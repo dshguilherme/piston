@@ -6,7 +6,7 @@ For each figure the driver runs its extractor (copies of the original scripts, p
 compiles the TikZ source with pdflatex in $REPRO_OUT/figs/build. Data go to $REPRO_OUT/figs/data, PDFs to
 $REPRO_OUT/figs/pdf. Nothing is written into results/ or into the paper tree. Schematic figures need no data.
 --extras also builds the in-progress figures F19-F22 (not in the audited draft).
---paper builds the 17 figures of the submitted manuscript from their sources in paper_jsv/prototype/figs. Their data
+--paper builds the 19 figures of the submitted manuscript from their sources in paper_jsv/prototype/figs. Their data
 come from the extractors below and, for the pass-rule, long-run and fluid-loading figures, from the scripts
 tests/r0_fig_passrule_v2.py, tests/r0_fig_longruns.py and tests/r0_fig_fsi_f18b.py, which write into the stored
 data folder and are run separately.
@@ -49,6 +49,7 @@ EXTRAS = {
 PAPER = {
     "fig_cap_geometry": ("Fig. 1", ["extras/r0_fig_geometry.py"], ["f19_*"]),
     "fig_pipeline_eng": ("pipeline schematic", [], []),
+    "fig_cap_problem": ("problem schematic", [], []),
     "fig_opt_paths_v2": ("paths from the uniform start", ["make_fig_data_d2.py"], ["f13_*"]),
     "fig_designs_paper_v2": ("design-point designs", ["extras/r0_fig_designs.py"], ["f20_*"]),
     "fig_mechanism": ("cancellation mechanism", ["extras/r0_fig_mechanism.py"], ["f22_*"]),
@@ -57,6 +58,7 @@ PAPER = {
     "fig_longruns": ("long runs (data: tests/r0_fig_longruns.py)", [], []),
     "fig_fsi_v2": ("fluid loading (data: tests/r0_fig_fsi_f18b.py)", [], []),
     "fig_verification": ("verification", ["make_fig_data_d2.py"], ["f6_*"]),
+    "fig_ratio_kR_proto": ("ratio against kR (matplotlib)", ["make_fig_ratio_kR.py"], []),
     "fig_regime_map_v2": ("ratio maps", ["make_fig_data_d2.py"], ["f8_*"]),
     "fig_regime_mean": ("ratio means", ["make_fig_data_d2.py"], ["f8_*"]),
     "fig_face_power_v2": ("face power", ["make_fig_data_d2.py"], ["f9_shares"]),

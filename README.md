@@ -38,7 +38,7 @@ python reproduce/run_smoke_tests.py
 python reproduce/figures/make_figures.py --paper
 ```
 
-The smoke tests take about 2 minutes (15 tests; on the authors' machine 10 pass, 2 are skipped without the binary dataset and MATLAB, 3 report information) and write `reproduce/docs/smoke-test-log.md`. `make_figures.py --paper` builds the 17 figures of the manuscript into `reproduce/out/figs/pdf` in about 2 minutes; re-plotting needs no binary file. The exact-operator smoke test, any re-evaluation and any re-optimization need the binary dataset listed in `LARGE_FILES.csv`.
+The smoke tests take about 2 minutes (15 tests; on the authors' machine 10 pass, 2 are skipped without the binary dataset and MATLAB, 3 report information) and write `reproduce/docs/smoke-test-log.md`. `make_figures.py --paper` builds the 19 figures of the manuscript into `reproduce/out/figs/pdf` in about 2 minutes; re-plotting needs no binary file. The exact-operator smoke test, any re-evaluation and any re-optimization need the binary dataset listed in `LARGE_FILES.csv`.
 
 ## Results of the later sections
 
