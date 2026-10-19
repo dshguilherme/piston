@@ -1,11 +1,15 @@
 """Regenerate the paper's figures from the stored results: data extraction, then the PDF.
 
-Usage:  python reproduce/figures/make_figures.py [--only fig_fsi fig_opt_paths ...] [--extras] [--no-pdf]
+Usage:  python reproduce/figures/make_figures.py [--paper] [--only fig_fsi fig_opt_paths ...] [--extras] [--no-pdf]
 
 For each figure the driver runs its extractor (copies of the original scripts, paths parametrised) and
 compiles the TikZ source with pdflatex in $REPRO_OUT/figs/build. Data go to $REPRO_OUT/figs/data, PDFs to
 $REPRO_OUT/figs/pdf. Nothing is written into results/ or into the paper tree. Schematic figures need no data.
 --extras also builds the in-progress figures F19-F22 (not in the audited draft).
+--paper builds the 17 figures of the submitted manuscript from their sources in paper_jsv/prototype/figs. Their data
+come from the extractors below and, for the pass-rule, long-run and fluid-loading figures, from the scripts
+tests/r0_fig_passrule_v2.py, tests/r0_fig_longruns.py and tests/r0_fig_fsi_f18b.py, which write into the stored
+data folder and are run separately.
 """
 import argparse
 import os
@@ -42,14 +46,39 @@ EXTRAS = {
     "fig_pipeline_eng": ("pipeline schematic (in progress)", [], []),
 }
 
+PAPER = {
+    "fig_cap_geometry": ("Fig. 1", ["extras/r0_fig_geometry.py"], ["f19_*"]),
+    "fig_pipeline_eng": ("pipeline schematic", [], []),
+    "fig_opt_paths_v2": ("paths from the uniform start", ["make_fig_data_d2.py"], ["f13_*"]),
+    "fig_designs_paper_v2": ("design-point designs", ["extras/r0_fig_designs.py"], ["f20_*"]),
+    "fig_mechanism": ("cancellation mechanism", ["extras/r0_fig_mechanism.py"], ["f22_*"]),
+    "fig_pilot_regime_v2": ("regime study", ["make_fig_pilot_f17.py"], ["f17_*"]),
+    "fig_passbars_v2": ("guaranteed level (data: tests/r0_fig_passrule_v2.py)", [], []),
+    "fig_longruns": ("long runs (data: tests/r0_fig_longruns.py)", [], []),
+    "fig_fsi_v2": ("fluid loading (data: tests/r0_fig_fsi_f18b.py)", [], []),
+    "fig_verification": ("verification", ["make_fig_data_d2.py"], ["f6_*"]),
+    "fig_regime_map_v2": ("ratio maps", ["make_fig_data_d2.py"], ["f8_*"]),
+    "fig_regime_mean": ("ratio means", ["make_fig_data_d2.py"], ["f8_*"]),
+    "fig_face_power_v2": ("face power", ["make_fig_data_d2.py"], ["f9_shares"]),
+    "fig_designs_pilot_v2": ("low-kR designs", ["extras/r0_fig_designs.py"], ["f21_*"]),
+    "fig_pilot_erp": ("ERP in the regime study", ["make_fig_pilot_f17.py"], ["f17_*"]),
+    "fig_bench_cards": ("benchmark cards", [], []),
+    "fig_passrule_scatter_v2": ("error against predicted level (data: tests/r0_fig_passrule_v2.py)", [], []),
+}
+
+
+def needs_dataset(stderr):
+    return "FileNotFoundError" in stderr and any(x in stderr for x in (".mat'", ".npz'", ".npy'"))
+
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*", default=[])
     ap.add_argument("--extras", action="store_true")
+    ap.add_argument("--paper", action="store_true")
     ap.add_argument("--no-pdf", action="store_true")
     a = ap.parse_args()
-    figs = dict(FIGS, **(EXTRAS if a.extras else {}))
+    figs = PAPER if a.paper else dict(FIGS, **(EXTRAS if a.extras else {}))
     only = {x for s in a.only for x in s.split(",") if x}
     names = [n for n in figs if not only or n in only]
     unknown = only - set(figs)
@@ -64,7 +93,9 @@ def main():
             t = time.time()
             r = subprocess.run([sys.executable, os.path.join(HERE, s)], cwd=C.out("figs"), capture_output=True, text=True)
             print("extract %-28s exit %d (%.1f s)" % (s, r.returncode, time.time() - t))
-            if r.returncode:
+            if r.returncode and needs_dataset(r.stderr):
+                print("        %-28s needs the binary dataset (LARGE_FILES.csv); the stored data are used" % s)
+            elif r.returncode:
                 print(r.stderr[-2000:])
                 sys.exit(1)
             done.add(s)
@@ -80,8 +111,10 @@ def main():
         if os.path.isdir(src):
             for f in os.listdir(src):
                 shutil.copy2(os.path.join(src, f), os.path.join(bdata, f))
-    for f in os.listdir(C.TIKZ):
-        shutil.copy2(os.path.join(C.TIKZ, f), os.path.join(build, f))
+    tikz = C.FIGS_STORED if a.paper else C.TIKZ
+    for f in os.listdir(tikz):
+        if f.endswith((".tex", ".sty")):
+            shutil.copy2(os.path.join(tikz, f), os.path.join(build, f))
     for n in names:
         if n == "fig_ratio_kR_proto":
             shutil.copy2(os.path.join(C.OUT, "figs", n + ".pdf"), os.path.join(pdf, n + ".pdf"))
