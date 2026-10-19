@@ -7,7 +7,7 @@ Code and data for
 - Software DOI: `10.5281/zenodo.XXXXXXX` (placeholder, not yet minted)
 - Data DOI: `10.5281/zenodo.YYYYYYY` (placeholder, not yet minted)
 - Licence: code `<LICENCE PLACEHOLDER, proposed GPL-3.0-or-later>`; data and figures `<PLACEHOLDER, proposed CC-BY-4.0>`; see `LICENSE-NOTE.md`
-- Status: **local draft, 2026-10-18.** Not published, not pushed. This folder sits inside the fastSIMP repository (`harmonic_shell_course/reproduce/`) and reads the stored results from `harmonic_shell_course/results/`.
+- Status: release candidate, 2026-10-19. The folder above `reproduce/` is the repository root (`REPRO_ROOT`); see the top-level `README.md` for the layout.
 
 ## What can be reproduced, and at what cost
 
@@ -102,4 +102,4 @@ Gradient-based runs of 600 iterations are not bitwise portable across machines, 
 ## Citation and contact
 
 See `CITATION.cff`. Please cite the article and the version DOI of the release you used.
-Guilherme Henrique da Silva, LVA, Universidade Federal de Santa Catarina. `<contact placeholder>`
+Guilherme Henrique da Silva, LVA, Universidade Federal de Santa Catarina. dshguilherme@gmail.com
