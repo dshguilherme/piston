@@ -1,0 +1,23 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== new A_c90_k1p5_XU (theta0 90, kR 1.5000), start C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\results\r0_revision\pilot\run_c90_k1p5_XU.mat at it 600, target 1800 ==
+  stage 1: rung X on c90_k1p5 from it 600, cstart 9.36204e+05, move 0
+  [X c90_k1p5] it   601 (stage 1,    1): Jown=6.35160e-13 f0=+100.0000  exact  -59.714 dB  sinc  -15.261 dB  erp   -6.194 dB  vol=0.5000 chg=1.76e-06 inner=6
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.039960e-16.] 
+  [X c90_k1p5] it   625 (stage 1,   25): Jown=6.17953e-13 f0= +99.6840  exact  -59.833 dB  sinc  -15.279 dB  erp   -6.193 dB  vol=0.5000 chg=2.85e-06 inner=6
+  [X c90_k1p5] it   650 (stage 1,   50): Jown=6.04620e-13 f0= +99.4330  exact  -59.928 dB  sinc  -15.296 dB  erp   -6.197 dB  vol=0.5000 chg=6.79e-06 inner=6
+  [X c90_k1p5] it   675 (stage 1,   75): Jown=5.87995e-13 f0= +99.1122  exact  -60.049 dB  sinc  -15.320 dB  erp   -6.204 dB  vol=0.5000 chg=1.86e-05 inner=6
+  [X c90_k1p5] it   700 (stage 1,  100): Jown=5.74422e-13 f0= +98.8434  exact  -60.150 dB  sinc  -15.341 dB  erp   -6.211 dB  vol=0.5000 chg=5.88e-06 inner=6
+  [X c90_k1p5] it   725 (stage 1,  125): Jown=5.68717e-13 f0= +98.7286  exact  -60.194 dB  sinc  -15.349 dB  erp   -6.213 dB  vol=0.5000 chg=7.40e-06 inner=6
+  [X c90_k1p5] it   750 (stage 1,  150): Jown=5.56572e-13 f0= +98.4802  exact  -60.287 dB  sinc  -15.375 dB  erp   -6.221 dB  vol=0.5000 chg=7.49e-06 inner=6
+  [X c90_k1p5] it   775 (stage 1,  175): Jown=5.53562e-13 f0= +98.4178  exact  -60.311 dB  sinc  -15.381 dB  erp   -6.224 dB  vol=0.5000 chg=6.35e-05 inner=5
+  [X c90_k1p5] it   800 (stage 1,  200): Jown=5.48194e-13 f0= +98.3056  exact  -60.353 dB  sinc  -15.393 dB  erp   -6.228 dB  vol=0.5000 chg=3.09e-06 inner=6
+  [X c90_k1p5] it   825 (stage 1,  225): Jown=5.46389e-13 f0= +98.2677  exact  -60.368 dB  sinc  -15.397 dB  erp   -6.230 dB  vol=0.5000 chg=2.83e-06 inner=7
+  [X c90_k1p5] it   850 (stage 1,  250): Jown=5.44733e-13 f0= +98.2328  exact  -60.381 dB  sinc  -15.402 dB  erp   -6.232 dB  vol=0.5000 chg=3.43e-06 inner=6
+  [X c90_k1p5] it   875 (stage 1,  275): Jown=5.42935e-13 f0= +98.1947  exact  -60.395 dB  sinc  -15.410 dB  erp   -6.234 dB  vol=0.5000 chg=2.74e-06 inner=6
+  [X c90_k1p5] it   900 (stage 1,  300): Jown=5.41481e-13 f0= +98.1639  exact  -60.407 dB  sinc  -15.414 dB  erp   -6.236 dB  vol=0.5000 chg=1.06e-06 inner=7
+  [X c90_k1p5] it   925 (stage 1,  325): Jown=5.39771e-13 f0= +98.1275  exact  -60.420 dB  sinc  -15.423 dB  erp   -6.238 dB  vol=0.5000 chg=2.75e-05 inner=5
+  [X c90_k1p5] STOP at it 944 (stage it 344): converged (xstat 8.04e-05, fstat 9.28e-05)
+R0_LONG_A_c90_k1p5_XU_DONE it=944 status=converged walltime=518s warn=1

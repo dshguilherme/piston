@@ -1,0 +1,56 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== new A_c90_k1p5_SU (theta0 90, kR 1.5000), start C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\results\r0_revision\pilot\run_c90_k1p5_SU.mat at it 600, target 1800 ==
+  stage 1: rung S on c90_k1p5 from it 600, cstart 5.56333e+04, move 0
+  [S c90_k1p5] it   601 (stage 1,    1): Jown=1.06886e-11 f0=+100.0000  exact  -28.423 dB  sinc  -47.453 dB  erp   -4.056 dB  vol=0.5000 chg=1.50e-06 inner=6
+  [S c90_k1p5] it   625 (stage 1,   25): Jown=1.06340e-11 f0= +99.9412  exact  -28.422 dB  sinc  -47.476 dB  erp   -4.056 dB  vol=0.5000 chg=7.98e-06 inner=6
+  [S c90_k1p5] it   650 (stage 1,   50): Jown=1.05882e-11 f0= +99.8915  exact  -28.434 dB  sinc  -47.494 dB  erp   -4.053 dB  vol=0.5000 chg=2.59e-05 inner=5
+  [S c90_k1p5] it   675 (stage 1,   75): Jown=1.05142e-11 f0= +99.8108  exact  -28.454 dB  sinc  -47.525 dB  erp   -4.050 dB  vol=0.5000 chg=9.04e-06 inner=6
+  [S c90_k1p5] it   700 (stage 1,  100): Jown=1.04579e-11 f0= +99.7489  exact  -28.460 dB  sinc  -47.548 dB  erp   -4.048 dB  vol=0.5000 chg=2.72e-05 inner=5
+  [S c90_k1p5] it   725 (stage 1,  125): Jown=1.03370e-11 f0= +99.6151  exact  -28.472 dB  sinc  -47.599 dB  erp   -4.046 dB  vol=0.5000 chg=2.92e-05 inner=5
+  [S c90_k1p5] it   750 (stage 1,  150): Jown=1.02052e-11 f0= +99.4675  exact  -28.489 dB  sinc  -47.654 dB  erp   -4.042 dB  vol=0.5000 chg=7.67e-06 inner=6
+  [S c90_k1p5] it   775 (stage 1,  175): Jown=1.01484e-11 f0= +99.4033  exact  -28.499 dB  sinc  -47.679 dB  erp   -4.040 dB  vol=0.5000 chg=8.60e-06 inner=6
+  [S c90_k1p5] it   800 (stage 1,  200): Jown=1.00772e-11 f0= +99.3222  exact  -28.506 dB  sinc  -47.709 dB  erp   -4.038 dB  vol=0.5000 chg=1.06e-05 inner=6
+  [S c90_k1p5] it   825 (stage 1,  225): Jown=1.00136e-11 f0= +99.2494  exact  -28.517 dB  sinc  -47.737 dB  erp   -4.035 dB  vol=0.5000 chg=9.82e-06 inner=6
+  [S c90_k1p5] it   850 (stage 1,  250): Jown=9.92082e-12 f0= +99.1423  exact  -28.532 dB  sinc  -47.777 dB  erp   -4.032 dB  vol=0.5000 chg=5.01e-06 inner=6
+  [S c90_k1p5] it   875 (stage 1,  275): Jown=9.84787e-12 f0= +99.0574  exact  -28.538 dB  sinc  -47.809 dB  erp   -4.029 dB  vol=0.5000 chg=1.59e-05 inner=6
+  [S c90_k1p5] it   900 (stage 1,  300): Jown=9.78505e-12 f0= +98.9837  exact  -28.546 dB  sinc  -47.837 dB  erp   -4.025 dB  vol=0.5000 chg=9.29e-06 inner=6
+  [S c90_k1p5] it   925 (stage 1,  325): Jown=9.69079e-12 f0= +98.8724  exact  -28.559 dB  sinc  -47.879 dB  erp   -4.019 dB  vol=0.5000 chg=9.69e-06 inner=6
+  [S c90_k1p5] it   950 (stage 1,  350): Jown=9.55087e-12 f0= +98.7050  exact  -28.573 dB  sinc  -47.942 dB  erp   -4.012 dB  vol=0.5000 chg=1.80e-05 inner=6
+  [S c90_k1p5] it   975 (stage 1,  375): Jown=9.47337e-12 f0= +98.6112  exact  -28.582 dB  sinc  -47.977 dB  erp   -4.008 dB  vol=0.5000 chg=9.59e-06 inner=6
+  [S c90_k1p5] it  1000 (stage 1,  400): Jown=9.40267e-12 f0= +98.5251  exact  -28.589 dB  sinc  -48.010 dB  erp   -4.004 dB  vol=0.5000 chg=1.35e-05 inner=6
+  [S c90_k1p5] it  1025 (stage 1,  425): Jown=9.34173e-12 f0= +98.4502  exact  -28.605 dB  sinc  -48.038 dB  erp   -4.001 dB  vol=0.5000 chg=1.52e-05 inner=6
+  [S c90_k1p5] it  1050 (stage 1,  450): Jown=9.26791e-12 f0= +98.3589  exact  -28.620 dB  sinc  -48.073 dB  erp   -3.996 dB  vol=0.5000 chg=9.88e-06 inner=6
+  [S c90_k1p5] it  1075 (stage 1,  475): Jown=9.21915e-12 f0= +98.2982  exact  -28.632 dB  sinc  -48.096 dB  erp   -3.992 dB  vol=0.5000 chg=1.10e-05 inner=6
+  [S c90_k1p5] it  1100 (stage 1,  500): Jown=9.15614e-12 f0= +98.2193  exact  -28.633 dB  sinc  -48.125 dB  erp   -3.990 dB  vol=0.5000 chg=1.05e-05 inner=6
+  [S c90_k1p5] it  1125 (stage 1,  525): Jown=9.06410e-12 f0= +98.1031  exact  -28.647 dB  sinc  -48.169 dB  erp   -3.984 dB  vol=0.5000 chg=2.24e-05 inner=5
+  [S c90_k1p5] it  1150 (stage 1,  550): Jown=9.00043e-12 f0= +98.0220  exact  -28.654 dB  sinc  -48.200 dB  erp   -3.981 dB  vol=0.5000 chg=5.98e-05 inner=5
+  [S c90_k1p5] it  1175 (stage 1,  575): Jown=8.91530e-12 f0= +97.9126  exact  -28.666 dB  sinc  -48.241 dB  erp   -3.976 dB  vol=0.5000 chg=4.83e-05 inner=5
+  [S c90_k1p5] it  1200 (stage 1,  600): Jown=8.85684e-12 f0= +97.8369  exact  -28.678 dB  sinc  -48.270 dB  erp   -3.971 dB  vol=0.5000 chg=2.13e-05 inner=5
+  [S c90_k1p5] it  1225 (stage 1,  625): Jown=8.78302e-12 f0= +97.7406  exact  -28.688 dB  sinc  -48.306 dB  erp   -3.965 dB  vol=0.5000 chg=1.28e-05 inner=6
+  [S c90_k1p5] it  1250 (stage 1,  650): Jown=8.71597e-12 f0= +97.6524  exact  -28.701 dB  sinc  -48.339 dB  erp   -3.959 dB  vol=0.5000 chg=1.34e-05 inner=6
+  [S c90_k1p5] it  1275 (stage 1,  675): Jown=8.63570e-12 f0= +97.5460  exact  -28.707 dB  sinc  -48.380 dB  erp   -3.954 dB  vol=0.5000 chg=1.19e-05 inner=6
+  [S c90_k1p5] it  1300 (stage 1,  700): Jown=8.54422e-12 f0= +97.4234  exact  -28.713 dB  sinc  -48.426 dB  erp   -3.948 dB  vol=0.5000 chg=1.18e-05 inner=6
+  [S c90_k1p5] it  1325 (stage 1,  725): Jown=8.47297e-12 f0= +97.3271  exact  -28.734 dB  sinc  -48.462 dB  erp   -3.941 dB  vol=0.5000 chg=3.33e-05 inner=5
+  [S c90_k1p5] it  1350 (stage 1,  750): Jown=8.39938e-12 f0= +97.2267  exact  -28.741 dB  sinc  -48.500 dB  erp   -3.935 dB  vol=0.5000 chg=1.72e-05 inner=5
+  [S c90_k1p5] it  1375 (stage 1,  775): Jown=8.30589e-12 f0= +97.0979  exact  -28.758 dB  sinc  -48.549 dB  erp   -3.926 dB  vol=0.5000 chg=8.48e-06 inner=6
+  [S c90_k1p5] it  1400 (stage 1,  800): Jown=8.22199e-12 f0= +96.9811  exact  -28.761 dB  sinc  -48.593 dB  erp   -3.919 dB  vol=0.5000 chg=3.17e-05 inner=5
+  [S c90_k1p5] it  1425 (stage 1,  825): Jown=8.12238e-12 f0= +96.8408  exact  -28.767 dB  sinc  -48.646 dB  erp   -3.909 dB  vol=0.5000 chg=4.95e-05 inner=5
+  [S c90_k1p5] it  1450 (stage 1,  850): Jown=8.03034e-12 f0= +96.7097  exact  -28.782 dB  sinc  -48.695 dB  erp   -3.900 dB  vol=0.5000 chg=3.00e-05 inner=5
+  [S c90_k1p5] it  1475 (stage 1,  875): Jown=7.94600e-12 f0= +96.5882  exact  -28.796 dB  sinc  -48.741 dB  erp   -3.891 dB  vol=0.5000 chg=4.68e-05 inner=5
+  [S c90_k1p5] it  1500 (stage 1,  900): Jown=7.86290e-12 f0= +96.4672  exact  -28.802 dB  sinc  -48.787 dB  erp   -3.882 dB  vol=0.5000 chg=6.23e-05 inner=5
+  [S c90_k1p5] it  1525 (stage 1,  925): Jown=7.75853e-12 f0= +96.3134  exact  -28.825 dB  sinc  -48.845 dB  erp   -3.870 dB  vol=0.5000 chg=1.16e-05 inner=5
+  [S c90_k1p5] it  1550 (stage 1,  950): Jown=7.67818e-12 f0= +96.1937  exact  -28.836 dB  sinc  -48.890 dB  erp   -3.862 dB  vol=0.5000 chg=2.29e-05 inner=6
+  [S c90_k1p5] it  1575 (stage 1,  975): Jown=7.58330e-12 f0= +96.0506  exact  -28.834 dB  sinc  -48.944 dB  erp   -3.852 dB  vol=0.5000 chg=1.48e-05 inner=6
+  [S c90_k1p5] it  1600 (stage 1, 1000): Jown=7.51624e-12 f0= +95.9484  exact  -28.844 dB  sinc  -48.983 dB  erp   -3.846 dB  vol=0.5000 chg=8.01e-05 inner=5
+  [S c90_k1p5] it  1625 (stage 1, 1025): Jown=7.44285e-12 f0= +95.8355  exact  -28.861 dB  sinc  -49.025 dB  erp   -3.838 dB  vol=0.5000 chg=1.79e-05 inner=5
+  [S c90_k1p5] it  1650 (stage 1, 1050): Jown=7.35554e-12 f0= +95.6997  exact  -28.876 dB  sinc  -49.076 dB  erp   -3.828 dB  vol=0.5000 chg=3.37e-05 inner=5
+  [S c90_k1p5] it  1675 (stage 1, 1075): Jown=7.26116e-12 f0= +95.5511  exact  -28.885 dB  sinc  -49.132 dB  erp   -3.819 dB  vol=0.5000 chg=3.13e-05 inner=5
+  [S c90_k1p5] it  1700 (stage 1, 1100): Jown=7.19079e-12 f0= +95.4390  exact  -28.902 dB  sinc  -49.175 dB  erp   -3.811 dB  vol=0.5000 chg=6.27e-05 inner=5
+  [S c90_k1p5] it  1725 (stage 1, 1125): Jown=7.10413e-12 f0= +95.2995  exact  -28.930 dB  sinc  -49.227 dB  erp   -3.800 dB  vol=0.5000 chg=1.41e-05 inner=6
+  [S c90_k1p5] it  1750 (stage 1, 1150): Jown=7.01889e-12 f0= +95.1606  exact  -28.938 dB  sinc  -49.280 dB  erp   -3.792 dB  vol=0.5000 chg=1.34e-05 inner=6
+  [S c90_k1p5] it  1775 (stage 1, 1175): Jown=6.93821e-12 f0= +95.0276  exact  -28.944 dB  sinc  -49.330 dB  erp   -3.784 dB  vol=0.5000 chg=3.07e-05 inner=5
+  [S c90_k1p5] it  1800 (stage 1, 1200): Jown=6.87551e-12 f0= +94.9231  exact  -28.957 dB  sinc  -49.369 dB  erp   -3.776 dB  vol=0.5000 chg=1.35e-05 inner=5
+R0_LONG_A_c90_k1p5_SU_DONE it=1800 status=budget walltime=2295s warn=0

@@ -1,0 +1,9 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+c90_k7 grad at uniform: cos(S,X)=0.9989 cos(E,X)=0.3835
+c90_k7 grad at XU: cos(S,X)=0.5331 cos(E,X)=0.2485
+c90_k7 grad at SU: cos(S,X)=0.3657 cos(E,X)=0.1320
+c90_k7 grad at EU: cos(S,X)=0.9999 cos(E,X)=-0.0342
+R0_PILOT_RUNS_c90_k7_grad_DONE

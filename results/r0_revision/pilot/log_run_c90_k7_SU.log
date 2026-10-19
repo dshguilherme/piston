@@ -1,0 +1,32 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== pilot run c90_k7 SU (theta0 90, kR 7.0000), normalisation 5.77435e+01 ==
+  [quadvel    |consistent] it   1: J=5.94640e-07  f0=+100.0000  Jbest=5.94640e-07  vol=0.5000  chg=1.13e-02  inner=2
+  [quadvel    |consistent] it  25: J=2.66198e-09  f0=+37.7613  Jbest=2.66198e-09  vol=0.4849  chg=1.26e-03  inner=4
+  [quadvel    |consistent] it  50: J=1.40692e-09  f0=+30.4237  Jbest=1.40692e-09  vol=0.4987  chg=1.18e-03  inner=4
+  [quadvel    |consistent] it  75: J=8.83877e-10  f0=+25.0749  Jbest=8.83877e-10  vol=0.5000  chg=4.30e-04  inner=4
+  [quadvel    |consistent] it 100: J=6.44826e-10  f0=+21.4464  Jbest=6.44826e-10  vol=0.5000  chg=1.16e-03  inner=4
+  [quadvel    |consistent] it 125: J=4.88677e-10  f0=+18.2558  Jbest=4.88677e-10  vol=0.5000  chg=9.64e-04  inner=4
+  [quadvel    |consistent] it 150: J=3.40969e-10  f0=+14.1144  Jbest=3.40969e-10  vol=0.5000  chg=5.66e-04  inner=4
+  [quadvel    |consistent] it 175: J=2.57980e-10  f0=+10.9051  Jbest=2.57980e-10  vol=0.5000  chg=3.93e-04  inner=4
+  [quadvel    |consistent] it 200: J=1.96676e-10  f0=+7.7830  Jbest=1.96676e-10  vol=0.5000  chg=4.93e-04  inner=5
+  [quadvel    |consistent] it 225: J=1.55888e-10  f0=+5.1087  Jbest=1.55888e-10  vol=0.5000  chg=1.28e-04  inner=5
+  [quadvel    |consistent] it 250: J=1.30457e-10  f0=+3.0593  Jbest=1.30457e-10  vol=0.5000  chg=1.37e-04  inner=5
+  [quadvel    |consistent] it 275: J=1.15282e-10  f0=+1.6363  Jbest=1.15282e-10  vol=0.5000  chg=5.26e-04  inner=4
+  [quadvel    |consistent] it 300: J=1.01776e-10  f0=+0.2025  Jbest=1.01776e-10  vol=0.5000  chg=1.78e-04  inner=5
+  [quadvel    |consistent] it 325: J=8.93347e-11  f0=-1.2977  Jbest=8.93347e-11  vol=0.5000  chg=7.37e-05  inner=5
+  [quadvel    |consistent] it 350: J=8.15991e-11  f0=-2.3399  Jbest=8.15991e-11  vol=0.5000  chg=8.18e-05  inner=5
+  [quadvel    |consistent] it 375: J=7.60478e-11  f0=-3.1506  Jbest=7.60478e-11  vol=0.5000  chg=8.18e-05  inner=5
+  [quadvel    |consistent] it 400: J=7.17460e-11  f0=-3.8207  Jbest=7.17460e-11  vol=0.5000  chg=8.08e-05  inner=5
+  [quadvel    |consistent] it 425: J=6.79971e-11  f0=-4.4382  Jbest=6.79971e-11  vol=0.5000  chg=4.12e-05  inner=5
+  [quadvel    |consistent] it 450: J=6.52775e-11  f0=-4.9079  Jbest=6.52775e-11  vol=0.5000  chg=5.50e-05  inner=5
+  [quadvel    |consistent] it 475: J=6.15027e-11  f0=-5.5933  Jbest=6.15027e-11  vol=0.5000  chg=6.75e-05  inner=5
+  [quadvel    |consistent] it 500: J=5.87750e-11  f0=-6.1153  Jbest=5.87750e-11  vol=0.5000  chg=3.22e-05  inner=5
+  [quadvel    |consistent] it 525: J=5.67342e-11  f0=-6.5220  Jbest=5.67342e-11  vol=0.5000  chg=5.13e-05  inner=5
+  [quadvel    |consistent] it 550: J=5.48573e-11  f0=-6.9091  Jbest=5.48573e-11  vol=0.5000  chg=4.63e-05  inner=6
+  [quadvel    |consistent] it 575: J=5.31915e-11  f0=-7.2639  Jbest=5.31915e-11  vol=0.5000  chg=3.82e-05  inner=5
+  [quadvel    |consistent] it 600: J=5.16999e-11  f0=-7.5912  Jbest=5.16999e-11  vol=0.5000  chg=7.78e-05  inner=5
+RESULT c90_k7 SU: it=600 stop=nmax evals=2816 Jbest=5.169991e-11 vol=0.500000 time=637s
+R0_PILOT_RUNS_c90_k7_SU_DONE

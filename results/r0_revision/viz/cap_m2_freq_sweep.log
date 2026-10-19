@@ -1,0 +1,11 @@
+nv=3841 h_max=0.6540  kR_max(6 el/wl) = 16.0114  freq in file=100.0
+== kR=0.1 k=0.010000 f=0.5459 Hz  el/wl=960.686 resolved=True
+   assembled in 804.9s
+   uniform        P_bem=6.212653e-14 P_far=1.001158e-14 far/bem=0.16115 sinc/bem=89.95075
+   dyncomp        P_bem=3.598845e-16 P_far=8.825805e-17 far/bem=0.24524 sinc/bem=84.73498
+   inputpower     P_bem=1.260525e-16 P_far=5.071303e-17 far/bem=0.40232 sinc/bem=715.84140
+   quadvel-rad    P_bem=1.095150e-15 P_far=1.047888e-16 far/bem=0.09568 sinc/bem=177.90637
+   quadvel-I      P_bem=5.429741e-16 P_far=4.598200e-17 far/bem=0.08469 sinc/bem=214.83634
+   quadvel-ones   P_bem=1.448189e-14 P_far=1.243233e-15 far/bem=0.08585 sinc/bem=55.79237
+   kR done; elapsed total 1387s
+== kR=0.3 k=0.030000 f=1.6377 Hz  el/wl=320.229 resolved=True

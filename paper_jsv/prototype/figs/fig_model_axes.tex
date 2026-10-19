@@ -1,0 +1,67 @@
+﻿% Model axes: three independent choices behind every number in the paper.
+% Prototype revision (2026-10-17) of supplement/figure-first-skill/prototypes/fig_model_axes.tex:
+%  - lane (c) renamed to the optimization method / use of the operator (external review),
+%  - 2x sinc marked as a calibration of the sinc model (same minimizer),
+%  - no connectors between alternatives in lanes (a) and (c): they are not a ladder.
+% Numbers in the right-hand notes are traceable (number trace rows 35, 37, 40, 100, 103):
+% integration (centroid to spline-consistent) up to 1.99 % (uniform cap field, row 103);
+% compression (rank-32 Nystrom) 6.13 % for a canceling field (row 35); rho from 0.15 to 2627;
+% 9.5 dB between the end designs reached from one start.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\begin{document}
+\begin{tikzpicture}
+  \def\bw{26mm}
+  \def\dx{3.30}
+  \tikzset{box/.style={text width=\bw, minimum height=8.5mm}}
+
+  % ---------------------------------------------------------------- lane 1: physical acoustic model
+  \node[paneltag, anchor=base west] at (-1.30,6.30) {(a)};
+  \node[paneltitle, anchor=base west] at (-0.85,6.30) {Physical acoustic model: changes the problem};
+  \node[note, anchor=base east] at (11.25,6.30) {effect on power: $\rho$ from 0.15 to $>10^{3}$};
+  \node[thingsurr, box] (m1) at (0*\dx,5.50) {sinc model\\one-sided, baffled};
+  \node[thing, box] (m2) at (1*\dx,5.50) {$2\times$ sinc\\calibration only};
+  \node[thingref, box] (m3) at (2*\dx,5.50) {exact two-sided\\open spherical cap};
+  \node[thing, box] (m4) at (3*\dx,5.50) {two-sided BEM\\any open surface};
+  \node[note, anchor=north] at ($(m2.south)+(0,-0.06)$) {same minimizer as sinc};
+
+  % ---------------------------------------------------------------- lane 2: discretization and compression
+  \node[paneltag, anchor=base west] at (-1.30,3.95) {(b)};
+  \node[paneltitle, anchor=base west] at (-0.85,3.95) {Discretization and compression: same problem};
+  \node[note, anchor=base east] at (11.25,3.95) {integration: up to 2\,\%; compression: up to 6\,\%};
+  \node[thing, box] (d1) at (0*\dx,3.15) {element centroid\\one point per patch};
+  \node[thing, box] (d2) at (1*\dx,3.15) {finite patches\\kernel integrated};
+  \node[thing, box, chosen] (d3) at (2*\dx,3.15) {spline-consistent\\Galerkin quadrature};
+  \node[thing, box] (d4) at (3*\dx,3.15) {Nystr\"om, rank $r$\\compressed kernel};
+  \draw[axisline] ($(d1.south west)+(0.05,-0.22)$) -- ($(d3.south east)+(-0.05,-0.22)$)
+     node[note, midway, below] {more exact integration of the same kernel};
+  \draw[axisline] ($(d4.south west)+(0.05,-0.22)$) -- ($(d4.south east)+(-0.05,-0.22)$)
+     node[note, midway, below] {compression};
+
+  % ---------------------------------------------------------------- lane 3: use and optimization method
+  \node[paneltag, anchor=base west] at (-1.30,1.45) {(c)};
+  \node[paneltitle, anchor=base west] at (-0.85,1.45) {Use and optimization method: what depends on it};
+  \node[note, anchor=base east] at (11.25,1.45) {effect: end designs 9.5\,dB apart, one start};
+  \node[action, box] (u1) at (0*\dx,0.65) {evaluate\\a frozen field};
+  \node[action, box] (u2) at (1*\dx,0.65) {sweep $kR$\\with a frozen field};
+  \node[action, box] (u3) at (2*\dx,0.65) {optimize thickness\\adjoint, GCMMA};
+  \node[action, box] (u4) at (3*\dx,0.65) {cross-evaluate\\every iterate};
+  \draw[axisline, -] ($(u1.south west)+(0.05,-0.22)$) -- ($(u2.south east)+(-0.05,-0.22)$)
+     node[note, midway, below] {operator tests};
+  \draw[axisline, -] ($(u3.south west)+(0.05,-0.22)$) -- ($(u4.south east)+(-0.05,-0.22)$)
+     node[note, midway, below] {design tests};
+
+  % ---------------------------------------------------------------- key
+  \begin{scope}[shift={(-1.3,-0.95)}]
+    \node[thing, text width=5mm, minimum height=3.2mm, inner sep=0pt] at (0.25,0) {};
+    \node[note, anchor=mid west] at (0.62,0) {model or matrix};
+    \node[action, text width=5mm, minimum height=3.2mm, inner sep=0pt, rounded corners=1.4mm] at (3.25,0) {};
+    \node[note, anchor=mid west] at (3.62,0) {process};
+    \draw[surrcurve] (5.20,0) -- (5.90,0);
+    \node[note, anchor=mid west] at (5.97,0) {surrogate under test};
+    \draw[refcurve] (8.80,0) -- (9.50,0);
+    \node[note, anchor=mid west] at (9.57,0) {exact reference};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

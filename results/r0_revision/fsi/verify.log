@@ -1,0 +1,138 @@
+====================================================================================================
+TEST A: near-closed cap vs closed sphere modal impedance (m=0)
+  zcap = Zc / int|v|^2 dS, zsph = rho0 c0 / lam_l, lam_l = x^2 j_l'(x) h_l^(1)'(x); Zc via Richardson in 1/L
+====================================================================================================
+  kR=1.5: j_l'(kR) for l=0..3 = -0.3962, +0.1368, +0.1415, +0.0518  (interior Neumann resonances at j_l'=0: l=1 x=2.08, l=2 x=3.34, l=3 x=4.51, l=0 x=4.49 -> none near)
+  kR=1.0: j_l'(kR) for l=0..3 = -0.3012, +0.2391, +0.1151, +0.0260  (interior Neumann resonances at j_l'=0: l=1 x=2.08, l=2 x=3.34, l=3 x=4.51, l=0 x=4.49 -> none near)
+
+  hole half-angle 10 deg (theta0=170): basis built in 0.6s, whitened rank 32/32
+
+  hole half-angle 5 deg (theta0=175): basis built in 0.7s, whitened rank 32/32
+
+  hole half-angle 2 deg (theta0=178): basis built in 0.6s, whitened rank 32/32
+
+  L-convergence check with L=4000/8000 (hole 2 deg, N=32):
+    kR=1.5 l=0: zcap(Rich 2000/4000)=290.199474+506.861752j  zcap(Rich 4000/8000)=290.199451+506.861739j  rel diff=4.54e-08
+    kR=1.5 l=1: zcap(Rich 2000/4000)=212.989213-1433.056827j  zcap(Rich 4000/8000)=212.989364-1433.057341j  rel diff=3.70e-07
+
+  Table A1: zcap / zsph (Richardson L=2000/4000)  [|ratio| , phase deg ; re , im]
+  kR=1.5  l=0   zsph = +287.32846 +505.09684i   (sign Im zsph = +1)
+      hole 10 deg: zcap = +302.69286 +515.88172i | ratio = +1.02921 -0.01381i | |r|=1.02930 ph=-0.768 deg | raw L1: +302.68037+515.87593i  raw L2: +302.68662+515.87883i
+      hole  5 deg: zcap = +294.36575 +509.68543i | ratio = +1.01285 -0.00662i | |r|=1.01287 ph=-0.375 deg | raw L1: +294.35563+509.68012i  raw L2: +294.36069+509.68278i
+      hole  2 deg: zcap = +290.19947 +506.86175i | ratio = +1.00508 -0.00279i | |r|=1.00509 ph=-0.159 deg | raw L1: +290.19521+506.85935i  raw L2: +290.19734+506.86055i
+  kR=1.5  l=1   zsph = +231.84434 -1494.17807i   (sign Im zsph = -1)
+      hole 10 deg: zcap = +161.26682 -1237.73326i | ratio = +0.82525 -0.02012i | |r|=0.82549 ph=-1.397 deg | raw L1: +161.32068-1237.99448i  raw L2: +161.29375-1237.86387i
+      hole  5 deg: zcap = +191.35152 -1357.83506i | ratio = +0.90679 -0.01264i | |r|=0.90688 ph=-0.798 deg | raw L1: +191.40909-1358.05660i  raw L2: +191.38031-1357.94583i
+      hole  2 deg: zcap = +212.98921 -1433.05683i | ratio = +0.95814 -0.00612i | |r|=0.95816 ph=-0.366 deg | raw L1: +213.01695-1433.15167i  raw L2: +213.00308-1433.10425i
+  kR=1.5  l=2   zsph = +46.11444 -650.27915i   (sign Im zsph = -1)
+      hole 10 deg: zcap = +39.78256 -584.43512i | ratio = +0.89856 -0.00254i | |r|=0.89857 ph=-0.162 deg | raw L1: +39.78495-584.50880i  raw L2: +39.78375-584.47196i
+      hole  5 deg: zcap = +41.23883 -610.33559i | ratio = +0.93835 -0.00313i | |r|=0.93836 ph=-0.191 deg | raw L1: +41.24482-610.40407i  raw L2: +41.24183-610.36983i
+      hole  2 deg: zcap = +43.56432 -631.20772i | ratio = +0.97054 -0.00183i | |r|=0.97054 ph=-0.108 deg | raw L1: +43.56789-631.23778i  raw L2: +43.56611-631.22275i
+  kR=1.5  l=3   zsph = +2.40420 -406.40116i   (sign Im zsph = -1)
+      hole 10 deg: zcap = +4.43646 -380.09880i | ratio = +0.93531 +0.00538i | |r|=0.93533 ph=+0.330 deg | raw L1: +4.43298-380.13175i  raw L2: +4.43472-380.11528i
+      hole  5 deg: zcap = +2.81167 -386.79415i | ratio = +0.95176 +0.00129i | |r|=0.95176 ph=+0.078 deg | raw L1: +2.81012-386.82971i  raw L2: +2.81090-386.81193i
+      hole  2 deg: zcap = +2.40801 -396.26815i | ratio = +0.97507 +0.00016i | |r|=0.97507 ph=+0.009 deg | raw L1: +2.40782-396.28435i  raw L2: +2.40792-396.27625i
+  kR=1.0  l=0   zsph = +207.51500 +952.08667i   (sign Im zsph = +1)
+      hole 10 deg: zcap = +240.86462 +1022.78504i | ratio = +1.07818 -0.01799i | |r|=1.07833 ph=-0.956 deg | raw L1: +240.82962+1022.72076i  raw L2: +240.84712+1022.75290i
+      hole  5 deg: zcap = +222.31772 +984.03234i | ratio = +1.03527 -0.00786i | |r|=1.03530 ph=-0.435 deg | raw L1: +222.29343+983.98364i  raw L2: +222.30558+984.00799i
+      hole  2 deg: zcap = +213.47157 +965.01751i | ratio = +1.01427 -0.00315i | |r|=1.01427 ph=-0.178 deg | raw L1: +213.46223+964.99785i  raw L2: +213.46690+965.00768i
+  kR=1.0  l=1   zsph = +83.00600 -771.71336i   (sign Im zsph = -1)
+      hole 10 deg: zcap = +60.98411 -657.30013i | ratio = +0.85040 -0.01245i | |r|=0.85049 ph=-0.838 deg | raw L1: +61.00322-657.43227i  raw L2: +60.99366-657.36620i
+      hole  5 deg: zcap = +71.02433 -713.87282i | ratio = +0.92426 -0.00738i | |r|=0.92428 ph=-0.457 deg | raw L1: +71.04270-713.97343i  raw L2: +71.03351-713.92312i
+      hole  2 deg: zcap = +77.61911 -746.43797i | ratio = +0.96688 -0.00342i | |r|=0.96689 ph=-0.203 deg | raw L1: +77.62731-746.47836i  raw L2: +77.62321-746.45816i
+  kR=1.0  l=2   zsph = +4.66326 -382.30899i   (sign Im zsph = -1)
+      hole 10 deg: zcap = +5.40701 -343.80312i | ratio = +0.89932 +0.00317i | |r|=0.89933 ph=+0.202 deg | raw L1: +5.40463-343.85171i  raw L2: +5.40582-343.82741i
+      hole  5 deg: zcap = +4.51417 -360.42667i | ratio = +0.94277 +0.00031i | |r|=0.94277 ph=+0.019 deg | raw L1: +4.51378-360.46683i  raw L2: +4.51398-360.44675i
+      hole  2 deg: zcap = +4.48427 -372.16005i | ratio = +0.97345 -0.00014i | |r|=0.97345 ph=-0.008 deg | raw L1: +4.48444-372.17653i  raw L2: +4.48435-372.16829i
+  kR=1.0  l=3   zsph = +0.10467 -253.41875i   (sign Im zsph = -1)
+      hole 10 deg: zcap = +1.17257 -235.32642i | ratio = +0.92861 +0.00424i | |r|=0.92862 ph=+0.262 deg | raw L1: +1.17063-235.35148i  raw L2: +1.17160-235.33895i
+      hole  5 deg: zcap = +0.35404 -241.25054i | ratio = +0.95198 +0.00100i | |r|=0.95198 ph=+0.060 deg | raw L1: +0.35324-241.27409i  raw L2: +0.35364-241.26231i
+      hole  2 deg: zcap = +0.14597 -247.36318i | ratio = +0.97610 +0.00017i | |r|=0.97610 ph=+0.010 deg | raw L1: +0.14584-247.37315i  raw L2: +0.14591-247.36817i
+
+  Table A2: extrapolation of ratio to zero hole
+   linear from holes (5,2) deg: r0 = r2 - 2 (r5-r2)/3 ;  quadratic from (10,5,2) also shown
+   kR=1.5 l=0: ratios 10/5/2 deg = +1.0292-0.0138i / +1.0129-0.0066i / +1.0051-0.0028i ; linear r0 = +0.99990-0.00024i (|r0-1|=2.58e-04) ; quad r0 = +1.00076-0.00044i (|r0q-1|=8.74e-04) -> PASS (tol 1e-2)
+   kR=1.5 l=1: ratios 10/5/2 deg = +0.8252-0.0201i / +0.9068-0.0126i / +0.9581-0.0061i ; linear r0 = +0.99238-0.00178i (|r0-1|=7.83e-03) ; quad r0 = +0.99339-0.00094i (|r0q-1|=6.67e-03) -> PASS (tol 1e-2)
+   kR=1.5 l=2: ratios 10/5/2 deg = +0.8986-0.0025i / +0.9384-0.0031i / +0.9705-0.0018i ; linear r0 = +0.99200-0.00097i (|r0-1|=8.06e-03) ; quad r0 = +0.99547-0.00029i (|r0q-1|=4.54e-03) -> PASS (tol 1e-2)
+   kR=1.5 l=3: ratios 10/5/2 deg = +0.9353+0.0054i / +0.9518+0.0013i / +0.9751+0.0002i ; linear r0 = +0.99060-0.00060i (|r0-1|=9.41e-03) ; quad r0 = +0.99620-0.00004i (|r0q-1|=3.80e-03) -> PASS (tol 1e-2)
+   kR=1.5 l=0: POWER ratio Re(zcap)/Re(zsph) hole 10/5/2 = 1.0535 / 1.0245 / 1.0100
+   kR=1.5 l=1: POWER ratio Re(zcap)/Re(zsph) hole 10/5/2 = 0.6956 / 0.8253 / 0.9187
+   kR=1.5 l=2: POWER ratio Re(zcap)/Re(zsph) hole 10/5/2 = 0.8627 / 0.8943 / 0.9447
+   kR=1.5 l=3: POWER ratio Re(zcap)/Re(zsph) hole 10/5/2 = 1.8453 / 1.1695 / 1.0016
+   kR=1.0 l=0: ratios 10/5/2 deg = +1.0782-0.0180i / +1.0353-0.0079i / +1.0143-0.0031i ; linear r0 = +1.00027-0.00000i (|r0-1|=2.68e-04) ; quad r0 = +1.00225-0.00057i (|r0q-1|=2.32e-03) -> PASS (tol 1e-2)
+   kR=1.0 l=1: ratios 10/5/2 deg = +0.8504-0.0124i / +0.9243-0.0074i / +0.9669-0.0034i ; linear r0 = +0.99530-0.00078i (|r0-1|=4.77e-03) ; quad r0 = +0.99459-0.00039i (|r0q-1|=5.42e-03) -> PASS (tol 1e-2)
+   kR=1.0 l=2: ratios 10/5/2 deg = +0.8993+0.0032i / +0.9428+0.0003i / +0.9735-0.0001i ; linear r0 = +0.99391-0.00045i (|r0-1|=6.11e-03) ; quad r0 = +0.99583+0.00008i (|r0q-1|=4.17e-03) -> PASS (tol 1e-2)
+   kR=1.0 l=3: ratios 10/5/2 deg = +0.9286+0.0042i / +0.9520+0.0010i / +0.9761+0.0002i ; linear r0 = +0.99218-0.00038i (|r0-1|=7.82e-03) ; quad r0 = +0.99639+0.00008i (|r0q-1|=3.61e-03) -> PASS (tol 1e-2)
+   kR=1.0 l=0: POWER ratio Re(zcap)/Re(zsph) hole 10/5/2 = 1.1607 / 1.0713 / 1.0287
+   kR=1.0 l=1: POWER ratio Re(zcap)/Re(zsph) hole 10/5/2 = 0.7347 / 0.8557 / 0.9351
+   kR=1.0 l=2: POWER ratio Re(zcap)/Re(zsph) hole 10/5/2 = 1.1595 / 0.9680 / 0.9616
+   kR=1.0 l=3: POWER ratio Re(zcap)/Re(zsph) hole 10/5/2 = 11.2022 / 3.3823 / 1.3946
+
+====================================================================================================
+TEST B: flat-disc limit, rigid disc broadside added mass m_a = (8/3) rho0 a^3  (uniform v=1, m=0)
+  m_a = -Im(Zc)/w ;  Zc = int mu dS = force.  Resistance vs low-ka dipole formula (see below).
+====================================================================================================
+  dipole-formula sanity on closed sphere l=1, kR=0.05: P_exact=1.358180e-03, k^2|F|^2/(24 pi rho c)=1.360220e-03, ratio=0.99850 ; m_a/(0.5 rho V)= 3.00225
+  dipole-formula sanity on closed sphere l=1, kR=0.1: P_exact=2.173038e-02, k^2|F|^2/(24 pi rho c)=2.186127e-02, ratio=0.99401 ; m_a/(0.5 rho V)= 3.00898
+
+  a/R=0.2: theta0=11.5370 deg, a=2.0000, area=12.69461 (pi a^2=12.56637), L=2000/4000, basis 0.5s, rank 24/24
+    ka=0.02 (kR=0.1000): Zc raw L1 = 5.21868e-05-9.11029e+01i ; raw L2 = 5.17571e-05-9.07250e+01i ; Rich = 5.13274e-05-9.03472e+01i
+       m_a/((8/3) rho a^3): raw L1 1.028950  raw L2 1.024682  Richardson 1.020414   Im(Zc)<0: True
+       Re(Zc)/[rho c (16/27pi) k^4 a^6] = 1.02443 ; Re(Zc)/2 vs k^2|Zc|^2/(24 pi rho c) ratio = 0.98386
+    ka=0.05 (kR=0.2500): Zc raw L1 = 2.03996e-03-2.27855e+02i ; raw L2 = 2.02316e-03-2.26909e+02i ; Rich = 2.00636e-03-2.25964e+02i
+       m_a/((8/3) rho a^3): raw L1 1.029389  raw L2 1.025119  Richardson 1.020848   Im(Zc)<0: True
+       Re(Zc)/[rho c (16/27pi) k^4 a^6] = 1.02514 ; Re(Zc)/2 vs k^2|Zc|^2/(24 pi rho c) ratio = 0.98370
+
+  a/R=0.1: theta0=5.7392 deg, a=1.0000, area=3.14949 (pi a^2=3.14159), L=4000/8000, basis 1.8s, rank 24/24
+    ka=0.02 (kR=0.2000): Zc raw L1 = 1.27728e-05-2.23976e+01i ; raw L2 = 1.26657e-05-2.23033e+01i ; Rich = 1.25586e-05-2.22091e+01i
+       m_a/((8/3) rho a^3): raw L1 1.011866  raw L2 1.007608  Richardson 1.003351   Im(Zc)<0: True
+       Re(Zc)/[rho c (16/27pi) k^4 a^6] = 1.00262 ; Re(Zc)/2 vs k^2|Zc|^2/(24 pi rho c) ratio = 0.99593
+    ka=0.05 (kR=0.5000): Zc raw L1 = 4.99278e-04-5.60177e+01i ; raw L2 = 4.95090e-04-5.57819e+01i ; Rich = 4.90902e-04-5.55461e+01i
+       m_a/((8/3) rho a^3): raw L1 1.012294  raw L2 1.008034  Richardson 1.003773   Im(Zc)<0: True
+       Re(Zc)/[rho c (16/27pi) k^4 a^6] = 1.00330 ; Re(Zc)/2 vs k^2|Zc|^2/(24 pi rho c) ratio = 0.99577
+
+  a/R=0.05: theta0=2.8660 deg, a=0.5000, area=0.78589 (pi a^2=0.78540), L=8000/16000, basis 7.0s, rank 24/24
+    ka=0.02 (kR=0.4000): Zc raw L1 = 3.17656e-06-5.57633e+00i ; raw L2 = 3.14983e-06-5.55282e+00i ; Rich = 3.12310e-06-5.52930e+00i
+       m_a/((8/3) rho a^3): raw L1 1.007699  raw L2 1.003448  Richardson 0.999198   Im(Zc)<0: True
+       Re(Zc)/[rho c (16/27pi) k^4 a^6] = 0.99733 ; Re(Zc)/2 vs k^2|Zc|^2/(24 pi rho c) ratio = 0.99893
+    ka=0.05 (kR=1.0000): Zc raw L1 = 1.24168e-04-1.39467e+01i ; raw L2 = 1.23123e-04-1.38879e+01i ; Rich = 1.22078e-04-1.38290e+01i
+       m_a/((8/3) rho a^3): raw L1 1.008124  raw L2 1.003871  Richardson 0.999618   Im(Zc)<0: True
+       Re(Zc)/[rho c (16/27pi) k^4 a^6] = 0.99800 ; Re(Zc)/2 vs k^2|Zc|^2/(24 pi rho c) ratio = 0.99877
+
+  Table B1: m_a / ((8/3) rho0 a^3)  and (a/R)^2 extrapolation (from a/R = 0.1, 0.05)
+   ka=0.02: ratios a/R=0.2/0.1/0.05: 1.02041 / 1.00335 / 0.99920 ; (a/R)^2 extrap = 0.99781 (dev -2.19e-03) ; linear extrap = 0.99505
+   ka=0.05: ratios a/R=0.2/0.1/0.05: 1.02085 / 1.00377 / 0.99962 ; (a/R)^2 extrap = 0.99823 (dev -1.77e-03) ; linear extrap = 0.99546
+   a/R=0.2: ma ratio ka=0.02 -> 1.02041, ka=0.05 -> 1.02085
+   a/R=0.1: ma ratio ka=0.02 -> 1.00335, ka=0.05 -> 1.00377
+   a/R=0.05: ma ratio ka=0.02 -> 0.99920, ka=0.05 -> 0.99962
+
+====================================================================================================
+TEST C: sign / convention sanity (e^{-i w t}: mass-like <=> Im Zc < 0)
+====================================================================================================
+  Test B: Im(Zc) < 0 for all 6 (a/R, ka) cases: True
+  Test B: Re(Zc) > 0 (radiated power positive): True
+  closed sphere kR=1.5: l=0: Im(zsph) > 0, l=1: Im(zsph) < 0, l=2: Im(zsph) < 0, l=3: Im(zsph) < 0
+  cap (hole 2 deg) kR=1.5: l=0: Im(zcap@2deg) > 0, l=1: Im(zcap@2deg) < 0, l=2: Im(zcap@2deg) < 0, l=3: Im(zcap@2deg) < 0
+  closed sphere kR=1.0: l=0: Im(zsph) > 0, l=1: Im(zsph) < 0, l=2: Im(zsph) < 0, l=3: Im(zsph) < 0
+  cap (hole 2 deg) kR=1.0: l=0: Im(zcap@2deg) > 0, l=1: Im(zcap@2deg) < 0, l=2: Im(zcap@2deg) < 0, l=3: Im(zcap@2deg) < 0
+  Note: for the closed sphere, l=0 (breathing) and l>=1 modes at low kR have different reactive character (compressible interior stiffness vs mass-like exterior+interior inertia); signs listed above are those of the exact lam_l.
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+  [PASS] A kR=1.5 l=0 |r0-1|: value +2.585e-04, tol 0.01
+  [PASS] A kR=1.5 l=1 |r0-1|: value +7.826e-03, tol 0.01
+  [PASS] A kR=1.5 l=2 |r0-1|: value +8.057e-03, tol 0.01
+  [PASS] A kR=1.5 l=3 |r0-1|: value +9.415e-03, tol 0.01
+  [PASS] A kR=1.0 l=0 |r0-1|: value +2.679e-04, tol 0.01
+  [PASS] A kR=1.0 l=1 |r0-1|: value +4.767e-03, tol 0.01
+  [PASS] A kR=1.0 l=2 |r0-1|: value +6.108e-03, tol 0.01
+  [PASS] A kR=1.0 l=3 |r0-1|: value +7.824e-03, tol 0.01
+  [PASS] B dipole formula vs sphere kR=0.05 |ratio-1|: value -1.499e-03, tol 0.05
+  [PASS] B dipole formula vs sphere kR=0.1 |ratio-1|: value -5.987e-03, tol 0.05
+  [PASS] B ka=0.02 |ma ratio -1| (a/R)^2 extrap: value -2.186e-03, tol 0.01
+  [PASS] B ka=0.05 |ma ratio -1| (a/R)^2 extrap: value -1.768e-03, tol 0.01
+  [PASS] C Im Zc<0 all disc cases: value +1.000e+00, tol 0.5
+  [PASS] C Re Zc>0 all disc cases: value +1.000e+00, tol 0.5
+  14/14 checks passed. Runtime 14 s.
+wrote C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\results\r0_revision\fsi\verify.csv

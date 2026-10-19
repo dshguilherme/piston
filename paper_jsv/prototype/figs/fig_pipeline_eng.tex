@@ -1,0 +1,41 @@
+% Pipeline (T2, single panel): the one computational chain behind every result of the
+% engineering restructure (manuscript_eng.tex, Section 2). New figure, 2026-10-18; it replaces
+% fig_model_axes.tex in the main text (that file is unchanged). Schematic, no data.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\begin{document}
+\begin{tikzpicture}
+  \tikzset{big/.style={text width=33mm, minimum height=13mm},
+           op/.style={text width=33mm, minimum height=5.2mm, inner sep=1pt}}
+  % ------------------------------------------------ row 1: model -> response -> operator
+  \node[thing, big] (shell) at (1.90,3.20) {shell model\\Kirchhoff--Love, splines\\960 thicknesses $h_e$};
+  \node[action, big] (resp) at (6.75,3.20) {structural response\\solve $\mathbf K_D(h)\,\mathbf q=\mathbf F$\\at 100~Hz};
+  \node[thing, op, fill=black!6] (erp) at (11.60,3.95) {ERP (regime study)};
+  \node[thingsurr, op] (snc) at (11.60,3.20) {sinc matrix $\mathbf S$};
+  \node[thingref, op] (exa) at (11.60,2.45) {exact two-sided $\mathbf F_x$};
+  \node[paneltitle, anchor=base east] at (13.30,4.55) {radiation operator, $P=\omega^2\|\mathbf F\mathbf q\|^2$};
+  % ------------------------------------------------ row 2: objective -> optimizer -> evaluation
+  \node[thing, big] (obj) at (11.60,0.00) {objective\\nominal: $10\log_{10}P$\\robust: $10\log_{10}\mathrm{E}_{\xi}[P]$};
+  \node[action, big] (opt) at (6.75,0.00) {optimizer\\GCMMA, adjoint gradient\\volume constraint};
+  \node[action, big, draw=figref, line width=0.9pt] (ev) at (1.90,0.00) {evaluation\\exact power of the end\\designs; pass rule\\$\Delta L_g\le-T$; fluid $\mathbf Z$};
+  % ------------------------------------------------ arrows
+  \draw[axisline] (shell.east) -- (resp.east -| resp.west) node[note, midway, above] {$h$};
+  \draw[axisline] (resp.east) -- (snc.west) node[note, midway, above] {$\mathbf q$};
+  \draw[axisline] (exa.south) -- (obj.north) node[note, midway, right] {one operator drives};
+  \draw[axisline] (obj.west) -- (opt.east) node[note, midway, above] {$J$, $\nabla J$};
+  \draw[axisline] (opt.north) -- (resp.south) node[note, midway, right] {new $h$};
+  \draw[axisline] (opt.west) -- (ev.east) node[note, midway, above] {end designs};
+  % ------------------------------------------------ key
+  \begin{scope}[shift={(0.25,-1.35)}]
+    \node[thing, text width=5mm, minimum height=3.2mm, inner sep=0pt] at (0.25,0) {};
+    \node[note, anchor=mid west] at (0.62,0) {model or data};
+    \node[action, text width=5mm, minimum height=3.2mm, inner sep=0pt, rounded corners=1.4mm] at (3.05,0) {};
+    \node[note, anchor=mid west] at (3.42,0) {process};
+    \draw[surrcurve] (5.00,0) -- (5.70,0);
+    \node[note, anchor=mid west] at (5.77,0) {piston (sinc) model under test};
+    \draw[refcurve] (9.30,0) -- (10.00,0);
+    \node[note, anchor=mid west] at (10.07,0) {exact reference};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

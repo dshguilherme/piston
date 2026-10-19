@@ -1,0 +1,15 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== new c30_k3_XX_N8_s1_mean (theta0 30, kR 3.0000): start C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\results\r0_revision\pilot\run_c30_k3_XU.mat, N 8, sigma 0.01, mode mean, cstart 2.610122e+06, target 200 ==
+  [X c30_k3 N8 s0.01] it     1: Jrob=2.27821e-13 (std 1.52e-13) f0=+100.0000  nominal exact  -84.526 dB  sinc  -23.902 dB  robust  -64.167 dB  vol=0.4990 chg=4.01e-05 inner=7 4.8s
+  [X c30_k3 N8 s0.01] it    25: Jrob=1.66050e-13 (std 7.36e-14) f0= +96.3607  nominal exact  -69.935 dB  sinc  -23.977 dB  robust  -65.540 dB  vol=0.4990 chg=6.79e-05 inner=5 3.8s
+  [X c30_k3 N8 s0.01] it    50: Jrob=1.56549e-13 (std 6.57e-14) f0= +95.6827  nominal exact  -70.205 dB  sinc  -24.000 dB  robust  -65.796 dB  vol=0.4993 chg=1.49e-04 inner=5 3.7s
+  [X c30_k3 N8 s0.01] it    75: Jrob=1.47477e-13 (std 5.72e-14) f0= +94.9959  nominal exact  -70.119 dB  sinc  -24.038 dB  robust  -66.055 dB  vol=0.4996 chg=1.07e-04 inner=5 3.5s
+  [X c30_k3 N8 s0.01] it   100: Jrob=1.36541e-13 (std 4.78e-14) f0= +94.1093  nominal exact  -70.161 dB  sinc  -24.083 dB  robust  -66.390 dB  vol=0.5000 chg=4.73e-04 inner=4 3.1s
+  [X c30_k3 N8 s0.01] it   125: Jrob=1.30394e-13 (std 4.37e-14) f0= +93.5792  nominal exact  -70.371 dB  sinc  -24.087 dB  robust  -66.590 dB  vol=0.5000 chg=1.39e-04 inner=4 3.1s
+  [X c30_k3 N8 s0.01] it   150: Jrob=1.24513e-13 (std 4.14e-14) f0= +93.0482  nominal exact  -70.180 dB  sinc  -24.096 dB  robust  -66.790 dB  vol=0.5000 chg=1.69e-04 inner=5 3.6s
+  [X c30_k3 N8 s0.01] it   175: Jrob=1.19590e-13 (std 3.92e-14) f0= +92.5840  nominal exact  -70.006 dB  sinc  -24.103 dB  robust  -66.966 dB  vol=0.5000 chg=1.15e-04 inner=5 3.7s
+  [X c30_k3 N8 s0.01] it   200: Jrob=1.15738e-13 (std 3.59e-14) f0= +92.2073  nominal exact  -70.629 dB  sinc  -24.105 dB  robust  -67.108 dB  vol=0.5000 chg=2.22e-04 inner=4 3.1s
+R0_ROBUST_c30_k3_XX_N8_s1_mean_DONE it=200 status=budget walltime=713s warn=0

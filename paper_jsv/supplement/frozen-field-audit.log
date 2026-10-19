@@ -1,0 +1,79 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+Builder: C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\tests\obstacle_build_ctx.m
+Legacy radiation builder: C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\src\articleB_r0_build.m
+cylpanel uniform q=4 angular=24: legacy=5.950109372e-09 joint=5.950126964e-09 pair=5.942474970e-09 consistent=5.959581102e-09
+cylpanel legacy_long_horizon q=4 angular=24: legacy=4.397151243e-15 joint=4.397321132e-15 pair=4.383843365e-15 consistent=4.413688826e-15
+cylpanel uniform q=4 angular=40: legacy=5.950109372e-09 joint=5.950126964e-09 pair=5.942474970e-09 consistent=5.959581102e-09
+cylpanel legacy_long_horizon q=4 angular=40: legacy=4.397151243e-15 joint=4.397321132e-15 pair=4.383843365e-15 consistent=4.413688826e-15
+cylpanel uniform q=4 angular=64: legacy=5.950109372e-09 joint=5.950126964e-09 pair=5.942474970e-09 consistent=5.959581102e-09
+cylpanel legacy_long_horizon q=4 angular=64: legacy=4.397151243e-15 joint=4.397321132e-15 pair=4.383843365e-15 consistent=4.413688826e-15
+cylpanel uniform q=6 angular=24: legacy=5.950109372e-09 joint=5.950126964e-09 pair=5.942474970e-09 consistent=5.959581102e-09
+cylpanel legacy_long_horizon q=6 angular=24: legacy=4.397151243e-15 joint=4.397321132e-15 pair=4.383843365e-15 consistent=4.413688826e-15
+cylpanel uniform q=6 angular=40: legacy=5.950109372e-09 joint=5.950126964e-09 pair=5.942474970e-09 consistent=5.959581102e-09
+cylpanel legacy_long_horizon q=6 angular=40: legacy=4.397151243e-15 joint=4.397321132e-15 pair=4.383843365e-15 consistent=4.413688826e-15
+cylpanel uniform q=6 angular=64: legacy=5.950109372e-09 joint=5.950126964e-09 pair=5.942474970e-09 consistent=5.959581102e-09
+cylpanel legacy_long_horizon q=6 angular=64: legacy=4.397151243e-15 joint=4.397321132e-15 pair=4.383843365e-15 consistent=4.413688826e-15
+cylpanel uniform q=8 angular=24: legacy=5.950109372e-09 joint=5.950126964e-09 pair=5.942474970e-09 consistent=5.959581102e-09
+cylpanel legacy_long_horizon q=8 angular=24: legacy=4.397151243e-15 joint=4.397321132e-15 pair=4.383843365e-15 consistent=4.413688826e-15
+cylpanel uniform q=8 angular=40: legacy=5.950109372e-09 joint=5.950126964e-09 pair=5.942474970e-09 consistent=5.959581102e-09
+cylpanel legacy_long_horizon q=8 angular=40: legacy=4.397151243e-15 joint=4.397321132e-15 pair=4.383843365e-15 consistent=4.413688826e-15
+cylpanel uniform q=8 angular=64: legacy=5.950109372e-09 joint=5.950126964e-09 pair=5.942474970e-09 consistent=5.959581102e-09
+cylpanel legacy_long_horizon q=8 angular=64: legacy=4.397151243e-15 joint=4.397321132e-15 pair=4.383843365e-15 consistent=4.413688826e-15
+spherecap uniform q=4 angular=24: legacy=3.705379427e-07 joint=3.706560249e-07 pair=3.750045087e-07 consistent=3.779177687e-07
+spherecap dyncomp q=4 angular=24: legacy=1.376739887e-08 joint=1.376959092e-08 pair=1.370470740e-08 consistent=1.376857286e-08
+spherecap inputpower q=4 angular=24: legacy=1.490414043e-08 joint=1.490508464e-08 pair=1.487913753e-08 consistent=1.496078594e-08
+spherecap quadvel-rad q=4 angular=24: legacy=7.090714947e-09 joint=7.092258737e-09 pair=7.142398805e-09 consistent=7.185041749e-09
+spherecap quadvel-I q=4 angular=24: legacy=9.583568499e-09 joint=9.585401302e-09 pair=9.572012351e-09 consistent=9.645324069e-09
+spherecap quadvel-ones q=4 angular=24: legacy=2.871842548e-08 joint=2.873184559e-08 pair=2.862607567e-08 consistent=2.879960495e-08
+spherecap uniform q=4 angular=40: legacy=3.705379427e-07 joint=3.706560249e-07 pair=3.750045087e-07 consistent=3.779177687e-07
+spherecap dyncomp q=4 angular=40: legacy=1.376739887e-08 joint=1.376959092e-08 pair=1.370470740e-08 consistent=1.376857286e-08
+spherecap inputpower q=4 angular=40: legacy=1.490414043e-08 joint=1.490508464e-08 pair=1.487913753e-08 consistent=1.496078594e-08
+spherecap quadvel-rad q=4 angular=40: legacy=7.090714947e-09 joint=7.092258737e-09 pair=7.142398805e-09 consistent=7.185041749e-09
+spherecap quadvel-I q=4 angular=40: legacy=9.583568499e-09 joint=9.585401302e-09 pair=9.572012351e-09 consistent=9.645324069e-09
+spherecap quadvel-ones q=4 angular=40: legacy=2.871842548e-08 joint=2.873184559e-08 pair=2.862607567e-08 consistent=2.879960495e-08
+spherecap uniform q=4 angular=64: legacy=3.705379427e-07 joint=3.706560249e-07 pair=3.750045087e-07 consistent=3.779177687e-07
+spherecap dyncomp q=4 angular=64: legacy=1.376739887e-08 joint=1.376959092e-08 pair=1.370470740e-08 consistent=1.376857286e-08
+spherecap inputpower q=4 angular=64: legacy=1.490414043e-08 joint=1.490508464e-08 pair=1.487913753e-08 consistent=1.496078594e-08
+spherecap quadvel-rad q=4 angular=64: legacy=7.090714947e-09 joint=7.092258737e-09 pair=7.142398805e-09 consistent=7.185041749e-09
+spherecap quadvel-I q=4 angular=64: legacy=9.583568499e-09 joint=9.585401302e-09 pair=9.572012351e-09 consistent=9.645324069e-09
+spherecap quadvel-ones q=4 angular=64: legacy=2.871842548e-08 joint=2.873184559e-08 pair=2.862607567e-08 consistent=2.879960495e-08
+spherecap uniform q=6 angular=24: legacy=3.705379427e-07 joint=3.706560249e-07 pair=3.750045087e-07 consistent=3.779177687e-07
+spherecap dyncomp q=6 angular=24: legacy=1.376739887e-08 joint=1.376959092e-08 pair=1.370470740e-08 consistent=1.376857286e-08
+spherecap inputpower q=6 angular=24: legacy=1.490414043e-08 joint=1.490508464e-08 pair=1.487913753e-08 consistent=1.496078595e-08
+spherecap quadvel-rad q=6 angular=24: legacy=7.090714947e-09 joint=7.092258737e-09 pair=7.142398807e-09 consistent=7.185041815e-09
+spherecap quadvel-I q=6 angular=24: legacy=9.583568499e-09 joint=9.585401302e-09 pair=9.572012352e-09 consistent=9.645324129e-09
+spherecap quadvel-ones q=6 angular=24: legacy=2.871842548e-08 joint=2.873184559e-08 pair=2.862607567e-08 consistent=2.879960495e-08
+spherecap uniform q=6 angular=40: legacy=3.705379427e-07 joint=3.706560249e-07 pair=3.750045087e-07 consistent=3.779177687e-07
+spherecap dyncomp q=6 angular=40: legacy=1.376739887e-08 joint=1.376959092e-08 pair=1.370470740e-08 consistent=1.376857286e-08
+spherecap inputpower q=6 angular=40: legacy=1.490414043e-08 joint=1.490508464e-08 pair=1.487913753e-08 consistent=1.496078595e-08
+spherecap quadvel-rad q=6 angular=40: legacy=7.090714947e-09 joint=7.092258737e-09 pair=7.142398807e-09 consistent=7.185041815e-09
+spherecap quadvel-I q=6 angular=40: legacy=9.583568499e-09 joint=9.585401302e-09 pair=9.572012352e-09 consistent=9.645324129e-09
+spherecap quadvel-ones q=6 angular=40: legacy=2.871842548e-08 joint=2.873184559e-08 pair=2.862607567e-08 consistent=2.879960495e-08
+spherecap uniform q=6 angular=64: legacy=3.705379427e-07 joint=3.706560249e-07 pair=3.750045087e-07 consistent=3.779177687e-07
+spherecap dyncomp q=6 angular=64: legacy=1.376739887e-08 joint=1.376959092e-08 pair=1.370470740e-08 consistent=1.376857286e-08
+spherecap inputpower q=6 angular=64: legacy=1.490414043e-08 joint=1.490508464e-08 pair=1.487913753e-08 consistent=1.496078595e-08
+spherecap quadvel-rad q=6 angular=64: legacy=7.090714947e-09 joint=7.092258737e-09 pair=7.142398807e-09 consistent=7.185041815e-09
+spherecap quadvel-I q=6 angular=64: legacy=9.583568499e-09 joint=9.585401302e-09 pair=9.572012352e-09 consistent=9.645324129e-09
+spherecap quadvel-ones q=6 angular=64: legacy=2.871842548e-08 joint=2.873184559e-08 pair=2.862607567e-08 consistent=2.879960495e-08
+spherecap uniform q=8 angular=24: legacy=3.705379427e-07 joint=3.706560249e-07 pair=3.750045087e-07 consistent=3.779177687e-07
+spherecap dyncomp q=8 angular=24: legacy=1.376739887e-08 joint=1.376959092e-08 pair=1.370470740e-08 consistent=1.376857286e-08
+spherecap inputpower q=8 angular=24: legacy=1.490414043e-08 joint=1.490508464e-08 pair=1.487913753e-08 consistent=1.496078595e-08
+spherecap quadvel-rad q=8 angular=24: legacy=7.090714947e-09 joint=7.092258737e-09 pair=7.142398807e-09 consistent=7.185041815e-09
+spherecap quadvel-I q=8 angular=24: legacy=9.583568499e-09 joint=9.585401302e-09 pair=9.572012352e-09 consistent=9.645324129e-09
+spherecap quadvel-ones q=8 angular=24: legacy=2.871842548e-08 joint=2.873184559e-08 pair=2.862607567e-08 consistent=2.879960495e-08
+spherecap uniform q=8 angular=40: legacy=3.705379427e-07 joint=3.706560249e-07 pair=3.750045087e-07 consistent=3.779177687e-07
+spherecap dyncomp q=8 angular=40: legacy=1.376739887e-08 joint=1.376959092e-08 pair=1.370470740e-08 consistent=1.376857286e-08
+spherecap inputpower q=8 angular=40: legacy=1.490414043e-08 joint=1.490508464e-08 pair=1.487913753e-08 consistent=1.496078595e-08
+spherecap quadvel-rad q=8 angular=40: legacy=7.090714947e-09 joint=7.092258737e-09 pair=7.142398807e-09 consistent=7.185041815e-09
+spherecap quadvel-I q=8 angular=40: legacy=9.583568499e-09 joint=9.585401302e-09 pair=9.572012352e-09 consistent=9.645324129e-09
+spherecap quadvel-ones q=8 angular=40: legacy=2.871842548e-08 joint=2.873184559e-08 pair=2.862607567e-08 consistent=2.879960495e-08
+spherecap uniform q=8 angular=64: legacy=3.705379427e-07 joint=3.706560249e-07 pair=3.750045087e-07 consistent=3.779177687e-07
+spherecap dyncomp q=8 angular=64: legacy=1.376739887e-08 joint=1.376959092e-08 pair=1.370470740e-08 consistent=1.376857286e-08
+spherecap inputpower q=8 angular=64: legacy=1.490414043e-08 joint=1.490508464e-08 pair=1.487913753e-08 consistent=1.496078595e-08
+spherecap quadvel-rad q=8 angular=64: legacy=7.090714947e-09 joint=7.092258737e-09 pair=7.142398807e-09 consistent=7.185041815e-09
+spherecap quadvel-I q=8 angular=64: legacy=9.583568499e-09 joint=9.585401302e-09 pair=9.572012352e-09 consistent=9.645324129e-09
+spherecap quadvel-ones q=8 angular=64: legacy=2.871842548e-08 joint=2.873184559e-08 pair=2.862607567e-08 consistent=2.879960495e-08
+R0_FROZEN_FIELD_AUDIT_DONE

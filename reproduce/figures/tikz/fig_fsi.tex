@@ -1,0 +1,140 @@
+﻿% F18: does the deep cancellation of the exact-operator optima survive fluid loading?
+% (a) power change of the best exact design and of the sinc design from uniform, three readings
+% of the fluid loading; (b) exact-power gap s of the sinc design, same readings.
+% Data: data/f18_fsi.dat; re-optimized points hard-coded below. Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+
+\pgfplotstableread{data/f18_fsi.dat}\fsitab
+
+\pgfplotsset{
+  axbase/.style={
+    scale only axis, anchor=south west, clip=false,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    label style={lab},
+    major tick length=1.2mm, tick align=outside,
+    width=49mm, height=38mm,
+    xmin=0.4, xmax=7.6, xtick=\empty, xticklabels={},
+    axis x line*=bottom, axis y line*=left,
+  },
+  pwax/.style={
+    axbase,
+    ymin=-90, ymax=0, ytick={-80,-60,-40,-20,0},
+    yticklabels={$-$80,$-$60,$-$40,$-$20,0},
+    ylabel={$\Delta L$ vs uniform (dB)},
+  },
+  gapax/.style={
+    axbase,
+    ymin=0, ymax=55, ytick={0,10,20,30,40,50},
+    ylabel={exact-power gap $s$ (dB)},
+  },
+  % marker shapes (same three for both designs); sizes differ so coincident readings stay visible
+  mvacr/.style={only marks, mark=*, mark size=1.7pt, mark options={solid, fill=figref}},
+  mvacs/.style={only marks, mark=*, mark size=1.7pt, mark options={solid, fill=figsurr}},
+  mdev/.style={only marks, mark=o, mark size=2.2pt, mark options={solid}},
+  mphy/.style={only marks, mark=x, mark size=2.3pt, mark options={solid}},
+  mre/.style={refcurve, only marks, mark=diamond, mark size=2.4pt, mark options={solid}},
+}
+
+% two-line tick rows, brackets and paper-case tag under an axis whose left edge is at #1 (mm)
+\def\tickrows#1{%
+  \foreach \i in {0,...,6}{
+    \pgfplotstablegetelem{\i}{idx}\of\fsitab \xdef\ix{\pgfplotsretval}
+    \pgfplotstablegetelem{\i}{theta}\of\fsitab \xdef\th{\pgfplotsretval}
+    \pgfplotstablegetelem{\i}{kR}\of\fsitab \xdef\kr{\pgfplotsretval}
+    \pgfmathsetmacro{\xx}{#1+(\ix-0.4)*49/7.2}
+    \node[note, anchor=north] at (\xx mm,10.4mm) {\pgfmathprintnumber[fixed,precision=0,assume math mode]{\th}$^\circ$};
+    \node[note, anchor=north] at (\xx mm,7.1mm) {\pgfmathprintnumber[fixed,precision=1,zerofill,assume math mode]{\kr}};
+    \draw[witness] (\xx mm,14mm) -- (\xx mm,12.8mm);
+  }
+  \node[note, anchor=east] at (#1 mm-1mm,9.2mm) {$\theta_0$};
+  \node[note, anchor=east] at (#1 mm-1mm,5.9mm) {$kR$};
+  \pgfmathsetmacro{\xA}{#1+(0.7-0.4)*49/7.2}\pgfmathsetmacro{\xB}{#1+(4.3-0.4)*49/7.2}
+  \pgfmathsetmacro{\xC}{#1+(4.7-0.4)*49/7.2}\pgfmathsetmacro{\xD}{#1+(6.4-0.4)*49/7.2}
+  \pgfmathsetmacro{\xAB}{(\xA+\xB)/2}\pgfmathsetmacro{\xCD}{(\xC+\xD)/2}
+  \draw[witness] (\xA mm,4.4mm) -- (\xA mm,3.4mm) -- (\xB mm,3.4mm) -- (\xB mm,4.4mm);
+  \node[note, anchor=north] at (\xAB mm,3.0mm) {$kR\le3$};
+  \draw[witness] (\xC mm,4.4mm) -- (\xC mm,3.4mm) -- (\xD mm,3.4mm) -- (\xD mm,4.4mm);
+  \node[note, anchor=north] at (\xCD mm,3.0mm) {$kR\ge7$};
+  \pgfmathsetmacro{\xP}{#1+(7-0.4)*49/7.2}
+  \node[note, anchor=north] at (\xP mm,3.0mm) {paper\\case};
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% ================================================================ panel (a)
+\begin{axis}[pwax, at={(12mm,14mm)}]
+  % exact designs: connector from in vacuo to physical density, then the three markers
+  \addplot[refcurve, mark=none, draw=none, error bars/.cd, y dir=both, y explicit,
+      error bar style={refcurve}, error mark=none]
+    table[x expr=\thisrow{idx}-0.2, y=exvac,
+      y error plus expr={max(\thisrow{exvac},\thisrow{exphys})-\thisrow{exvac}},
+      y error minus expr={\thisrow{exvac}-min(\thisrow{exvac},\thisrow{exphys})}]{data/f18_fsi.dat};
+  \addplot[refcurve, mvacr] table[x expr=\thisrow{idx}-0.2, y=exvac]{data/f18_fsi.dat};
+  \addplot[refcurve, mdev] table[x expr=\thisrow{idx}-0.2, y=exdev]{data/f18_fsi.dat};
+  \addplot[refcurve, mphy] table[x expr=\thisrow{idx}-0.2, y=exphys]{data/f18_fsi.dat};
+  % sinc designs from uniform
+  \addplot[surrcurve, mark=none, draw=none, error bars/.cd, y dir=both, y explicit,
+      error bar style={surrcurve}, error mark=none]
+    table[x expr=\thisrow{idx}+0.2, y=sinvac,
+      y error plus expr={max(\thisrow{sinvac},\thisrow{sinphys})-\thisrow{sinvac}},
+      y error minus expr={\thisrow{sinvac}-min(\thisrow{sinvac},\thisrow{sinphys})}]{data/f18_fsi.dat};
+  \addplot[surrcurve, mvacs] table[x expr=\thisrow{idx}+0.2, y=sinvac]{data/f18_fsi.dat};
+  \addplot[surrcurve, mdev] table[x expr=\thisrow{idx}+0.2, y=sindev]{data/f18_fsi.dat};
+  \addplot[surrcurve, mphy] table[x expr=\thisrow{idx}+0.2, y=sinphys]{data/f18_fsi.dat};
+  % exact design re-optimized with fluid loading in the loop, cell 4 (30 deg, kR 3)
+  % source: results\r0_revision\fsi\reopt_eval_c30_k3.csv  (-84.5 dB pilot medium, -83.9 dB physical density)
+  \addplot[mre] coordinates {(4.05,-84.5) (4.35,-83.9)};
+  \node[note, anchor=west, align=left] (renote) at (axis cs:4.95,-76) {re-optimized\\with fluid\\loading};
+  \draw[leader] (axis cs:4.5,-82.2) -- (axis cs:4.9,-79.4);
+\end{axis}
+\tickrows{12}
+
+% ================================================================ panel (b)
+\begin{axis}[gapax, at={(76mm,14mm)}]
+  \draw[reference] (axis cs:0.4,10) -- (axis cs:7.6,10);
+  \node[note, anchor=west] at ([xshift=0.2mm]axis cs:7.6,10) {10 dB};
+  \addplot[surrcurve, mvacs] table[x expr=\thisrow{idx}-0.2, y=svac]{data/f18_fsi.dat};
+  \addplot[surrcurve, mdev] table[x expr=\thisrow{idx}, y=sdev]{data/f18_fsi.dat};
+  \addplot[surrcurve, mphy] table[x expr=\thisrow{idx}+0.2, y=sphys]{data/f18_fsi.dat};
+  % gap of the sinc design measured against the re-optimized exact design, cell 4
+  % source: results\r0_revision\fsi\reopt_eval_c30_k3.csv  (50.4 dB pilot medium, 50.7 dB physical density)
+  \addplot[mre, draw=figsurr] coordinates {(4.05,50.4) (4.35,50.7)};
+  \node[note, anchor=west, align=left] at (axis cs:4.95,44) {against the\\re-optimized\\exact design};
+  \draw[leader] (axis cs:4.5,49.4) -- (axis cs:4.9,46.2);
+\end{axis}
+\tickrows{76}
+
+\node[paneltag, anchor=north west] at (0mm,59mm) {(a)};
+\node[paneltitle, anchor=north west] at (5mm,59mm) {Power change under fluid loading};
+\node[paneltag, anchor=north west] at (64mm,59mm) {(b)};
+\node[paneltitle, anchor=north west] at (69mm,59mm) {Gap $s$ of the sinc design};
+
+% ================================================================ shared legend
+\def\lgx{12mm}
+\def\lgyA{66.5mm}
+\def\lgyB{63mm}
+\draw[refcurve] (\lgx,\lgyA) -- (\lgx+6mm,\lgyA);
+\node[note, anchor=west] at (\lgx+6.5mm,\lgyA) {exact-optimized};
+\draw[surrcurve] (\lgx+36mm,\lgyA) -- (\lgx+42mm,\lgyA);
+\node[note, anchor=west] at (\lgx+42.5mm,\lgyA) {sinc-optimized from uniform};
+\draw[witness] plot[only marks, mark=*, mark size=1.7pt, mark options={solid,fill=black!60}] coordinates {(\lgx,\lgyB)};
+\node[note, anchor=west] at (\lgx+1.5mm,\lgyB) {in vacuo};
+\draw[witness] plot[only marks, mark=o, mark size=2.2pt, mark options={solid}] coordinates {(\lgx+18mm,\lgyB)};
+\node[note, anchor=west] at (\lgx+19.5mm,\lgyB) {scaled medium};
+\draw[witness] plot[only marks, mark=x, mark size=2.3pt, mark options={solid}] coordinates {(\lgx+41mm,\lgyB)};
+\node[note, anchor=west] at (\lgx+42.5mm,\lgyB) {air density};
+\draw[witness] plot[only marks, mark=diamond, mark size=2.4pt, mark options={solid}] coordinates {(\lgx+60mm,\lgyB)};
+\node[note, anchor=west] at (\lgx+61.5mm,\lgyB) {re-optimized with fluid loading};
+\end{tikzpicture}
+\end{document}
+
+
+
+

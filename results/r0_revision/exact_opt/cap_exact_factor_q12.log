@@ -1,0 +1,51 @@
+nq=12: 138240 points, ndof 3024, theta max 29.993085 deg, w0 = 628.318531, kR = 18.318325
+  m=-20: kept 35 of 48; H eig max 1.185e-08, 17 negative, most negative -1.18e-08 (-1.0e+00 of max) -> clipped
+  m=-19: kept 36 of 48; H eig max 2.042e-08, 17 negative, most negative -2.04e-08 (-1.0e+00 of max) -> clipped
+  m=-18: kept 36 of 48; H eig max 5.497e-09, 18 negative, most negative -5.50e-09 (-1.0e+00 of max) -> clipped
+  m=-17: kept 37 of 48; H eig max 1.478e-08, 18 negative, most negative -1.48e-08 (-1.0e+00 of max) -> clipped
+  m=-16: kept 38 of 48; H eig max 9.738e-09, 18 negative, most negative -5.46e-09 (-5.6e-01 of max) -> clipped
+  m=-15: kept 38 of 48; H eig max 1.130e-07, 18 negative, most negative -6.78e-09 (-6.0e-02 of max) -> clipped
+  m=-14: kept 39 of 48; H eig max 1.142e-06, 18 negative, most negative -7.92e-09 (-6.9e-03 of max) -> clipped
+  m=-13: kept 40 of 48; H eig max 9.950e-06, 19 negative, most negative -8.95e-09 (-9.0e-04 of max) -> clipped
+  m=-12: kept 41 of 48; H eig max 7.413e-05, 19 negative, most negative -8.14e-09 (-1.1e-04 of max) -> clipped
+  m=-11: kept 42 of 48; H eig max 4.693e-04, 19 negative, most negative -3.85e-08 (-8.2e-05 of max) -> clipped
+  m=-10: kept 42 of 48; H eig max 2.528e-03, 19 negative, most negative -1.48e-07 (-5.8e-05 of max) -> clipped
+  m=-9: kept 43 of 48; H eig max 1.184e-02, 20 negative, most negative -4.69e-07 (-4.0e-05 of max) -> clipped
+  m=-8: kept 44 of 48; H eig max 5.127e-02, 21 negative, most negative -1.32e-06 (-2.6e-05 of max) -> clipped
+  m=-7: kept 45 of 48; H eig max 2.353e-01, 20 negative, most negative -3.96e-06 (-1.7e-05 of max) -> clipped
+  m=-6: kept 46 of 48; H eig max 1.124e+00, 20 negative, most negative -1.16e-05 (-1.0e-05 of max) -> clipped
+  m=-5: kept 47 of 48; H eig max 1.601e+00, 21 negative, most negative -8.15e-06 (-5.1e-06 of max) -> clipped
+  m=-4: kept 48 of 48; H eig max 1.152e+00, 21 negative, most negative -4.47e-06 (-3.9e-06 of max) -> clipped
+  m=-3: kept 48 of 48; H eig max 1.476e+00, 22 negative, most negative -1.24e-05 (-8.4e-06 of max) -> clipped
+  m=-2: kept 48 of 48; H eig max 1.438e+00, 22 negative, most negative -5.76e-06 (-4.0e-06 of max) -> clipped
+  m=-1: kept 48 of 48; H eig max 1.219e+00, 22 negative, most negative -8.39e-06 (-6.9e-06 of max) -> clipped
+  m=+0: kept 48 of 48; H eig max 1.566e+00, 21 negative, most negative -6.74e-06 (-4.3e-06 of max) -> clipped
+  m=+1: kept 48 of 48; H eig max 1.219e+00, 22 negative, most negative -8.39e-06 (-6.9e-06 of max) -> clipped
+  m=+2: kept 48 of 48; H eig max 1.438e+00, 22 negative, most negative -5.76e-06 (-4.0e-06 of max) -> clipped
+  m=+3: kept 48 of 48; H eig max 1.476e+00, 22 negative, most negative -1.24e-05 (-8.4e-06 of max) -> clipped
+  m=+4: kept 48 of 48; H eig max 1.152e+00, 21 negative, most negative -4.47e-06 (-3.9e-06 of max) -> clipped
+  m=+5: kept 47 of 48; H eig max 1.601e+00, 21 negative, most negative -8.15e-06 (-5.1e-06 of max) -> clipped
+  m=+6: kept 46 of 48; H eig max 1.124e+00, 20 negative, most negative -1.16e-05 (-1.0e-05 of max) -> clipped
+  m=+7: kept 45 of 48; H eig max 2.353e-01, 20 negative, most negative -3.96e-06 (-1.7e-05 of max) -> clipped
+  m=+8: kept 44 of 48; H eig max 5.127e-02, 21 negative, most negative -1.32e-06 (-2.6e-05 of max) -> clipped
+  m=+9: kept 43 of 48; H eig max 1.184e-02, 20 negative, most negative -4.69e-07 (-4.0e-05 of max) -> clipped
+  m=+10: kept 42 of 48; H eig max 2.528e-03, 19 negative, most negative -1.48e-07 (-5.8e-05 of max) -> clipped
+  m=+11: kept 42 of 48; H eig max 4.693e-04, 19 negative, most negative -3.85e-08 (-8.2e-05 of max) -> clipped
+  m=+12: kept 41 of 48; H eig max 7.413e-05, 19 negative, most negative -8.14e-09 (-1.1e-04 of max) -> clipped
+  m=+13: kept 40 of 48; H eig max 9.950e-06, 19 negative, most negative -8.95e-09 (-9.0e-04 of max) -> clipped
+  m=+14: kept 39 of 48; H eig max 1.142e-06, 18 negative, most negative -7.92e-09 (-6.9e-03 of max) -> clipped
+  m=+15: kept 38 of 48; H eig max 1.130e-07, 18 negative, most negative -6.78e-09 (-6.0e-02 of max) -> clipped
+  m=+16: kept 38 of 48; H eig max 9.738e-09, 18 negative, most negative -5.46e-09 (-5.6e-01 of max) -> clipped
+  m=+17: kept 37 of 48; H eig max 1.478e-08, 18 negative, most negative -1.48e-08 (-1.0e+00 of max) -> clipped
+  m=+18: kept 36 of 48; H eig max 5.497e-09, 18 negative, most negative -5.50e-09 (-1.0e+00 of max) -> clipped
+  m=+19: kept 36 of 48; H eig max 2.042e-08, 17 negative, most negative -2.04e-08 (-1.0e+00 of max) -> clipped
+  m=+20: kept 35 of 48; H eig max 1.185e-08, 17 negative, most negative -1.18e-08 (-1.0e+00 of max) -> clipped
+frozen designs: P_exact(factor) / P2s_extrap(m8 P1 trace, Exp.2) | Richardson rel. corr | P_sinc_spec(factor) / P_sinc_consistent(paper)
+  uniform       Pex 5.946400e-07  /trace 1.000721  (L8000-only rel -1.30e-04)   Psinc 3.779178e-07 /consistent 0.999999   ratio sinc/exact 0.6355
+  dyncomp       Pex 2.617387e-08  /trace 1.000323  (L8000-only rel -1.55e-04)   Psinc 1.376857e-08 /consistent 0.999998   ratio sinc/exact 0.5260
+  inputpower    Pex 2.773982e-08  /trace 1.000394  (L8000-only rel -2.02e-04)   Psinc 1.496079e-08 /consistent 0.999999   ratio sinc/exact 0.5393
+  quadvel-rad   Pex 1.174758e-08  /trace 1.000596  (L8000-only rel +1.69e-04)   Psinc 7.185042e-09 /consistent 1.000000   ratio sinc/exact 0.6116
+  quadvel-I     Pex 1.718280e-08  /trace 1.000506  (L8000-only rel -1.97e-04)   Psinc 9.645324e-09 /consistent 1.000000   ratio sinc/exact 0.5613
+  quadvel-ones  Pex 5.834770e-08  /trace 1.000577  (L8000-only rel -6.75e-04)   Psinc 2.879960e-08 /consistent 1.000000   ratio sinc/exact 0.4936
+Fx (1730, 3024), Fs (4131, 3024); runtime 106 s
+R0_OPT_EXACT_FACTOR_DONE

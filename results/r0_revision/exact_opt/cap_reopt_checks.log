@@ -1,0 +1,28 @@
+1. convergence tails (J under the run's own operator)
+  S0: niter 600, stop nmax, Jbest 7.172718e-09, best-so-far decrease over last 50 its 6.69e-06 (0.0000 dB), last 100 its 3.90e-05 (0.0002 dB)
+  X0: niter 600, stop nmax, Jbest 1.303138e-09, best-so-far decrease over last 50 its 1.24e-02 (0.0534 dB), last 100 its 3.46e-02 (0.1477 dB)
+  XS: niter 600, stop nmax, Jbest 9.775943e-09, best-so-far decrease over last 50 its 4.46e-03 (0.0193 dB), last 100 its 1.06e-02 (0.0457 dB)
+  SX: niter 600, stop nmax, Jbest 1.019532e-09, best-so-far decrease over last 50 its 4.97e-04 (0.0022 dB), last 100 its 1.19e-03 (0.0052 dB)
+  SR: niter 109, stop converged, Jbest 7.183772e-09, best-so-far decrease over last 50 its 2.63e-07 (0.0000 dB), last 100 its 5.04e-06 (0.0000 dB)
+  XR: niter 600, stop nmax, Jbest 1.074618e-08, best-so-far decrease over last 50 its 3.84e-05 (0.0002 dB), last 100 its 5.94e-05 (0.0003 dB)
+
+2. quadrature check, exact power of optima: q12 factor / q8 factor
+  S0                 q8 1.1615641e-08  q12 1.1615641e-08  rel -9.25e-09
+  X0                 q8 1.3031384e-09  q12 1.3031384e-09  rel -1.31e-08
+  XS                 q8 9.7759434e-09  q12 9.7759432e-09  rel -1.86e-08
+  SX                 q8 1.5398992e-09  q12 1.5398992e-09  rel +2.95e-08
+  SR                 q8 1.1789502e-08  q12 1.1789502e-08  rel -3.62e-09
+  XR                 q8 1.0746178e-08  q12 1.0746178e-08  rel -1.11e-08
+  uniform            q8 5.9463998e-07  q12 5.9463997e-07  rel -8.44e-10
+  paper quadvel-rad  q8 1.1747578e-08  q12 1.1747578e-08  rel -3.66e-09
+
+3. exact radiation efficiency sigma = P_exact / (1/2 rho c w0^2 int |u_n|^2 dS)
+  S0                 P_exact 1.16156e-08  P_ref 3.37156e-08  sigma 3.4452e-01
+  X0                 P_exact 1.30314e-09  P_ref 1.24324e-07  sigma 1.0482e-02
+  XS                 P_exact 9.77594e-09  P_ref 4.36630e-08  sigma 2.2390e-01
+  SX                 P_exact 1.53990e-09  P_ref 1.24155e-07  sigma 1.2403e-02
+  SR                 P_exact 1.17895e-08  P_ref 2.78780e-08  sigma 4.2290e-01
+  XR                 P_exact 1.07462e-08  P_ref 3.97982e-08  sigma 2.7002e-01
+  uniform            P_exact 5.94640e-07  P_ref 8.11427e-07  sigma 7.3283e-01
+  paper quadvel-rad  P_exact 1.17476e-08  P_ref 2.81388e-08  sigma 4.1749e-01
+R0_OPT_CAP_CHECKS_DONE

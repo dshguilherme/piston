@@ -1,0 +1,16 @@
+cell c30_k18: theta0 30, kR 18.3183, c' 343.00 m/s; device rho' = 1.21000 kg/m^3 (s=1); physical-density variant rho = 1.21 kg/m^3, impedance x1.0000 (s=1.0000)
+  Z assembled; ||Herm part|| / ||anti-Herm part|| = 9.158e-01 (e^{+iwt}: Re Z = resistance, Im Z = w * added mass); Im-part eigenvalue range [[-0.00708296  0.31249522]] kg (unit s)
+  uniform in-vacuo state, Python dense vs MATLAB export: rel diff 4.46e-10
+  uniform  vac P 5.9464e-07 (pilot 5.9464e-07)  dev P 5.8059e-07 x0.9764  phys x0.9764  L8000-coupling x0.9764  KEa/KE dev 4.742e-03  cap 1.000000  bal -1.0e-10  Hx/Fx 1.0000
+    modes uniform: f1 vac 79.317 Hz; shift dev median -0.1798% [-0.3806, 0.0029]; phys median -0.1798% [-0.3806, 0.0029]
+  XU       vac P 1.3031e-09 (pilot 1.3031e-09)  dev P 1.2972e-09 x0.9954  phys x0.9954  L8000-coupling x0.9954  KEa/KE dev 3.674e-03  cap 0.999945  bal -8.6e-11  Hx/Fx 1.0000
+    modes XU: f1 vac 61.717 Hz; shift dev median -0.2194% [-0.4706, -0.0013]; phys median -0.2194% [-0.4706, -0.0013]
+  XS       vac P 9.7759e-09 (pilot 9.7759e-09)  dev P 9.6533e-09 x0.9875  phys x0.9875  L8000-coupling x0.9874  KEa/KE dev 4.114e-03  cap 0.999944  bal -2.0e-11  Hx/Fx 1.0000
+    modes XS: f1 vac 57.739 Hz; shift dev median -0.2416% [-0.4397, 0.0003]; phys median -0.2416% [-0.4397, 0.0003]
+  SU       vac P 1.1616e-08 (pilot 1.1616e-08)  dev P 1.1500e-08 x0.9901  phys x0.9901  L8000-coupling x0.9901  KEa/KE dev 3.832e-03  cap 0.999964  bal 1.4e-10  Hx/Fx 1.0000
+    modes SU: f1 vac 58.726 Hz; shift dev median -0.2401% [-0.4287, -0.0052]; phys median -0.2401% [-0.4287, -0.0052]
+  SX       vac P 1.5399e-09 (pilot 1.5399e-09)  dev P 1.5302e-09 x0.9937  phys x0.9937  L8000-coupling x0.9937  KEa/KE dev 3.651e-03  cap 0.999942  bal 6.8e-11  Hx/Fx 1.0000
+  EU       vac P 2.4436e-08 (pilot 2.4436e-08)  dev P 2.4432e-08 x0.9999  phys x0.9999  L8000-coupling x0.9999  KEa/KE dev 1.614e-03  cap 0.999984  bal 4.3e-11  Hx/Fx 1.0000
+  EX       vac P 2.3032e-08 (pilot 2.3032e-08)  dev P 2.2668e-08 x0.9842  phys x0.9842  L8000-coupling x0.9842  KEa/KE dev 2.053e-03  cap 0.999977  bal 2.1e-11  Hx/Fx 1.0000
+  runtime 303 s
+R0_FSI_CHECK_DONE

@@ -1,0 +1,77 @@
+﻿% Identity / mechanism schematic: why the sinc power is twice a monopole-sheet power (a, b),
+% and why an open shell with both faces wet is a different, dipole-layer problem (c).
+% Drawn for the 137 mm width; include at natural size. Schematic, not data.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\begin{document}
+\begin{tikzpicture}
+% ------------------------------------------------------------------ panel (a)
+\begin{scope}[shift={(1.5,0)}]
+  \fill[hatch] (-1.3,-0.22) rectangle (1.3,0);
+  \draw[baffle] (-1.3,0) -- (1.3,0);
+  \draw[piston] (-0.8,0) -- (0.8,0);
+  \node[note, anchor=north] at (0,-0.28) {rigid baffle};
+  \draw[normal] (0,0.10) -- (0,0.60) node[lab, anchor=south] {$\bm n$, $v_n$};
+  \node[note, anchor=south, align=center] at (0,1.20) {fluid: upper half-space};
+  \node[paneltag, anchor=north west] at (-1.5,2.50) {(a)};
+  \node[paneltitle, anchor=north west, align=left] at (-1.05,2.50) {Baffled\\flat patch};
+  \node[anchor=north] at (0,-2.00) {$P_{\rm sinc}$};
+  \node[note, anchor=north, align=center] at (0,-2.50) {exact half-space power};
+\end{scope}
+
+\node at (3.55,0.2) {$=$};
+
+% ------------------------------------------------------------------ panel (b)
+\begin{scope}[shift={(5.8,0)}]
+  \draw[reference, dash pattern=on 5pt off 1.5pt on 1pt off 1.5pt] (-1.5,0) -- (1.5,0);
+  \draw[piston] (-0.8,0.35) -- (0.8,0.35);
+  \draw[structure, dash pattern=on 3pt off 2pt] (-0.8,-0.35) -- (0.8,-0.35);
+  \draw[flow] (0,0.52) -- (0,1.05) node[lab, anchor=west, xshift=2pt, pos=0.55] {$v_n$};
+  \draw[flow] (0,-0.52) -- (0,-1.05) node[lab, anchor=west, xshift=2pt, pos=0.55] {$v_n$};
+  \node[note, anchor=north, align=center] at (0,-1.25) {image coincides with the patch;\\drawn apart for clarity};
+  \node[paneltag, anchor=north west] at (-1.9,2.50) {(b)};
+  \node[paneltitle, anchor=north west, align=left] at (-1.45,2.50) {Patch and image\\in free space};
+  \node[anchor=north] at (0,-2.00) {$P_{\rm sinc}=2P_{\rm mono}$};
+  \node[note, anchor=north, align=center] at (0,-2.50) {Im of the free-space Green\\function: $\sin(kr)/(4\pi r)$};
+\end{scope}
+
+% ------------------------------------------------------------------ panel (c)
+\begin{scope}[shift={(10.5,0)}]
+  \def\R{2.2}
+  \coordinate (O) at (0,-1.7);
+  \draw[structure] ($(O)+(55:\R)$) arc[start angle=55, end angle=125, radius=\R];
+  % dipole-layer signs
+  \foreach \ang in {72,82,98,108} {
+    \node[lab] at ($(O)+(\ang:{\R+0.24})$) {$+$};
+    \node[lab] at ($(O)+(\ang:{\R-0.24})$) {$-$};
+  }
+  % normal on the outer face
+  \draw[normal] ($(O)+(90:{\R+0.10})$) -- ($(O)+(90:{\R+0.65})$)
+       node[lab, anchor=south] {$\bm n$};
+  % faces
+  \draw[leader] ($(O)+(118:{\R+0.06})$) -- (-1.55,0.80);
+  \node[lab, anchor=east, align=right] at (-1.55,0.80) {outer face,\\$p^+$};
+  \draw[leader] ($(O)+(90:{\R-0.06})$) -- (0,-0.45);
+  \node[lab, anchor=north] at (-0.25,-0.45) {inner face, $p^-$};
+  % flow around the free edge
+  \draw[flow] (1.0,-0.25) to[out=0, in=-90] (1.65,0.10) to[out=90, in=10] (1.15,0.50);
+  \node[lab, anchor=west, align=left] at (1.85,0.10) {free edge,\\$\mu=0$};
+  \node[paneltag, anchor=north west] at (-2.45,2.50) {(c)};
+  \node[paneltitle, anchor=north west, align=left] at (-2.0,2.50) {Open shell:\\both faces wet};
+  \node[anchor=north, align=center] at (0,-2.00)
+       {$P_{2s}=\tfrac12\,\mathrm{Re}\!\int_\Gamma \mu\,\overline{v_n}\,dS$,\\
+         $\mu=p^+-p^-$};
+  \node[note, anchor=north, align=center] at (0,-2.90)
+       {same $v_n$ on both faces: a dipole layer,\\not (a) or (b)};
+\end{scope}
+
+\node[note, anchor=south west] at (0,-3.50) {schematic, not to scale};
+\end{tikzpicture}
+\end{document}
+
+
+
+
+
+

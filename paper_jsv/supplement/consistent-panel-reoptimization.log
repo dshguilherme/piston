@@ -1,0 +1,61 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+resolved evaluator: C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\src\articleB_r0_eval.m
+resolved builder: C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\tests\obstacle_build_ctx.m
+design variables 960, FE dofs 3276, acoustic angular factor 2048 x 3276
+  [quadvel    |consistent] it   1: J=5.95958e-09  f0(dB)=+100.0000  Jbest=5.95958e-09  vol=0.5000  chg=2.13e-02  inner=0
+  [quadvel    |consistent] it   5: J=2.91507e-12  f0(dB)=-86.4882  Jbest=2.91507e-12  vol=0.4426  chg=5.51e-04  inner=4
+  [quadvel    |consistent] it  10: J=2.05529e-12  f0(dB)=-95.0378  Jbest=2.05529e-12  vol=0.4426  chg=3.28e-04  inner=4
+  [quadvel    |consistent] it  15: J=1.82187e-12  f0(dB)=-97.9871  Jbest=1.82187e-12  vol=0.4432  chg=2.26e-04  inner=4
+  [quadvel    |consistent] it  20: J=1.76608e-12  f0(dB)=-98.7479  Jbest=1.76608e-12  vol=0.4433  chg=1.30e-03  inner=4
+  [quadvel    |consistent] it  25: J=1.37837e-12  f0(dB)=-104.8117  Jbest=1.37837e-12  vol=0.4429  chg=4.25e-04  inner=4
+  [quadvel    |consistent] it  30: J=1.31102e-12  f0(dB)=-106.0372  Jbest=1.31102e-12  vol=0.4431  chg=1.69e-03  inner=4
+  [quadvel    |consistent] it  35: J=1.25686e-12  f0(dB)=-107.0693  Jbest=1.25686e-12  vol=0.4432  chg=4.97e-04  inner=4
+  [quadvel    |consistent] it  40: J=1.19079e-12  f0(dB)=-108.3904  Jbest=1.19079e-12  vol=0.4434  chg=5.25e-04  inner=4
+  [quadvel    |consistent] it  45: J=1.06317e-12  f0(dB)=-111.1639  Jbest=1.06317e-12  vol=0.4439  chg=1.99e-03  inner=4
+  [quadvel    |consistent] it  50: J=9.73336e-13  f0(dB)=-113.3235  Jbest=9.73336e-13  vol=0.4447  chg=5.39e-04  inner=4
+  [quadvel    |consistent] it  55: J=9.15371e-13  f0(dB)=-114.8257  Jbest=9.15371e-13  vol=0.4454  chg=4.38e-03  inner=3
+  [quadvel    |consistent] it  60: J=8.28412e-13  f0(dB)=-117.2676  Jbest=8.28412e-13  vol=0.4461  chg=5.17e-04  inner=4
+  [quadvel    |consistent] it  65: J=7.73467e-13  f0(dB)=-118.9466  Jbest=7.73467e-13  vol=0.4466  chg=3.21e-03  inner=3
+  [quadvel    |consistent] it  70: J=7.11356e-13  f0(dB)=-120.9945  Jbest=7.11356e-13  vol=0.4473  chg=6.63e-04  inner=4
+  [quadvel    |consistent] it  75: J=6.54084e-13  f0(dB)=-123.0479  Jbest=6.54084e-13  vol=0.4481  chg=5.56e-04  inner=4
+  [quadvel    |consistent] it  80: J=4.53512e-13  f0(dB)=-132.0071  Jbest=4.53512e-13  vol=0.4515  chg=6.47e-04  inner=4
+  [quadvel    |consistent] it  85: J=4.24944e-13  f0(dB)=-133.5989  Jbest=4.24944e-13  vol=0.4519  chg=1.43e-03  inner=4
+  [quadvel    |consistent] it  90: J=3.98830e-13  f0(dB)=-135.1505  Jbest=3.98830e-13  vol=0.4525  chg=5.88e-04  inner=4
+  [quadvel    |consistent] it  95: J=3.56327e-13  f0(dB)=-137.9073  Jbest=3.56327e-13  vol=0.4535  chg=6.26e-04  inner=4
+  [quadvel    |consistent] it 100: J=3.32483e-13  f0(dB)=-139.6017  Jbest=3.32483e-13  vol=0.4540  chg=6.16e-03  inner=3
+  [quadvel    |consistent] it 105: J=3.01411e-13  f0(dB)=-142.0019  Jbest=3.01411e-13  vol=0.4547  chg=1.02e-03  inner=4
+  [quadvel    |consistent] it 110: J=2.85623e-13  f0(dB)=-143.3182  Jbest=2.85623e-13  vol=0.4552  chg=1.85e-03  inner=4
+  [quadvel    |consistent] it 115: J=2.66060e-13  f0(dB)=-145.0539  Jbest=2.66060e-13  vol=0.4556  chg=1.88e-03  inner=4
+  [quadvel    |consistent] it 120: J=2.48319e-13  f0(dB)=-146.7422  Jbest=2.48319e-13  vol=0.4560  chg=1.12e-03  inner=4
+  [quadvel    |consistent] it 125: J=2.28664e-13  f0(dB)=-148.7595  Jbest=2.28664e-13  vol=0.4566  chg=6.96e-04  inner=4
+  [quadvel    |consistent] it 130: J=2.17450e-13  f0(dB)=-149.9897  Jbest=2.17450e-13  vol=0.4571  chg=3.25e-03  inner=4
+  [quadvel    |consistent] it 135: J=2.03822e-13  f0(dB)=-151.5731  Jbest=2.03822e-13  vol=0.4577  chg=6.13e-04  inner=4
+  [quadvel    |consistent] it 140: J=1.71932e-13  f0(dB)=-155.7357  Jbest=1.71932e-13  vol=0.4593  chg=6.94e-04  inner=4
+  [quadvel    |consistent] it 145: J=1.67814e-13  f0(dB)=-156.3288  Jbest=1.67814e-13  vol=0.4595  chg=1.44e-03  inner=3
+  [quadvel    |consistent] it 150: J=1.48921e-13  f0(dB)=-159.2507  Jbest=1.48921e-13  vol=0.4613  chg=9.26e-04  inner=4
+  [quadvel    |consistent] it 155: J=1.38590e-13  f0(dB)=-161.0096  Jbest=1.38590e-13  vol=0.4614  chg=4.27e-04  inner=4
+  [quadvel    |consistent] it 160: J=1.31524e-13  f0(dB)=-162.2899  Jbest=1.31524e-13  vol=0.4617  chg=5.62e-04  inner=4
+  [quadvel    |consistent] it 165: J=1.28480e-13  f0(dB)=-162.8627  Jbest=1.28480e-13  vol=0.4619  chg=7.19e-04  inner=4
+  [quadvel    |consistent] it 170: J=1.25618e-13  f0(dB)=-163.4138  Jbest=1.25618e-13  vol=0.4621  chg=5.30e-04  inner=4
+  [quadvel    |consistent] it 175: J=9.23301e-14  f0(dB)=-170.9458  Jbest=9.23301e-14  vol=0.4654  chg=3.37e-04  inner=4
+  [quadvel    |consistent] it 180: J=8.95131e-14  f0(dB)=-171.7038  Jbest=8.95131e-14  vol=0.4657  chg=4.44e-04  inner=5
+  [quadvel    |consistent] it 185: J=8.74075e-14  f0(dB)=-172.2862  Jbest=8.74075e-14  vol=0.4660  chg=1.96e-04  inner=5
+  [quadvel    |consistent] it 190: J=8.57459e-14  f0(dB)=-172.7557  Jbest=8.57459e-14  vol=0.4662  chg=3.98e-03  inner=3
+  [quadvel    |consistent] it 195: J=8.24926e-14  f0(dB)=-173.7020  Jbest=8.24926e-14  vol=0.4667  chg=3.83e-04  inner=4
+  [quadvel    |consistent] it 200: J=8.12640e-14  f0(dB)=-174.0691  Jbest=8.12640e-14  vol=0.4669  chg=3.35e-03  inner=4
+  [quadvel    |consistent] it 205: J=7.77015e-14  f0(dB)=-175.1658  Jbest=7.77015e-14  vol=0.4675  chg=4.11e-04  inner=4
+  [quadvel    |consistent] it 210: J=7.57256e-14  f0(dB)=-175.7959  Jbest=7.57256e-14  vol=0.4679  chg=1.50e-04  inner=4
+  [quadvel    |consistent] it 215: J=7.09664e-14  f0(dB)=-177.3839  Jbest=7.09664e-14  vol=0.4689  chg=2.17e-04  inner=4
+  [quadvel    |consistent] it 220: J=7.02128e-14  f0(dB)=-177.6451  Jbest=7.02128e-14  vol=0.4691  chg=2.79e-04  inner=4
+  [quadvel    |consistent] it 225: J=6.92274e-14  f0(dB)=-177.9909  Jbest=6.92274e-14  vol=0.4692  chg=1.02e-03  inner=4
+  [quadvel    |consistent] it 230: J=6.78996e-14  f0(dB)=-178.4647  Jbest=6.78996e-14  vol=0.4696  chg=2.27e-04  inner=4
+  [quadvel    |consistent] it 235: J=6.64357e-14  f0(dB)=-178.9979  Jbest=6.64357e-14  vol=0.4699  chg=6.74e-04  inner=4
+  [quadvel    |consistent] it 240: J=6.53568e-14  f0(dB)=-179.3984  Jbest=6.53568e-14  vol=0.4701  chg=1.01e-04  inner=5
+  [quadvel    |consistent] it 245: J=6.24585e-14  f0(dB)=-180.5081  Jbest=6.24585e-14  vol=0.4708  chg=1.28e-04  inner=4
+  [quadvel    |consistent] it 250: J=6.06505e-14  f0(dB)=-181.2267  Jbest=6.06505e-14  vol=0.4713  chg=1.20e-04  inner=4
+Consistent-model reevaluation: old design 4.413688826253e-15 W, new design 6.065051673110e-14 W
+weighted volume old 0.50000000, new 0.47130870; stop=nmax, iter=250
+R0_CONSISTENT_PANEL_REOPT_DONE

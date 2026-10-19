@@ -1,0 +1,27 @@
+T3-LH quadvel-rad warm continuation from t2 V2 endpoint
+stopReason: converged
+iterations: 8210
+walltime_s: 14218.0
+Jbest: 4.3971488613e-15
+J(1): 5.9500859964e-09
+Wrad: 4.3971512428e-15
+o/d: -0.999989
+Jbest every 500 its:
+  it    500  Jbest 4.1144576745e-14
+  it   1000  Jbest 2.6778013480e-14
+  it   1500  Jbest 1.9886615415e-14
+  it   2000  Jbest 1.6034445877e-14
+  it   2500  Jbest 1.3642962183e-14
+  it   3000  Jbest 1.1721709482e-14
+  it   3500  Jbest 1.0292441111e-14
+  it   4000  Jbest 9.3112799164e-15
+  it   4500  Jbest 8.4324420071e-15
+  it   5000  Jbest 7.6575420552e-15
+  it   5500  Jbest 7.0150446425e-15
+  it   6000  Jbest 6.2993987288e-15
+  it   6500  Jbest 5.8041729094e-15
+  it   7000  Jbest 5.3021608531e-15
+  it   7500  Jbest 4.8879378274e-15
+  it   8000  Jbest 4.5217428484e-15
+  it   8210  Jbest 4.3971488613e-15
+slope log10(Jbest) per 1000 its over last 2000 its: -7.213751e-02

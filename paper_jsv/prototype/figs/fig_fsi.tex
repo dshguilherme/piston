@@ -1,0 +1,101 @@
+% F18b (redesign of F18, FIG9-FIX-NOTES.md): does the deep cancellation of the exact optima survive fluid loading?
+% Small multiples, one panel per cell: x = medium (in vacuo, scaled medium, air density), y = Delta L, the exact
+% radiated power relative to the uniform design in the same medium (dB); higher = more power.
+% figref solid: best exact-optimized design; figsurr dashed: sinc-optimized design from the uniform start;
+% hollow figref diamonds: exact design re-optimized with fluid loading (30 deg, kR 3 only).
+% The two lines are dodged by 0.07 of a category (exact left, sinc right) so coincident points stay visible.
+% Data: data/f18b_<cell>.dat, written by tests/r0_fig_fsi_f18b.py from results/r0_revision/fsi/fsi_summary.csv
+% and reopt_eval_c30_k3.csv. Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% panel geometry (mm): left gutter 18, panel 36.5 x 32, gap 4 between columns
+\def\pw{36.5}
+\def\ph{32}
+\def\colA{18}
+\def\colB{58.5}
+\def\colC{99}
+\def\rowB{10}
+\def\rowA{57.5}
+
+\pgfplotsset{
+  fsiax/.style={
+    scale only axis, anchor=south west, clip=false,
+    width=\pw mm, height=\ph mm,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+    xmin=0.5, xmax=3.5, xtick={1,2,3},
+    xticklabels={in\\vacuo, scaled\\medium, air\\density},
+    xticklabel style={align=center},
+    ymin=-97, ymax=0, ytick={-80,-60,-40,-20,0},
+    yticklabels={$-$80,$-$60,$-$40,$-$20,0},
+  },
+  noylab/.style={yticklabels={}},
+  exline/.style={refcurve, mark=*, mark size=1.6pt, mark options={solid, fill=figref}},
+  siline/.style={surrcurve, mark=square*, mark size=1.5pt, mark options={solid, fill=figsurr}},
+  reopt/.style={refcurve, only marks, mark=diamond, mark size=2.6pt, mark options={solid}},
+}
+
+% one panel: #1 x (mm), #2 y (mm), #3 cell file stem, #4 title, #5 extra axis keys
+\newcommand{\fsipanel}[5]{%
+  \begin{axis}[fsiax, at={(#1 mm,#2 mm)}, #5]
+    \draw (axis cs:0.5,-20) -- (axis cs:3.5,-20);
+    \addplot[siline] table[x expr=\thisrow{med}+0.07, y=sinc]{data/f18b_#3.dat};
+    \addplot[exline] table[x expr=\thisrow{med}-0.07, y=exact]{data/f18b_#3.dat};
+  \end{axis}
+  \node[paneltitle, anchor=south west] at (#1 mm,#2 mm+\ph mm+1.6mm) {#4};
+}
+
+% left gutter of one row whose axis starts at height #1 (mm): reading arrow and y label
+\newcommand{\fsigutter}[1]{%
+  \node[note, rotate=90, anchor=west] at (1.8mm,#1 mm) {less power};
+  \node[note, rotate=90, anchor=east] at (1.8mm,#1 mm+\ph mm) {more power};
+  \draw[axisline] (4.4mm,#1 mm+0.5mm) -- (4.4mm,#1 mm+\ph mm);
+  \node[lab, rotate=90, anchor=north] at (6.2mm,#1 mm+0.5*\ph mm) {$\Delta L$ (dB)};
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% ---------------------------------------------------------------- row 1: kR <= 1.5
+\fsipanel{\colA}{\rowA}{c30_k1}{$30^\circ$, $kR=1$}{}
+\fsipanel{\colB}{\rowA}{c90_k1p5}{$90^\circ$, $kR=1.5$}{noylab}
+\fsipanel{\colC}{\rowA}{c120_k1p5}{$120^\circ$, $kR=1.5$}{noylab}
+\fsigutter{\rowA}
+\node[note, anchor=south west] at (\colA mm+0.8mm,\rowA mm+0.79*\ph mm) {20 dB target};
+
+% ---------------------------------------------------------------- row 2: kR 3 and the design point
+\begin{axis}[fsiax, at={(\colA mm,\rowB mm)}]
+  \draw (axis cs:0.5,-20) -- (axis cs:3.5,-20);
+  \addplot[siline] table[x expr=\thisrow{med}+0.07, y=sinc]{data/f18b_c30_k3.dat};
+  \addplot[exline] table[x expr=\thisrow{med}-0.07, y=exact]{data/f18b_c30_k3.dat};
+  \addplot[reopt] table[x expr=\thisrow{med}-0.07, y=reopt]{data/f18b_c30_k3.dat};
+  \node[note, anchor=center] at (axis cs:2.4,-92) {re-optimized with fluid};
+\end{axis}
+\node[paneltitle, anchor=south west] at (\colA mm,\rowB mm+\ph mm+1.6mm) {$30^\circ$, $kR=3$};
+\node[note, anchor=south west] at (\colA mm+0.8mm,\rowB mm+0.79*\ph mm) {20 dB target};
+\fsipanel{\colB}{\rowB}{c30_k18}{$30^\circ$, $kR=18.3$ (design point)}{noylab}
+\fsigutter{\rowB}
+
+% ---------------------------------------------------------------- key, in the free sixth slot
+\def\kx{\colC mm+2mm}
+\def\kt{\colC mm+9.5mm}
+\draw[refcurve] (\kx,39mm) -- ++(6mm,0);
+\draw[refcurve] plot[mark=*, mark size=1.6pt, mark options={solid, fill=figref}] coordinates {($(\kx,39mm)+(3mm,0)$)};
+\node[note, anchor=west] at (\kt,39mm) {exact-optimized};
+\draw[surrcurve] (\kx,32.5mm) -- ++(6mm,0);
+\draw[surrcurve] plot[mark=square*, mark size=1.5pt, mark options={solid, fill=figsurr}] coordinates {($(\kx,32.5mm)+(3mm,0)$)};
+\node[note, anchor=west] at (\kt,32.5mm) {sinc-optimized\\from uniform};
+\draw[refcurve] plot[mark=diamond, mark size=2.6pt, mark options={solid}] coordinates {($(\kx,25.5mm)+(3mm,0)$)};
+\node[note, anchor=west] at (\kt,25.5mm) {exact, re-optimized\\with fluid loading};
+\draw (\kx,18.5mm) -- ++(6mm,0);
+\node[note, anchor=west] at (\kt,18.5mm) {20 dB reduction\\target};
+\node[note, anchor=north west] at (\kx,13mm) {0 dB: same power as\\the uniform design\\in the same medium};
+
+\end{tikzpicture}
+\end{document}

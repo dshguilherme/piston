@@ -1,0 +1,5 @@
+== 2026-10-18T01:12:02 cell c30_k3: theta0 30, kR 3.000000
+  dev: s = 1.000000, ||iwZ||_F = 9.7584e+04, reciprocity before symmetrising 2.60e-16 -> C:\Users\dshgu\AppData\Local\Temp\claude\C--Users-dshgu-OneDrive-Documents-FastFormation-harmonic-shell-course-paper-jsv\90c1eee2-75c1-4619-af46-00827600c50f\scratchpad\z\iwz_c30_k3_dev.mat
+  phys: s = 6.106108, ||iwZ||_F = 5.9586e+05, reciprocity before symmetrising 2.60e-16 -> C:\Users\dshgu\AppData\Local\Temp\claude\C--Users-dshgu-OneDrive-Documents-FastFormation-harmonic-shell-course-paper-jsv\90c1eee2-75c1-4619-af46-00827600c50f\scratchpad\z\iwz_c30_k3_phys.mat
+  runtime 37 s
+R0_ROBUST_ZEXPORT_DONE

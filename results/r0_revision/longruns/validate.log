@@ -1,0 +1,16 @@
+﻿
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+eval: pilot vs long J diff 0.000e+00 (rel 0.00e+00), J(cache hit) diff 0.000e+00, grad max diff 0.000e+00
+eval sinc (cache hit on a second factor): J diff 0.000e+00, grad max diff 0.000e+00
+  [X c30_k3] it     1 (stage 1,    1): Jown=5.94640e-07 f0=+100.0000  exact   +0.000 dB  sinc   +0.000 dB  erp   +0.000 dB  vol=0.5000 chg=1.52e-02 inner=0
+  [X c30_k3] it    25 (stage 1,   25): Jown=1.21091e-11 f0= -24.2932  exact  -46.911 dB  sinc  -21.982 dB  erp  -11.104 dB  vol=0.4999 chg=7.96e-04 inner=3
+core vs pilot run c30_k3 XU, its 1..30: max rel diff 0.000e+00 (it 1 0.0e+00, it 10 0.0e+00, it 30 0.0e+00); 0.96 s/it here vs 1.08 s/it pilot average
+  designs at its 10/20/30: max abs diff 0.000e+00
+  [X c30_k3] it     1 (stage 1,    1): Jown=5.94640e-07 f0=+100.0000  exact   +0.000 dB  sinc   +0.000 dB  erp   +0.000 dB  vol=0.5000 chg=1.52e-02 inner=0
+  [X c30_k3] it    25 (stage 1,   25): Jown=1.21091e-11 f0= -24.2932  exact  -46.911 dB  sinc  -21.982 dB  erp  -11.104 dB  vol=0.4999 chg=7.96e-04 inner=3
+chunked 15+15 (save/load) vs straight 30: max |dJ| 0.000e+00, max |dt| 0.000e+00, isequal(st) 1
+lastwarn with the warning display off: id ""
+R0_LONG_validate_DONE
+

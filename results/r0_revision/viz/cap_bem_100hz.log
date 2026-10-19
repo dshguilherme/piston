@@ -1,0 +1,20 @@
+﻿freq 100.0 k 1.8318324510727657 kR 18.318324510727656 ['uniform', 'dyncomp', 'inputpower', 'quadvel-rad', 'quadvel-I', 'quadvel-ones']
+nv 3841 nt 7632 hmax 0.6540312923078148 lambda/hmax 5.244397386395539
+H assembled 784.9s
+K assembled+applied 81.3s
+regression P_bem vs json rel: [-1.44328993e-15  1.33226763e-15  1.55431223e-15 -3.33066907e-15
+ -1.55431223e-15  1.77635684e-15]
+jump check vertices: 20 polar range 1.1250000000001108 19.125000000000014
+  quadvel-rad delta=0.5h: |jump-mu|/|mu|=9.8075e-02  |jump+mu|/|mu|=1.9494e+00  |avg-x|/|x|=6.6616e-03  LS coef jump/mu=0.9476+0.0053j
+  quadvel-rad delta=0.25h: |jump-mu|/|mu|=4.3017e-02  |jump+mu|/|mu|=1.9982e+00  |avg-x|/|x|=1.9371e-02  LS coef jump/mu=0.9977+0.0025j
+  uniform delta=0.5h: |jump-mu|/|mu|=4.9763e-02  |jump+mu|/|mu|=1.9697e+00  |avg-x|/|x|=2.8256e-03  LS coef jump/mu=0.9693+0.0066j
+  uniform delta=0.25h: |jump-mu|/|mu|=2.1404e-02  |jump+mu|/|mu|=2.0093e+00  |avg-x|/|x|=9.6295e-03  LS coef jump/mu=1.0092+0.0033j
+JUMP SIGN s = 1.0 (+1 means p(+n)-p(-n)=mu as assumed; -1 means plus/minus SWAPPED)
+P_plus+P_minus vs P_bem rel: [ 0.00000000e+00 -1.99840144e-15 -1.77635684e-15  2.22044605e-15
+ -2.22044605e-16 -2.33146835e-15]
+sinc_mesh uniform: 3.72422112e-07
+sinc_mesh dyncomp: 1.36897255e-08
+sinc_mesh inputpower: 1.48546204e-08
+sinc_mesh quadvel-rad: 7.09228109e-09
+sinc_mesh quadvel-I: 9.55538410e-09
+sinc_mesh quadvel-ones: 2.85538449e-08

@@ -1,0 +1,26 @@
+{
+ "geom": "cylpanel",
+ "m": 2,
+ "qbump": 0,
+ "regular": 4,
+ "singular": 4,
+ "nv": 3969,
+ "nt": 7680,
+ "n_dofs": 3713,
+ "h_max": 1.1293584457360781,
+ "assembly_s": 341.8748879432678,
+ "solve_s": 1.9581496715545654,
+ "normal_bad": 0,
+ "results": [
+  {
+   "design": "uniform",
+   "P_bem": 1.3822402848356574e-08,
+   "P_far": 1.3822402848381876e-08
+  },
+  {
+   "design": "legacy_long_horizon",
+   "P_bem": 2.4520290368725357e-13,
+   "P_far": 2.4770750697522044e-13
+  }
+ ]
+}

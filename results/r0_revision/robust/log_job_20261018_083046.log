@@ -1,0 +1,20 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== new c30_k3_SU_N8_s1_mean (theta0 30, kR 3.0000): start uniform, N 8, sigma 0.01, mode mean, cstart 1.002414e+00, target 400 ==
+  [S c30_k3 N8 s0.01] it     1: Jrob=5.93208e-07 (std 1.33e-09) f0=+100.0000  nominal exact   +0.000 dB  sinc   +0.000 dB  robust   -0.010 dB  vol=0.5000 chg=1.60e-02 inner=0 2.3s
+  [S c30_k3 N8 s0.01] it    25: Jrob=6.31141e-10 (std 5.72e-12) f0= +21.2273  nominal exact  -25.088 dB  sinc  -29.750 dB  robust  -29.741 dB  vol=0.4903 chg=3.83e-03 inner=3 4.2s
+  [S c30_k3 N8 s0.01] it    50: Jrob=1.36092e-10 (std 1.90e-12) f0=  +3.5737  nominal exact  -30.255 dB  sinc  -36.458 dB  robust  -36.404 dB  vol=0.5000 chg=4.63e-03 inner=3 19.5s
+  [S c30_k3 N8 s0.01] it    75: Jrob=1.97508e-11 (std 1.50e-12) f0= -18.6360  nominal exact  -34.843 dB  sinc  -45.244 dB  robust  -44.787 dB  vol=0.4999 chg=1.19e-02 inner=2 2.5s
+  [S c30_k3 N8 s0.01] it   100: Jrob=6.47673e-12 (std 1.66e-12) f0= -31.4657  nominal exact  -36.814 dB  sinc  -51.475 dB  robust  -49.629 dB  vol=0.4998 chg=9.62e-04 inner=4 5.1s
+  [S c30_k3 N8 s0.01] it   125: Jrob=4.03857e-12 (std 1.64e-12) f0= -36.9007  nominal exact  -37.743 dB  sinc  -55.360 dB  robust  -51.680 dB  vol=0.4999 chg=4.33e-04 inner=4 23.0s
+  [S c30_k3 N8 s0.01] it   150: Jrob=3.59812e-12 (std 1.59e-12) f0= -38.2295  nominal exact  -38.078 dB  sinc  -56.479 dB  robust  -52.182 dB  vol=0.5000 chg=2.45e-04 inner=4 4.4s
+  [S c30_k3 N8 s0.01] it   175: Jrob=3.43041e-12 (std 1.54e-12) f0= -38.7787  nominal exact  -38.157 dB  sinc  -56.770 dB  robust  -52.389 dB  vol=0.5000 chg=1.32e-04 inner=5 6.3s
+  [S c30_k3 N8 s0.01] it   200: Jrob=3.26315e-12 (std 1.49e-12) f0= -39.3539  nominal exact  -38.168 dB  sinc  -56.975 dB  robust  -52.606 dB  vol=0.5000 chg=5.10e-05 inner=5 6.5s
+  [S c30_k3 N8 s0.01] it   225: Jrob=3.12580e-12 (std 1.38e-12) f0= -39.8487  nominal exact  -38.189 dB  sinc  -57.263 dB  robust  -52.793 dB  vol=0.5000 chg=9.75e-05 inner=5 22.2s
+  [S c30_k3 N8 s0.01] it   250: Jrob=3.02795e-12 (std 1.32e-12) f0= -40.2147  nominal exact  -38.240 dB  sinc  -57.340 dB  robust  -52.931 dB  vol=0.5000 chg=6.44e-05 inner=5 17.3s
+  [S c30_k3 N8 s0.01] it   275: Jrob=2.93141e-12 (std 1.27e-12) f0= -40.5875  nominal exact  -38.277 dB  sinc  -57.503 dB  robust  -53.072 dB  vol=0.5000 chg=7.63e-05 inner=5 53.8s
+  [S c30_k3 N8 s0.01] it   300: Jrob=2.86040e-12 (std 1.20e-12) f0= -40.8697  nominal exact  -38.299 dB  sinc  -57.552 dB  robust  -53.178 dB  vol=0.5000 chg=1.25e-04 inner=5 14.3s
+STOP file seen at it 300
+R0_ROBUST_c30_k3_SU_N8_s1_mean_DONE it=300 status=running walltime=4680s warn=0

@@ -1,0 +1,105 @@
+nv=3841 h_max=0.6540  kR_max(6 el/wl) = 16.0114  freq in file=100.0
+skip kR=0.1 (done)
+skip kR=0.3 (done)
+skip kR=1 (done)
+skip kR=2 (done)
+== kR=4 k=0.400000 f=21.8361 Hz  el/wl=24.017 resolved=True
+   assembled in 414.5s
+   uniform        P+=2.483355e-08 P-=4.076798e-08 sum/P_bem=1.00000000
+   uniform        P_bem=6.560153e-08 P_far=6.559955e-08 far/bem=0.99997 sinc/bem=0.22060
+   dyncomp        P+=4.942141e-10 P-=5.021769e-10 sum/P_bem=1.00000000
+   dyncomp        P_bem=9.963911e-10 P_far=9.963700e-10 far/bem=0.99998 sinc/bem=0.18896
+   inputpower     P+=3.385332e-10 P-=3.141956e-10 sum/P_bem=1.00000000
+   inputpower     P_bem=6.527287e-10 P_far=6.527177e-10 far/bem=0.99998 sinc/bem=0.21020
+   quadvel-rad    P+=3.550615e-10 P-=5.167668e-10 sum/P_bem=1.00000000
+   quadvel-rad    P_bem=8.718282e-10 P_far=8.717920e-10 far/bem=0.99996 sinc/bem=0.24900
+   quadvel-I      P+=2.849411e-10 P-=2.659647e-10 sum/P_bem=1.00000000
+   quadvel-I      P_bem=5.509057e-10 P_far=5.508780e-10 far/bem=0.99995 sinc/bem=0.21233
+   quadvel-ones   P+=3.330173e-09 P-=5.244019e-09 sum/P_bem=1.00000000
+   quadvel-ones   P_bem=8.574192e-09 P_far=8.573702e-09 far/bem=0.99994 sinc/bem=0.23480
+   kR done; elapsed total 815s
+== kR=6 k=0.600000 f=32.7541 Hz  el/wl=16.011 resolved=True
+   assembled in 323.5s
+   uniform        P_bem=7.707473e-08 P_far=7.707311e-08 far/bem=0.99998 sinc/bem=0.48277
+   dyncomp        P_bem=2.228541e-09 P_far=2.228587e-09 far/bem=1.00002 sinc/bem=0.74736
+   inputpower     P_bem=1.654336e-09 P_far=1.654389e-09 far/bem=1.00003 sinc/bem=0.82885
+   quadvel-rad    P_bem=1.541209e-09 P_far=1.541227e-09 far/bem=1.00001 sinc/bem=0.75790
+   quadvel-I      P_bem=1.309230e-09 P_far=1.309250e-09 far/bem=1.00002 sinc/bem=0.86072
+   quadvel-ones   P_bem=1.092610e-08 P_far=1.092546e-08 far/bem=0.99994 sinc/bem=0.49970
+   kR done; elapsed total 1406s
+== kR=8 k=0.800000 f=43.6721 Hz  el/wl=12.009 resolved=True
+   assembled in 275.2s
+   uniform        P_bem=7.888543e-08 P_far=7.888431e-08 far/bem=0.99999 sinc/bem=0.70630
+   dyncomp        P_bem=5.893926e-09 P_far=5.894178e-09 far/bem=1.00004 sinc/bem=0.93070
+   inputpower     P_bem=4.942282e-09 P_far=4.942530e-09 far/bem=1.00005 sinc/bem=0.97887
+   quadvel-rad    P_bem=3.312590e-09 P_far=3.312746e-09 far/bem=1.00005 sinc/bem=1.03384
+   quadvel-I      P_bem=3.609702e-09 P_far=3.609863e-09 far/bem=1.00004 sinc/bem=1.06054
+   quadvel-ones   P_bem=1.285772e-08 P_far=1.285691e-08 far/bem=0.99994 sinc/bem=0.72392
+   kR done; elapsed total 2078s
+== kR=10 k=1.000000 f=54.5901 Hz  el/wl=9.607 resolved=True
+   assembled in 361.0s
+   uniform        P+=6.435553e-08 P-=6.935503e-08 sum/P_bem=1.00000000
+   uniform        P_bem=1.337106e-07 P_far=1.337141e-07 far/bem=1.00003 sinc/bem=0.49226
+   dyncomp        P+=9.396116e-09 P-=1.375110e-08 sum/P_bem=1.00000000
+   dyncomp        P_bem=2.314722e-08 P_far=2.314825e-08 far/bem=1.00004 sinc/bem=0.43308
+   inputpower     P+=8.423401e-09 P-=1.238134e-08 sum/P_bem=1.00000000
+   inputpower     P_bem=2.080474e-08 P_far=2.080571e-08 far/bem=1.00005 sinc/bem=0.43463
+   quadvel-rad    P+=4.264335e-09 P-=7.067379e-09 sum/P_bem=1.00000000
+   quadvel-rad    P_bem=1.133171e-08 P_far=1.133233e-08 far/bem=1.00005 sinc/bem=0.47542
+   quadvel-I      P+=5.522770e-09 P-=8.666422e-09 sum/P_bem=1.00000000
+   quadvel-I      P_bem=1.418919e-08 P_far=1.418982e-08 far/bem=1.00004 sinc/bem=0.46451
+   quadvel-ones   P+=9.194740e-09 P-=1.266521e-08 sum/P_bem=1.00000000
+   quadvel-ones   P_bem=2.185995e-08 P_far=2.185889e-08 far/bem=0.99995 sinc/bem=0.51432
+   kR done; elapsed total 2886s
+== kR=12 k=1.200000 f=65.5082 Hz  el/wl=8.006 resolved=True
+   assembled in 318.3s
+   uniform        P_bem=1.814592e-07 P_far=1.814637e-07 far/bem=1.00003 sinc/bem=0.55871
+   dyncomp        P_bem=2.735551e-08 P_far=2.735634e-08 far/bem=1.00003 sinc/bem=0.45865
+   inputpower     P_bem=2.486091e-08 P_far=2.486165e-08 far/bem=1.00003 sinc/bem=0.45769
+   quadvel-rad    P_bem=1.196594e-08 P_far=1.196618e-08 far/bem=1.00002 sinc/bem=0.46298
+   quadvel-I      P_bem=1.616268e-08 P_far=1.616296e-08 far/bem=1.00002 sinc/bem=0.46097
+   quadvel-ones   P_bem=2.350193e-08 P_far=2.350019e-08 far/bem=0.99993 sinc/bem=0.50886
+   kR done; elapsed total 3718s
+== kR=14 k=1.400000 f=76.4262 Hz  el/wl=6.862 resolved=True
+   assembled in 224.8s
+   uniform        P_bem=2.311396e-07 P_far=2.311388e-07 far/bem=1.00000 sinc/bem=0.69725
+   dyncomp        P_bem=2.453323e-08 P_far=2.453370e-08 far/bem=1.00002 sinc/bem=0.52553
+   inputpower     P_bem=2.259003e-08 P_far=2.259043e-08 far/bem=1.00002 sinc/bem=0.52426
+   quadvel-rad    P_bem=9.302942e-09 P_far=9.302718e-09 far/bem=0.99998 sinc/bem=0.52154
+   quadvel-I      P_bem=1.399112e-08 P_far=1.399111e-08 far/bem=1.00000 sinc/bem=0.51040
+   quadvel-ones   P_bem=2.728249e-08 P_far=2.728124e-08 far/bem=0.99995 sinc/bem=0.53928
+   kR done; elapsed total 4150s
+== kR=16 k=1.600000 f=87.3442 Hz  el/wl=6.004 resolved=True
+   assembled in 198.2s
+   uniform        P+=1.879230e-07 P-=1.921738e-07 sum/P_bem=1.00000000
+   uniform        P_bem=3.800968e-07 P_far=3.800812e-07 far/bem=0.99996 sinc/bem=0.53200
+   dyncomp        P+=1.268021e-08 P-=1.416404e-08 sum/P_bem=1.00000000
+   dyncomp        P_bem=2.684425e-08 P_far=2.684488e-08 far/bem=1.00002 sinc/bem=0.47970
+   inputpower     P+=1.256496e-08 P-=1.353621e-08 sum/P_bem=1.00000000
+   inputpower     P_bem=2.610118e-08 P_far=2.610182e-08 far/bem=1.00002 sinc/bem=0.47518
+   quadvel-rad    P+=4.786203e-09 P-=4.136843e-09 sum/P_bem=1.00000000
+   quadvel-rad    P_bem=8.923046e-09 P_far=8.922649e-09 far/bem=0.99996 sinc/bem=0.53058
+   quadvel-I      P+=7.745625e-09 P-=7.747344e-09 sum/P_bem=1.00000000
+   quadvel-I      P_bem=1.549297e-08 P_far=1.549319e-08 far/bem=1.00001 sinc/bem=0.48093
+   quadvel-ones   P+=2.329655e-08 P-=2.457027e-08 sum/P_bem=1.00000000
+   quadvel-ones   P_bem=4.786682e-08 P_far=4.786870e-08 far/bem=1.00004 sinc/bem=0.43621
+   kR done; elapsed total 4589s
+== kR=18.3183 k=1.831830 f=99.9999 Hz  el/wl=5.244 resolved=False
+   assembled in 201.1s
+   uniform        P_bem=5.886956e-07 P_far=5.887052e-07 far/bem=1.00002 sinc/bem=0.63262
+   dyncomp        P_bem=2.610020e-08 P_far=2.610100e-08 far/bem=1.00003 sinc/bem=0.52451
+   inputpower     P_bem=2.765018e-08 P_far=2.765148e-08 far/bem=1.00005 sinc/bem=0.53723
+   quadvel-rad    P_bem=1.160624e-08 P_far=1.160660e-08 far/bem=1.00003 sinc/bem=0.61107
+   quadvel-I      P_bem=1.709186e-08 P_far=1.709275e-08 far/bem=1.00005 sinc/bem=0.55906
+   quadvel-ones   P_bem=5.841035e-08 P_far=5.841061e-08 far/bem=1.00000 sinc/bem=0.48885
+   kR done; elapsed total 4999s
+== kR=21 k=2.100000 f=114.6393 Hz  el/wl=4.575 resolved=False
+   assembled in 200.8s
+   uniform        P_bem=1.780409e-06 P_far=1.780670e-06 far/bem=1.00015 sinc/bem=0.60075
+   dyncomp        P_bem=2.729970e-08 P_far=2.730079e-08 far/bem=1.00004 sinc/bem=0.53881
+   inputpower     P_bem=3.509372e-08 P_far=3.509656e-08 far/bem=1.00008 sinc/bem=0.55097
+   quadvel-rad    P_bem=2.747388e-08 P_far=2.747794e-08 far/bem=1.00015 sinc/bem=0.59183
+   quadvel-I      P_bem=2.191808e-08 P_far=2.191984e-08 far/bem=1.00008 sinc/bem=0.58548
+   quadvel-ones   P_bem=6.681534e-08 P_far=6.680955e-08 far/bem=0.99991 sinc/bem=0.52000
+   kR done; elapsed total 5413s
+ALL DONE total 5413s

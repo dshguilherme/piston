@@ -1,0 +1,85 @@
+% F27 Long runs (Experiment 8): level re uniform against iteration for the continued runs.
+% (a) design point, exact-driven run X0 continued to the stopping rule; (b) 90 deg cap, kR = 1.5: exact runs
+% from uniform (XU) and from the sinc design (XS), sinc run from uniform (SU, true and predicted level).
+% Higher = more power; 0 dB = uniform design. Every value is the running pick (lowest own objective so far,
+% feasible). Data: data/f27_*.dat and data/f27_numbers.tex from tests/r0_fig_longruns.py. Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\input{data/f27_numbers.tex}
+
+% geometry (mm): two axes, 40 x 40 (a) and 38 x 40 (b)
+\def\ph{40}
+\def\axA{19}
+\def\axB{80}
+
+\pgfplotsset{
+  lrax/.style={
+    height=\ph mm, scale only axis, anchor=south west, clip=false,
+    xmin=1, xmax=5000,
+    xtick={1,10,100,600,3000}, xticklabels={1,10,100,600,3000},
+    xminorticks=false,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+  },
+}
+\tikzset{
+  predcurve/.style={witness, draw=figsurr, dash pattern=on 1pt off 1pt},
+  othercurve/.style={refcurve, draw=black!55},
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% ================================================================ panel (a)
+\begin{axis}[lrax, xmode=log, width=40mm, at={(\axA mm,0mm)},
+    ymin=-35, ymax=0, ytick={0,-10,-20,-30}, yticklabels={0,$-$10,$-$20,$-$30}]
+  \draw[reference] (axis cs:600,-35) -- (axis cs:600,0);
+  \draw (axis cs:1,-20) -- (axis cs:5000,-20);
+  \addplot[refcurve] table[x=it,y=dLx]{data/f27_a_X0.dat};
+  \addplot[refcurve, only marks, mark=*, mark size=1.3pt] coordinates {(600,\lrXzSix)};
+  \addplot[refcurve, only marks, mark=*, mark size=1.3pt] coordinates {(\lrXzEndIt,\lrXzEnd)};
+  \node[note, anchor=south west, inner sep=0.5pt] at (axis cs:1.15,-20) {$-20$ dB target};
+  \node[note, anchor=south, align=center] at (axis cs:600,0.3) {earlier limit};
+  \node[note, anchor=north east, align=right] at (axis cs:560,-27.4) {$\lrXzSix$\,dB at 600};
+  \node[note, anchor=north east, align=right] at (axis cs:\lrXzEndIt,-30.6) {$\lrXzEnd$\,dB, stops at \lrXzEndIt};
+\end{axis}
+
+% left gutter: reading arrows and axis label
+\node[note, rotate=90, anchor=west] at (1.8mm,0mm) {less power};
+\node[note, rotate=90, anchor=east] at (1.8mm,\ph mm) {more power};
+\draw[axisline] (4.4mm,0.5mm) -- (4.4mm,\ph mm);
+\node[lab, rotate=90, anchor=north] at (6.2mm,0.5*\ph mm) {$\Delta L$ (dB) re uniform};
+\node[lab, anchor=north] at (\axA mm+20mm,-5mm) {iteration};
+
+\node[paneltag, anchor=north west] at (0mm,\ph mm+9mm) {(a)};
+\node[paneltitle, anchor=north west] at (5mm,\ph mm+9mm) {Design point, run X0};
+
+% ================================================================ panel (b)
+\begin{axis}[lrax, xmode=log, width=38mm, at={(\axB mm,0mm)},
+    ymin=-80, ymax=0, ytick={0,-20,-40,-60,-80}, yticklabels={0,$-$20,$-$40,$-$60,$-$80}]
+  \draw[reference] (axis cs:600,-80) -- (axis cs:600,0);
+  \draw (axis cs:1,-20) -- (axis cs:5000,-20);
+  \addplot[predcurve] table[x=it,y=dLs]{data/f27_b_SU.dat};
+  \addplot[surrcurve] table[x=it,y=dLx]{data/f27_b_SU.dat};
+  \addplot[othercurve] table[x=it,y=dLx]{data/f27_b_XS.dat};
+  \addplot[refcurve] table[x=it,y=dLx]{data/f27_b_XU.dat};
+  \addplot[refcurve, only marks, mark=*, mark size=1.3pt] coordinates {(\lrXUEndIt,\lrXUEnd)};
+  % direct labels at the right end of each curve
+  \node[note, anchor=west, text=figsurr] at (axis cs:3300,\lrSUEndTrue) {sinc run, true};
+  \node[note, anchor=west, text=figsurr] at (axis cs:3300,\lrSUEndPred) {sinc run, predicted};
+  \node[note, anchor=north west, align=left] at (axis cs:3300,\lrXSEnd) {exact, from\\sinc design};
+  \node[note, anchor=north east, align=right, text=figref] at (axis cs:540,\lrXUEnd-2.5) {exact, from uniform,\\stops at \lrXUEndIt};
+\end{axis}
+\node[lab, rotate=90, anchor=south] at (\axB mm-8.4mm,0.5*\ph mm) {$\Delta L$ (dB) re uniform};
+\node[lab, anchor=north] at (\axB mm+19mm,-5mm) {iteration};
+
+\node[paneltag, anchor=north west] at (66mm,\ph mm+9mm) {(b)};
+\node[paneltitle, anchor=north west] at (71mm,\ph mm+9mm) {$90^\circ$ cap, $kR=1.5$};
+
+\end{tikzpicture}
+\end{document}

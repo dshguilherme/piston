@@ -1,0 +1,1419 @@
+﻿
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== FSI re-opt c30_k3 start XU s=1.00000: J_fsi(start) 1.97885e-15  J_vac(start) 6.84598e-17  J_fsi(uniform) 1.94954e-08  J_vac(uniform) 1.94113e-08 ==
+  FD check FSI adjoint: J 1.97885e-15 fd -1.472839415e-13 adj -1.472841423e-13 rel 1.36e-06
+  [quadvel    |consistent] it   1: J=5.94640e-07  f0=+100.0000  Jbest=5.94640e-07  vol=0.4990  chg=8.38e-05  inner=6
+  [quadvel    |consistent] it  25: J=2.65324e-08  f0=+64.2187  Jbest=2.65324e-08  vol=0.4992  chg=2.53e-05  inner=5
+  [quadvel    |consistent] it  50: J=2.20315e-08  f0=+62.0797  Jbest=2.20315e-08  vol=0.4994  chg=8.80e-06  inner=6
+  [quadvel    |consistent] it  75: J=2.10224e-08  f0=+61.5402  Jbest=2.10224e-08  vol=0.4995  chg=5.88e-06  inner=6
+  [quadvel    |consistent] it 100: J=2.08990e-08  f0=+61.4724  Jbest=2.08990e-08  vol=0.4995  chg=1.24e-05  inner=5
+  [quadvel    |consistent] it 125: J=2.07889e-08  f0=+61.4116  Jbest=2.07889e-08  vol=0.4995  chg=1.22e-05  inner=5
+  [quadvel    |consistent] it 150: J=2.07026e-08  f0=+61.3638  Jbest=2.07026e-08  vol=0.4995  chg=1.36e-06  inner=6
+RESULT c30_k3 dev_XU: it=150 stop=nmax J_fsi(best) 6.88945e-17 (-84.52 dB vs fsi uniform, -14.58 dB vs start)  J_vac(best) 1.97077e-15  vol 0.499521  time 2054 s
+R0_FSI_REOPT_DONE
+== FSI re-opt c30_k3 start XU s=6.10611: J_fsi(start) 7.33694e-14  J_vac(start) 6.84598e-17  J_fsi(uniform) 1.99077e-08  J_vac(uniform) 1.94113e-08 ==
+  FD check FSI adjoint: J 7.33694e-14 fd -8.200307465e-13 adj -8.200489783e-13 rel 2.22e-05
+  [quadvel    |consistent] it   1: J=5.94640e-07  f0=+100.0000  Jbest=5.94640e-07  vol=0.4990  chg=4.89e-04  inner=4
+  [quadvel    |consistent] it  25: J=7.06377e-09  f0=+48.9908  Jbest=7.06377e-09  vol=0.5000  chg=1.97e-05  inner=5
+  [quadvel    |consistent] it  50: J=2.95896e-09  f0=+38.9783  Jbest=2.95896e-09  vol=0.5001  chg=4.97e-05  inner=5
+  [quadvel    |consistent] it  75: J=9.52410e-10  f0=+25.9342  Jbest=9.52410e-10  vol=0.5000  chg=5.88e-05  inner=5
+  [quadvel    |consistent] it 100: J=7.37998e-10  f0=+22.9994  Jbest=7.37998e-10  vol=0.5000  chg=3.59e-05  inner=5
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176212e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176440e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176473e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.176474e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_fsi_track (line 48)
+In r0_fsi_reopt (line 38)
+] 
+  [quadvel    |consistent] it 125: J=6.75583e-10  f0=+21.9826  Jbest=6.75583e-10  vol=0.5000  chg=5.42e-06  inner=6
+  [quadvel    |consistent] it 150: J=6.60629e-10  f0=+21.7250  Jbest=6.60629e-10  vol=0.5000  chg=4.57e-06  inner=6
+RESULT c30_k3 phys_XU: it=150 stop=nmax J_fsi(best) 8.15115e-17 (-83.88 dB vs fsi uniform, -29.54 dB vs start)  J_vac(best) 7.47944e-14  vol 0.500000  time 1989 s
+R0_FSI_REOPT_DONE

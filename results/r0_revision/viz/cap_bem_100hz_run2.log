@@ -1,0 +1,3 @@
+﻿freq 100.0 k 1.8318324510727657 kR 18.318324510727656 ['uniform', 'dyncomp', 'inputpower', 'quadvel-rad', 'quadvel-I', 'quadvel-ones']
+nv 3841 nt 7632 hmax 0.6540312923078148 lambda/hmax 5.244397386395539
+loaded mu checkpoint (H assembly 784.9 s in first run)

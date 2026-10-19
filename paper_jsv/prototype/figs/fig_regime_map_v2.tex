@@ -1,0 +1,116 @@
+﻿% Regime map of rho = P_sinc/P_2s: kR versus cap half-angle for a smooth (v_0) and an
+% edge-dominated (v_7) velocity pattern. Lightness-monotone map: light = sinc under-predicts,
+% dark = sinc over-predicts. Cells are built in TeX from data/f8_*.dat.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{patchplots}
+\usepackage{pgfplotstable}
+
+% lightness falls monotonically from rho = 1/8 (light) to rho = 8 (dark)
+\definecolor{rhoa}{rgb}{0.88,0.93,0.99}
+\definecolor{rhob}{rgb}{0.78,0.86,0.95}
+\definecolor{rhoc}{rgb}{0.70,0.70,0.70}
+\definecolor{rhod}{rgb}{0.55,0.30,0.28}
+\definecolor{rhoe}{rgb}{0.15,0.04,0.04}
+
+\pgfplotsset{
+  colormap={rhomono}{color(-3)=(rhoa) color(-1.5)=(rhob) color(0)=(rhoc)
+                     color(1.5)=(rhod) color(3)=(rhoe)},
+  mapaxis/.style={
+    scale only axis, width=49mm, height=30mm,
+    xmin=0.09, xmax=42, ymin=-0.5, ymax=5.5, y dir=reverse,
+    xtick={0.1,1,10,40}, xticklabels={0.1,1,10,40}, minor tick num=0,
+    ytick={0,1,2,3,4,5}, xtick pos=bottom, ytick pos=left, tick align=outside, major tick length=1.2mm,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    every axis label/.append style={lab},
+    xlabel={$kR$},
+    clip mode=individual,
+    unbounded coords=jump,
+    colormap name=rhomono, point meta min=-3, point meta max=3,
+  },
+}
+
+\newcommand{\buildcells}[2]{%
+  \pgfplotstablegetrowsof{#1}%
+  \pgfmathtruncatemacro{\nr}{\pgfplotsretval-1}%
+  \gdef#2{}%
+  \foreach \i in {0,...,\nr}{%
+    \pgfplotstablegetelem{\i}{x0}\of{#1}\let\xa\pgfplotsretval
+    \pgfplotstablegetelem{\i}{x1}\of{#1}\let\xb\pgfplotsretval
+    \pgfplotstablegetelem{\i}{row}\of{#1}\let\rw\pgfplotsretval
+    \pgfplotstablegetelem{\i}{l2c}\of{#1}\let\mm\pgfplotsretval
+    \pgfmathsetmacro{\ya}{\rw-0.5}\pgfmathsetmacro{\yb}{\rw+0.5}%
+    \xdef#2{#2 (\xa,\ya) [\mm] (\xb,\ya) [\mm] (\xb,\yb) [\mm] (\xa,\yb) [\mm]}%
+  }%
+}
+
+\begin{document}
+\pgfplotstableread{data/f8_cells_cos0.dat}\tabA
+\pgfplotstableread{data/f8_cells_cos7.dat}\tabB
+\buildcells{\tabA}{\cellsA}
+\buildcells{\tabB}{\cellsB}
+
+\begin{tikzpicture}
+% ---------------------------------------------------------------- (a) smooth pattern
+\begin{axis}[mapaxis, xmode=log, name=axa, at={(0.9cm,2.45cm)}, anchor=south west,
+  yticklabels={$15^\circ$,$30^\circ$,$60^\circ$,$90^\circ$,$120^\circ$,$150^\circ$}]
+  \edef\tmp{\noexpand\addplot[patch, patch type=rectangle, shader=flat, point meta=explicit, draw=none]
+     coordinates {\cellsA};}\tmp
+  \addplot[draw=black, mark=none] table[x=x, y=y] {data/f8_rho1_cos0.dat};
+  \node[lab, rotate=90, anchor=south] at ([xshift=-7.5mm]current axis.west) {cap half-angle $\theta_0$};
+  % direct label for the rho=1 staircase
+  \draw[leader] (axis cs:4.4721,5.5) -- ([xshift=-2.5mm,yshift=-2mm]axis cs:4.4721,5.5);
+  \node[note, anchor=north east, inner sep=0.5pt, outer sep=0pt] at ([xshift=-2.5mm,yshift=-2mm]axis cs:4.4721,5.5) {$\rho=1$};
+  % regime brackets (kR spans) and names
+  \draw[witness] (axis cs:0.1,-0.55) -- (axis cs:0.1,-0.75) -- (axis cs:1,-0.75) -- (axis cs:1,-0.55);
+  \draw[witness] (axis cs:1.5,-0.55) -- (axis cs:1.5,-0.75) -- (axis cs:8,-0.75) -- (axis cs:8,-0.55);
+  \draw[witness] (axis cs:10,-0.55) -- (axis cs:10,-0.75) -- (axis cs:40,-0.75) -- (axis cs:40,-0.55);
+  \node[note, anchor=south, align=center] at (axis cs:0.316,-0.85) {dipole regime,\\$\rho\gg1$};
+  \node[note, anchor=south west] at (axis cs:1.5,-0.85) {minimum};
+  \node[note, anchor=south, align=center] at (axis cs:20,-0.85) {two-face plateau,\\$\rho\approx0.5$};
+  \node[paneltag, anchor=south west] at ([xshift=-1.2mm,yshift=11mm]current axis.north west) {(a)};
+  \node[paneltitle, anchor=south west] at ([xshift=4mm,yshift=11mm]current axis.north west) {Smooth pattern $v_0$};
+\end{axis}
+
+% ---------------------------------------------------------------- (b) edge-dominated pattern
+\begin{axis}[mapaxis, xmode=log, name=axb, at={(6.4cm,2.45cm)}, anchor=south west, yticklabels={}]
+  \edef\tmp{\noexpand\addplot[patch, patch type=rectangle, shader=flat, point meta=explicit, draw=none]
+     coordinates {\cellsB};}\tmp
+  \addplot[draw=black, mark=none] table[x=x, y=y] {data/f8_rho1_cos7.dat};
+  % edge-dominated corner: kR 10 to 40
+  \draw[witness] (axis cs:10,-0.55) -- (axis cs:10,-0.75) -- (axis cs:40,-0.75) -- (axis cs:40,-0.55);
+  \node[note, anchor=south east, align=right] at (axis cs:40,-0.85) {edge-dominated:\\sinc over-predicts};
+  % near-closed cap, 150 degree row
+  \draw[leader] (axis cs:42,5) -- ([xshift=3mm]axis cs:42,5);
+  \node[note, anchor=west, text width=1.4cm] at ([xshift=3mm]axis cs:42,5)
+     {near-closed cap: interior resonances};
+  \node[paneltag, anchor=south west] at ([xshift=-1.2mm,yshift=11mm]current axis.north west) {(b)};
+  \node[paneltitle, anchor=south west] at ([xshift=4mm,yshift=11mm]current axis.north west) {Edge-dominated pattern $v_7$};
+\end{axis}
+
+% ---------------------------------------------------------------- colour bar and key
+\begin{scope}[shift={(4.2cm,1.05cm)}]
+  \def\un{0.9}% width of one log2 step in cm; bar spans 6 steps
+  \shade[left color=rhoa, right color=rhob] (0,0) rectangle (1.5*\un,0.25);
+  \shade[left color=rhob, right color=rhoc] (1.5*\un,0) rectangle (3*\un,0.25);
+  \shade[left color=rhoc, right color=rhod] (3*\un,0) rectangle (4.5*\un,0.25);
+  \shade[left color=rhod, right color=rhoe] (4.5*\un,0) rectangle (6*\un,0.25);
+  \draw[witness] (0,0) rectangle (6*\un,0.25);
+  \foreach \t/\s in {-3/{1/8}, -2/{1/4}, -1/{1/2}, 0/{1}, 1/{2}, 2/{4}, 3/{8}} {
+    \draw[witness] ({(\t+3)*\un},0) -- ({(\t+3)*\un},-0.08);
+    \node[note, anchor=north, inner sep=0.5pt] at ({(\t+3)*\un},-0.08) {\s};
+  }
+  \node[note, anchor=east, align=right] at (-0.15,0.125) {sinc\\under-predicts};
+  \node[note, anchor=west, align=left] at (6*\un+0.15,0.125) {sinc\\over-predicts};
+  \node[note, anchor=north, align=center] at (3*\un,-0.50) {$\rho=P_{\rm sinc}/P_{2s}$, clipped at 1/8 and 8};
+\end{scope}
+\draw[black] (0.9,0.28) -- (1.5,0.28);
+\node[note, anchor=west] at (1.55,0.28) {$\rho=1$ boundary};
+\end{tikzpicture}
+\end{document}
+
+

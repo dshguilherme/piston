@@ -1,0 +1,18 @@
+# The repository root .gitignore excludes *.tex, *.pdf, *.png, *.txt, *.log and *.mat.
+# Inside the package the TikZ sources, requirements files and frozen logs must be tracked,
+# so those patterns are re-included here (a nested .gitignore overrides its parents).
+!*.tex
+!*.sty
+!*.txt
+!*.log
+
+# Everything a re-run writes, and Python caches
+out/
+__pycache__/
+*.pyc
+
+# LaTeX build artefacts (in case someone compiles in place)
+*.aux
+*.fls
+*.fdb_latexmk
+*.synctex.gz

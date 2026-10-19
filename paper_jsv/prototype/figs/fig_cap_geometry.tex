@@ -1,0 +1,184 @@
+﻿% Problem schematic (T1): geometry, supports, load, normal and mesh of the open spherical cap.
+% Drawn for the 137 mm width; include at natural size. Each panel is to scale (own scale bar).
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\input{data/f19_params.tex}
+\begin{document}
+\begin{tikzpicture}
+\def\sca{0.30}% panel (a): cm per metre
+\def\scb{0.40}% panel (b): cm per metre
+\pgfmathsetmacro{\Rr}{\fR*\sca}
+\pgfmathsetmacro{\Ar}{\Rr*sin(\fThz)}
+\pgfmathsetmacro{\Yr}{\Rr*cos(\fThz)}
+\pgfmathsetmacro{\Hr}{\Rr-\Yr}
+\pgfmathsetmacro{\hatchr}{0.15}
+\pgfmathsetmacro{\bara}{4*\sca}
+\pgfmathsetmacro{\barb}{4*\scb}
+
+% ------------------------------------------------------------------ panel titles
+\node[paneltag, anchor=base west] at (0.05,6.75) {(a)};
+\node[paneltitle, anchor=base west] at (0.50,6.75) {Meridional section};
+\node[paneltag, anchor=base west] at (8.30,6.75) {(b)};
+\node[paneltitle, anchor=base west] at (8.75,6.75) {Plan view and mesh};
+
+% ------------------------------------------------------------------ panel (a)
+\begin{scope}[shift={(4.30,1.40)}]
+  \coordinate (O) at (0,0);
+  \coordinate (Ap) at (0,\Rr);
+  \coordinate (PR) at ({90-\fThz}:\Rr);
+  \coordinate (PL) at ({90+\fThz}:\Rr);
+  % axis of symmetry (arrow up = +z) and radius to the right rim
+  \draw[reference, ->, dash pattern=on 5pt off 1.5pt on 1pt off 1.5pt] (0,0) -- (0,\Rr+1.40);
+  \node[lab, anchor=west] at (0.04,\Rr+1.32) {$z$};
+  \draw[witness] (O) -- (PR);
+  % apex-level reference line to the right gutter
+  \draw[reference] (0.10,\Rr) -- ({\Ar+0.85},\Rr);
+  % mesh ticks on the inside of the arc: 40 per half-arc, every 10th longer
+  \foreach \k in {0,...,40} {
+    \pgfmathsetmacro{\psi}{\k*\fDmer}
+    \pgfmathsetmacro{\tl}{ifthenelse(mod(\k,10)==0,0.16,0.10)}
+    \draw[witness, draw=black!60] ({90-\psi}:\Rr) -- ({90-\psi}:{\Rr-\tl});
+    \draw[witness, draw=black!60] ({90+\psi}:\Rr) -- ({90+\psi}:{\Rr-\tl});
+  }
+  % the shell mid-surface
+  \draw[structure] (PR) arc[start angle={90-\fThz}, end angle={90+\fThz}, radius=\Rr];
+  \node[point] at (O) {};
+  \node[lab, anchor=north] at (0.02,-0.08) {$O$};
+  % x axis and y into the page at O
+  \draw[normal] (0.07,0) -- (0.55,0);
+  \node[lab, anchor=west] at (0.55,0) {$x$};
+  \draw[leader] (-0.26,0) circle (0.09);
+  \draw[leader] (-0.32,-0.06) -- (-0.20,0.06);
+  \draw[leader] (-0.32,0.06) -- (-0.20,-0.06);
+  \node[lab, anchor=south east] at (-0.20,0.10) {$y$};
+  % half-angle and radius labels
+  \draw[witness, ->] (90:0.80) arc[start angle=90, end angle={90-\fThz}, radius=0.80];
+  \node[lab, anchor=south] at ({90-\fThz/2}:1.12) {$\theta_0$};
+  \node[lab, anchor=north west] at ($(O)!0.45!(PR)+(0.04,0.0)$) {$R$};
+
+  % upright pin supports at both rim points: triangle, apex at the rim point, hatched strip below
+  \foreach \P in {PR,PL} {
+    \draw[baffle] (\P) -- ($(\P)+(-0.20,-0.25)$) -- ($(\P)+(0.20,-0.25)$) -- cycle;
+    \fill[hatch] ($(\P)+(-0.30,-0.25)$) rectangle ($(\P)+(0.30,-0.33)$);
+    \draw[baffle] ($(\P)+(-0.30,-0.25)$) -- ($(\P)+(0.30,-0.25)$);
+  }
+  \draw[leader] ($(PL)+(-0.30,-0.29)$) -- (-2.00,1.76);
+  \node[lab, anchor=north east, align=left] at (-1.95,1.72)
+     {rim:\\ $u_x=u_y=u_z=0$,\\ rotations free};
+
+  % height H in the right gutter
+  \draw[witness] ($(PR)+(0.45,0)$) -- ($(PR)+(0.85,0)$);
+  \draw[dimension] ($(PR)+(0.65,0)$) -- ($(PR)+(0.65,\Hr)$);
+  \node[lab, anchor=west] at ($(PR)+(0.72,0.5*\Hr)$) {$H=\fH$ m};
+
+  % rim radius a in the bottom gutter
+  \draw[witness] ($(PR)+(0,-0.47)$) -- ($(PR|-O)+(0,-0.72)$);
+  \draw[witness] (0,-0.45) -- (0,-0.72);
+  \draw[dimension] (0,-0.60) -- ($(PR|-O)+(0,-0.60)$);
+  \node[lab, anchor=north] at (0.5*\Ar,-0.62) {$a=R\sin\theta_0=\fA$ m};
+  \node[note, anchor=north] at (0.5*\Ar,-1.12) {$R=\fR$ m, $\theta_0=\fThz^\circ$};
+
+  % apex load along +z
+  \draw[normal] (0,\Rr+0.07) -- (0,\Rr+0.80);
+  \node[lab, anchor=west, align=left] at (0.10,\Rr+0.50) {$F=\fLoad$ N,\\ \fFreq\,Hz};
+
+  % normal at 15 degrees, outer face
+  \draw[normal] ({90+15}:{\Rr+0.05}) -- ({90+15}:{\Rr+0.65});
+  \node[lab, anchor=south east, align=right] at (-0.10,\Rr+0.78)
+     {$\bm n=\bm e_r$\\ (outer face)};
+
+  % mesh note in the left interior; short leader ends on a tick of the left half-arc
+  \node[note, anchor=north east, align=right] at (-0.25,2.05)
+     {40 elements\\ along the\\ meridian\\ ($\fDmer^\circ$ each)};
+  \draw[leader] (-1.00,2.12) -- ({90+18}:{\Rr-0.06});
+
+  % thickness detail (not to scale), top-left; all its text directly under the circle
+  \coordinate (C) at (-3.15,4.00);
+  \draw[witness] (C) circle (0.80);
+  \draw[reference] ($(C)+(-0.62,0)$) -- ($(C)+(0.24,0)$);
+  \draw[structure] ($(C)+(-0.62,0.12)$) -- ($(C)+(0,0.12)$) -- ($(C)+(0,0.22)$) -- ($(C)+(0.16,0.22)$);
+  \draw[structure] ($(C)+(-0.62,-0.12)$) -- ($(C)+(0,-0.12)$) -- ($(C)+(0,-0.22)$) -- ($(C)+(0.16,-0.22)$);
+  \draw[witness] ($(C)+(0.20,0.22)$) -- ($(C)+(0.34,0.22)$);
+  \draw[witness] ($(C)+(0.20,-0.22)$) -- ($(C)+(0.34,-0.22)$);
+  \draw[dimension] ($(C)+(0.28,-0.22)$) -- ($(C)+(0.28,0.22)$);
+  \node[lab, anchor=west] at ($(C)+(0.31,0)$) {$h_e$};
+  \coordinate (DT) at ({90+24}:\Rr);
+  \node[point] at (DT) {};
+  \draw[leader] ($(C)+(-30:0.80)$) -- ($(DT)+(0.02,0.03)$);
+  \node[note, anchor=north, align=center] at ($(C)+(0,-0.88)$)
+     {detail, not to scale\\ $\fTmin\le h_e\le\fTmax$ mm,\\ mean $\le\fTmean$ mm,\\ uniform start \fTmean\ mm};
+
+  % scale bar (4 m) and scale statement
+  \begin{scope}[shift={(-4.25,-1.15)}]
+    \draw[leader] (0,0) -- (\bara,0);
+    \foreach \m in {0,2,4} {
+      \draw[leader] ({\m*\sca},-0.05) -- ({\m*\sca},0.05);
+      \node[lab, anchor=north] at ({\m*\sca},-0.07) {\m};
+    }
+    \node[lab, anchor=west] at (\bara+0.1,-0.25) {m};
+  \end{scope}
+  \node[note, anchor=south west] at (-4.25,-0.95) {drawn to scale};
+\end{scope}
+
+% ------------------------------------------------------------------ panel (b)
+\begin{scope}[shift={(10.55,3.60)}]
+  \pgfmathsetmacro{\Rb}{\fR*\scb}
+  \pgfmathsetmacro{\Ab}{\Rb*sin(\fThz)}
+  \pgfmathsetmacro{\rho}{0.17}
+  \pgfmathsetmacro{\rin}{\Rb*sin(30*\fDmer)}
+  \pgfmathsetmacro{\rout}{\Rb*sin(31*\fDmer)}
+  % rim support: hatched ring just outside the rim
+  \fill[hatch, even odd rule] (0,0) circle (\Ab+\hatchr) (0,0) circle (\Ab);
+  % mesh: rings 4..39 (ring 40 is the rim), 24 meridians
+  \foreach \k in {4,...,39} {
+    \pgfmathsetmacro{\rk}{\Rb*sin(\k*\fDmer)}
+    \draw[witness, draw=black!35] (0,0) circle (\rk);
+  }
+  \foreach \j in {0,...,23} {
+    \draw[witness, draw=black!35] ({\j*\fDcirc}:\rho) -- ({\j*\fDcirc}:\Ab);
+  }
+  % highlighted element: rings 30 and 31, phi from 15 to 30 deg
+  \draw[witness, fill=black!25, draw=black!80]
+     (15:\rin) arc[start angle=15, end angle=30, radius=\rin] -- (30:\rout)
+     arc[start angle=30, end angle=15, radius=\rout] -- cycle;
+  \draw[structure] (0,0) circle (\Ab);
+  % axes: dashed reference lines along +x and +y, beyond the rim
+  \draw[reference, ->] (0.17,0) -- ({\Ab+0.55},0);
+  \draw[reference, ->] (0,0.17) -- (0,{\Ab+0.55});
+  \node[lab, anchor=west] at ({\Ab+0.55},0) {$x$};
+  \node[lab, anchor=east] at (0,{\Ab+0.55}) {$y$};
+  % apex load, out of the page
+  \draw[baffle] (0,0) circle (0.12);
+  \fill (0,0) circle (0.03);
+  \draw[leader] ({127.5}:0.18) -- ({127.5}:{\Ab+0.35});
+  \node[lab, anchor=south east, align=right] at ({127.5}:{\Ab+0.35}) {$F$ ($+z$,\\ out of page)};
+  % element label
+  \coordinate (EL) at ({22.5}:{0.5*(\rin+\rout)});
+  \draw[leader] ($(EL)+(-0.02,0.08)$) -- (1.05,2.30);
+  \node[lab, anchor=south east, align=left] at (2.85,1.95)
+     {element $e$:\\ thickness $h_e$\\ (one of \fNe)};
+  % azimuth phi
+  \draw[witness, ->] (\Ab+0.40,0) arc[start angle=0, end angle=24, radius=\Ab+0.40];
+  \node[lab, anchor=west] at ({\Ab+0.45},0.50) {$\varphi$};
+  % rim support label
+  \draw[leader] ({-55}:{\Ab+0.20}) -- ({-55}:{\Ab+0.50});
+  \node[lab, anchor=north west] at ({-55}:{\Ab+0.50}) {rim fixed};
+  % scale bar (4 m)
+  \begin{scope}[shift={(-3.00,-2.30)}]
+    \draw[leader] (0,0) -- (\barb,0);
+    \foreach \m in {0,2,4} {
+      \draw[leader] ({\m*\scb},-0.05) -- ({\m*\scb},0.05);
+      \node[lab, anchor=north] at ({\m*\scb},-0.07) {\m};
+    }
+    \node[lab, anchor=west] at (\barb+0.1,-0.25) {m};
+  \end{scope}
+  \node[note, anchor=south west] at (-3.00,-2.20) {drawn to scale};
+  \node[note, anchor=north west, text width=5.8cm] at (-3.00,-2.90)
+     {$\fNmer\times\fNcirc$ quadratic $C^1$ B-spline elements, periodic in $\varphi$; \fNdof\ displacement coefficients};
+\end{scope}
+\end{tikzpicture}
+\end{document}
+
+
+

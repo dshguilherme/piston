@@ -1,0 +1,96 @@
+% F25 Pass rule applied design by design: guaranteed reduction R_g (class envelope from the other cells of the
+% same kR class) against the true reduction R_x, for the 14 sinc end designs of the seven regime-study cases.
+% Data: data/f25_bars.dat (tests/r0_fig_passrule.py from results/r0_revision/passrule/). Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+
+\pgfplotstableread{data/f25_bars.dat}\bartab
+% bar position: design index plus a gap of 0.7 between cases
+\def\xpos{\thisrow{idx}+0.7*floor((\thisrow{idx}-0.5)/2)}
+% axis geometry (mm): x = 12 + (X - 0.3)*114/(18.7 - 0.3)
+\def\axx{12}\def\axw{114}\def\xlo{0.3}\def\xhi{18.7}
+
+\pgfplotsset{
+  barax/.style={
+    scale only axis, anchor=south west, clip=false,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    label style={lab},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+    width=\axw mm, height=40mm,
+    xmin=\xlo, xmax=\xhi, xtick=\empty,
+    ymin=0, ymax=76, ytick={0,20,40,60},
+    ylabel={reduction (dB)},
+  },
+  truebar/.style={refcurve, fill=figref!25, ybar, bar width=1.7mm, bar shift=-0.95mm},
+  guarbar/.style={surrcurve, fill=figsurr!10, ybar, bar width=1.7mm, bar shift=0.95mm},
+}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[barax, at={(\axx mm,16mm)}]
+  % targets
+  \draw[reference] (axis cs:\xlo,20) -- (axis cs:\xhi,20);
+  \draw[reference] (axis cs:\xlo,40) -- (axis cs:\xhi,40);
+  % true reduction (exact, in vacuo) and guaranteed reduction (sinc prediction minus the envelope budget)
+  \addplot[truebar] table[x expr=\xpos, y=Rx]{data/f25_bars.dat};
+  \addplot[guarbar] table[x expr=\xpos, y=Rg]{data/f25_bars.dat};
+  % prediction of the sinc model, joined to the top of its R_g bar (the budget subtracted)
+  \addplot[surrcurve, solid, only marks, mark=o, mark size=1.2pt, mark options={solid},
+      error bars/.cd, y dir=minus, y explicit, error bar style={surrcurve, solid}, error mark=none]
+    table[x expr=\xpos+0.14, y=Rpred, y error minus expr=\thisrow{Rpred}-\thisrow{Rg}]{data/f25_bars.dat};
+  % true reduction with fluid loading at the air density
+  \addplot[structure, only marks, mark=-, mark size=1.1mm] table[x expr=\xpos-0.14, y=Rxair]{data/f25_bars.dat};
+  % envelope evaluated outside the R_pred range it was fitted on
+  \addplot[only marks, mark=none, nodes near coords={$\ast$}, every node near coord/.style={note, anchor=south},
+      restrict expr to domain={\thisrow{extrap}}{1:1}]
+    table[x expr=\xpos+0.14, y expr=\thisrow{Rpred}+0.6]{data/f25_bars.dat};
+\end{axis}
+% target labels at the right end of the axis
+\node[note, anchor=west] at ({(\axx+\axw)*1mm}, {(16+20*40/76)*1mm}) {$T=20$};
+\node[note, anchor=west] at ({(\axx+\axw)*1mm}, {(16+40*40/76)*1mm}) {$T=40$};
+
+% start of each sinc run (U: uniform design; X: end design of the exact run), case labels and class brackets
+\foreach \i in {0,...,13}{
+  \pgfplotstablegetelem{\i}{idx}\of\bartab \xdef\ix{\pgfplotsretval}
+  \pgfplotstablegetelem{\i}{start}\of\bartab \xdef\st{\pgfplotsretval}
+  \pgfmathsetmacro{\xx}{\axx+(\ix+0.7*floor((\ix-0.5)/2)-\xlo)*\axw/(\xhi-\xlo)}
+  \node[note, anchor=north] at (\xx mm,15.2mm) {\st};
+}
+\foreach \c in {0,...,6}{
+  \pgfmathtruncatemacro{\r}{2*\c}
+  \pgfplotstablegetelem{\r}{theta}\of\bartab \xdef\th{\pgfplotsretval}
+  \pgfplotstablegetelem{\r}{kR}\of\bartab \xdef\kr{\pgfplotsretval}
+  \pgfmathsetmacro{\xx}{\axx+(2*\c+1.5+0.7*\c-\xlo)*\axw/(\xhi-\xlo)}
+  \node[note, anchor=north] at (\xx mm,11.6mm) {\pgfmathprintnumber[fixed,precision=0,assume math mode]{\th}$^\circ$};
+  \node[note, anchor=north] at (\xx mm,8.3mm) {\pgfmathprintnumber[fixed,precision=1,assume math mode]{\kr}};
+}
+\node[note, anchor=east] at (11mm,13.6mm) {start};
+\node[note, anchor=east] at (11mm,10.3mm) {$\theta_0$};
+\node[note, anchor=east] at (11mm,7.0mm) {$kR$};
+\pgfmathsetmacro{\xA}{\axx+(0.6-\xlo)*\axw/(\xhi-\xlo)}\pgfmathsetmacro{\xB}{\axx+(10.5-\xlo)*\axw/(\xhi-\xlo)}
+\pgfmathsetmacro{\xC}{\axx+(11.3-\xlo)*\axw/(\xhi-\xlo)}\pgfmathsetmacro{\xD}{\axx+(18.5-\xlo)*\axw/(\xhi-\xlo)}
+\draw[witness] (\xA mm,4.6mm) -- (\xA mm,3.6mm) -- (\xB mm,3.6mm) -- (\xB mm,4.6mm);
+\node[note, anchor=north] at ({(\xA+\xB)/2*1mm},3.2mm) {$kR\le3$};
+\draw[witness] (\xC mm,4.6mm) -- (\xC mm,3.6mm) -- (\xD mm,3.6mm) -- (\xD mm,4.6mm);
+\node[note, anchor=north] at ({(\xC+\xD)/2*1mm},3.2mm) {$kR\ge7$ (the design point included)};
+
+% legend above the axis
+\def\ly{63mm}\def\lyy{59.5mm}
+\draw[refcurve, fill=figref!25] (12mm,{\ly-1.2mm}) rectangle (14mm,{\ly+1.2mm});
+\node[note, anchor=west] at (14.5mm,\ly) {true reduction $R_x$ (exact, in vacuo)};
+\draw[surrcurve, fill=figsurr!10] (62mm,{\ly-1.2mm}) rectangle (64mm,{\ly+1.2mm});
+\node[note, anchor=west] at (64.5mm,\ly) {guaranteed reduction $R_g$};
+\draw[surrcurve, solid] plot[only marks, mark=o, mark size=1.2pt] coordinates {(13mm,\lyy)};
+\draw[surrcurve, solid] (13mm,{\lyy-0.45mm}) -- (13mm,{\lyy-2.2mm});
+\node[note, anchor=west] at (14.5mm,\lyy) {predicted $R_{\rm pred}$, minus the budget};
+\draw[structure] (61.9mm,\lyy) -- (64.1mm,\lyy);
+\node[note, anchor=west] at (64.5mm,\lyy) {$R_x$ with fluid loading, air density};
+\node[note, anchor=west] at (110mm,\lyy) {$\ast$ extrapolated};
+\end{tikzpicture}
+\end{document}

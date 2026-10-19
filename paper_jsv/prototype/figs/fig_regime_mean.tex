@@ -1,0 +1,96 @@
+﻿% Geometric mean of rho = P_sinc/P_2s over 10<=kR<=40: patterns v_c, v_0..v_7 per cap
+% half-angle, and the six frozen design fields at 30 degrees. Same lightness-monotone map
+% as fig_regime_map_v2. Cells built in TeX from data/f8_geomean_*.dat.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{patchplots}
+\usepackage{pgfplotstable}
+
+\definecolor{rhoa}{rgb}{0.88,0.93,0.99}
+\definecolor{rhob}{rgb}{0.78,0.86,0.95}
+\definecolor{rhoc}{rgb}{0.70,0.70,0.70}
+\definecolor{rhod}{rgb}{0.55,0.30,0.28}
+\definecolor{rhoe}{rgb}{0.15,0.04,0.04}
+
+\pgfplotsset{
+  colormap={rhomono}{color(-3)=(rhoa) color(-1.5)=(rhob) color(0)=(rhoc)
+                     color(1.5)=(rhod) color(3)=(rhoe)},
+}
+
+\begin{document}
+\pgfplotstableread{data/f8_geomean_modes.dat}\tabM
+\pgfplotstableread{data/f8_geomean_designs30.dat}\tabD
+\pgfplotstablegetrowsof{\tabM}\pgfmathtruncatemacro{\nm}{\pgfplotsretval-1}
+\pgfplotstablegetrowsof{\tabD}\pgfmathtruncatemacro{\nd}{\pgfplotsretval-1}
+
+\begin{tikzpicture}
+\begin{axis}[name=axc, at={(0.9cm,1.15cm)}, anchor=south west, scale only axis,
+  width=104mm, height=19mm, xmin=-0.5, xmax=15, ymin=-0.5, ymax=5.5, y dir=reverse,
+  clip mode=individual, axis line style={draw=none},
+  xtick={0,1,2,3,4,5,6,7,8,9.5,10.5,11.5,12.5,13.5,14.5},
+  xticklabels={$v_{\rm c}$,$v_0$,$v_1$,$v_2$,$v_3$,$v_4$,$v_5$,$v_6$,$v_7$,U,B,C,D,E,G},
+  xticklabel pos=upper, ytick={0,1,2,3,4,5},
+  yticklabels={$15^\circ$,$30^\circ$,$60^\circ$,$90^\circ$,$120^\circ$,$150^\circ$},
+  major tick length=0mm, tick style={draw=none}, every tick label/.append style={note},
+  colormap name=rhomono, point meta min=-3, point meta max=3]
+  \xdef\cellsC{}
+  \foreach \i in {0,...,\nm}{%
+    \pgfplotstablegetelem{\i}{col}\of{\tabM}\let\cx\pgfplotsretval
+    \pgfplotstablegetelem{\i}{row}\of{\tabM}\let\cy\pgfplotsretval
+    \pgfplotstablegetelem{\i}{l2c}\of{\tabM}\let\mm\pgfplotsretval
+    \pgfmathsetmacro{\xa}{\cx-0.5}\pgfmathsetmacro{\xb}{\cx+0.5}
+    \pgfmathsetmacro{\ya}{\cy-0.5}\pgfmathsetmacro{\yb}{\cy+0.5}
+    \xdef\cellsC{\cellsC (\xa,\ya) [\mm] (\xb,\ya) [\mm] (\xb,\yb) [\mm] (\xa,\yb) [\mm]}
+  }
+  \foreach \i in {0,...,\nd}{%
+    \pgfplotstablegetelem{\i}{col}\of{\tabD}\let\cx\pgfplotsretval
+    \pgfplotstablegetelem{\i}{l2c}\of{\tabD}\let\mm\pgfplotsretval
+    \pgfmathsetmacro{\xa}{9.5+\cx-0.5}\pgfmathsetmacro{\xb}{9.5+\cx+0.5}
+    \xdef\cellsC{\cellsC (\xa,0.5) [\mm] (\xb,0.5) [\mm] (\xb,1.5) [\mm] (\xa,1.5) [\mm]}
+  }
+  \edef\tmp{\noexpand\addplot[patch, patch type=rectangle, shader=flat, point meta=explicit, draw=none]
+     coordinates {\cellsC};}\tmp
+  % printed geometric means; white digits on the dark cells
+  \foreach \i in {0,...,\nm}{%
+    \pgfplotstablegetelem{\i}{col}\of{\tabM}\let\cx\pgfplotsretval
+    \pgfplotstablegetelem{\i}{row}\of{\tabM}\let\cy\pgfplotsretval
+    \pgfplotstablegetelem{\i}{gm}\of{\tabM}\let\gv\pgfplotsretval
+    \pgfplotstablegetelem{\i}{l2c}\of{\tabM}\let\mm\pgfplotsretval
+    \pgfmathparse{\mm>1.2?1:0}\let\dk\pgfmathresult
+    \edef\tmp{\noexpand\node[note, text=\ifnum\dk=1 white\else black\fi, anchor=center, inner sep=0pt] at (axis cs:\cx,\cy) {\gv};}\tmp
+  }
+  \foreach \i in {0,...,\nd}{%
+    \pgfplotstablegetelem{\i}{col}\of{\tabD}\let\cx\pgfplotsretval
+    \pgfplotstablegetelem{\i}{gm}\of{\tabD}\let\gv\pgfplotsretval
+    \pgfplotstablegetelem{\i}{l2c}\of{\tabD}\let\mm\pgfplotsretval
+    \pgfmathparse{\mm>1.2?1:0}\let\dk\pgfmathresult
+    \pgfmathsetmacro{\xp}{9.5+\cx}
+    \edef\tmp{\noexpand\node[note, text=\ifnum\dk=1 white\else black\fi, anchor=center, inner sep=0pt] at (axis cs:\xp,1) {\gv};}\tmp
+  }
+  \node[note, anchor=south, align=center] at ([yshift=4.5mm]axis cs:12,-0.5) {design fields, $\theta_0=30^\circ$};
+  \node[paneltitle, anchor=south west] at ([xshift=-1.2mm,yshift=7mm]current axis.north west)
+     {Geometric mean of $\rho$ over $10\le kR\le40$};
+  \node[lab, rotate=90, anchor=south] at ([xshift=-7.5mm]current axis.west) {$\theta_0$};
+\end{axis}
+
+% ---------------------------------------------------------------- colour bar
+\begin{scope}[shift={(4.6cm,0.5cm)}]
+  \def\un{0.6}
+  \shade[left color=rhoa, right color=rhob] (0,0) rectangle (1.5*\un,0.2);
+  \shade[left color=rhob, right color=rhoc] (1.5*\un,0) rectangle (3*\un,0.2);
+  \shade[left color=rhoc, right color=rhod] (3*\un,0) rectangle (4.5*\un,0.2);
+  \shade[left color=rhod, right color=rhoe] (4.5*\un,0) rectangle (6*\un,0.2);
+  \draw[witness] (0,0) rectangle (6*\un,0.2);
+  \foreach \t/\s in {-3/{1/8}, -2/{1/4}, -1/{1/2}, 0/{1}, 1/{2}, 2/{4}, 3/{8}} {
+    \draw[witness] ({(\t+3)*\un},0) -- ({(\t+3)*\un},-0.07);
+    \node[note, anchor=north, inner sep=0.3pt] at ({(\t+3)*\un},-0.07) {\s};
+  }
+  \node[note, anchor=east, align=right] at (-0.15,0.1) {sinc under-predicts};
+  \node[note, anchor=west, align=left] at (6*\un+0.15,0.1) {sinc over-predicts};
+\end{scope}
+\end{tikzpicture}
+\end{document}
+

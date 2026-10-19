@@ -1,0 +1,68 @@
+[spherecap m=2] default quadrature regular=4 singular=4; bump=+0
+   using regular=4 singular=4
+   nv=3841 nt=7632 k=1.83183 normal disagreements = 0 (min dot 0.9995)
+   h_max=0.6540  interior dofs=3793  boundary vertices=48  est dense matrix GB=0.23
+   assembled+restricted in 469.7s
+   LU+solve (6 rhs) in 1.6s
+   uniform        P_bem=5.886994e-07 P_far=5.887089e-07 far/bem=1.00002
+   dyncomp        P_bem=2.610019e-08 P_far=2.610098e-08 far/bem=1.00003
+   inputpower     P_bem=2.765020e-08 P_far=2.765150e-08 far/bem=1.00005
+   quadvel-rad    P_bem=1.160630e-08 P_far=1.160666e-08 far/bem=1.00003
+   quadvel-I      P_bem=1.709188e-08 P_far=1.709277e-08 far/bem=1.00005
+   quadvel-ones   P_bem=5.841028e-08 P_far=5.841054e-08 far/bem=1.00000
+   sinc_mesh (core) uniform: 3.72422112e-07
+   sinc_mesh (core) dyncomp: 1.36897255e-08
+   sinc_mesh (core) inputpower: 1.48546204e-08
+   sinc_mesh (core) quadvel-rad: 7.09228109e-09
+   sinc_mesh (core) quadvel-I: 9.55538410e-09
+   sinc_mesh (core) quadvel-ones: 2.85538449e-08
+[cylpanel m=2] default quadrature regular=4 singular=4; bump=+0
+   using regular=4 singular=4
+   nv=3969 nt=7680 k=0.11972 normal disagreements = 0 (min dot 1.0000)
+   h_max=1.1294  interior dofs=3713  boundary vertices=256  est dense matrix GB=0.22
+   assembled+restricted in 341.9s
+   LU+solve (2 rhs) in 2.0s
+   uniform        P_bem=1.382240e-08 P_far=1.382240e-08 far/bem=1.00000
+   legacy_long_horizon P_bem=2.452029e-13 P_far=2.477075e-13 far/bem=1.01021
+   sinc_mesh (core) uniform: 5.94908084e-09
+   sinc_mesh (core) legacy_long_horizon: 6.75615580e-15
+[spherecap m=2] default quadrature regular=4 singular=4; bump=+2
+   using regular=6 singular=6
+   nv=3841 nt=7632 k=1.83183 normal disagreements = 0 (min dot 0.9995)
+   h_max=0.6540  interior dofs=3793  boundary vertices=48  est dense matrix GB=0.23
+   assembled+restricted in 1311.5s
+   LU+solve (6 rhs) in 2.3s
+   uniform        P_bem=5.886909e-07 P_far=5.886939e-07 far/bem=1.00001
+   dyncomp        P_bem=2.608861e-08 P_far=2.608884e-08 far/bem=1.00001
+   inputpower     P_bem=2.763609e-08 P_far=2.763645e-08 far/bem=1.00001
+   quadvel-rad    P_bem=1.160881e-08 P_far=1.160897e-08 far/bem=1.00001
+   quadvel-I      P_bem=1.708322e-08 P_far=1.708349e-08 far/bem=1.00002
+   quadvel-ones   P_bem=5.831342e-08 P_far=5.831415e-08 far/bem=1.00001
+[cylpanel m=2] default quadrature regular=4 singular=4; bump=+2
+   using regular=6 singular=6
+   nv=3969 nt=7680 k=0.11972 normal disagreements = 0 (min dot 1.0000)
+   h_max=1.1294  interior dofs=3713  boundary vertices=256  est dense matrix GB=0.22
+   assembled+restricted in 707.1s
+   LU+solve (2 rhs) in 1.6s
+   uniform        P_bem=1.382257e-08 P_far=1.382257e-08 far/bem=1.00000
+   legacy_long_horizon P_bem=2.476262e-13 P_far=2.477164e-13 far/bem=1.00036
+[spherecap m=3] default quadrature regular=4 singular=4; bump=+0
+   using regular=4 singular=4
+   nv=8641 nt=17208 k=1.83183 normal disagreements = 0 (min dot 0.9998)
+   h_max=0.4367  interior dofs=8569  boundary vertices=72  est dense matrix GB=1.17
+   assembled+restricted in 1202.3s
+   LU+solve (6 rhs) in 9.4s
+   uniform        P_bem=5.921101e-07 P_far=5.921143e-07 far/bem=1.00001
+   dyncomp        P_bem=2.615058e-08 P_far=2.615095e-08 far/bem=1.00001
+   inputpower     P_bem=2.771258e-08 P_far=2.771318e-08 far/bem=1.00002
+   quadvel-rad    P_bem=1.168057e-08 P_far=1.168077e-08 far/bem=1.00002
+   quadvel-I      P_bem=1.715005e-08 P_far=1.715048e-08 far/bem=1.00002
+   quadvel-ones   P_bem=5.846401e-08 P_far=5.846435e-08 far/bem=1.00001
+[cylpanel m=3] default quadrature regular=4 singular=4; bump=+0
+   using regular=4 singular=4
+   nv=8833 nt=17280 k=0.11972 normal disagreements = 0 (min dot 1.0000)
+   h_max=0.7529  interior dofs=8449  boundary vertices=384  est dense matrix GB=1.14
+   assembled+restricted in 1205.3s
+   LU+solve (2 rhs) in 12.9s
+   uniform        P_bem=1.376492e-08 P_far=1.376492e-08 far/bem=1.00000
+   legacy_long_horizon P_bem=2.407116e-13 P_far=2.418522e-13 far/bem=1.00474

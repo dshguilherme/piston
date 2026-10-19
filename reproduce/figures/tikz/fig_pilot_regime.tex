@@ -1,0 +1,139 @@
+﻿% Pilot regime figure: regret of the design reached from uniform per cell (a), and
+% predicted against true reduction for every run (b). Data: data/f17_*.dat only. Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+
+\pgfplotstableread{data/f17_regret.dat}\regtab
+% paper-case value of the sinc run started at the exact run's end (row 7, column sincpick)
+\pgfplotstablegetelem{6}{sincpick}\of\regtab
+\xdef\pickval{\pgfplotsretval}
+
+\pgfplotsset{
+  axbase/.style={
+    scale only axis, anchor=south west, clip=false,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    label style={lab},
+    major tick length=1.2mm, tick align=outside,
+  },
+  regax/.style={
+    axbase, width=63mm, height=35mm,
+    xmin=0.4, xmax=8.6, xtick=\empty, xticklabels={},
+    ymin=0, ymax=65, ytick={0,20,40,60},
+    axis x line*=bottom, axis y line*=left,
+    ylabel={exact-power gap $s$ (dB)},
+  },
+  scatax/.style={
+    axbase, width=50mm, height=46mm,
+    xmin=-90, xmax=3, ymin=-90, ymax=3,
+    xtick={-80,-60,-40,-20,0}, ytick={-80,-60,-40,-20,0},
+    xticklabels={$-$80,$-$60,$-$40,$-$20,0},
+    yticklabels={$-$80,$-$60,$-$40,$-$20,0},
+    xlabel={predicted $\Delta L$, own objective (dB)},
+    ylabel={true $\Delta L$, exact (dB)},
+  },
+  erpmk/.style={refcurve, draw=black!60, only marks, mark=*, mark size=1.5pt, mark options={fill=black!60}},
+  erpmo/.style={refcurve, draw=black!60, only marks, mark=o, mark size=1.5pt},
+  sincmk/.style={surrcurve, only marks, mark=square, mark size=1.5pt, mark options={solid}},
+  exactmk/.style={refcurve, only marks, mark=triangle, mark size=2.6pt},
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% ================================================================ panel (a)
+\begin{axis}[regax, at={(10mm,14mm)}]
+  % separator between the kR <= 3 and kR >= 7 cells, and the 10 dB reference
+  \draw[reference] (axis cs:4.5,0) -- (axis cs:4.5,65);
+  \draw[reference] (axis cs:0.4,10) -- (axis cs:7.45,10);
+  \node[note, anchor=south west, align=left] at (axis cs:4.72,10.5) {10 dB: about\\the exact runs'\\own spread};
+  % exact: spread of the two starts (bar) and the from-uniform value (triangle)
+  \addplot[refcurve, mark=none, draw=none, error bars/.cd, y dir=both, y explicit,
+      error bar style={refcurve}, error mark=none]
+    table[x expr=\thisrow{idx}-0.28, y=exact,
+      y error plus expr={max(\thisrow{exact},\thisrow{exactxs})-\thisrow{exact}},
+      y error minus expr={\thisrow{exact}-min(\thisrow{exact},\thisrow{exactxs})}]{data/f17_regret.dat};
+  \addplot[exactmk] table[x expr=\thisrow{idx}-0.28, y=exact]{data/f17_regret.dat};
+  % ERP: filled when the stopping rule was met, open at the cap
+  \addplot[erpmk, restrict expr to domain={\thisrow{erpcap}}{0:0}]
+    table[x expr=\thisrow{idx}+0.28, y=erp]{data/f17_regret.dat};
+  \addplot[erpmo, restrict expr to domain={\thisrow{erpcap}}{1:1}]
+    table[x expr=\thisrow{idx}+0.28, y=erp]{data/f17_regret.dat};
+  % sinc (all at the cap)
+  \addplot[sincmk] table[x=idx, y=sinc]{data/f17_regret.dat};
+  % paper case: sinc started at the exact run's end
+  \addplot[sincmk, mark size=1.1pt] coordinates {(7,\pickval)};
+  \draw[leader] (axis cs:7.12,\pickval+1.2) -- (axis cs:7.52,7.2);
+  \node[note, anchor=west, align=left] at (axis cs:7.55,8.5) {from\\exact end};
+
+\end{axis}
+
+% two-line tick labels read from the table; x = 10 + (idx-0.4)*63/8.2 mm (panel (a) axis)
+\foreach \i in {0,...,6}{
+  \pgfplotstablegetelem{\i}{idx}\of\regtab \xdef\ix{\pgfplotsretval}
+  \pgfplotstablegetelem{\i}{theta}\of\regtab \xdef\th{\pgfplotsretval}
+  \pgfplotstablegetelem{\i}{kR}\of\regtab \xdef\kr{\pgfplotsretval}
+  \pgfmathsetmacro{\xx}{10+(\ix-0.4)*63/8.2}
+  \node[note, anchor=north] at (\xx mm,10.4mm) {\pgfmathprintnumber[fixed,precision=0,assume math mode]{\th}$^\circ$};
+  \node[note, anchor=north] at (\xx mm,7.1mm) {\pgfmathprintnumber[fixed,precision=1,assume math mode]{\kr}};
+  \draw[witness] (\xx mm,14mm) -- (\xx mm,12.8mm);
+}
+\node[note, anchor=east] at (9mm,9.2mm) {$\theta_0$};
+\node[note, anchor=east] at (9mm,5.9mm) {$kR$};
+% group brackets
+\pgfmathsetmacro{\xA}{10+(0.7-0.4)*63/8.2}\pgfmathsetmacro{\xB}{10+(4.3-0.4)*63/8.2}
+\pgfmathsetmacro{\xC}{10+(4.7-0.4)*63/8.2}\pgfmathsetmacro{\xD}{10+(7.3-0.4)*63/8.2}
+\pgfmathsetmacro{\xAB}{(\xA+\xB)/2}\pgfmathsetmacro{\xCD}{(\xC+\xD)/2}
+\draw[witness] (\xA mm,4.4mm) -- (\xA mm,3.4mm) -- (\xB mm,3.4mm) -- (\xB mm,4.4mm);
+\node[note, anchor=north] at (\xAB mm,3.0mm) {$kR\le3$};
+\draw[witness] (\xC mm,4.4mm) -- (\xC mm,3.4mm) -- (\xD mm,3.4mm) -- (\xD mm,4.4mm);
+\node[note, anchor=north west] at (\xC mm,3.0mm) {$kR\ge7$};
+\pgfmathsetmacro{\xP}{10+(7-0.4)*63/8.2}
+\node[note, anchor=north] at (\xP mm,3.0mm) {paper case};
+% legend above the axis
+\def\lgx{10.5mm}
+\draw[refcurve, draw=black!60, fill=black!60] plot[only marks, mark=*, mark size=1.5pt] coordinates {(\lgx,59.5mm)};
+\node[note, anchor=west] at (\lgx+2mm,59.5mm) {ERP (phase-blind velocity norm)};
+\draw[surrcurve] plot[only marks, mark=square, mark size=1.5pt, mark options={solid}] coordinates {(\lgx+46mm,59.5mm)};
+\node[note, anchor=west] at (\lgx+48mm,59.5mm) {sinc};
+\draw[refcurve] plot[only marks, mark=triangle, mark size=1.9pt] coordinates {(\lgx,56.2mm)};
+\node[note, anchor=west] at (\lgx+2mm,56.2mm) {exact, from uniform};
+\draw[refcurve] (\lgx+31.5mm,54.7mm) -- (\lgx+31.5mm,57.7mm);
+\node[note, anchor=west] at (\lgx+33.5mm,56.2mm) {exact, spread of two starts};
+\node[note, anchor=west] at (\lgx-1mm,52.9mm) {filled: stopping rule met; open: 600-iteration cap};
+
+\node[paneltag, anchor=north west] at (0mm,64mm) {(a)};
+\node[paneltitle, anchor=north west] at (5mm,64mm) {Gap $s$ of the design reached from uniform};
+
+% ================================================================ panel (b)
+\begin{axis}[scatax, at={(86mm,9mm)}]
+  \draw[reference] (axis cs:-90,-90) -- (axis cs:3,3);
+  % exact first, then ERP, then sinc so that the squares stay visible
+  \addplot[exactmk] table[x=pred, y=true]{data/f17_pt_exact.dat};
+  \addplot[erpmk, restrict expr to domain={\thisrow{cap}}{0:0}] table[x=pred, y=true]{data/f17_pt_erp.dat};
+  \addplot[erpmo, restrict expr to domain={\thisrow{cap}}{1:1}] table[x=pred, y=true]{data/f17_pt_erp.dat};
+  \addplot[sincmk] table[x=pred, y=true]{data/f17_pt_sinc.dat};
+  \draw[reference] (axis cs:3,3) -- ([yshift=2.2mm]axis cs:3,3);
+  \node[note, anchor=south east] at ([yshift=2.2mm]axis cs:3,3) {equal prediction};
+  % cluster labels
+  \node[note, anchor=north west] (lowk) at (axis cs:-86,-4) {sinc,\\$kR\le3$};
+  \draw[leader] (axis cs:-76,-19) -- (axis cs:-62,-28);
+  \node[note, anchor=north] (hik) at (axis cs:-32,-60) {sinc, $kR\ge7$};
+  \draw[leader] (axis cs:-35,-58.5) -- (axis cs:-38,-43);
+  \draw[leader] (axis cs:-28,-58.5) -- (axis cs:-25,-29.5);
+  \node[note, anchor=north] (erpl) at (axis cs:-11,-34) {ERP};
+\end{axis}
+\node[paneltag, anchor=north west] at (72mm,64mm) {(b)};
+\node[paneltitle, anchor=north west] at (77mm,64mm) {Predicted against true reduction};
+\end{tikzpicture}
+\end{document}
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+Consistent-spline prescribed-source sinc reoptimization, cylindrical panel.
+Boundary condition: existing displacement-fixed edges; not a verified KL rotation clamp.
+Acoustic model: baffled-Rayleigh-type sinc source operator on midsurface; not an unbaffled BEM.
+W old design = 4.413688826253e-15 W; W consistent reoptimized = 4.413688826253e-15 W
+Weighted volume old=0.5 new=0.5 stop=nmax iterations=250

@@ -1,0 +1,39 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== new c30_k18_SU_N8_s1_mean (theta0 30, kR 18.3183): start uniform, N 8, sigma 0.01, mode mean, cstart 1.001586e+00, target 800 ==
+  [S c30_k18 N8 s0.01] it     1: Jrob=5.93698e-07 (std 1.26e-09) f0=+100.0000  nominal exact   +0.000 dB  sinc   +0.000 dB  robust   -0.007 dB  vol=0.5000 chg=1.39e-02 inner=0 1.0s
+  [S c30_k18 N8 s0.01] it    25: Jrob=1.33798e-08 (std 3.91e-11) f0= +56.3592  nominal exact  -16.405 dB  sinc  -16.477 dB  robust  -16.478 dB  vol=0.4992 chg=1.10e-02 inner=0 1.0s
+  [S c30_k18 N8 s0.01] it    50: Jrob=1.22265e-08 (std 3.33e-11) f0= +55.3220  nominal exact  -16.965 dB  sinc  -16.869 dB  robust  -16.870 dB  vol=0.4999 chg=9.10e-03 inner=1 1.5s
+  [S c30_k18 N8 s0.01] it    75: Jrob=1.19045e-08 (std 3.44e-11) f0= +55.0149  nominal exact  -17.121 dB  sinc  -16.985 dB  robust  -16.985 dB  vol=0.5000 chg=3.81e-03 inner=2 2.0s
+  [S c30_k18 N8 s0.01] it   100: Jrob=1.16654e-08 (std 3.30e-11) f0= +54.7813  nominal exact  -17.177 dB  sinc  -17.073 dB  robust  -17.074 dB  vol=0.5000 chg=1.86e-03 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   125: Jrob=1.15790e-08 (std 3.38e-11) f0= +54.6958  nominal exact  -17.198 dB  sinc  -17.105 dB  robust  -17.106 dB  vol=0.5000 chg=1.07e-03 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   150: Jrob=1.15201e-08 (std 3.35e-11) f0= +54.6371  nominal exact  -17.216 dB  sinc  -17.127 dB  robust  -17.128 dB  vol=0.5000 chg=2.74e-03 inner=2 2.0s
+  [S c30_k18 N8 s0.01] it   175: Jrob=1.14771e-08 (std 3.30e-11) f0= +54.5941  nominal exact  -17.228 dB  sinc  -17.143 dB  robust  -17.144 dB  vol=0.5000 chg=1.79e-03 inner=2 2.3s
+  [S c30_k18 N8 s0.01] it   200: Jrob=1.14336e-08 (std 3.39e-11) f0= +54.5504  nominal exact  -17.245 dB  sinc  -17.160 dB  robust  -17.161 dB  vol=0.5000 chg=1.09e-03 inner=2 2.0s
+  [S c30_k18 N8 s0.01] it   225: Jrob=1.13841e-08 (std 3.42e-11) f0= +54.5005  nominal exact  -17.259 dB  sinc  -17.179 dB  robust  -17.180 dB  vol=0.4999 chg=2.77e-03 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   250: Jrob=1.12890e-08 (std 3.38e-11) f0= +54.4039  nominal exact  -17.342 dB  sinc  -17.215 dB  robust  -17.216 dB  vol=0.5000 chg=1.18e-03 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   275: Jrob=1.12758e-08 (std 3.35e-11) f0= +54.3905  nominal exact  -17.339 dB  sinc  -17.220 dB  robust  -17.221 dB  vol=0.5000 chg=1.55e-03 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   300: Jrob=1.12504e-08 (std 3.35e-11) f0= +54.3645  nominal exact  -17.363 dB  sinc  -17.229 dB  robust  -17.231 dB  vol=0.5000 chg=1.52e-03 inner=2 2.0s
+  [S c30_k18 N8 s0.01] it   325: Jrob=1.12256e-08 (std 3.44e-11) f0= +54.3391  nominal exact  -17.380 dB  sinc  -17.239 dB  robust  -17.240 dB  vol=0.5000 chg=2.34e-03 inner=2 2.2s
+  [S c30_k18 N8 s0.01] it   350: Jrob=1.12122e-08 (std 3.42e-11) f0= +54.3254  nominal exact  -17.387 dB  sinc  -17.244 dB  robust  -17.246 dB  vol=0.5000 chg=1.67e-03 inner=2 2.0s
+  [S c30_k18 N8 s0.01] it   375: Jrob=1.11781e-08 (std 3.43e-11) f0= +54.2904  nominal exact  -17.393 dB  sinc  -17.258 dB  robust  -17.259 dB  vol=0.5000 chg=2.39e-03 inner=2 2.0s
+  [S c30_k18 N8 s0.01] it   400: Jrob=1.11542e-08 (std 3.52e-11) f0= +54.2657  nominal exact  -17.399 dB  sinc  -17.267 dB  robust  -17.268 dB  vol=0.5000 chg=8.86e-04 inner=2 2.2s
+  [S c30_k18 N8 s0.01] it   425: Jrob=1.11394e-08 (std 3.60e-11) f0= +54.2505  nominal exact  -17.405 dB  sinc  -17.273 dB  robust  -17.274 dB  vol=0.5000 chg=1.12e-03 inner=3 2.7s
+  [S c30_k18 N8 s0.01] it   450: Jrob=1.11262e-08 (std 3.58e-11) f0= +54.2368  nominal exact  -17.410 dB  sinc  -17.278 dB  robust  -17.279 dB  vol=0.5000 chg=2.31e-03 inner=1 1.6s
+  [S c30_k18 N8 s0.01] it   475: Jrob=1.11149e-08 (std 3.61e-11) f0= +54.2251  nominal exact  -17.413 dB  sinc  -17.283 dB  robust  -17.283 dB  vol=0.5000 chg=1.01e-03 inner=2 2.0s
+  [S c30_k18 N8 s0.01] it   500: Jrob=1.10818e-08 (std 3.60e-11) f0= +54.1908  nominal exact  -17.435 dB  sinc  -17.296 dB  robust  -17.296 dB  vol=0.5000 chg=1.04e-03 inner=2 2.2s
+  [S c30_k18 N8 s0.01] it   525: Jrob=1.10734e-08 (std 3.57e-11) f0= +54.1821  nominal exact  -17.440 dB  sinc  -17.299 dB  robust  -17.300 dB  vol=0.5000 chg=4.30e-04 inner=2 2.2s
+  [S c30_k18 N8 s0.01] it   550: Jrob=1.10685e-08 (std 3.55e-11) f0= +54.1770  nominal exact  -17.440 dB  sinc  -17.301 dB  robust  -17.302 dB  vol=0.5000 chg=5.50e-04 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   575: Jrob=1.10652e-08 (std 3.54e-11) f0= +54.1736  nominal exact  -17.439 dB  sinc  -17.302 dB  robust  -17.303 dB  vol=0.5000 chg=4.99e-03 inner=1 1.5s
+  [S c30_k18 N8 s0.01] it   600: Jrob=1.10588e-08 (std 3.54e-11) f0= +54.1669  nominal exact  -17.440 dB  sinc  -17.305 dB  robust  -17.305 dB  vol=0.5000 chg=9.33e-04 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   625: Jrob=1.10511e-08 (std 3.53e-11) f0= +54.1589  nominal exact  -17.440 dB  sinc  -17.308 dB  robust  -17.308 dB  vol=0.5000 chg=9.30e-04 inner=2 2.2s
+  [S c30_k18 N8 s0.01] it   650: Jrob=1.10493e-08 (std 3.54e-11) f0= +54.1570  nominal exact  -17.437 dB  sinc  -17.309 dB  robust  -17.309 dB  vol=0.5000 chg=4.27e-04 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   675: Jrob=1.10480e-08 (std 3.53e-11) f0= +54.1557  nominal exact  -17.436 dB  sinc  -17.309 dB  robust  -17.310 dB  vol=0.5000 chg=1.58e-04 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   700: Jrob=1.10476e-08 (std 3.52e-11) f0= +54.1552  nominal exact  -17.436 dB  sinc  -17.309 dB  robust  -17.310 dB  vol=0.5000 chg=1.26e-04 inner=2 2.4s
+  [S c30_k18 N8 s0.01] it   725: Jrob=1.10466e-08 (std 3.53e-11) f0= +54.1542  nominal exact  -17.436 dB  sinc  -17.310 dB  robust  -17.310 dB  vol=0.5000 chg=5.89e-04 inner=2 2.0s
+  [S c30_k18 N8 s0.01] it   750: Jrob=1.10453e-08 (std 3.53e-11) f0= +54.1528  nominal exact  -17.435 dB  sinc  -17.310 dB  robust  -17.311 dB  vol=0.5000 chg=1.60e-04 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   775: Jrob=1.10448e-08 (std 3.53e-11) f0= +54.1523  nominal exact  -17.434 dB  sinc  -17.310 dB  robust  -17.311 dB  vol=0.5000 chg=2.25e-04 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   800: Jrob=1.10445e-08 (std 3.53e-11) f0= +54.1520  nominal exact  -17.434 dB  sinc  -17.310 dB  robust  -17.311 dB  vol=0.5000 chg=6.71e-04 inner=2 2.1s
+R0_ROBUST_c30_k18_SU_N8_s1_mean_DONE it=800 status=budget walltime=1508s warn=0

@@ -1,0 +1,97 @@
+% F24 Pass rule: error of the sinc model against its predicted reduction, with the class envelopes.
+% (a) design point (paper case); (b) two low-kR cells of the regime study (30 deg, kR 3; 120 deg, kR 1.5).
+% Data: data/f24_*.dat and data/f24_numbers.tex (tests/r0_fig_passrule.py from results/r0_revision/passrule/).
+% Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\input{data/f24_numbers.tex}
+
+\pgfplotsset{
+  axbase/.style={
+    scale only axis, anchor=south west, clip=true,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    label style={lab},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+    xlabel={predicted reduction $R_{\rm pred}$ (dB)},
+  },
+  sincmk/.style={surrcurve, only marks, mark=square, mark size=0.9pt, mark options={solid}},
+  sincmkb/.style={surrcurve, only marks, mark=diamond, mark size=1.2pt, mark options={solid}},
+  exactmk/.style={refcurve, only marks, mark=triangle, mark size=1.1pt},
+  randmk/.style={refcurve, draw=black!55, only marks, mark=*, mark size=0.9pt, mark options={fill=black!55}},
+  envline/.style={refcurve, draw=black},
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% ================================================================ panel (a): design point
+\begin{axis}[axbase, at={(12mm,10mm)}, width=50mm, height=42mm,
+    xmin=-3, xmax=27, ymin=-2.4, ymax=1.6,
+    xtick={0,5,10,15,20,25}, ytick={-2,-1,0,1},
+    yticklabels={$-$2,$-$1,0,1},
+    ylabel={error $e=R_{\rm pred}-R_x$ (dB)}]
+  \draw[reference] (axis cs:-3,0) -- (axis cs:27,0);
+  \addplot[exactmk] table[x=Rpred, y=e]{data/f24_paper_exact.dat};
+  \addplot[randmk] table[x=Rpred, y=e]{data/f24_paper_random.dat};
+  \addplot[sincmk] table[x=Rpred, y=e]{data/f24_paper_sinc.dat};
+  % class envelope (kR >= 7, pooled) and the line R_x = 20 dB (e = R_pred - 20)
+  \addplot[envline, domain=0:27, samples=2] {\envHiA+\envHiB*x};
+  \addplot[reference, domain=17.6:21.6, samples=2] {x-20};
+  \draw[leader] (axis cs:\needHiTtwenty,{\envHiA+\envHiB*\needHiTtwenty}) -- (axis cs:\needHiTtwenty,-2.4);
+\end{axis}
+% labels of panel (a), outside the point cloud (axis: x = 12 + (X+3)*50/30 mm, y = 10 + (Y+2.4)*42/4 mm)
+\node[note, anchor=south] at ({(12+(21.6+3)*50/30)*1mm}, {(10+(1.6+2.4)*42/4)*1mm}) {$R_x=20$~dB};
+\node[note, anchor=south east] at ({(12+(20.3+3)*50/30)*1mm}, {(10+(0.95+2.4)*42/4)*1mm}) {certified from \needHiTtwenty~dB};
+\node[point] at ({(12+(\needHiTtwenty+3)*50/30)*1mm}, {(10+(\envHiA+\envHiB*\needHiTtwenty+2.4)*42/4)*1mm}) {};
+\node[note, anchor=west, align=left] at ({(12+(-2.6+3)*50/30)*1mm}, {(10+(-2.1+2.4)*42/4)*1mm}) {$e<0$: understated};
+
+\node[paneltag, anchor=north west] at (0mm,61mm) {(a)};
+\node[paneltitle, anchor=north west] at (5mm,61mm) {Design point, $30^\circ$, $kR=18.3$};
+
+% ================================================================ panel (b): two low-kR cells
+\begin{axis}[axbase, at={(83mm,10mm)}, width=52mm, height=42mm,
+    xmin=-6, xmax=62, ymin=-66, ymax=40,
+    xtick={0,20,40,60}, ytick={-60,-40,-20,0,20,40},
+    yticklabels={$-$60,$-$40,$-$20,0,20,40}]
+  \draw[reference] (axis cs:-6,0) -- (axis cs:62,0);
+  \addplot[exactmk] table[x=Rpred, y=e]{data/f24_c30k3_exact.dat};
+  \addplot[exactmk] table[x=Rpred, y=e]{data/f24_c120k1p5_exact.dat};
+  \addplot[randmk] table[x=Rpred, y=e]{data/f24_c30k3_random.dat};
+  \addplot[randmk] table[x=Rpred, y=e]{data/f24_c120k1p5_random.dat};
+  \addplot[sincmk] table[x=Rpred, y=e]{data/f24_c30k3_sinc.dat};
+  \addplot[sincmkb] table[x=Rpred, y=e]{data/f24_c120k1p5_sinc.dat};
+  \addplot[envline, domain=0:62, samples=2] {\envLoA+\envLoB*x};
+  \addplot[reference, domain=-6:60, samples=2] {x-20};
+  \addplot[reference, dash pattern=on 4pt off 1.5pt on 0.8pt off 1.5pt, domain=-6:62, samples=2] {x-40};
+  \draw[leader] (axis cs:\needLoTtwenty,{\envLoA+\envLoB*\needLoTtwenty}) -- (axis cs:\needLoTtwenty,-66);
+\end{axis}
+% labels of panel (b) (axis: x = 83 + (X+6)*52/68 mm, y = 10 + (Y+66)*42/106 mm)
+\node[note, anchor=south east] at ({(83+(58+6)*52/68)*1mm}, {(10+(40+66)*42/106)*1mm}) {$R_x=20$~dB};
+\node[note, anchor=north west] at ({(83+(-5+6)*52/68)*1mm}, {(10+(-46+66)*42/106)*1mm}) {$R_x=40$~dB};
+\node[point] at ({(83+(\needLoTtwenty+6)*52/68)*1mm}, {(10+(\envLoA+\envLoB*\needLoTtwenty+66)*42/106)*1mm}) {};
+\node[note, anchor=north west, align=left] at ({(83+(45+6)*52/68)*1mm}, {(10+(-40+66)*42/106)*1mm}) {certified\\from \needLoTtwenty~dB};
+
+\node[paneltag, anchor=north west] at (72mm,61mm) {(b)};
+\node[paneltitle, anchor=north west] at (77mm,61mm) {Two low-$kR$ cases (scaled)};
+
+% ================================================================ legend above the panels
+\def\ly{68.5mm}\def\lyy{65mm}
+\draw[surrcurve] plot[only marks, mark=square, mark size=1.2pt, mark options={solid}] coordinates {(2mm,\ly)};
+\node[note, anchor=west] at (3.5mm,\ly) {sinc-driven iterates: (a) runs S0, SX, SG; (b) $30^\circ$, $kR=3$};
+\draw[surrcurve] plot[only marks, mark=diamond, mark size=1.5pt, mark options={solid}] coordinates {(84mm,\ly)};
+\node[note, anchor=west] at (85.5mm,\ly) {(b) $120^\circ$, $kR=1.5$};
+\draw[refcurve] plot[only marks, mark=triangle, mark size=1.5pt] coordinates {(2mm,\lyy)};
+\node[note, anchor=west] at (3.5mm,\lyy) {exact-driven iterates};
+\draw[refcurve, draw=black!55, fill=black!55] plot[only marks, mark=*, mark size=1.1pt] coordinates {(36mm,\lyy)};
+\node[note, anchor=west] at (37.5mm,\lyy) {random fields};
+\draw[refcurve, draw=black] (60mm,\lyy) -- (65mm,\lyy);
+\node[note, anchor=west] at (65.5mm,\lyy) {envelope};
+\draw[reference] (84mm,\lyy) -- (89mm,\lyy);
+\node[note, anchor=west] at (89.5mm,\lyy) {true reduction equal to the target};
+\end{tikzpicture}
+\end{document}

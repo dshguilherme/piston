@@ -1,0 +1,7 @@
+cell,run,rung,start,niter,stop,numeval,walltime_s,final_vol,Jbest_own_normalised,tail100_dB,tail50_dB,source
+c30_k3,XU,X,U,600,nmax,2935,650.5,0.498969,2.097181e-15,0.09416,0.04606,pilot
+c30_k3,SU,S,U,600,nmax,2434,465.9,0.500000,1.541140e-12,0.15484,0.07681,pilot
+c30_k3,EU,E,U,392,converged,328,201.0,0.500000,1.106093e-08,0.00068,0.00001,pilot
+c30_k3,SX,S,X,600,nmax,2779,941.8,0.500000,4.809191e-10,0.35276,0.16728,pilot
+c30_k3,EX,E,X,214,converged,166,131.3,0.500000,8.673736e-08,0.00003,0.00000,pilot
+c30_k3,XS,X,S,600,nmax,3237,1092.5,0.498173,2.107070e-11,0.56119,0.26483,pilot

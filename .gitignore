@@ -1,0 +1,12 @@
+﻿out/
+__pycache__/
+*.pyc
+*.mat
+*.npz
+*.npy
+*.h5
+external/
+*.aux
+*.fls
+*.fdb_latexmk
+*.synctex.gz

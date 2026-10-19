@@ -1,0 +1,80 @@
+% jsvfigs.sty -- single shared figure style for the JSV sinc-surrogate paper.
+% Derived from benchmark-review/book/benchmark-figs.sty (handbook rule set S01-S05,
+% A01-A09, F01-F03; see projects/.apm/book-design/firing-squad-report.md), adapted to
+% an Elsevier/JSV journal page. Prototype copy: do not load it from the handbook.
+%
+% Page facts (measured 2026-10-17 with elsarticle):
+%   preprint,12pt : \textwidth = 390pt = 137 mm  (close to Elsevier 1.5-column 140 mm)
+%   final,5p      : \columnwidth = 252pt = 88.6 mm, \textwidth = 522pt = 183.5 mm
+% Rule: draw every figure at its final print width (88 mm or 137 mm), include it at
+% natural size. Never rescale by more than 10 %; text size is fixed below in points.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jsvfigs}[2026/10/17 v0.1 JSV paper figure style (prototype)]
+
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.markings,positioning,fit}
+
+% Absolute label size: 8 pt on 9.5 pt leading, independent of the class option.
+\newcommand{\figfont}{\fontsize{8}{9.5}\selectfont\sffamily}
+\newcommand{\figfontsmall}{\fontsize{7}{8.5}\selectfont\sffamily}
+
+% Widths a figure may be drawn for (S02 analogue: one coordinate unit = 1 cm, no scale=).
+\newlength{\figsingle}\setlength{\figsingle}{88mm}
+\newlength{\figwide}\setlength{\figwide}{137mm}
+
+% ---------------------------------------------------------------- baseline (S01)
+\tikzset{
+  >={Latex[length=2.2mm,width=1.5mm]},
+  line width=0.6pt,
+  every picture/.style={line cap=round,line join=round},
+  every node/.style={font=\figfont, inner sep=1.5pt, outer sep=2pt, text=black!85},
+}
+
+% ---------------------------------------------------------------- colour (S05, two accents)
+% Two accent roles only, each also coded by line style so greyscale print reads:
+% figref (blue, solid line) marks the exact two-sided reference; figsurr (red, dashed
+% line) marks the sinc surrogate under test.
+\definecolor{figref}{HTML}{1F5FA8}
+\definecolor{figsurr}{HTML}{C0392B}
+
+% ---------------------------------------------------------------- path roles (S03)
+\tikzset{
+  structure/.style  = {line width=1.1pt, draw=black},            % shell mid-surface, bodies
+  reference/.style  = {line width=0.45pt, draw=black!45, dash pattern=on 2.5pt off 1.5pt}, % construction lines
+  dimension/.style  = {line width=0.45pt, draw=black!70, {Latex[length=1.6mm,width=1.1mm]}-{Latex[length=1.6mm,width=1.1mm]}},
+  witness/.style    = {line width=0.35pt, draw=black!55},
+  leader/.style     = {line width=0.35pt, draw=black!60},
+  normal/.style     = {line width=0.7pt, draw=black, ->},
+  flow/.style       = {line width=0.6pt, draw=black!70, ->, dash pattern=on 1.8pt off 1.2pt},
+  baffle/.style     = {line width=0.9pt, draw=black},
+  hatch/.style      = {pattern=north east lines, pattern color=black!55, draw=none},
+  refcurve/.style   = {line width=0.9pt, draw=figref},
+  surrcurve/.style  = {line width=0.9pt, draw=figsurr, dash pattern=on 3pt off 1.5pt},
+  point/.style      = {circle, fill=black, inner sep=0pt, minimum size=3pt, outer sep=0pt},
+  piston/.style     = {line width=1.8pt, draw=black},             % vibrating patch set in a baffle
+}
+
+% ---------------------------------------------------------------- label roles (text only, never drawn)
+\tikzset{
+  lab/.style        = {inner sep=1.2pt, outer sep=1.5pt},
+  note/.style       = {font=\figfontsmall, text=black!75, align=left, inner sep=1pt},
+  paneltag/.style   = {font=\figfont\bfseries, text=black, inner sep=0pt},
+  paneltitle/.style = {font=\figfont, text=black, inner sep=0pt},
+}
+
+% ---------------------------------------------------------------- block roles (OPM shape rule)
+% Sharp rectangles are things (a model, a matrix, a data set, a geometry);
+% rounded rectangles are actions (a process such as evaluating, optimising, comparing).
+\tikzset{
+  thing/.style   = {draw=black!80, line width=0.5pt, rectangle, rounded corners=0pt,
+                    minimum height=6.5mm, text width=19mm, align=center, inner sep=1.5pt},
+  action/.style  = {draw=black!80, line width=0.5pt, rectangle, rounded corners=2.6mm,
+                    minimum height=6.5mm, text width=19mm, align=center, inner sep=1.5pt},
+  thingref/.style  = {thing, draw=figref, line width=0.9pt, fill=figref!8},
+  thingsurr/.style = {thing, draw=figsurr, line width=0.9pt, dash pattern=on 3pt off 1.5pt, fill=figsurr!6},
+  chosen/.style    = {line width=1.1pt},                           % the variant used in the main results
+  axisline/.style  = {line width=0.6pt, draw=black!60, -{Latex[length=2.4mm,width=1.6mm]}},
+}
+
+% A01: there is deliberately no white-fill or opacity masking style in this package.
+\endinput

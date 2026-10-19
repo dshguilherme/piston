@@ -1,0 +1,12 @@
+# conda env create -f reproduce/env/environment-analysis.yml   ->  conda activate piston-analysis
+# Pins from pip-freeze-miniconda-base.txt (author's machine, 2026-10-18). The author used the miniconda
+# *base* interpreter, which also holds many unrelated packages; this file keeps only what the package needs.
+# Untested as a fresh environment: the versions are what ran, the environment itself was not rebuilt.
+name: piston-analysis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13.12
+  - pip
+  - pip:
+      - -r requirements-analysis.txt

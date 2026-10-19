@@ -1,0 +1,75 @@
+﻿% Problem schematic: where the sinc kernel is exact (a) and the problem the paper solves (b).
+% Drawn for the 137 mm width; include at natural size. Geometry of (b) is to scale.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\begin{document}
+\begin{tikzpicture}
+% ------------------------------------------------------------------ panel (a)
+\begin{scope}[shift={(0,1.35)}]
+  \def\hw{1.0}
+  \fill[hatch] (-1.9,-0.22) rectangle (1.9,0);
+  \draw[baffle] (-1.9,0) -- (1.9,0);
+  \draw[piston] (-\hw,0) -- (\hw,0);
+  \node[note, anchor=north] at (0,-0.28) {rigid baffle, no fluid below};
+  \node[note, anchor=south west] at (-1.9,1.10) {fluid, one half-space};
+  \coordinate (X) at (-0.62,0);
+  \coordinate (Y) at (0.55,0);
+  \node[point] at (X) {};
+  \node[point] at (Y) {};
+  \draw[witness] ($(X)+(0,0.12)$) -- ($(X)+(0,0.72)$);
+  \draw[witness] ($(Y)+(0,0.12)$) -- ($(Y)+(0,0.72)$);
+  \draw[dimension] ($(X)+(0,0.62)$) -- ($(Y)+(0,0.62)$)
+     node[lab, midway, above] {$r=|\bm x-\bm y|$};
+  \node[lab, anchor=south east] at ($(X)+(-0.03,0.10)$) {$\bm x$};
+  \node[lab, anchor=south west] at ($(Y)+(0.03,0.10)$) {$\bm y$};
+  \draw[normal] (1.40,0.06) -- (1.40,0.66) node[lab, anchor=south] {$\bm n$, $v_n$};
+  \node[paneltag, anchor=base west] at (-1.9,3.20) {(a)};
+  \node[paneltitle, anchor=base west] at (-1.45,3.20) {Baffled flat patch};
+\end{scope}
+
+% ------------------------------------------------------------------ panel (b)
+\begin{scope}[shift={(6.55,-0.15)}]
+  \def\R{3.6}
+  \def\th{30}
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (90:\R);
+  \coordinate (Rr) at ({90-\th}:\R);
+  \coordinate (Rl) at ({90+\th}:\R);
+  % rest of the sphere (construction only)
+  \draw[reference] ({90+\th}:\R) arc[start angle={90+\th}, end angle={90+\th+14}, radius=\R];
+  % cap axis and radius to the rim
+  \draw[reference, dash pattern=on 5pt off 1.5pt on 1pt off 1.5pt] (0,-0.25) -- (0,\R+0.95);
+  \draw[witness] (O) -- (Rr);
+  % the shell
+  \draw[structure] (Rr) arc[start angle={90-\th}, end angle={90+\th}, radius=\R];
+  \node[point] at (O) {};
+  \node[lab, anchor=north east] at (-0.04,-0.02) {$O$};
+  % half-angle
+  \draw[witness, ->] (90:1.25) arc[start angle=90, end angle={90-\th}, radius=1.25];
+  \node[lab] at ({90-\th/2}:1.55) {$\theta_0$};
+  % radius label, on the outside of the angle
+  \node[lab, anchor=west] at ($(O)!0.42!(Rr)+(0.08,-0.05)$) {$R$};
+  % rim radius a, dimension in the bottom gutter
+  \draw[witness] ($(Rr)+(0,-0.52)$) -- ($(Rr|-O)+(0,-0.72)$);
+  \draw[witness] (0,-0.30) -- (0,-0.72);
+  \draw[dimension] (0,-0.60) -- ($(Rr|-O)+(0,-0.60)$) node[lab, midway, below] {$a=R\sin\theta_0$};
+  % outward normals on the outer face
+  \foreach \ang in {90,107} {
+    \draw[normal] (\ang:{\R+0.06}) -- (\ang:{\R+0.70});
+  }
+  \node[lab, anchor=west] at (90:{\R+0.62}) {$\bm n$, $v_n$};
+  % faces
+  \draw[leader] ($(118:\R)+(118:0.08)$) -- (-3.05,4.05);
+  \node[lab, anchor=east] at (-3.05,4.05) {outer face, $p^+$};
+  \node[lab, anchor=east] at (-0.14,2.72) {inner face, $p^-$};
+  % flow around the free edge
+  \draw[flow] ($(Rr)+(-0.10,-0.30)$) to[out=0, in=-80] ($(Rr)+(0.30,0.02)$)
+               to[out=100, in=10] ($(Rr)+(-0.05,0.42)$);
+  \node[lab, anchor=west, align=left] at ($(Rr)+(0.45,-0.10)$) {free edge\\$\mu=p^+-p^-=0$};
+  \node[note, anchor=south west] at (-4.75,-0.95) {drawn to scale for $\theta_0=30^\circ$};
+  \node[paneltag, anchor=base west] at (-4.75,4.70) {(b)};
+  \node[paneltitle, anchor=base west] at (-4.30,4.70) {Open spherical cap in free space};
+\end{scope}
+\end{tikzpicture}
+\end{document}

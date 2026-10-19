@@ -1,0 +1,15 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== resume B_c30_k3_P from checkpoint: it 900, stage 1 (stage it 900), done 0 ==
+  [X c30_k3] it   925 (stage 1,  925): Jown=1.97364e-15 f0=-124.6533  exact  -84.790 dB  sinc  -23.940 dB  erp   -8.968 dB  vol=0.4991 chg=2.16e-06 inner=7
+  [X c30_k3] it   950 (stage 1,  950): Jown=1.96673e-15 f0=-124.6936  exact  -84.805 dB  sinc  -23.943 dB  erp   -8.969 dB  vol=0.4991 chg=2.23e-06 inner=6
+  [X c30_k3] it   975 (stage 1,  975): Jown=1.95821e-15 f0=-124.7436  exact  -84.824 dB  sinc  -23.945 dB  erp   -8.970 dB  vol=0.4992 chg=5.00e-06 inner=6
+  [X c30_k3] it  1000 (stage 1, 1000): Jown=1.94928e-15 f0=-124.7962  exact  -84.844 dB  sinc  -23.949 dB  erp   -8.971 dB  vol=0.4992 chg=2.18e-06 inner=6
+  [X c30_k3] it  1025 (stage 1, 1025): Jown=1.93737e-15 f0=-124.8667  exact  -84.870 dB  sinc  -23.953 dB  erp   -8.973 dB  vol=0.4992 chg=3.14e-06 inner=6
+  [X c30_k3] it  1050 (stage 1, 1050): Jown=1.92683e-15 f0=-124.9295  exact  -84.894 dB  sinc  -23.957 dB  erp   -8.974 dB  vol=0.4992 chg=4.32e-06 inner=6
+  [X c30_k3] it  1075 (stage 1, 1075): Jown=1.91849e-15 f0=-124.9794  exact  -84.913 dB  sinc  -23.960 dB  erp   -8.976 dB  vol=0.4992 chg=1.90e-06 inner=7
+  [X c30_k3] it  1100 (stage 1, 1100): Jown=1.91305e-15 f0=-125.0121  exact  -84.925 dB  sinc  -23.961 dB  erp   -8.976 dB  vol=0.4992 chg=5.84e-06 inner=6
+  [X c30_k3] STOP at it 1100 (stage it 1100): converged (xstat 7.78e-05, fstat 8.52e-05)
+R0_LONG_B_c30_k3_P_DONE it=1100 status=converged walltime=1717s warn=0

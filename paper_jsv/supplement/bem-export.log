@@ -1,0 +1,160 @@
+
+===== cylpanel: designs in mat: uniform, legacy_long_horizon
+re-solve check uniform: rel diff 0.00e+00
+re-solve check legacy_long_horizon: rel diff 0.00e+00
+freq 6.53547 Hz omega 41.06357 lambda 52.4828 m k 0.11972; spline area (sum of weights) 1745.32925199 m^2
+
+-- cylpanel m=2: Nv=3969 Nt=7680 (removed degenerate 0) area 1745.30709967 (spline 1745.32925199, rel -1.27e-05)
+   max extent 50.0000 m, k*extent 5.9859; edge mean 0.8691 max 1.1294 m; h_max/lambda 0.0215; elements/lambda (max edge) 46.47
+   orientation: 0 of 7680 triangles initially disagree with spline normal (flipped to fix); after fix 0
+   duplicate-sample consistency: max rel |dvn| 4.90e-12, max |dx| 2.08e-11, max |dn| 3.49e-13; analytic-position check 2.08e-11
+   boundary vertices: 256
+   uniform              P_mesh=5.949080687e-09 P_ref=5.959581102e-09 rel=-1.762e-03
+   legacy_long_horizon  P_mesh=6.756155179e-15 P_ref=4.413688826e-15 rel=+5.307e-01
+
+-- cylpanel m=3: Nv=8833 Nt=17280 (removed degenerate 0) area 1745.31940650 (spline 1745.32925199, rel -5.64e-06)
+   max extent 50.0000 m, k*extent 5.9859; edge mean 0.5794 max 0.7529 m; h_max/lambda 0.0143; elements/lambda (max edge) 69.71
+   orientation: 0 of 17280 triangles initially disagree with spline normal (flipped to fix); after fix 0
+   duplicate-sample consistency: max rel |dvn| 4.90e-12, max |dx| 2.08e-11, max |dn| 3.49e-13; analytic-position check 2.08e-11
+   boundary vertices: 384
+   uniform              P_mesh=5.954904302e-09 P_ref=5.959581102e-09 rel=-7.848e-04
+   legacy_long_horizon  P_mesh=4.940356941e-15 P_ref=4.413688826e-15 rel=+1.193e-01
+
+-- cylpanel m=4: Nv=15617 Nt=30720 (removed degenerate 0) area 1745.32371390 (spline 1745.32925199, rel -3.17e-06)
+   max extent 50.0000 m, k*extent 5.9859; edge mean 0.4346 max 0.5647 m; h_max/lambda 0.0108; elements/lambda (max edge) 92.94
+   orientation: 0 of 30720 triangles initially disagree with spline normal (flipped to fix); after fix 0
+   duplicate-sample consistency: max rel |dvn| 4.90e-12, max |dx| 2.08e-11, max |dn| 3.49e-13; analytic-position check 2.08e-11
+   boundary vertices: 512
+   uniform              P_mesh=5.956948442e-09 P_ref=5.959581102e-09 rel=-4.418e-04
+   legacy_long_horizon  P_mesh=4.608176688e-15 P_ref=4.413688826e-15 rel=+4.406e-02
+
+-- cylpanel m=6: Nv=34945 Nt=69120 (removed degenerate 0) area 1745.32679062 (spline 1745.32925199, rel -1.41e-06)
+   max extent 50.0000 m, k*extent 5.9859; edge mean 0.2897 max 0.3765 m; h_max/lambda 0.0072; elements/lambda (max edge) 139.41
+   orientation: 0 of 69120 triangles initially disagree with spline normal (flipped to fix); after fix 0
+   duplicate-sample consistency: max rel |dvn| 4.90e-12, max |dx| 2.08e-11, max |dn| 3.49e-13; analytic-position check 2.08e-11
+   boundary vertices: 768
+   uniform              P_mesh=5.958410408e-09 P_ref=5.959581102e-09 rel=-1.964e-04
+   legacy_long_horizon  P_mesh=4.467753652e-15 P_ref=4.413688826e-15 rel=+1.225e-02
+
+-- cylpanel m=8: Nv=61953 Nt=122880 (removed degenerate 0) area 1745.32786747 (spline 1745.32925199, rel -7.93e-07)
+   max extent 50.0000 m, k*extent 5.9859; edge mean 0.2173 max 0.2823 m; h_max/lambda 0.0054; elements/lambda (max edge) 185.89
+   orientation: 0 of 122880 triangles initially disagree with spline normal (flipped to fix); after fix 0
+   duplicate-sample consistency: max rel |dvn| 4.90e-12, max |dx| 2.08e-11, max |dn| 3.49e-13; analytic-position check 2.08e-11
+   boundary vertices: 1024
+   uniform              P_mesh=5.958922464e-09 P_ref=5.959581102e-09 rel=-1.105e-04
+   legacy_long_horizon  P_mesh=4.437719022e-15 P_ref=4.413688826e-15 rel=+5.444e-03
+
+===== spherecap: designs in mat: uniform, dyncomp, inputpower, quadvel-rad, quadvel-I, quadvel-ones
+re-solve check uniform: rel diff 0.00e+00
+re-solve check dyncomp: rel diff 0.00e+00
+re-solve check inputpower: rel diff 0.00e+00
+re-solve check quadvel-rad: rel diff 0.00e+00
+re-solve check quadvel-I: rel diff 0.00e+00
+re-solve check quadvel-ones: rel diff 0.00e+00
+freq 100.00000 Hz omega 628.31853 lambda 3.4300 m k 1.83183; spline area (sum of weights) 84.17872145 m^2
+
+-- spherecap m=2: Nv=3841 Nt=7632 (removed degenerate 48) area 83.96115193 (spline 84.17872145, rel -2.58e-03)
+   max extent 10.0000 m, k*extent 18.3183; edge mean 0.2499 max 0.6540 m; h_max/lambda 0.1907; elements/lambda (max edge) 5.24
+   orientation: 0 of 7632 triangles initially disagree with spline normal (flipped to fix); after fix 0
+   duplicate-sample consistency: max rel |dvn| 1.56e-12, max |dx| 1.31e-11, max |dn| 1.31e-12; analytic-position check 1.31e-11
+   pole (merged 49 samples): relative spread of v_n per design (max|v-mean|/max(|mean|,eps)), and absolute (m/s):
+      uniform        rel 4.884e-14  abs 2.549e-21  |mean| 5.220e-08
+      dyncomp        rel 3.711e-11  abs 3.847e-20  |mean| 1.037e-09
+      inputpower     rel 1.736e-09  abs 4.683e-18  |mean| 2.698e-09
+      quadvel-rad    rel 3.043e-08  abs 6.552e-17  |mean| 2.153e-09
+      quadvel-I      rel 2.115e-06  abs 2.983e-15  |mean| 1.410e-09
+      quadvel-ones   rel 1.104e-11  abs 1.560e-19  |mean| 1.413e-08
+   boundary vertices: 48
+   uniform              P_mesh=3.724208669e-07 P_ref=3.779177687e-07 rel=-1.455e-02
+   dyncomp              P_mesh=1.368972083e-08 P_ref=1.376857286e-08 rel=-5.727e-03
+   inputpower           P_mesh=1.485461667e-08 P_ref=1.496078595e-08 rel=-7.097e-03
+   quadvel-rad          P_mesh=7.092268451e-09 P_ref=7.185041815e-09 rel=-1.291e-02
+   quadvel-I            P_mesh=9.555354975e-09 P_ref=9.645324129e-09 rel=-9.328e-03
+   quadvel-ones         P_mesh=2.855373497e-08 P_ref=2.879960495e-08 rel=-8.537e-03
+
+-- spherecap m=3: Nv=8641 Nt=17208 (removed degenerate 72) area 84.08197419 (spline 84.17872145, rel -1.15e-03)
+   max extent 10.0000 m, k*extent 18.3183; edge mean 0.1664 max 0.4367 m; h_max/lambda 0.1273; elements/lambda (max edge) 7.85
+   orientation: 0 of 17208 triangles initially disagree with spline normal (flipped to fix); after fix 0
+   duplicate-sample consistency: max rel |dvn| 1.56e-12, max |dx| 1.31e-11, max |dn| 1.31e-12; analytic-position check 1.31e-11
+   pole (merged 73 samples): relative spread of v_n per design (max|v-mean|/max(|mean|,eps)), and absolute (m/s):
+      uniform        rel 4.910e-14  abs 2.563e-21  |mean| 5.220e-08
+      dyncomp        rel 3.711e-11  abs 3.847e-20  |mean| 1.037e-09
+      inputpower     rel 1.718e-09  abs 4.636e-18  |mean| 2.698e-09
+      quadvel-rad    rel 3.046e-08  abs 6.558e-17  |mean| 2.153e-09
+      quadvel-I      rel 2.121e-06  abs 2.991e-15  |mean| 1.410e-09
+      quadvel-ones   rel 1.116e-11  abs 1.577e-19  |mean| 1.413e-08
+   boundary vertices: 72
+   uniform              P_mesh=3.754620445e-07 P_ref=3.779177687e-07 rel=-6.498e-03
+   dyncomp              P_mesh=1.373345760e-08 P_ref=1.376857286e-08 rel=-2.550e-03
+   inputpower           P_mesh=1.491346307e-08 P_ref=1.496078595e-08 rel=-3.163e-03
+   quadvel-rad          P_mesh=7.143590222e-09 P_ref=7.185041815e-09 rel=-5.769e-03
+   quadvel-I            P_mesh=9.605195923e-09 P_ref=9.645324129e-09 rel=-4.160e-03
+   quadvel-ones         P_mesh=2.869021343e-08 P_ref=2.879960495e-08 rel=-3.798e-03
+
+-- spherecap m=4: Nv=15361 Nt=30624 (removed degenerate 96) area 84.12429133 (spline 84.17872145, rel -6.47e-04)
+   max extent 10.0000 m, k*extent 18.3183; edge mean 0.1247 max 0.3279 m; h_max/lambda 0.0956; elements/lambda (max edge) 10.46
+   orientation: 0 of 30624 triangles initially disagree with spline normal (flipped to fix); after fix 0
+   duplicate-sample consistency: max rel |dvn| 1.56e-12, max |dx| 1.31e-11, max |dn| 1.31e-12; analytic-position check 1.31e-11
+   pole (merged 97 samples): relative spread of v_n per design (max|v-mean|/max(|mean|,eps)), and absolute (m/s):
+      uniform        rel 4.949e-14  abs 2.583e-21  |mean| 5.220e-08
+      dyncomp        rel 3.711e-11  abs 3.847e-20  |mean| 1.037e-09
+      inputpower     rel 1.727e-09  abs 4.660e-18  |mean| 2.698e-09
+      quadvel-rad    rel 3.048e-08  abs 6.562e-17  |mean| 2.153e-09
+      quadvel-I      rel 2.117e-06  abs 2.985e-15  |mean| 1.410e-09
+      quadvel-ones   rel 1.110e-11  abs 1.569e-19  |mean| 1.413e-08
+   boundary vertices: 96
+   uniform              P_mesh=3.765339228e-07 P_ref=3.779177687e-07 rel=-3.662e-03
+   dyncomp              P_mesh=1.374880675e-08 P_ref=1.376857286e-08 rel=-1.436e-03
+   inputpower           P_mesh=1.493413991e-08 P_ref=1.496078595e-08 rel=-1.781e-03
+   quadvel-rad          P_mesh=7.161682038e-09 P_ref=7.185041815e-09 rel=-3.251e-03
+   quadvel-I            P_mesh=9.622724091e-09 P_ref=9.645324129e-09 rel=-2.343e-03
+   quadvel-ones         P_mesh=2.873804950e-08 P_ref=2.879960495e-08 rel=-2.137e-03
+
+-- spherecap m=6: Nv=34561 Nt=68976 (removed degenerate 144) area 84.15452718 (spline 84.17872145, rel -2.87e-04)
+   max extent 10.0000 m, k*extent 18.3183; edge mean 0.0831 max 0.2188 m; h_max/lambda 0.0638; elements/lambda (max edge) 15.67
+   orientation: 0 of 68976 triangles initially disagree with spline normal (flipped to fix); after fix 0
+   duplicate-sample consistency: max rel |dvn| 1.56e-12, max |dx| 1.31e-11, max |dn| 1.31e-12; analytic-position check 1.31e-11
+   pole (merged 145 samples): relative spread of v_n per design (max|v-mean|/max(|mean|,eps)), and absolute (m/s):
+      uniform        rel 4.962e-14  abs 2.590e-21  |mean| 5.220e-08
+      dyncomp        rel 3.711e-11  abs 3.847e-20  |mean| 1.037e-09
+      inputpower     rel 1.724e-09  abs 4.653e-18  |mean| 2.698e-09
+      quadvel-rad    rel 3.050e-08  abs 6.565e-17  |mean| 2.153e-09
+      quadvel-I      rel 2.110e-06  abs 2.976e-15  |mean| 1.410e-09
+      quadvel-ones   rel 1.114e-11  abs 1.575e-19  |mean| 1.413e-08
+   boundary vertices: 144
+   uniform              P_mesh=3.773019308e-07 P_ref=3.779177687e-07 rel=-1.630e-03
+   dyncomp              P_mesh=1.375978355e-08 P_ref=1.376857286e-08 rel=-6.384e-04
+   inputpower           P_mesh=1.494893471e-08 P_ref=1.496078595e-08 rel=-7.922e-04
+   quadvel-rad          P_mesh=7.174645940e-09 P_ref=7.185041815e-09 rel=-1.447e-03
+   quadvel-I            P_mesh=9.635270806e-09 P_ref=9.645324129e-09 rel=-1.042e-03
+   quadvel-ones         P_mesh=2.877223977e-08 P_ref=2.879960495e-08 rel=-9.502e-04
+
+-- spherecap m=8: Nv=61441 Nt=122688 (removed degenerate 192) area 84.16511156 (spline 84.17872145, rel -1.62e-04)
+   max extent 10.0000 m, k*extent 18.3183; edge mean 0.0623 max 0.1642 m; h_max/lambda 0.0479; elements/lambda (max edge) 20.89
+   orientation: 0 of 122688 triangles initially disagree with spline normal (flipped to fix); after fix 0
+   duplicate-sample consistency: max rel |dvn| 1.56e-12, max |dx| 1.31e-11, max |dn| 1.31e-12; analytic-position check 1.31e-11
+   pole (merged 193 samples): relative spread of v_n per design (max|v-mean|/max(|mean|,eps)), and absolute (m/s):
+      uniform        rel 4.949e-14  abs 2.583e-21  |mean| 5.220e-08
+      dyncomp        rel 3.715e-11  abs 3.851e-20  |mean| 1.037e-09
+      inputpower     rel 1.723e-09  abs 4.649e-18  |mean| 2.698e-09
+      quadvel-rad    rel 3.051e-08  abs 6.569e-17  |mean| 2.153e-09
+      quadvel-I      rel 2.108e-06  abs 2.974e-15  |mean| 1.410e-09
+      quadvel-ones   rel 1.113e-11  abs 1.573e-19  |mean| 1.413e-08
+   boundary vertices: 192
+   uniform              P_mesh=3.775712031e-07 P_ref=3.779177687e-07 rel=-9.170e-04
+   dyncomp              P_mesh=1.376362801e-08 P_ref=1.376857286e-08 rel=-3.591e-04
+   inputpower           P_mesh=1.495411794e-08 P_ref=1.496078595e-08 rel=-4.457e-04
+   quadvel-rad          P_mesh=7.179191426e-09 P_ref=7.185041815e-09 rel=-8.142e-04
+   quadvel-I            P_mesh=9.639667390e-09 P_ref=9.645324129e-09 rel=-5.865e-04
+   quadvel-ones         P_mesh=2.878421062e-08 P_ref=2.879960495e-08 rel=-5.345e-04
+
+===== convergence table (rel_diff) =====
+cylpanel  uniform               m=2:1.762e-03  m=3:7.848e-04  m=4:4.418e-04  m=6:1.964e-04  m=8:1.105e-04
+cylpanel  legacy_long_horizon   m=2:5.307e-01  m=3:1.193e-01  m=4:4.406e-02  m=6:1.225e-02  m=8:5.444e-03
+spherecap uniform               m=2:1.455e-02  m=3:6.498e-03  m=4:3.662e-03  m=6:1.630e-03  m=8:9.170e-04
+spherecap dyncomp               m=2:5.727e-03  m=3:2.550e-03  m=4:1.436e-03  m=6:6.384e-04  m=8:3.591e-04
+spherecap inputpower            m=2:7.097e-03  m=3:3.163e-03  m=4:1.781e-03  m=6:7.922e-04  m=8:4.457e-04
+spherecap quadvel-rad           m=2:1.291e-02  m=3:5.769e-03  m=4:3.251e-03  m=6:1.447e-03  m=8:8.142e-04
+spherecap quadvel-I             m=2:9.328e-03  m=3:4.160e-03  m=4:2.343e-03  m=6:1.042e-03  m=8:5.865e-04
+spherecap quadvel-ones          m=2:8.537e-03  m=3:3.798e-03  m=4:2.137e-03  m=6:9.502e-04  m=8:5.345e-04
+R0_BEM_EXPORT_DONE

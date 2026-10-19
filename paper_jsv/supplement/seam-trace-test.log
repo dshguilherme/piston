@@ -1,0 +1,7 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+spherecap seam value 0.000e+00 geometry 6.983e-17 physical-gradient 2.549e-16
+cylshell seam value 3.368e-16 geometry 4.413e-17 physical-gradient 4.617e-16
+R0_SEAM_TRACE_TESTS_PASS

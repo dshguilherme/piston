@@ -1,0 +1,100 @@
+﻿% Construction diagram: three ways to build the sinc operator on a patch mesh.
+% Drawn for the 137 mm width; schematic, not to scale.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\def\PP#1#2{({(1-#1)*(1-#2)*\gxa+#1*(1-#2)*\gxb+#1*#2*\gxc+(1-#1)*#2*\gxd+0.06*sin(180*#2)},{(1-#1)*(1-#2)*\gya+#1*(1-#2)*\gyb+#1*#2*\gyc+(1-#1)*#2*\gyd+0.07*sin(180*#1)})}
+\def\patchE{\def\gxa{0.10}\def\gya{0.05}\def\gxb{1.70}\def\gyb{0.00}\def\gxc{1.85}\def\gyc{0.80}\def\gxd{0.30}\def\gyd{0.90}}
+\def\patchF{\def\gxa{2.40}\def\gya{0.85}\def\gxb{4.05}\def\gyb{0.80}\def\gxc{4.15}\def\gyc{1.65}\def\gxd{2.55}\def\gyd{1.80}}
+% outline of the current patch
+\def\outline{\draw[structure] \PP{0}{0} \foreach \t in {0.1,0.2,...,1.0}{-- \PP{\t}{0}}
+   \foreach \t in {0.1,0.2,...,1.0}{-- \PP{1}{\t}}
+   \foreach \t in {0.9,0.8,...,0.0}{-- \PP{\t}{1}}
+   \foreach \t in {0.9,0.8,...,0.0}{-- \PP{0}{\t}} -- cycle;}
+% mesh lines (n x n elements)
+\def\meshlines#1{\foreach \m in {#1}{
+   \draw[witness] \PP{\m}{0} \foreach \t in {0.1,0.2,...,1.0}{-- \PP{\m}{\t}};
+   \draw[witness] \PP{0}{\m} \foreach \t in {0.1,0.2,...,1.0}{-- \PP{\t}{\m}};}}
+\begin{document}
+\begin{tikzpicture}
+% ================================================================ panel (a)
+\begin{scope}[shift={(0.2,0)}]
+  \patchE \outline \patchF \outline
+  \patchE \node[point] (xe) at \PP{0.5}{0.5} {};
+  \patchF \node[point] (xf) at \PP{0.5}{0.5} {};
+  \draw[dimension] (xe) -- (xf);
+  \node[lab, anchor=north west] at ($(xe)!0.5!(xf)+(0.12,-0.08)$) {$r_{ef}$};
+  \patchE \node[lab, anchor=north east] at ($(xe)+(-0.02,-0.04)$) {$\bm x_e$};
+  \patchF \node[lab, anchor=south west] at ($(xf)+(0.02,0.04)$) {$\bm x_f$};
+  \node[lab, anchor=south west] at (0.10,0.92) {$S_e$};
+  \node[lab, anchor=south east] at (4.15,1.72) {$S_f$};
+  \node[paneltag, anchor=base west] at (0,2.35) {(a)};
+  \node[paneltitle, anchor=base west] at (0.42,2.35) {Element centroid};
+  \node[lab, anchor=north] at (2.1,-0.45) {$(\mathbf S_{\rm cen})_{ef}=\alpha A_eA_f\,j_0(kr_{ef})$};
+  \node[note, anchor=north] at (2.1,-0.95) {one distance per patch pair;\\constant $v_e$ per patch};
+\end{scope}
+% ================================================================ panel (b)
+\begin{scope}[shift={(4.65,0)}]
+  \patchE \outline \meshlines{0.5}
+  \patchF \outline \meshlines{0.5}
+  \foreach \u/\v in {0.25/0.25,0.75/0.25,0.25/0.75,0.75/0.75}{
+    \patchE \node[point] at \PP{\u}{\v} {};
+    \patchF \node[point] at \PP{\u}{\v} {};}
+  \patchE \path \PP{0.75}{0.75} coordinate (e1); \path \PP{0.75}{0.25} coordinate (e2);
+  \path \PP{0.25}{0.75} coordinate (e3); \path \PP{0.25}{0.25} coordinate (e4);
+  \patchF \path \PP{0.25}{0.25} coordinate (f1); \path \PP{0.25}{0.75} coordinate (f2);
+  \path \PP{0.75}{0.25} coordinate (f3); \path \PP{0.75}{0.75} coordinate (f4);
+  \draw[witness] (e1) -- (f4);
+  \draw[witness] (e2) -- (f3);
+  \draw[witness] (e3) -- (f2);
+  \draw[witness] (e4) -- (f1);
+  \node[lab, anchor=south west] at (0.10,0.92) {$S_e$};
+  \node[lab, anchor=south east] at (4.15,1.72) {$S_f$};
+  \node[paneltag, anchor=base west] at (0,2.35) {(b)};
+  \node[paneltitle, anchor=base west] at (0.42,2.35) {Finite patches};
+  \node[lab, anchor=north] at (2.1,-0.45) {$\int_{S_e}\!\int_{S_f} j_0(k|\bm x-\bm y|)\,\mathrm dS\,\mathrm dS$};
+  \node[note, anchor=north] at (2.1,-0.95) {kernel integrated over the pair};
+\end{scope}
+% ================================================================ panel (c)
+\begin{scope}[shift={(9.1,0)}]
+  \draw[chosen] (-0.1,-3.1) rectangle (4.2,2.75);
+  \patchE
+  \fill[hatch] \PP{0}{0} \foreach \t in {0.1,0.2,...,0.6667}{-- \PP{\t}{0}}
+     \foreach \t in {0.1,0.2,...,0.6667}{-- \PP{0.6667}{\t}}
+     \foreach \t in {0.5,0.4,...,0.0}{-- \PP{\t}{0.6667}} -- cycle;
+  \outline \meshlines{0.3333,0.6667}
+  \patchF \outline \meshlines{0.3333,0.6667}
+  \foreach \u in {0.1667,0.5,0.8333}{\foreach \v in {0.1667,0.5,0.8333}{
+    \patchE \node[point] at \PP{\u}{\v} {};
+    \patchF \node[point] at \PP{\u}{\v} {};}}
+  \patchE \path \PP{0.8333}{0.8333} coordinate (qe);
+  \patchF \path \PP{0.1667}{0.8333} coordinate (qf);
+  \draw[normal] ($(qe)+(0,0.08)$) -- ($(qe)+(0.02,0.58)$);
+  \draw[normal] ($(qf)+(0,0.08)$) -- ($(qf)+(0.02,0.46)$);
+  \node[lab, anchor=south] at ($(qe)+(0.0,0.62)$) {$\bm n(\bm x_q)$};
+  \node[lab, anchor=east] at ($(qf)+(-0.08,0.36)$) {$\bm n(\bm x_{q'})$};
+  \patchE \path \PP{0.4}{0.4} coordinate (hs);
+  \node[lab, anchor=north] (sup) at (0.9,-0.02) {supp $N_a$};
+  \draw[leader] (sup.north) -- (hs);
+  \node[lab, anchor=south west] at (0.10,0.92) {$S_e$};
+  \node[lab, anchor=south east] at (4.15,1.72) {$S_f$};
+  \node[paneltag, anchor=base west] at (0,2.35) {(c)};
+  \node[paneltitle, anchor=base west] at (0.42,2.35) {\bfseries Spline-consistent};
+  \node[lab, anchor=north] at (2.1,-0.45) {$\mathbf S=\alpha\,\mathbf B^{H}\mathbf W\mathbf K\mathbf W\mathbf B$};
+  \foreach \i/\s/\t in {0/{\mathbf B^{H}}/{$n_u$\\$\times n_q$},1/{\mathbf W}/{$n_q$\\$\times n_q$\\diag.},2/{\mathbf K}/{$n_q$\\$\times n_q$},3/{\mathbf W}/{$n_q$\\$\times n_q$\\diag.},4/{\mathbf B}/{$n_q$\\$\times n_u$}}{
+    \node[thing, text width=0.5cm, minimum width=0.66cm, minimum height=0.5cm] (b\i) at ({0.25+0.8*\i+0.33},-1.3) {$\s$};
+    \node[note, anchor=north, align=center] at (b\i.south) {\t};}
+  \node[note, anchor=north] at (2.1,-2.6) {field and normal from the spline basis};
+\end{scope}
+% ================================================================ axis
+\draw[axisline] (0.2,-3.4) -- (13.3,-3.4);
+\node[lab, anchor=north west] at (0.2,-3.4) {finer integration of the kernel; (c) also uses the spline trace};
+\node[note, anchor=north east] at (13.3,-3.4) {schematic, not to scale};
+\end{tikzpicture}
+\end{document}
+
+
+
+
+
+

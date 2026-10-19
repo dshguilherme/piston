@@ -1,0 +1,16 @@
+cell c120_k7: theta0 120, kR 7.0000, c' 897.60 m/s; device rho' = 0.46238 kg/m^3 (s=1); physical-density variant rho = 1.21 kg/m^3, impedance x2.6169 (s=2.6169)
+  Z assembled; ||Herm part|| / ||anti-Herm part|| = 1.668e+00 (e^{+iwt}: Re Z = resistance, Im Z = w * added mass); Im-part eigenvalue range [[-7.76480446  5.1143182 ]] kg (unit s)
+  uniform in-vacuo state, Python dense vs MATLAB export: rel diff 9.66e-12
+  uniform  vac P 1.8569e-08 (pilot 1.8569e-08)  dev P 1.8274e-08 x0.9841  phys x2.513  L8000-coupling x0.9841  KEa/KE dev 1.377e-03  cap 0.999889  bal 1.8e-13  Hx/Fx 1.0000
+    modes uniform: f1 vac 23.385 Hz; shift dev median -0.0888% [-0.4614, 0.2058]; phys median -0.3111% [-1.0188, 0.5407]
+  XU       vac P 3.6482e-12 (pilot 3.6482e-12)  dev P 3.9530e-12 x1.084  phys x4.12  L8000-coupling x1.084  KEa/KE dev 1.289e-03  cap 0.999454  bal 2.3e-12  Hx/Fx 1.0000
+    modes XU: f1 vac 23.655 Hz; shift dev median -0.0858% [-0.2451, 0.1864]; phys median -0.2228% [-0.6925, 0.5006]
+  XS       vac P 9.4231e-13 (pilot 9.4231e-13)  dev P 1.2185e-12 x1.293  phys x7.718  L8000-coupling x1.293  KEa/KE dev 1.315e-03  cap 0.998641  bal -7.1e-13  Hx/Fx 1.0000
+    modes XS: f1 vac 22.881 Hz; shift dev median -0.0721% [-0.3638, 0.2436]; phys median -0.2159% [-0.6140, 0.1495]
+  SU       vac P 2.1545e-12 (pilot 2.1545e-12)  dev P 2.2786e-12 x1.058  phys x4.315  L8000-coupling x1.058  KEa/KE dev 1.313e-03  cap 0.998933  bal -1.1e-12  Hx/Fx 1.0000
+    modes SU: f1 vac 22.800 Hz; shift dev median -0.0685% [-0.3235, 0.2383]; phys median -0.2048% [-0.6154, 0.3923]
+  SX       vac P 1.5124e-12 (pilot 1.5124e-12)  dev P 1.7320e-12 x1.145  phys x5.731  L8000-coupling x1.145  KEa/KE dev 1.297e-03  cap 0.999315  bal 2.1e-12  Hx/Fx 1.0000
+  EU       vac P 5.7671e-09 (pilot 5.7671e-09)  dev P 5.6963e-09 x0.9877  phys x2.536  L8000-coupling x0.9877  KEa/KE dev 1.606e-03  cap 0.995093  bal -9.7e-12  Hx/Fx 1.0000
+  EX       vac P 1.9367e-09 (pilot 1.9367e-09)  dev P 1.9266e-09 x0.9948  phys x2.585  L8000-coupling x0.9947  KEa/KE dev 1.211e-03  cap 0.997167  bal 9.9e-16  Hx/Fx 1.0000
+  runtime 312 s
+R0_FSI_CHECK_DONE

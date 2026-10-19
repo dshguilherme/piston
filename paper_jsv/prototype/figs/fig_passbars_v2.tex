@@ -1,0 +1,98 @@
+% F25 v2: true level, guaranteed level and predicted level of the 14 sinc end designs of the seven cases,
+% in the level convention (Delta L re the uniform design; 0 at the top, quieter downwards).
+% Data: data/f25v2_bars.dat. Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+
+\pgfplotstableread{data/f25v2_bars.dat}\bartab
+% bar position: design index plus a gap of 0.7 between cases
+\def\xpos{\thisrow{idx}+0.7*floor((\thisrow{idx}-0.5)/2)}
+% axis geometry (mm): x = \axx + (X - xlo)*axw/(xhi - xlo); y = \ay + (L + 78)*\ah/78
+\def\axx{18}\def\axw{108}\def\xlo{0.3}\def\xhi{18.7}
+\def\ay{16}\def\ah{46}
+\def\bsh{0.16}% half bar offset in axis units (0.95 mm)
+
+\pgfplotsset{
+  barax/.style={
+    scale only axis, anchor=south west, clip=false,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    label style={lab},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+    width=\axw mm, height=\ah mm,
+    xmin=\xlo, xmax=\xhi, xtick=\empty,
+    ymin=-78, ymax=0, ytick={0,-20,-40,-60},
+    yticklabels={0,$-$20,$-$40,$-$60},
+  },
+  truebar/.style={refcurve, fill=figref, ybar, bar width=1.7mm, bar shift=-0.95mm},
+  guarbar/.style={refcurve, draw=figsurr, solid, pattern=north east lines, pattern color=figsurr,
+      ybar, bar width=1.7mm, bar shift=0.95mm},
+}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[barax, at={(\axx mm,\ay mm)}]
+  % uniform design (0 dB) and targets
+  \draw[witness] (axis cs:\xlo,0) -- (axis cs:\xhi,0);
+  \draw[reference] (axis cs:\xlo,-20) -- (axis cs:\xhi,-20);
+  \draw[reference] (axis cs:\xlo,-40) -- (axis cs:\xhi,-40);
+  % true level (exact, in vacuo) and guaranteed level (sinc prediction plus the envelope budget)
+  \addplot[truebar] table[x expr=\xpos, y=dLx]{data/f25v2_bars.dat};
+  \addplot[guarbar] table[x expr=\xpos, y=dLg]{data/f25v2_bars.dat};
+  % predicted level, joined upward to the end of its guaranteed bar (stem length = budget)
+  \addplot[draw=figsurr, only marks, mark=o, mark size=1.3pt, mark options={solid, fill=none, draw=figsurr},
+      error bars/.cd, y dir=plus, y explicit, error bar style={witness, draw=figsurr}, error mark=none]
+    table[x expr=\xpos+\bsh, y=dLpred, y error=emax]{data/f25v2_bars.dat};
+  \node[note, anchor=north] at (axis cs:17.7,-30) {design point};
+\end{axis}
+% target labels at the right end of the axis
+\node[note, anchor=west] at ({(\axx+\axw)*1mm}, {(\ay+58*\ah/78)*1mm}) {$-20$ dB};
+\node[note, anchor=west] at ({(\axx+\axw)*1mm}, {(\ay+38*\ah/78)*1mm}) {$-40$ dB};
+
+% reading arrows in the left gutter
+\node[note, rotate=90, anchor=west] at (1.8mm,\ay mm) {less power};
+\node[note, rotate=90, anchor=east] at (1.8mm,\ay mm+\ah mm) {more power};
+\draw[axisline] (4.4mm,\ay mm+0.5mm) -- (4.4mm,\ay mm+\ah mm);
+\node[lab, rotate=90, anchor=north] at (6.2mm,\ay mm+0.5*\ah mm) {level re uniform design, $\Delta L$ (dB)};
+
+% start of each sinc run (U: uniform design; X: end design of the exact run), case labels and class brackets
+\foreach \i in {0,...,13}{
+  \pgfplotstablegetelem{\i}{idx}\of\bartab \xdef\ix{\pgfplotsretval}
+  \pgfplotstablegetelem{\i}{start}\of\bartab \xdef\st{\pgfplotsretval}
+  \pgfmathsetmacro{\xx}{\axx+(\ix+0.7*floor((\ix-0.5)/2)-\xlo)*\axw/(\xhi-\xlo)}
+  \node[note, anchor=north] at (\xx mm,15.2mm) {\st};
+}
+\foreach \c in {0,...,6}{
+  \pgfmathtruncatemacro{\r}{2*\c}
+  \pgfplotstablegetelem{\r}{theta}\of\bartab \xdef\th{\pgfplotsretval}
+  \pgfplotstablegetelem{\r}{kR}\of\bartab \xdef\kr{\pgfplotsretval}
+  \pgfmathsetmacro{\xx}{\axx+(2*\c+1.5+0.7*\c-\xlo)*\axw/(\xhi-\xlo)}
+  \node[note, anchor=north] at (\xx mm,11.6mm) {\pgfmathprintnumber[fixed,precision=0,assume math mode]{\th}$^\circ$};
+  \node[note, anchor=north] at (\xx mm,8.3mm) {\pgfmathprintnumber[fixed,precision=1,assume math mode]{\kr}};
+}
+\node[note, anchor=east] at (\axx mm-1mm,13.6mm) {start};
+\node[note, anchor=east] at (\axx mm-1mm,10.3mm) {$\theta_0$};
+\node[note, anchor=east] at (\axx mm-1mm,7.0mm) {$kR$};
+\pgfmathsetmacro{\xA}{\axx+(0.6-\xlo)*\axw/(\xhi-\xlo)}\pgfmathsetmacro{\xB}{\axx+(10.5-\xlo)*\axw/(\xhi-\xlo)}
+\pgfmathsetmacro{\xC}{\axx+(11.3-\xlo)*\axw/(\xhi-\xlo)}\pgfmathsetmacro{\xD}{\axx+(18.5-\xlo)*\axw/(\xhi-\xlo)}
+\draw[witness] (\xA mm,4.6mm) -- (\xA mm,3.6mm) -- (\xB mm,3.6mm) -- (\xB mm,4.6mm);
+\node[note, anchor=north] at ({(\xA+\xB)/2*1mm},3.2mm) {$kR\le3$};
+\draw[witness] (\xC mm,4.6mm) -- (\xC mm,3.6mm) -- (\xD mm,3.6mm) -- (\xD mm,4.6mm);
+\node[note, anchor=north] at ({(\xC+\xD)/2*1mm},3.2mm) {$kR\ge7$};
+
+% key above the axis
+\def\ly{70.5mm}\def\lyy{66.5mm}
+\draw[refcurve, fill=figref] (18mm,{\ly-1.2mm}) rectangle (20.5mm,{\ly+1.2mm});
+\node[note, anchor=west] at (21mm,\ly) {true level $\Delta L_x$};
+\draw[refcurve, draw=figsurr, solid, pattern=north east lines, pattern color=figsurr] (62mm,{\ly-1.2mm}) rectangle (64.5mm,{\ly+1.2mm});
+\node[note, anchor=west] at (65mm,\ly) {guaranteed level $\Delta L_g=\Delta L_{\rm pred}+e_{\max}$};
+\draw[surrcurve, solid] plot[only marks, mark=o, mark size=1.3pt, mark options={solid}] coordinates {(19.25mm,{\lyy-0.9mm})};
+\draw[witness, draw=figsurr] (19.25mm,{\lyy-0.9mm+0.5mm}) -- (19.25mm,{\lyy+1.3mm});
+\node[note, anchor=west] at (21mm,\lyy) {predicted level $\Delta L_{\rm pred}$; stem = budget $e_{\max}$};
+\end{tikzpicture}
+\end{document}

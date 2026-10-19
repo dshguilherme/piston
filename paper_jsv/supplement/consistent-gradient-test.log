@@ -1,0 +1,9 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+h=0.001 fd=-9.438519008e-09 adj=-9.434607535e-09 rel=0.000414416
+h=0.0003 fd=-9.434959578e-09 adj=-9.434607535e-09 rel=3.73127e-05
+h=0.0001 fd=-9.434646653e-09 adj=-9.434607535e-09 rel=4.14626e-06
+h=3e-05 fd=-9.434611056e-09 adj=-9.434607535e-09 rel=3.73271e-07
+R0_CONSISTENT_GRADIENT_TEST_DONE

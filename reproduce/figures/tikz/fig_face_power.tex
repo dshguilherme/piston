@@ -1,0 +1,113 @@
+﻿% Face power versus far-field split: (a) surface work of each face, (b) far-field
+% angular partition, (c) measured shares at 100 Hz. Drawn at 137 mm, natural size.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\pgfplotsset{
+  sharesaxis/.style={
+    width=26mm, height=25.5mm, scale only axis,
+    bar width=3.4mm,
+    symbolic x coords={U,B,C,D,E,G}, xtick=data,
+    xmin=U, xmax=G, enlarge x limits=0.13,
+    ymin=0, ymax=1, ytick={0,0.5,1},
+    axis line style={leader, draw=black!70},
+    tick style={witness},
+    every tick label/.append style={note},
+    every axis label/.append style={note},
+    ylabel near ticks, xlabel near ticks,
+    ylabel={fraction of $P_{2s}$}, xlabel={design field},
+  },
+}
+\begin{document}
+\begin{tikzpicture}
+% ------------------------------------------------------------------ panel (a)
+\begin{scope}[shift={(0,0)}]
+  \def\Rc{1.8}
+  \coordinate (C) at (2.5,1.2);
+  \draw[structure] ($(C)+(50:\Rc)$) arc[start angle=50, end angle=130, radius=\Rc];
+  % normals on the convex (outer) side
+  \foreach \ang in {68,90,112} {
+    \draw[normal] ($(C)+(\ang:{\Rc+0.08})$) -- ($(C)+(\ang:{\Rc+0.70})$);
+  }
+  \node[lab, anchor=west] at ($(C)+(90:{\Rc+0.62})$) {$\bm n$};
+  % outer face: label and formula, leader to the convex side
+  \node[lab, anchor=south west, align=left] (po) at (0,4.10)
+    {outer face, $p^+$\\[1pt] $P^+=\tfrac12\operatorname{Re}\!\int p^+\overline{v_n}\,dS$};
+  \draw[leader] (1.05,4.08) -- ($(C)+(120:{\Rc+0.07})$);
+  % inner face: label and formula, leader to the concave side
+  \node[lab, anchor=north west, align=left] (pi) at (0.3,2.12)
+    {inner face, $p^-$\\[1pt] $P^-=-\tfrac12\operatorname{Re}\!\int p^-\overline{v_n}\,dS$};
+  \draw[leader] ($(C)+(100:{\Rc-0.07})$) -- (2.2,2.14);
+  % free edge, one side only
+  \draw[leader] ($(C)+(50:{\Rc+0.06})$) -- ++(0.22,0);
+  \node[note, anchor=west] at ($(C)+(50:{\Rc+0.06})+(0.22,0)$) {free edge,\\$\mu=0$};
+  % sum rule
+  \node[lab, anchor=center] at (2.5,1.00) {$P^++P^-=P_{2s}$};
+  \node[note, anchor=north west] at (0,0.66) {a face can absorb power:\\$P^-<0$ is possible};
+  \node[note, anchor=north east, align=right] at (5.1,5.12) {Schematic,\\not to scale};
+  \node[paneltag, anchor=base west] at (0,5.35) {(a)};
+  \node[paneltitle, anchor=base west] at (0.45,5.35) {Surface work of each face};
+\end{scope}
+
+% ------------------------------------------------------------------ panel (b)
+\begin{scope}[shift={(0,0)}]
+  \def\cx{7.1}
+  \def\cy{2.85}
+  \def\RF{1.2}
+  \coordinate (O) at (\cx,\cy);
+  \draw[reference] (O) circle[radius=\RF];
+  \draw[reference, dash pattern=on 5pt off 1.5pt on 1pt off 1.5pt]
+      ($(O)+(-1.42,0)$) -- ($(O)+(1.42,0)$);
+  \node[note, anchor=west, align=left] at ($(O)+(1.46,0)$) {plane\\normal to\\the axis};
+  \draw[reference, dash pattern=on 5pt off 1.5pt on 1pt off 1.5pt] ($(O)+(0,-1.05)$) -- ($(O)+(0,1.05)$);
+  % the small cap, rim on the plane
+  \coordinate (Cc) at ($(O)+(0,-0.46)$);
+  \draw[structure] ($(Cc)+(50:0.6)$) arc[start angle=50, end angle=130, radius=0.6];
+  % far-field flow crossing the sphere in both halves
+  \foreach \ang in {40,140,-40,-140} {
+    \draw[flow] ($(O)+(\ang:0.75)$) -- ($(O)+(\ang:1.65)$);
+  }
+  \node[lab, anchor=south] at ($(O)+(0,{\RF+0.02})$) {outer half-space};
+  \node[lab, anchor=north] at ($(O)+(0,{-\RF-0.02})$) {inner half-space};
+  \node[lab, anchor=center] at (\cx,0.98) {$P_{\rm out}+P_{\rm in}=P_{2s}$};
+  \node[note, anchor=north, align=center] at (\cx,0.72)
+      {power through each half of the\\far-field sphere; not the same\\split as (a)};
+  \node[note, anchor=north east, align=right] at (8.95,5.12) {Schematic,\\not to scale};
+  \node[paneltag, anchor=base west] at (5.45,5.35) {(b)};
+  \node[paneltitle, anchor=base west] at (5.90,5.35) {Far-field angular partition};
+\end{scope}
+
+% ------------------------------------------------------------------ panel (c)
+\begin{axis}[sharesaxis, at={(10.85cm,2.3cm)}, anchor=south west]
+  \addplot[ybar stacked, fill=black!55, draw=black!80] table[x=design, y=outer]
+      {data/f9_shares.dat};
+  \addplot[ybar stacked, fill=black!15, draw=black!80] table[x=design, y=inner]
+      {data/f9_shares.dat};
+  \draw[reference] (rel axis cs:0,0.5) -- (rel axis cs:1,0.5);
+  \addplot[only marks, stack plots=false, mark=diamond*, mark size=2.8pt, mark options={structure, fill=figsurr}]
+      table[x=design, y=sinc] {data/f9_shares.dat};
+  \addplot[only marks, stack plots=false, mark=o, mark size=2.2pt, mark options={structure, fill=none}]
+      table[x=design, y=farfield_outer] {data/f9_shares.dat};
+\end{axis}
+\node[paneltag, anchor=base west] at (9.95,5.35) {(c)};
+\node[paneltitle, anchor=base west] at (10.40,5.35) {Shares at 100 Hz};
+% manual legend, one column, below the axis
+\begin{scope}[shift={(9.95,0)}]
+  \fill[black!55] (0.00,1.18) rectangle (0.22,1.34);
+  \draw[witness] (0.00,1.18) rectangle (0.22,1.34);
+  \node[note, anchor=west] at (0.30,1.26) {outer face $P^+/P_{2s}$};
+  \fill[black!15] (0.00,0.82) rectangle (0.22,0.98);
+  \draw[witness] (0.00,0.82) rectangle (0.22,0.98);
+  \node[note, anchor=west] at (0.30,0.90) {inner face $P^-/P_{2s}$};
+  \draw[witness, draw=black, fill=figsurr] (0.11,0.64) -- (0.20,0.54) -- (0.11,0.44) -- (0.02,0.54) -- cycle;
+  \node[note, anchor=west] at (0.30,0.54) {sinc $P_{\rm sinc}/P_{2s}$};
+  \draw[structure] (0.11,0.18) circle[radius=0.07];
+  \node[note, anchor=west] at (0.30,0.18) {far field, outer half};
+\end{scope}\end{tikzpicture}
+\end{document}
+
+
+
+

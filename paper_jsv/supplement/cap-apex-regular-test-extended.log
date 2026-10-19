@@ -1,0 +1,24 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+frozen_response
+ u= 0.00e+00 phi-deg=  0.000 rel-RMS-spread= 6.4160e-05
+ u= 1.00e-06 phi-deg=  0.000 rel-RMS-spread= 6.3864e-05
+ u= 1.00e-04 phi-deg=  0.003 rel-RMS-spread= 3.5469e-05
+ u= 1.00e-02 phi-deg=  0.300 rel-RMS-spread= 2.7972e-03
+ u= 1.00e-01 phi-deg=  3.000 rel-RMS-spread= 1.6909e-02
+ u= 3.00e-01 phi-deg=  9.000 rel-RMS-spread= 8.6279e-02
+ u= 6.00e-01 phi-deg= 18.000 rel-RMS-spread= 2.7849e-01
+ u= 9.00e-01 phi-deg= 27.000 rel-RMS-spread= 4.8596e-01
+random_coefficients
+ u= 0.00e+00 phi-deg=  0.000 rel-RMS-spread= 9.6367e-01
+ u= 1.00e-06 phi-deg=  0.000 rel-RMS-spread= 9.6367e-01
+ u= 1.00e-04 phi-deg=  0.003 rel-RMS-spread= 9.6411e-01
+ u= 1.00e-02 phi-deg=  0.300 rel-RMS-spread= 9.9617e-01
+ u= 1.00e-01 phi-deg=  3.000 rel-RMS-spread= 9.7206e-01
+ u= 3.00e-01 phi-deg=  9.000 rel-RMS-spread= 9.2174e-01
+ u= 6.00e-01 phi-deg= 18.000 rel-RMS-spread= 9.5833e-01
+ u= 9.00e-01 phi-deg= 27.000 rel-RMS-spread= 8.5176e-01
+boundary max displacement 0.000000e+00; boundary gradient RMS 2.633068e-09; near-edge gradient RMS 2.133073e-09
+R0_CAP_APEX_REGULAR_TEST_DONE

@@ -1,0 +1,17 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+max direct modal integral relative error 6.464e-11
+ka=1, l=0 ratio 2.8322937; max ratio difference from direct 3.834e-11
+    degree_l    direct_quadratic    analytic_quadratic    relative_quadrature_error    direct_ratio
+    ________    ________________    __________________    _________________________    ____________
+
+       0               8.8979               8.8979               9.9819e-16               2.8323   
+       1               1.1398               1.1398               1.3637e-15              0.90703   
+       2              0.04836              0.04836               4.3045e-16              0.68501   
+       3            0.0010194            0.0010194               4.8926e-15              0.64327   
+       4           1.2845e-05           1.2845e-05               8.1454e-13              0.61357   
+       5           1.0766e-07           1.0766e-07               6.4642e-11              0.59319   
+
+R0_SPHERE_MODAL_SPECTRUM_PASS

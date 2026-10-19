@@ -1,0 +1,17 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== new c30_k18_SS_N8_s1_mean (theta0 30, kR 18.3183): start C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\results\r0_revision\exact_opt\run_S0.mat, N 8, sigma 0.01, mode mean, cstart 5.267722e+01, target 600 ==
+  [S c30_k18 N8 s0.01] it     1: Jrob=1.12884e-08 (std 3.48e-11) f0=+100.0000  nominal exact  -17.092 dB  sinc  -17.217 dB  robust  -17.216 dB  vol=0.5000 chg=1.01e-04 inner=2 2.2s
+  [S c30_k18 N8 s0.01] it    25: Jrob=1.12880e-08 (std 3.46e-11) f0= +99.9996  nominal exact  -17.091 dB  sinc  -17.217 dB  robust  -17.216 dB  vol=0.5000 chg=1.96e-05 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it    50: Jrob=1.12879e-08 (std 3.46e-11) f0= +99.9996  nominal exact  -17.091 dB  sinc  -17.217 dB  robust  -17.216 dB  vol=0.5000 chg=4.84e-05 inner=2 2.0s
+  [S c30_k18 N8 s0.01] it    75: Jrob=1.12879e-08 (std 3.46e-11) f0= +99.9995  nominal exact  -17.091 dB  sinc  -17.217 dB  robust  -17.216 dB  vol=0.5000 chg=2.22e-04 inner=1 1.5s
+  [S c30_k18 N8 s0.01] it   100: Jrob=1.12879e-08 (std 3.46e-11) f0= +99.9995  nominal exact  -17.091 dB  sinc  -17.217 dB  robust  -17.216 dB  vol=0.5000 chg=1.44e-05 inner=2 2.1s
+  [S c30_k18 N8 s0.01] it   125: Jrob=1.12879e-08 (std 3.46e-11) f0= +99.9995  nominal exact  -17.091 dB  sinc  -17.217 dB  robust  -17.216 dB  vol=0.5000 chg=2.62e-05 inner=2 2.2s
+  [S c30_k18 N8 s0.01] it   150: Jrob=1.12879e-08 (std 3.46e-11) f0= +99.9995  nominal exact  -17.091 dB  sinc  -17.217 dB  robust  -17.216 dB  vol=0.5000 chg=1.40e-05 inner=1 1.5s
+  [S c30_k18 N8 s0.01] it   175: Jrob=1.12879e-08 (std 3.46e-11) f0= +99.9995  nominal exact  -17.091 dB  sinc  -17.217 dB  robust  -17.216 dB  vol=0.5000 chg=1.65e-05 inner=1 1.6s
+  [S c30_k18 N8 s0.01] it   200: Jrob=1.12879e-08 (std 3.46e-11) f0= +99.9995  nominal exact  -17.091 dB  sinc  -17.217 dB  robust  -17.216 dB  vol=0.5000 chg=2.05e-05 inner=0 1.0s
+  [S c30_k18 N8 s0.01] it   225: Jrob=1.12879e-08 (std 3.46e-11) f0= +99.9995  nominal exact  -17.091 dB  sinc  -17.217 dB  robust  -17.216 dB  vol=0.5000 chg=6.69e-06 inner=0 1.0s
+  [S c30_k18] STOP at it 225: converged (xstat 8.92e-05, fstat 1.44e-09)
+R0_ROBUST_c30_k18_SS_N8_s1_mean_DONE it=225 status=converged walltime=390s warn=0

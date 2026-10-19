@@ -1,0 +1,36 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== r0_robust_evalstudy c30_k18_robust 2026-10-18T11:08:08: nsamp 200, sigmas [0.001 0.003 0.01 0.03] ==
+  uniform  sigma 0.000: P_exact mean 5.9464e-07 median 5.9464e-07 [p5 5.9464e-07, p95 5.9464e-07] (nominal-design ref below), fsi cols 1, fallbacks 0
+  uniform  sigma 0.001: P_exact mean 5.9465e-07 median 5.9465e-07 [p5 5.9444e-07, p95 5.9485e-07] (nominal-design ref below), fsi cols 1, fallbacks 0
+  uniform  sigma 0.003: P_exact mean 5.9467e-07 median 5.9467e-07 [p5 5.9405e-07, p95 5.9528e-07] (nominal-design ref below), fsi cols 1, fallbacks 0
+  uniform  sigma 0.010: P_exact mean 5.9474e-07 median 5.9474e-07 [p5 5.9268e-07, p95 5.9679e-07] (nominal-design ref below), fsi cols 1, fallbacks 0
+  uniform  sigma 0.030: P_exact mean 5.9508e-07 median 5.9500e-07 [p5 5.8888e-07, p95 6.0122e-07] (nominal-design ref below), fsi cols 1, fallbacks 0
+  design uniform done in 552 s
+  RSS_N8_s1_mean_it224 sigma 0.000: P_exact mean 1.1618e-08 median 1.1618e-08 [p5 1.1618e-08, p95 1.1618e-08] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RSS_N8_s1_mean_it224 sigma 0.001: P_exact mean 1.1618e-08 median 1.1618e-08 [p5 1.1613e-08, p95 1.1623e-08] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RSS_N8_s1_mean_it224 sigma 0.003: P_exact mean 1.1618e-08 median 1.1618e-08 [p5 1.1603e-08, p95 1.1632e-08] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RSS_N8_s1_mean_it224 sigma 0.010: P_exact mean 1.1622e-08 median 1.1623e-08 [p5 1.1571e-08, p95 1.1668e-08] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RSS_N8_s1_mean_it224 sigma 0.030: P_exact mean 1.1659e-08 median 1.1665e-08 [p5 1.1493e-08, p95 1.1798e-08] (nominal-design ref below), fsi cols 1, fallbacks 0
+  design RSS_N8_s1_mean_it224 done in 503 s
+  RSU_N8_s1_mean_it800 sigma 0.000: P_exact mean 1.0736e-08 median 1.0736e-08 [p5 1.0736e-08, p95 1.0736e-08] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RSU_N8_s1_mean_it800 sigma 0.001: P_exact mean 1.0736e-08 median 1.0736e-08 [p5 1.0731e-08, p95 1.0740e-08] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RSU_N8_s1_mean_it800 sigma 0.003: P_exact mean 1.0736e-08 median 1.0735e-08 [p5 1.0722e-08, p95 1.0748e-08] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RSU_N8_s1_mean_it800 sigma 0.010: P_exact mean 1.0741e-08 median 1.0738e-08 [p5 1.0694e-08, p95 1.0780e-08] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RSU_N8_s1_mean_it800 sigma 0.030: P_exact mean 1.0782e-08 median 1.0777e-08 [p5 1.0640e-08, p95 1.0903e-08] (nominal-design ref below), fsi cols 1, fallbacks 0
+  design RSU_N8_s1_mean_it800 done in 236 s
+  RXU_N8_s1_mean_it800 sigma 0.000: P_exact mean 1.3044e-09 median 1.3044e-09 [p5 1.3044e-09, p95 1.3044e-09] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RXU_N8_s1_mean_it800 sigma 0.001: P_exact mean 1.3046e-09 median 1.3047e-09 [p5 1.3030e-09, p95 1.3062e-09] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RXU_N8_s1_mean_it800 sigma 0.003: P_exact mean 1.3061e-09 median 1.3061e-09 [p5 1.3010e-09, p95 1.3107e-09] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RXU_N8_s1_mean_it800 sigma 0.010: P_exact mean 1.3212e-09 median 1.3211e-09 [p5 1.3023e-09, p95 1.3394e-09] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RXU_N8_s1_mean_it800 sigma 0.030: P_exact mean 1.4518e-09 median 1.4455e-09 [p5 1.3525e-09, p95 1.5647e-09] (nominal-design ref below), fsi cols 1, fallbacks 0
+  design RXU_N8_s1_mean_it800 done in 201 s
+  RXX_N8_s1_mean_it600 sigma 0.000: P_exact mean 1.2515e-09 median 1.2515e-09 [p5 1.2515e-09, p95 1.2515e-09] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RXX_N8_s1_mean_it600 sigma 0.001: P_exact mean 1.2517e-09 median 1.2517e-09 [p5 1.2504e-09, p95 1.2531e-09] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RXX_N8_s1_mean_it600 sigma 0.003: P_exact mean 1.2531e-09 median 1.2531e-09 [p5 1.2489e-09, p95 1.2572e-09] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RXX_N8_s1_mean_it600 sigma 0.010: P_exact mean 1.2675e-09 median 1.2677e-09 [p5 1.2528e-09, p95 1.2835e-09] (nominal-design ref below), fsi cols 1, fallbacks 0
+  RXX_N8_s1_mean_it600 sigma 0.030: P_exact mean 1.3925e-09 median 1.3874e-09 [p5 1.3104e-09, p95 1.4969e-09] (nominal-design ref below), fsi cols 1, fallbacks 0
+  design RXX_N8_s1_mean_it600 done in 184 s
+R0_ROBUST_EVALSTUDY_c30_k18_robust_DONE

@@ -1,0 +1,60 @@
+﻿% Decision flowchart (T8): which operator to use for the radiated power of an open spherical cap.
+% Schematic guidance, traced to Secs. 5.4, 6.3, 6.4, 6.5 of the paper (6.5 = fluid-loading branch note, FSI fold).
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usetikzlibrary{shapes.geometric}
+\begin{document}
+\begin{tikzpicture}
+  \tikzset{
+    dec/.style={diamond, aspect=2.4, draw=black!80, align=center, text width=21mm},
+    actref/.style={action, draw=figref},
+    actsurr/.style={action, draw=figsurr, dash pattern=on 3pt off 1.5pt},
+    wide/.style={text width=24mm},
+  }
+  \node[thing, text width=54mm] (start) at (3.0,-0.6) {Radiated power of an open\\spherical cap in a thickness design};
+
+  % ------------------------------------------------ decisions on the left spine
+  \node[dec] (d1) at (3.0,-2.3) {Absolute power level needed?};
+  \node[dec, text width=22mm, right=5mm of d1] (d1a) {$30^\circ\le\theta_0\le90^\circ$, smooth field, $kR\gtrsim10$?};
+  \node[action, wide, right=5mm of d1a] (sinc) {$2\times$ sinc, about $\pm20\%$};
+  \node[actref, wide, anchor=west] (ref) at ($(sinc.west)+(0,-1.55)$) {Two-sided\\reference\\(exact or BEM)};
+  \node[note, anchor=north west] at (sinc.south west) {frozen fields; Sec.~5.4};
+  \node[note, anchor=north west] at (ref.south west) {$\rho$ from 0.15 to $>10^{3}$;\\Sec.~5};
+
+  \node[dec, text width=26mm] (d2) at (3.0,-4.55) {Phase-blind velocity norm (ERP) as objective?};
+  \node[action, wide, right=8mm of d2] (erp) {Not adequate for reductions or selection};
+  \node[note, anchor=north west, text width=40mm] at (erp.south west) {gap $s$ of \mbox{12.7--61.8\,dB} in all 7 cells; Sec.~6.4};
+
+  \node[dec, text width=14mm] (d3) at (3.0,-6.9) {$kR\ge7$?};
+  \node[actsurr, text width=38mm, anchor=west] (sg) at (5.2,-6.9) {Sinc may drive the\\descent and rate reductions};
+  \node[note, anchor=north west, text width=38mm] at ($(sg.north east)+(0.1,0)$) {gap $s$ of \mbox{3.6--9.5\,dB}, within the exact runs' own spread (up to \mbox{8.8\,dB}); predicted minus true within \mbox{1.5\,dB}; Sec.~6.4};
+  \node[actref, text width=36mm] (ex) at (3.0,-8.2) {Optimize with the exact or a two-sided BEM operator, fluid loading included};
+  \node[note, anchor=north west, text width=60mm] at (ex.south west) {sinc gap $s$ of \mbox{26--50\,dB}, reductions overstated by \mbox{16--35\,dB}; \mbox{$3<kR<7$} not tested; Sec.~6.4.\\An \mbox{in-vacuo} exact optimum is not a design to trust: once \mbox{coupled}, it lost \mbox{2--30\,dB}; Sec.~6.5};
+  \node[actref, chosen, text width=36mm] (fin) at (8.0,-8.2) {Cross-evaluate the final designs under a reference};
+  \node[note, anchor=west] at ($(fin.east)+(0.1,0)$) {Secs.~6.3--6.4};
+
+  \node[note, anchor=north west, text width=134mm] (foot) at (0,-10.3) {Guidance for this cap family only: zero-thickness two-sided model, apex point load, structure driven at 100\,Hz, $kR$ set through the sound speed; local optimizer, most runs at the iteration cap. Schematic, not data.};
+
+  % ------------------------------------------------ arrows
+  \draw[->] (start.south -| d1) -- (d1.north);
+  \draw[->] (d1) -- node[lab, above] {yes} (d1a);
+  \draw[->] (d1a) -- node[lab, above] {yes} (sinc);
+  \draw[->] (d1a.south) |- (ref.west);
+  \node[lab, anchor=north west] at ($(d1a.south)+(0,-0.05)$) {no};
+  \draw[->] (d1.south) -- node[lab, right] {no} (d2.north);
+  \draw[->] (d2) -- node[lab, above] {yes} (erp);
+  \draw[->] (d2.south) -- node[lab, right] {no (sinc objective)} (d3.north);
+  \draw[->] (d3) -- node[lab, above] {yes} (sg);
+  \draw[->] (d3.south) -- node[lab, right] {no} (ex.north);
+  \draw[->] (sg.south) -- (sg.south |- fin.north);
+  \draw[->] (ex.east) -- (fin.west);
+  \node[note, anchor=north west, text width=25mm] at (0,-5.55) {tested: $kR$ = 1--3\\and 7--18.3;\\$\theta_0$ = 30, 90, 120$^\circ$};
+\end{tikzpicture}
+\end{document}
+
+
+
+
+
+

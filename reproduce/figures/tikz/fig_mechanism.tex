@@ -1,0 +1,139 @@
+﻿% Mechanism of the exact-driven optimum: normal-velocity maps of the cap (a) and the
+% running power and far-field directivity (b). Data: data/f22_*.dat, numbers in
+% data/f22_numbers.tex only. Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{patchplots}
+\input{data/f22_numbers.tex}
+
+\pgfplotsset{
+  colormap={ld}{gray(0cm)=(0.95) gray(1cm)=(0.10)},
+  mapax/.style={
+    width=22mm, height=22mm, scale only axis, anchor=south west, hide axis,
+    xmin=-5.3, xmax=5.3, ymin=-5.3, ymax=5.3, colormap name=ld,
+    clip=true,
+  },
+  plotax/.style={
+    scale only axis, anchor=south west,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    label style={lab},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+  },
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% ================================================================ panel (a)
+% #1 data tag, #2 x, #3 y (picture, mm), #4 meta column, #5 meta min, #6 meta max
+\newcommand{\MapAx}[6]{%
+  \begin{axis}[mapax, at={(#2 mm,#3 mm)}, point meta min=#5, point meta max=#6]
+    \addplot[patch, patch type=polygon, vertex count=8, shader=faceted,
+      faceted color=mapped color, point meta=\thisrow{#4}]
+      table[x=x,y=y] {data/f22_vmap_#1.dat};
+    \addplot[witness, domain=0:360, samples=91, no marks] ({5.236*cos(x)},{5.236*sin(x)});
+  \end{axis}
+}
+
+% columns at x = 14 and 40 mm, rows at y = 39 (U) and 15 (X0); maps 22 mm
+\MapAx{U}{14}{39}{vdb}{-40}{0}
+\MapAx{U}{40}{39}{dph}{0}{180}
+\MapAx{X0}{14}{15}{vdb}{-40}{0}
+\MapAx{X0}{40}{15}{dph}{0}{180}
+
+% column headers
+\node[note, anchor=south, align=center] at (25mm,62.5mm) {amplitude $|v_n|$};
+\node[note, anchor=south, align=center] at (51mm,62.5mm) {phase difference\\to the apex};
+
+% row labels with swatches (same codes as panel b)
+\draw[refcurve, draw=black] (0.5mm,52.5mm) -- (5.5mm,52.5mm);
+\node[lab, anchor=north west, align=left] at (0mm,51.5mm) {U\\[-0.5pt]uniform};
+\draw[refcurve] (0.5mm,28.5mm) -- (5.5mm,28.5mm);
+\node[lab, anchor=north west, align=left] at (0mm,27.5mm) {X0\\[-0.5pt]exact-\\[-0.5pt]driven};
+
+% scale bar (2 m = 4.15 mm on the printed map), lower left of the X0 amplitude map
+\draw[structure] (15mm,15.8mm) -- (19.15mm,15.8mm);
+\draw[structure] (15mm,15.1mm) -- (15mm,16.5mm);
+\draw[structure] (19.15mm,15.1mm) -- (19.15mm,16.5mm);
+\node[note, inner sep=0pt, anchor=south west] at (14.3mm,16.9mm) {0};
+\node[note, inner sep=0pt, anchor=south west] at (18mm,16.9mm) {2\,m};
+
+% colorbars (light = quiet / in phase, dark = loud / antiphase)
+\shade[left color=black!5, right color=black!90] (15mm,9mm) rectangle (35mm,11mm);
+\draw[witness] (15mm,9mm) rectangle (35mm,11mm);
+\foreach \x/\t in {15/{$-$40}, 25/{$-$20}, 35/{0}} {
+  \draw[witness] (\x mm,9mm) -- (\x mm,8.2mm);
+  \node[note, inner sep=0pt, anchor=north] at (\x mm,8mm) {\t};
+}
+\node[note, anchor=north, inner sep=0pt] at (25mm,4.2mm) {$|v_n|$ (dB re max)};
+\shade[left color=black!5, right color=black!90] (41mm,9mm) rectangle (61mm,11mm);
+\draw[witness] (41mm,9mm) rectangle (61mm,11mm);
+\foreach \x/\t in {41/0, 51/90, 61/180} {
+  \draw[witness] (\x mm,9mm) -- (\x mm,8.2mm);
+  \node[note, inner sep=0pt, anchor=north] at (\x mm,8mm) {\t};
+}
+\node[note, anchor=north, inner sep=0pt] at (51mm,4.2mm) {phase to apex (deg)};
+
+\node[paneltag, anchor=north west] at (0mm,73.4mm) {(a)};
+\node[paneltitle, anchor=north west, align=left] at (5mm,73.4mm) {Normal velocity\\(in-vacuo structural model)};
+
+% ================================================================ panel (b)
+\node[paneltag, anchor=north west] at (70mm,73.4mm) {(b)};
+\node[paneltitle, anchor=north west, align=left] at (75mm,73.4mm) {Power\\(exact two-sided operator)};
+
+% hand-drawn legend
+\draw[refcurve, draw=black] (80mm,64mm) -- (86mm,64mm);
+\node[note, anchor=west] at (87mm,64mm) {U, uniform};
+\draw[refcurve] (80mm,60.4mm) -- (86mm,60.4mm);
+\node[note, anchor=west] at (87mm,60.4mm) {X0, exact-driven, $\fmdL$\,dB};
+
+% running power: axis box 80..125 mm by 37.5..56.5 mm
+\begin{axis}[plotax, at={(80mm,37.5mm)}, width=45mm, height=19mm, clip=false,
+    xmin=0, xmax=5.24, xtick={0,1,2,3,4,5},
+    ymin=-0.5, ymax=11, ytick={0,5,10},
+    ]
+  \draw[reference] (axis cs:0,1) -- (axis cs:5.24,1);
+  \addplot[refcurve, draw=black] table[x=s,y=cU]{data/f22_dpds.dat};
+  \addplot[refcurve] table[x=s,y=cX]{data/f22_dpds.dat};
+  \node[note, anchor=west, inner sep=0pt] at (axis cs:5.3,1) {net power};
+  % direct curve labels
+  \node[lab, anchor=south, inner sep=1pt] at (axis cs:0.9,7.0) {X0};
+  \node[lab, anchor=south, inner sep=1pt] (ulab) at (axis cs:3.55,2.6) {U};
+  \draw[leader] (ulab.south) -- (axis cs:3.55,0.8);
+  % notes in empty areas, with leaders
+  \node[note, anchor=south west, inner sep=1pt, align=left] (rad) at (axis cs:0.6,1.9)
+    {radiating regions:\\$+\fmposX\,P$};
+  \draw[leader] (rad.north west) -- (axis cs:0.29,4.3);
+  \node[note, anchor=south west, inner sep=1pt, align=left] (abs) at (axis cs:4.0,5.6)
+    {absorbing regions:\\$\fmnegX\,P$};
+  \draw[leader] (abs.south west) -- (axis cs:3.55,4.75);
+\end{axis}
+
+% shared axis labels (hand placed)
+\node[lab, anchor=north] at (102.5mm,34mm) {arc length $s$ from the apex (m)};
+\node[lab, anchor=south, rotate=90, align=center] at (73mm,47.5mm) {power up to $s$\\/ net power};
+\node[lab, anchor=north] at (102.5mm,4mm) {polar angle from the apex direction (deg)};
+\node[lab, anchor=south, rotate=90] at (73mm,17.5mm) {d$P$/d$\Omega$ (dB)};
+
+% far-field directivity: axis box 80..125 mm by 7.5..26.5 mm
+\begin{axis}[plotax, at={(80mm,7.5mm)}, width=45mm, height=19mm, clip=false,
+    xmin=0, xmax=180, xtick={0,45,90,135,180},
+    ymin=-62, ymax=2, ytick={0,-20,-40}, yticklabels={0,$-$20,$-$40},
+    ]
+  \addplot[refcurve, draw=black] table[x=theta,y=dU]{data/f22_dir.dat};
+  \addplot[refcurve] table[x=theta,y=dX]{data/f22_dir.dat};
+  \node[note, anchor=south west, inner sep=1pt] at (axis cs:30,-61.5) {azimuthal mean, re max of U};
+  % direct curve labels
+  \node[lab, anchor=south, inner sep=1pt] at (axis cs:100,-8) {U};
+  \node[lab, anchor=south, inner sep=1pt] at (axis cs:100,-38) {X0};
+\end{axis}
+
+\end{tikzpicture}
+\end{document}
+
+

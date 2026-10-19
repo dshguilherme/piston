@@ -1,0 +1,74 @@
+﻿# Reconstruction of the pilot (Experiment 6) stage-run queue: cell:code:nmax, one item per line, in the order the runs STARTED.
+# Source: harmonic_shell_course/results/r0_revision/pilot/queue.log (121 lines; written by the queue runner),
+#   cross-checked against results/r0_revision/pilot/log_run_*.log (RESULT lines) and run_*.mat file names. The queue runner itself is not in tests/;
+#   it survived only in a session scratchpad and is now reproduce/drivers/pilot_queue.ps1 (copy of paper_jsv/reproduce_plan/rescued_scratch/queue.ps1),
+#   which takes this list as  -List "cell:code:nmax,cell:code:nmax,...". The -List strings actually passed were not recorded.
+#   Each item corresponds to one call r0_pilot_runs(cell, code, nmax) in a fresh MATLAB session with maxNumCompThreads(2).
+# This is a RECONSTRUCTION from log lines, not an original driver file. Commented items (#) were started but superseded or aborted; do not re-run them.
+# Stage codes (see r0_pilot_runs.m:17-23): first letter = rung (X exact, S sinc, E ERP); second letter = start (U uniform, X end of XU, S end of SU).
+# Counts: 46 stage starts in queue.log; 43 ended with exit 0 (43 run_*.mat files); 38 are the final runs listed uncommented below (6 cells x 6 codes + c30_k18 EU, EX).
+#   The "42 pilot runs" of Experiment 8 = 7 cells x 6 codes, i.e. these 38 plus the 4 anchor runs c30_k18 XU/SU/SX/XS, which are the Experiment-5 runs X0/S0/SX/XS (no pilot run).
+# Non-stage queue entries (eval, grad) take no nmax; they are listed at the end for completeness as "cell:eval" / "cell:grad" in order. The "ops" and "setup" stages ran before this queue (ops.log, setup.log).
+# nmax = 600 for every final item. Format: cell:code:nmax
+# c30_k1:XU:?   [SUPERSEDED/ABORTED, queue.log line 1, 2026-10-17T11:26:44] no nmax in the queue line; no matching end line (killed/aborted); log_run_c30_k1_XU.log stops at it 250 with no RESULT; nmax CANNOT BE DETERMINED from the logs
+# c30_k1:XU:?   [SUPERSEDED/ABORTED, queue.log line 2, 2026-10-17T11:27:23] no nmax in the queue line; no matching end line (restart of line 1, aborted); nmax CANNOT BE DETERMINED
+# c30_k1:XU:300   [SUPERSEDED/ABORTED, queue.log line 3, 2026-10-17T11:52:58] finished (300 its, run_c30_k1_XU_n300.mat kept); superseded by the 600-iteration rerun at queue line 10
+# c120_k7:XU:300   [SUPERSEDED/ABORTED, queue.log line 7, 2026-10-17T12:02:56] finished (300 its, run_c120_k7_XU_n300.mat kept); superseded by queue line 16 (600)
+# c120_k7:SU:300   [SUPERSEDED/ABORTED, queue.log line 9, 2026-10-17T12:06:39] no end line, no run file; killed after ~225 its (log_run_c120_k7_SU.log); superseded by queue line 18 (600)
+c30_k1:XU:600
+c30_k1:SU:600
+c30_k1:EU:600
+c120_k7:XU:600
+c120_k7:SU:600
+c120_k7:EU:600
+c90_k1p5:XU:600
+c90_k1p5:SU:600
+c90_k1p5:EU:600
+c30_k3:XU:600
+c30_k3:SU:600
+c30_k3:EU:600
+c90_k7:XU:600
+c90_k7:SU:600
+c90_k7:EU:600
+c120_k1p5:XU:600
+c120_k1p5:SU:600
+c120_k1p5:EU:600
+# c30_k1:SX:600   [SUPERSEDED/ABORTED, queue.log line 46, 2026-10-17T14:30:24] first pass for c30_k1 SX: file run_c30_k1_SX_p0start.mat (started without the J(start)=Jref rescale, p0 problem); superseded by queue line 53
+# c30_k1:EX:600   [SUPERSEDED/ABORTED, queue.log line 48, 2026-10-17T14:42:20] first pass for c30_k1 EX: run_c30_k1_EX_p0start.mat; superseded by queue line 55
+# c30_k1:XS:600   [SUPERSEDED/ABORTED, queue.log line 50, 2026-10-17T14:45:53] first pass for c30_k1 XS: run_c30_k1_XS_invalid_p0neg.mat (invalid, p0<0 flips the objective sign); superseded by queue line 57
+c30_k1:SX:600
+c30_k1:EX:600
+c30_k1:XS:600
+c120_k7:SX:600
+c120_k7:EX:600
+c120_k7:XS:600
+c90_k1p5:SX:600
+c90_k1p5:EX:600
+c90_k1p5:XS:600
+c30_k3:SX:600
+c30_k3:EX:600
+c30_k3:XS:600
+c90_k7:SX:600
+c90_k7:EX:600
+c90_k7:XS:600
+c120_k1p5:SX:600
+c120_k1p5:EX:600
+c120_k1p5:XS:600
+c30_k18:EU:600
+c30_k18:EX:600
+# --- evaluation and gradient stages (not optimisation runs), in order of first appearance of the final pass ---
+# c30_k1:eval
+# c30_k1:grad
+# c120_k7:eval
+# c120_k7:grad
+# c90_k1p5:eval
+# c90_k1p5:grad
+# c30_k3:eval
+# c30_k3:grad
+# c90_k7:eval
+# c90_k7:grad
+# c120_k1p5:eval
+# c120_k1p5:grad
+# c30_k18:eval
+# c30_k18:grad
+# (c30_k1:eval also ran at queue lines 5 (after the 300-iteration XU) and 52 (after the first, invalid SX/EX/XS pass); only the pass at line 59 is final. Each cell: eval then grad after its XS run.)

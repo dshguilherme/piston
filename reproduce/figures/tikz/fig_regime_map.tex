@@ -1,0 +1,163 @@
+﻿% Regime map of rho = P_sinc/P_2s: kR versus opening angle for a smooth (v_0) and an
+% edge-dominated (v_7) velocity pattern, and a table of geometric means at 10<=kR<=40.
+% Cells are built in TeX from data/f8_*.dat (no Python, no hand-typed data).
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{patchplots}
+\pgfplotsset{compat=1.18}
+
+\pgfplotsset{
+  colormap={rhodiv}{color(-3)=(figref!60) color(-1)=(figref!25) color(0)=(black!0)
+                    color(1)=(figsurr!55) color(3)=(figsurr!70!black)},
+  mapaxis/.style={
+    scale only axis, width=49mm, height=26mm,
+    xmin=0.09, xmax=42, ymin=-0.5, ymax=5.5, y dir=reverse,
+    xtick={0.1,1,10,40}, xticklabels={0.1,1,10,40}, minor tick num=0,
+    ytick={0,1,2,3,4,5}, xtick pos=bottom, ytick pos=left, tick align=outside, major tick length=1.2mm,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    every axis label/.append style={lab},
+    xlabel={$kR$},
+    clip mode=individual,
+    unbounded coords=jump,
+    colormap name=rhodiv, point meta min=-3, point meta max=3,
+  },
+}
+
+% Build "(x,y) [meta]" corner lists for rectangular patches from a cell table.
+% #1 table macro, #2 output macro
+\newcommand{\buildcells}[2]{%
+  \pgfplotstablegetrowsof{#1}%
+  \pgfmathtruncatemacro{\nr}{\pgfplotsretval-1}%
+  \gdef#2{}%
+  \foreach \i in {0,...,\nr}{%
+    \pgfplotstablegetelem{\i}{x0}\of{#1}\let\xa\pgfplotsretval
+    \pgfplotstablegetelem{\i}{x1}\of{#1}\let\xb\pgfplotsretval
+    \pgfplotstablegetelem{\i}{row}\of{#1}\let\rw\pgfplotsretval
+    \pgfplotstablegetelem{\i}{l2c}\of{#1}\let\mm\pgfplotsretval
+    \pgfmathsetmacro{\ya}{\rw-0.5}\pgfmathsetmacro{\yb}{\rw+0.5}%
+    \xdef#2{#2 (\xa,\ya) [\mm] (\xb,\ya) [\mm] (\xb,\yb) [\mm] (\xa,\yb) [\mm]}%
+  }%
+}
+
+\begin{document}
+\pgfplotstableread{data/f8_cells_cos0.dat}\tabA
+\pgfplotstableread{data/f8_cells_cos7.dat}\tabB
+\pgfplotstableread{data/f8_geomean_modes.dat}\tabM
+\pgfplotstableread{data/f8_geomean_designs30.dat}\tabD
+\buildcells{\tabA}{\cellsA}
+\buildcells{\tabB}{\cellsB}
+
+\begin{tikzpicture}
+% ---------------------------------------------------------------- (a) smooth pattern
+\begin{axis}[mapaxis, xmode=log, name=axa, at={(0.68cm,3.95cm)}, anchor=south west,
+  yticklabels={$15^\circ$,$30^\circ$,$60^\circ$,$90^\circ$,$120^\circ$,$150^\circ$}]
+  \edef\tmp{\noexpand\addplot[patch, patch type=rectangle, shader=flat, point meta=explicit, draw=none]
+     coordinates {\cellsA};}\tmp
+  \addplot[draw=black, mark=none] table[x=x, y=y] {data/f8_rho1_cos0.dat};
+  \node[lab, rotate=90, anchor=south] at ([xshift=-7.5mm]current axis.west) {cap half-angle $\theta_0$};
+  % direct label for the rho=1 staircase: leader from the bottom end of a vertical step
+  \draw[leader] (axis cs:4.4721,5.5) -- ([xshift=-2.5mm,yshift=-2mm]axis cs:4.4721,5.5);
+  \node[note, anchor=north east, inner sep=0.5pt, outer sep=0pt] at ([xshift=-2.5mm,yshift=-2mm]axis cs:4.4721,5.5) {$\rho=1$};
+  % regime brackets (kR spans) and names
+  \draw[witness] (axis cs:0.1,-0.55) -- (axis cs:0.1,-0.75) -- (axis cs:1,-0.75) -- (axis cs:1,-0.55);
+  \draw[witness] (axis cs:1.5,-0.55) -- (axis cs:1.5,-0.75) -- (axis cs:8,-0.75) -- (axis cs:8,-0.55);
+  \draw[witness] (axis cs:10,-0.55) -- (axis cs:10,-0.75) -- (axis cs:40,-0.75) -- (axis cs:40,-0.55);
+  \node[note, anchor=south, align=center] at (axis cs:0.316,-0.85) {dipole regime,\\$\rho\gg1$};
+  \node[note, anchor=south west] at (axis cs:1.5,-0.85) {minimum};
+  \node[note, anchor=south, align=center] at (axis cs:20,-0.85) {two-face plateau,\\$\rho\approx0.5$};
+  \node[paneltag, anchor=south west] at ([xshift=-1.2mm,yshift=11mm]current axis.north west) {(a)};
+  \node[paneltitle, anchor=south west] at ([xshift=4mm,yshift=11mm]current axis.north west) {Smooth pattern $v_0$};
+\end{axis}
+
+% ---------------------------------------------------------------- (b) edge-dominated pattern
+\begin{axis}[mapaxis, xmode=log, name=axb, at={(6.03cm,3.95cm)}, anchor=south west, yticklabels={}]
+  \edef\tmp{\noexpand\addplot[patch, patch type=rectangle, shader=flat, point meta=explicit, draw=none]
+     coordinates {\cellsB};}\tmp
+  \addplot[draw=black, mark=none] table[x=x, y=y] {data/f8_rho1_cos7.dat};
+  % edge-dominated corner: rows 15 and 30 degrees, kR 10 to 40
+  \draw[reference, draw=black] (axis cs:10,-0.5) rectangle (axis cs:40,1.5);
+  \draw[witness] (axis cs:10,-0.55) -- (axis cs:10,-0.75) -- (axis cs:40,-0.75) -- (axis cs:40,-0.55);
+  \node[note, anchor=south east, align=right] at (axis cs:40,-0.85) {edge-dominated:\\sinc over-predicts};
+  % near-closed cap, 150 degree row
+  \draw[leader] (axis cs:42,5) -- ([xshift=3mm]axis cs:42,5);
+  \node[note, anchor=west, text width=1.5cm] at ([xshift=3mm]axis cs:42,5)
+     {near-closed cap: interior resonances};
+  \node[paneltag, anchor=south west] at ([xshift=-1.2mm,yshift=11mm]current axis.north west) {(b)};
+  \node[paneltitle, anchor=south west] at ([xshift=4mm,yshift=11mm]current axis.north west) {Edge-dominated pattern $v_7$};
+\end{axis}
+
+% ---------------------------------------------------------------- (c) geometric means
+\pgfplotstablegetrowsof{\tabM}\pgfmathtruncatemacro{\nm}{\pgfplotsretval-1}
+\pgfplotstablegetrowsof{\tabD}\pgfmathtruncatemacro{\nd}{\pgfplotsretval-1}
+\begin{axis}[name=axc, at={(0.68cm,0cm)}, anchor=south west, scale only axis,
+  width=83.7mm, height=20.4mm, xmin=-0.5, xmax=15, ymin=-0.5, ymax=5.5, y dir=reverse,
+  clip mode=individual, axis line style={draw=none},
+  xtick={0,1,2,3,4,5,6,7,8,9.5,10.5,11.5,12.5,13.5,14.5},
+  xticklabels={$v_{\rm c}$,$v_0$,$v_1$,$v_2$,$v_3$,$v_4$,$v_5$,$v_6$,$v_7$,U,B,C,D,E,G},
+  xticklabel pos=upper, ytick={0,1,2,3,4,5},
+  yticklabels={$15^\circ$,$30^\circ$,$60^\circ$,$90^\circ$,$120^\circ$,$150^\circ$},
+  major tick length=0mm, tick style={draw=none}, every tick label/.append style={note},
+  colormap name=rhodiv, point meta min=-3, point meta max=3]
+  \xdef\cellsC{}
+  \foreach \i in {0,...,\nm}{%
+    \pgfplotstablegetelem{\i}{col}\of{\tabM}\let\cx\pgfplotsretval
+    \pgfplotstablegetelem{\i}{row}\of{\tabM}\let\cy\pgfplotsretval
+    \pgfplotstablegetelem{\i}{l2c}\of{\tabM}\let\mm\pgfplotsretval
+    \pgfmathsetmacro{\xa}{\cx-0.5}\pgfmathsetmacro{\xb}{\cx+0.5}
+    \pgfmathsetmacro{\ya}{\cy-0.5}\pgfmathsetmacro{\yb}{\cy+0.5}
+    \xdef\cellsC{\cellsC (\xa,\ya) [\mm] (\xb,\ya) [\mm] (\xb,\yb) [\mm] (\xa,\yb) [\mm]}
+  }
+  \foreach \i in {0,...,\nd}{%
+    \pgfplotstablegetelem{\i}{col}\of{\tabD}\let\cx\pgfplotsretval
+    \pgfplotstablegetelem{\i}{l2c}\of{\tabD}\let\mm\pgfplotsretval
+    \pgfmathsetmacro{\xa}{9.5+\cx-0.5}\pgfmathsetmacro{\xb}{9.5+\cx+0.5}
+    \xdef\cellsC{\cellsC (\xa,0.5) [\mm] (\xb,0.5) [\mm] (\xb,1.5) [\mm] (\xa,1.5) [\mm]}
+  }
+  \edef\tmp{\noexpand\addplot[patch, patch type=rectangle, shader=flat, point meta=explicit, draw=none]
+     coordinates {\cellsC};}\tmp
+  % printed geometric means
+  \foreach \i in {0,...,\nm}{%
+    \pgfplotstablegetelem{\i}{col}\of{\tabM}\let\cx\pgfplotsretval
+    \pgfplotstablegetelem{\i}{row}\of{\tabM}\let\cy\pgfplotsretval
+    \pgfplotstablegetelem{\i}{gm}\of{\tabM}\let\gv\pgfplotsretval
+    \edef\tmp{\noexpand\node[note, text=black, anchor=center, inner sep=0pt] at (axis cs:\cx,\cy) {\gv};}\tmp
+  }
+  \foreach \i in {0,...,\nd}{%
+    \pgfplotstablegetelem{\i}{col}\of{\tabD}\let\cx\pgfplotsretval
+    \pgfplotstablegetelem{\i}{gm}\of{\tabD}\let\gv\pgfplotsretval
+    \pgfmathsetmacro{\xp}{9.5+\cx}
+    \edef\tmp{\noexpand\node[note, text=black, anchor=center, inner sep=0pt] at (axis cs:\xp,1) {\gv};}\tmp
+  }
+  \node[note, anchor=south, align=center] at ([yshift=4.5mm]axis cs:12,-0.5) {design fields, $\theta_0=30^\circ$};
+  \node[paneltag, anchor=south west] at ([xshift=-1.2mm,yshift=4.5mm]current axis.north west) {(c)};
+  \node[paneltitle, anchor=south west] at ([xshift=4mm,yshift=4.5mm]current axis.north west)
+     {Geometric mean, $10\le kR\le40$};
+\end{axis}
+
+% ---------------------------------------------------------------- shared color bar and key
+\begin{scope}[shift={(9.4cm,0.5cm)}]
+  \def\bw{0.85}% width of one color segment in cm, 4 segments = 3.4 cm
+  % segments span l2c = -3..-1, -1..0, 0..1, 1..3 (widths 2, 1, 1, 2 units of 4*\bw/6)
+  \pgfmathsetmacro{\un}{4*\bw/6}
+  \shade[left color=figref!60, right color=figref!25]   (0,0) rectangle (2*\un,0.25);
+  \shade[left color=figref!25, right color=black!0]     (2*\un,0) rectangle (3*\un,0.25);
+  \shade[left color=black!0, right color=figsurr!55]    (3*\un,0) rectangle (4*\un,0.25);
+  \shade[left color=figsurr!55, right color=figsurr!70!black] (4*\un,0) rectangle (6*\un,0.25);
+  \draw[witness] (0,0) rectangle (4*\bw,0.25);
+  \foreach \t/\s in {-3/{1/8}, -2/{1/4}, -1/{1/2}, 0/{1}, 1/{2}, 2/{4}, 3/{8}} {
+    \draw[witness] ({(\t+3)*4*\bw/6},0) -- ({(\t+3)*4*\bw/6},-0.08);
+    \node[note, anchor=north, inner sep=0.5pt] at ({(\t+3)*4*\bw/6},-0.08) {\s};
+  }
+  \node[note, anchor=north, align=center] at (2*\bw,-0.50) {$\rho=P_{\rm sinc}/P_{2s}$\\(clipped at 1/8 and 8)};
+  \node[note, anchor=south west, inner sep=0.5pt] at (0,0.30) {under-predicts};
+  \node[note, anchor=south east, inner sep=0.5pt] at (4*\bw,0.30) {over-predicts};
+  % key for the rho=1 boundary
+  \draw[draw=black] (0,1.15) -- (0.6,1.15);
+  \node[note, anchor=west] at (0.65,1.15) {$\rho=1$ boundary};
+\end{scope}
+\end{tikzpicture}
+\end{document}

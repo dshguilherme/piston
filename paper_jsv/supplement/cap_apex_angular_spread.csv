@@ -1,0 +1,17 @@
+field,polar_angle_deg,relative_rms_angular_spread
+frozen_response,0,6.41601391198644e-05
+frozen_response,3e-05,6.38642589339689e-05
+frozen_response,0.003,3.54685774377298e-05
+frozen_response,0.3,0.00279717002192369
+frozen_response,3,0.0169086118000412
+frozen_response,9,0.0862790818243135
+frozen_response,18,0.278490229044554
+frozen_response,27,0.485959468530846
+random_coefficients,0,0.963669664348164
+random_coefficients,3e-05,0.963674057223218
+random_coefficients,0.003,0.964110535833059
+random_coefficients,0.3,0.996174208780631
+random_coefficients,3,0.972058217728359
+random_coefficients,9,0.921740589646201
+random_coefficients,18,0.958328531504179
+random_coefficients,27,0.851757251659512

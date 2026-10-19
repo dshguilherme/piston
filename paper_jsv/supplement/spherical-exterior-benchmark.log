@@ -1,0 +1,20 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+max direct-to-analytic double-integral error 3.590e+00
+max ratio formula discrepancy 2.737e+00
+    ka     quadrature_sinc_integral    analytic_sinc_integral    relative_quadrature_error    prescribed_sinc_to_exterior_power_ratio    analytic_ratio
+    ___    ________________________    ______________________    _________________________    _______________________________________    ______________
+
+    0.1              39.08                     157.39                      0.7517                              0.4999                         2.0133   
+    0.5               8.25                     145.19                     0.94318                             0.13061                         2.2985   
+      1             3.7498                     111.81                     0.96646                            0.094983                         2.8323   
+      2             2.5556                     32.642                     0.92171                             0.16183                         2.0671   
+      3              1.604                    0.34943                      3.5904                             0.20315                       0.044255   
+      4             1.5363                     5.6528                     0.72823                             0.33077                         1.2171   
+      5             0.7892                     5.8083                     0.86413                             0.25988                         1.9126   
+      6             1.2873                    0.34247                      2.7589                             0.60325                        0.16048   
+      8              1.029                     2.4152                     0.57395                             0.84709                         1.9882   
+
+R0_SPHERICAL_EXTERIOR_BENCHMARK_PASS

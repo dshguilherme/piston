@@ -1,0 +1,57 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+R0_NYSTROM_RANK_SWEEP_DONE
+      geometry                field             rank    dense_quadratic    compressed_quadratic    relative_quadratic_error    relative_kernel_frobenius_error
+    _____________    _______________________    ____    _______________    ____________________    ________________________    _______________________________
+
+    {'cylpanel' }    {'legacy_long_horizon'}     16       5.5089e-18            2.6775e-18                  -0.51397                      0.0020407           
+    {'cylpanel' }    {'legacy_long_horizon'}     32       5.5089e-18            5.1711e-18                  -0.06131                     1.1806e-05           
+    {'cylpanel' }    {'legacy_long_horizon'}     48       5.5089e-18             5.507e-18               -0.00033894                     0.00013757           
+    {'cylpanel' }    {'legacy_long_horizon'}     64       5.5089e-18            5.5088e-18               -1.5278e-05                     0.00010293           
+    {'cylpanel' }    {'legacy_long_horizon'}     96       5.5089e-18            5.5089e-18               -1.9683e-06                     0.00017512           
+    {'cylpanel' }    {'legacy_long_horizon'}    128       5.5089e-18            5.5089e-18               -6.6236e-07                     0.00015428           
+    {'cylpanel' }    {'legacy_long_horizon'}    192       5.5089e-18            5.5089e-18               -3.0783e-07                     5.9052e-05           
+    {'cylpanel' }    {'legacy_long_horizon'}    256       5.5089e-18            5.5089e-18               -1.0602e-07                     5.7481e-05           
+    {'cylpanel' }    {'legacy_long_horizon'}    384       5.5089e-18            5.5089e-18               -5.3596e-07                     2.7946e-05           
+    {'cylpanel' }    {'legacy_long_horizon'}    512       5.5089e-18            5.5089e-18               -2.1901e-07                      1.444e-05           
+    {'cylpanel' }    {'legacy_long_horizon'}    768       5.5089e-18            5.5089e-18                1.7256e-07                     1.2929e-05           
+    {'cylpanel' }    {'legacy_long_horizon'}    960       5.5089e-18            5.5089e-18               -1.7797e-07                     3.5375e-06           
+    {'spherecap'}    {'quadvel-rad'        }     16       1.6206e-16            1.2718e-16                  -0.21527                        0.32921           
+    {'spherecap'}    {'quadvel-I'          }     16       2.1904e-16            2.0005e-16                 -0.086725                        0.32921           
+    {'spherecap'}    {'quadvel-ones'       }     16       6.5639e-16              5.96e-16                 -0.092002                        0.32921           
+    {'spherecap'}    {'quadvel-rad'        }     32       1.6206e-16            1.4942e-16                 -0.078026                        0.15831           
+    {'spherecap'}    {'quadvel-I'          }     32       2.1904e-16            2.0942e-16                 -0.043935                        0.15831           
+    {'spherecap'}    {'quadvel-ones'       }     32       6.5639e-16            6.4605e-16                 -0.015753                        0.15831           
+    {'spherecap'}    {'quadvel-rad'        }     48       1.6206e-16            1.5823e-16                 -0.023667                       0.060921           
+    {'spherecap'}    {'quadvel-I'          }     48       2.1904e-16            2.1523e-16                 -0.017422                       0.060921           
+    {'spherecap'}    {'quadvel-ones'       }     48       6.5639e-16            6.5273e-16                -0.0055691                       0.060921           
+    {'spherecap'}    {'quadvel-rad'        }     64       1.6206e-16            1.6065e-16                -0.0087217                       0.023404           
+    {'spherecap'}    {'quadvel-I'          }     64       2.1904e-16             2.176e-16                -0.0065847                       0.023404           
+    {'spherecap'}    {'quadvel-ones'       }     64       6.5639e-16            6.5408e-16                -0.0035184                       0.023404           
+    {'spherecap'}    {'quadvel-rad'        }     96       1.6206e-16            1.6189e-16                -0.0011001                       0.005501           
+    {'spherecap'}    {'quadvel-I'          }     96       2.1904e-16            2.1883e-16               -0.00096889                       0.005501           
+    {'spherecap'}    {'quadvel-ones'       }     96       6.5639e-16            6.5603e-16               -0.00054779                       0.005501           
+    {'spherecap'}    {'quadvel-rad'        }    128       1.6206e-16            1.6203e-16               -0.00018919                       0.000608           
+    {'spherecap'}    {'quadvel-I'          }    128       2.1904e-16            2.1903e-16               -3.3009e-05                       0.000608           
+    {'spherecap'}    {'quadvel-ones'       }    128       6.5639e-16            6.5639e-16               -1.7136e-06                       0.000608           
+    {'spherecap'}    {'quadvel-rad'        }    192       1.6206e-16            1.6206e-16               -3.2963e-05                     5.1136e-05           
+    {'spherecap'}    {'quadvel-I'          }    192       2.1904e-16            2.1903e-16               -3.9252e-05                     5.1136e-05           
+    {'spherecap'}    {'quadvel-ones'       }    192       6.5639e-16             6.564e-16                1.6409e-05                     5.1136e-05           
+    {'spherecap'}    {'quadvel-rad'        }    256       1.6206e-16            1.6207e-16                1.4019e-05                     6.0215e-05           
+    {'spherecap'}    {'quadvel-I'          }    256       2.1904e-16            2.1904e-16                -1.269e-05                     6.0215e-05           
+    {'spherecap'}    {'quadvel-ones'       }    256       6.5639e-16            6.5642e-16                5.5335e-05                     6.0215e-05           
+    {'spherecap'}    {'quadvel-rad'        }    384       1.6206e-16            1.6208e-16                8.3112e-05                     8.4846e-05           
+    {'spherecap'}    {'quadvel-I'          }    384       2.1904e-16            2.1908e-16                0.00016316                     8.4846e-05           
+    {'spherecap'}    {'quadvel-ones'       }    384       6.5639e-16             6.563e-16               -0.00013115                     8.4846e-05           
+    {'spherecap'}    {'quadvel-rad'        }    512       1.6206e-16            1.6206e-16               -4.6098e-06                     2.4266e-05           
+    {'spherecap'}    {'quadvel-I'          }    512       2.1904e-16            2.1904e-16               -1.7434e-05                     2.4266e-05           
+    {'spherecap'}    {'quadvel-ones'       }    512       6.5639e-16            6.5637e-16               -2.2971e-05                     2.4266e-05           
+    {'spherecap'}    {'quadvel-rad'        }    768       1.6206e-16            1.6207e-16                 7.949e-06                     1.9758e-05           
+    {'spherecap'}    {'quadvel-I'          }    768       2.1904e-16            2.1905e-16                3.3175e-05                     1.9758e-05           
+    {'spherecap'}    {'quadvel-ones'       }    768       6.5639e-16            6.5636e-16                -3.451e-05                     1.9758e-05           
+    {'spherecap'}    {'quadvel-rad'        }    960       1.6206e-16            1.6207e-16                5.5963e-07                     2.6179e-06           
+    {'spherecap'}    {'quadvel-I'          }    960       2.1904e-16            2.1904e-16                8.5048e-07                     2.6179e-06           
+    {'spherecap'}    {'quadvel-ones'       }    960       6.5639e-16            6.5639e-16               -5.4572e-07                     2.6179e-06           
+

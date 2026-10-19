@@ -1,0 +1,37 @@
+﻿2026-10-18T01:51:29 runner start pid 20364
+2026-10-18T01:51:30 waiting 60 s: 2 MATLAB sessions running (0 of Experiment 10)
+2026-10-18T01:52:30 start [r0_robust_evalstudy('c30_k18','C:\Users\dshgu\AppData\Local\Temp\claude\C--Users-dshgu-OneDrive-Documents-FastFormation-harmonic-shell-course-paper-jsv\90c1eee2-75c1-4619-af46-00827600c50f\scratchpad\z')] launcher pid 18372 log log_job_20261018_015230.log
+2026-10-18T02:51:49 end [r0_robust_evalstudy('c30_k18','C:\Users\dshgu\AppData\Local\Temp\claude\C--Users-dshgu-OneDrive-Documents-FastFormation-harmonic-shell-course-paper-jsv\90c1eee2-75c1-4619-af46-00827600c50f\scratchpad\z')] exit  done-marker True
+2026-10-18T02:51:49 start [r0_robust_runs('c30_k18 X U 8 0.01 mean 2')] launcher pid 1180 log log_job_20261018_025149.log
+2026-10-18T02:53:04 end [r0_robust_runs('c30_k18 X U 8 0.01 mean 2')] exit  done-marker True
+2026-10-18T02:53:04 start [r0_robust_evalstudy('c30_k3','C:\Users\dshgu\AppData\Local\Temp\claude\C--Users-dshgu-OneDrive-Documents-FastFormation-harmonic-shell-course-paper-jsv\90c1eee2-75c1-4619-af46-00827600c50f\scratchpad\z',200,[0.001 0.003 0.01 0.03],'',[0 0.003 0.01])] launcher pid 7808 log log_job_20261018_025304.log
+2026-10-18T03:30:43 end [r0_robust_evalstudy('c30_k3','C:\Users\dshgu\AppData\Local\Temp\claude\C--Users-dshgu-OneDrive-Documents-FastFormation-harmonic-shell-course-paper-jsv\90c1eee2-75c1-4619-af46-00827600c50f\scratchpad\z',200,[0.001 0.003 0.01 0.03],'',[0 0.003 0.01])] exit  done-marker True
+2026-10-18T03:30:43 start [r0_robust_runs('c30_k18 X U 8 0.01 mean 800')] launcher pid 31884 log log_job_20261018_033043.log
+2026-10-18T03:57:46 end [r0_robust_runs('c30_k18 X U 8 0.01 mean 800')] exit  done-marker True
+2026-10-18T03:57:46 start [r0_robust_runs('c30_k18 S U 8 0.01 mean 800')] launcher pid 14012 log log_job_20261018_035746.log
+2026-10-18T04:23:04 end [r0_robust_runs('c30_k18 S U 8 0.01 mean 800')] exit  done-marker True
+2026-10-18T04:23:04 start [r0_robust_runs('c30_k18 X X 8 0.01 mean 600')] launcher pid 33616 log log_job_20261018_042304.log
+2026-10-18T04:49:30 end [r0_robust_runs('c30_k18 X X 8 0.01 mean 600')] exit  done-marker True
+2026-10-18T04:49:31 start [r0_robust_runs('c30_k18 S S 8 0.01 mean 600')] launcher pid 34144 log log_job_20261018_044931.log
+2026-10-18T04:56:11 end [r0_robust_runs('c30_k18 S S 8 0.01 mean 600')] exit  done-marker True
+2026-10-18T04:56:11 start [r0_robust_runs('c30_k3 X X 8 0.01 mean 200')] launcher pid 1880 log log_job_20261018_045611.log
+2026-10-18T05:08:14 end [r0_robust_runs('c30_k3 X X 8 0.01 mean 200')] exit  done-marker True
+2026-10-18T05:08:14 start [r0_robust_runs('c30_k3 X X 16 0.01 mean 200')] launcher pid 20192 log log_job_20261018_050814.log
+2026-10-18T05:29:33 end [r0_robust_runs('c30_k3 X X 16 0.01 mean 200')] exit  done-marker True
+2026-10-18T05:29:34 start [r0_robust_runs('c30_k3 X X 32 0.01 mean 200')] launcher pid 26488 log log_job_20261018_052934.log
+2026-10-18T06:09:20 end [r0_robust_runs('c30_k3 X X 32 0.01 mean 200')] exit  done-marker True
+2026-10-18T06:09:20 queue empty; runner exits
+2026-10-18T08:01:37 runner start pid 20068
+2026-10-18T08:01:37 start [r0_robust_runs('c30_k3 S S 8 0.01 mean 600')] launcher pid 26060 log log_job_20261018_080137.log
+2026-10-18T08:24:37 end [r0_robust_runs('c30_k3 S S 8 0.01 mean 600')] exit  done-marker True
+2026-10-18T08:24:37 STOP file present; runner exits
+2026-10-18T08:30:45 runner start pid 30244
+2026-10-18T08:30:47 start [r0_robust_runs('c30_k3 S U 8 0.01 mean 400')] launcher pid 24052 log log_job_20261018_083046.log
+2026-10-18T09:51:15 end [r0_robust_runs('c30_k3 S U 8 0.01 mean 400')] exit  done-marker True
+2026-10-18T09:51:15 STOP file present; runner exits
+2026-10-18T09:51:39 runner start pid 16796
+2026-10-18T09:51:41 start [r0_robust_evalstudy('c30_k3','C:\Users\dshgu\AppData\Local\Temp\claude\C--Users-dshgu-OneDrive-Documents-FastFormation-harmonic-shell-course-paper-jsv\90c1eee2-75c1-4619-af46-00827600c50f\scratchpad\z',200,[0.001 0.003 0.01 0.03],'robust',[0 0.01],true)] launcher pid 27492 log log_job_20261018_095141.log
+2026-10-18T11:06:41 end [r0_robust_evalstudy('c30_k3','C:\Users\dshgu\AppData\Local\Temp\claude\C--Users-dshgu-OneDrive-Documents-FastFormation-harmonic-shell-course-paper-jsv\90c1eee2-75c1-4619-af46-00827600c50f\scratchpad\z',200,[0.001 0.003 0.01 0.03],'robust',[0 0.01],true)] exit  done-marker True
+2026-10-18T11:06:42 start [r0_robust_evalstudy('c30_k18','C:\Users\dshgu\AppData\Local\Temp\claude\C--Users-dshgu-OneDrive-Documents-FastFormation-harmonic-shell-course-paper-jsv\90c1eee2-75c1-4619-af46-00827600c50f\scratchpad\z',200,[0.001 0.003 0.01 0.03],'robust',[0 0.01],true)] launcher pid 26416 log log_job_20261018_110642.log
+2026-10-18T11:36:12 end [r0_robust_evalstudy('c30_k18','C:\Users\dshgu\AppData\Local\Temp\claude\C--Users-dshgu-OneDrive-Documents-FastFormation-harmonic-shell-course-paper-jsv\90c1eee2-75c1-4619-af46-00827600c50f\scratchpad\z',200,[0.001 0.003 0.01 0.03],'robust',[0 0.01],true)] exit  done-marker True
+2026-10-18T11:36:13 queue empty; runner exits

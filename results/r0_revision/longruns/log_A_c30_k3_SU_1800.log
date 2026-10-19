@@ -1,0 +1,56 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== new A_c30_k3_SU (theta0 30, kR 3.0000), start C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\results\r0_revision\pilot\run_c30_k3_SU.mat at it 600, target 1800 ==
+  stage 1: rung S on c30_k3 from it 600, cstart 3.85844e+05, move 0
+  [S c30_k3] it   601 (stage 1,    1): Jown=1.54114e-12 f0=+100.0000  exact  -34.257 dB  sinc  -55.864 dB  erp   -7.282 dB  vol=0.5000 chg=1.94e-06 inner=6
+  [S c30_k3] it   625 (stage 1,   25): Jown=1.53537e-12 f0= +99.9568  exact  -34.265 dB  sinc  -55.880 dB  erp   -7.285 dB  vol=0.5000 chg=2.64e-05 inner=5
+  [S c30_k3] it   650 (stage 1,   50): Jown=1.52144e-12 f0= +99.8520  exact  -34.289 dB  sinc  -55.920 dB  erp   -7.293 dB  vol=0.5000 chg=2.20e-05 inner=6
+  [S c30_k3] it   675 (stage 1,   75): Jown=1.50604e-12 f0= +99.7349  exact  -34.316 dB  sinc  -55.964 dB  erp   -7.301 dB  vol=0.5000 chg=7.65e-05 inner=5
+  [S c30_k3] it   700 (stage 1,  100): Jown=1.49541e-12 f0= +99.6534  exact  -34.334 dB  sinc  -55.995 dB  erp   -7.309 dB  vol=0.5000 chg=1.74e-05 inner=6
+  [S c30_k3] it   725 (stage 1,  125): Jown=1.48357e-12 f0= +99.5619  exact  -34.352 dB  sinc  -56.029 dB  erp   -7.316 dB  vol=0.5000 chg=2.29e-05 inner=5
+  [S c30_k3] it   750 (stage 1,  150): Jown=1.46927e-12 f0= +99.4505  exact  -34.378 dB  sinc  -56.072 dB  erp   -7.325 dB  vol=0.5000 chg=2.82e-05 inner=5
+  [S c30_k3] it   775 (stage 1,  175): Jown=1.45138e-12 f0= +99.3095  exact  -34.405 dB  sinc  -56.125 dB  erp   -7.337 dB  vol=0.5000 chg=2.94e-05 inner=6
+  [S c30_k3] it   800 (stage 1,  200): Jown=1.42969e-12 f0= +99.1362  exact  -34.442 dB  sinc  -56.190 dB  erp   -7.352 dB  vol=0.5000 chg=1.55e-04 inner=5
+  [S c30_k3] it   825 (stage 1,  225): Jown=1.41205e-12 f0= +98.9934  exact  -34.483 dB  sinc  -56.244 dB  erp   -7.363 dB  vol=0.5000 chg=2.69e-05 inner=5
+  [S c30_k3] it   850 (stage 1,  250): Jown=1.40224e-12 f0= +98.9132  exact  -34.499 dB  sinc  -56.274 dB  erp   -7.369 dB  vol=0.5000 chg=8.77e-05 inner=5
+  [S c30_k3] it   875 (stage 1,  275): Jown=1.38824e-12 f0= +98.7977  exact  -34.528 dB  sinc  -56.318 dB  erp   -7.378 dB  vol=0.5000 chg=3.22e-05 inner=5
+  [S c30_k3] it   900 (stage 1,  300): Jown=1.37707e-12 f0= +98.7048  exact  -34.552 dB  sinc  -56.353 dB  erp   -7.385 dB  vol=0.5000 chg=3.57e-05 inner=5
+  [S c30_k3] it   925 (stage 1,  325): Jown=1.35933e-12 f0= +98.5555  exact  -34.581 dB  sinc  -56.409 dB  erp   -7.394 dB  vol=0.5000 chg=2.43e-05 inner=6
+  [S c30_k3] it   950 (stage 1,  350): Jown=1.34598e-12 f0= +98.4420  exact  -34.608 dB  sinc  -56.452 dB  erp   -7.401 dB  vol=0.5000 chg=2.19e-05 inner=5
+  [S c30_k3] it   975 (stage 1,  375): Jown=1.33662e-12 f0= +98.3617  exact  -34.628 dB  sinc  -56.482 dB  erp   -7.406 dB  vol=0.5000 chg=1.69e-05 inner=5
+  [S c30_k3] it  1000 (stage 1,  400): Jown=1.32884e-12 f0= +98.2945  exact  -34.642 dB  sinc  -56.508 dB  erp   -7.411 dB  vol=0.5000 chg=2.50e-05 inner=5
+  [S c30_k3] it  1025 (stage 1,  425): Jown=1.31726e-12 f0= +98.1938  exact  -34.667 dB  sinc  -56.546 dB  erp   -7.418 dB  vol=0.5000 chg=1.64e-05 inner=6
+  [S c30_k3] it  1050 (stage 1,  450): Jown=1.30858e-12 f0= +98.1177  exact  -34.684 dB  sinc  -56.575 dB  erp   -7.423 dB  vol=0.5000 chg=1.85e-05 inner=6
+  [S c30_k3] it  1075 (stage 1,  475): Jown=1.30110e-12 f0= +98.0518  exact  -34.698 dB  sinc  -56.599 dB  erp   -7.428 dB  vol=0.5000 chg=3.56e-05 inner=5
+  [S c30_k3] it  1100 (stage 1,  500): Jown=1.29336e-12 f0= +97.9831  exact  -34.712 dB  sinc  -56.625 dB  erp   -7.433 dB  vol=0.5000 chg=2.46e-05 inner=5
+  [S c30_k3] it  1125 (stage 1,  525): Jown=1.28431e-12 f0= +97.9023  exact  -34.731 dB  sinc  -56.656 dB  erp   -7.440 dB  vol=0.5000 chg=2.33e-05 inner=6
+  [S c30_k3] it  1150 (stage 1,  550): Jown=1.27415e-12 f0= +97.8109  exact  -34.751 dB  sinc  -56.690 dB  erp   -7.446 dB  vol=0.5000 chg=1.45e-05 inner=6
+  [S c30_k3] it  1175 (stage 1,  575): Jown=1.26648e-12 f0= +97.7414  exact  -34.770 dB  sinc  -56.717 dB  erp   -7.449 dB  vol=0.5000 chg=3.23e-05 inner=5
+  [S c30_k3] it  1200 (stage 1,  600): Jown=1.25887e-12 f0= +97.6721  exact  -34.787 dB  sinc  -56.743 dB  erp   -7.453 dB  vol=0.5000 chg=2.38e-05 inner=6
+  [S c30_k3] it  1225 (stage 1,  625): Jown=1.25083e-12 f0= +97.5984  exact  -34.805 dB  sinc  -56.771 dB  erp   -7.458 dB  vol=0.5000 chg=1.59e-05 inner=6
+  [S c30_k3] it  1250 (stage 1,  650): Jown=1.24443e-12 f0= +97.5394  exact  -34.817 dB  sinc  -56.793 dB  erp   -7.462 dB  vol=0.5000 chg=6.95e-05 inner=5
+  [S c30_k3] it  1275 (stage 1,  675): Jown=1.23713e-12 f0= +97.4716  exact  -34.834 dB  sinc  -56.818 dB  erp   -7.467 dB  vol=0.5000 chg=1.02e-05 inner=5
+  [S c30_k3] it  1300 (stage 1,  700): Jown=1.22840e-12 f0= +97.3902  exact  -34.853 dB  sinc  -56.849 dB  erp   -7.473 dB  vol=0.5000 chg=2.15e-05 inner=5
+  [S c30_k3] it  1325 (stage 1,  725): Jown=1.22031e-12 f0= +97.3142  exact  -34.872 dB  sinc  -56.878 dB  erp   -7.477 dB  vol=0.5000 chg=1.32e-05 inner=6
+  [S c30_k3] it  1350 (stage 1,  750): Jown=1.21183e-12 f0= +97.2339  exact  -34.892 dB  sinc  -56.908 dB  erp   -7.481 dB  vol=0.5000 chg=1.45e-05 inner=6
+  [S c30_k3] it  1375 (stage 1,  775): Jown=1.20367e-12 f0= +97.1562  exact  -34.907 dB  sinc  -56.937 dB  erp   -7.486 dB  vol=0.5000 chg=2.20e-05 inner=5
+  [S c30_k3] it  1400 (stage 1,  800): Jown=1.18756e-12 f0= +97.0011  exact  -34.946 dB  sinc  -56.996 dB  erp   -7.495 dB  vol=0.5000 chg=4.20e-05 inner=5
+  [S c30_k3] it  1425 (stage 1,  825): Jown=1.18064e-12 f0= +96.9338  exact  -34.957 dB  sinc  -57.021 dB  erp   -7.499 dB  vol=0.5000 chg=1.55e-04 inner=4
+  [S c30_k3] it  1450 (stage 1,  850): Jown=1.17051e-12 f0= +96.8347  exact  -34.979 dB  sinc  -57.059 dB  erp   -7.505 dB  vol=0.5000 chg=7.25e-06 inner=6
+  [S c30_k3] it  1475 (stage 1,  875): Jown=1.16519e-12 f0= +96.7822  exact  -34.993 dB  sinc  -57.079 dB  erp   -7.508 dB  vol=0.5000 chg=7.42e-05 inner=5
+  [S c30_k3] it  1500 (stage 1,  900): Jown=1.15655e-12 f0= +96.6966  exact  -35.013 dB  sinc  -57.111 dB  erp   -7.513 dB  vol=0.5000 chg=2.88e-05 inner=6
+  [S c30_k3] it  1525 (stage 1,  925): Jown=1.15103e-12 f0= +96.6416  exact  -35.023 dB  sinc  -57.132 dB  erp   -7.516 dB  vol=0.5000 chg=4.64e-05 inner=5
+  [S c30_k3] it  1550 (stage 1,  950): Jown=1.13385e-12 f0= +96.4685  exact  -35.062 dB  sinc  -57.197 dB  erp   -7.528 dB  vol=0.5000 chg=1.98e-05 inner=5
+  [S c30_k3] it  1575 (stage 1,  975): Jown=1.12679e-12 f0= +96.3966  exact  -35.076 dB  sinc  -57.224 dB  erp   -7.531 dB  vol=0.5000 chg=1.40e-05 inner=6
+  [S c30_k3] it  1600 (stage 1, 1000): Jown=1.12054e-12 f0= +96.3326  exact  -35.094 dB  sinc  -57.248 dB  erp   -7.535 dB  vol=0.5000 chg=1.29e-05 inner=6
+  [S c30_k3] it  1625 (stage 1, 1025): Jown=1.11562e-12 f0= +96.2820  exact  -35.105 dB  sinc  -57.267 dB  erp   -7.537 dB  vol=0.5000 chg=2.92e-05 inner=5
+  [S c30_k3] it  1650 (stage 1, 1050): Jown=1.10900e-12 f0= +96.2136  exact  -35.118 dB  sinc  -57.293 dB  erp   -7.541 dB  vol=0.5000 chg=1.45e-05 inner=6
+  [S c30_k3] it  1675 (stage 1, 1075): Jown=1.10316e-12 f0= +96.1528  exact  -35.134 dB  sinc  -57.316 dB  erp   -7.544 dB  vol=0.5000 chg=1.16e-05 inner=6
+  [S c30_k3] it  1700 (stage 1, 1100): Jown=1.09810e-12 f0= +96.0999  exact  -35.149 dB  sinc  -57.336 dB  erp   -7.546 dB  vol=0.5000 chg=1.06e-05 inner=6
+  [S c30_k3] it  1725 (stage 1, 1125): Jown=1.09144e-12 f0= +96.0298  exact  -35.164 dB  sinc  -57.363 dB  erp   -7.550 dB  vol=0.5000 chg=1.83e-05 inner=6
+  [S c30_k3] it  1750 (stage 1, 1150): Jown=1.08727e-12 f0= +95.9859  exact  -35.173 dB  sinc  -57.379 dB  erp   -7.552 dB  vol=0.5000 chg=4.18e-05 inner=5
+  [S c30_k3] it  1775 (stage 1, 1175): Jown=1.08224e-12 f0= +95.9325  exact  -35.185 dB  sinc  -57.399 dB  erp   -7.554 dB  vol=0.5000 chg=4.59e-05 inner=5
+  [S c30_k3] it  1800 (stage 1, 1200): Jown=1.07686e-12 f0= +95.8751  exact  -35.198 dB  sinc  -57.421 dB  erp   -7.557 dB  vol=0.5000 chg=8.13e-06 inner=6
+R0_LONG_A_c30_k3_SU_DONE it=1800 status=budget walltime=2203s warn=0

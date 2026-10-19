@@ -1,0 +1,110 @@
+% F24 v2, pass rule in the level convention: error of the sinc model against its predicted level,
+% with the class envelopes. x = predicted level re uniform design (negative = quieter, 0 at the right),
+% y = error e = DeltaL_x - DeltaL_pred (up = louder than predicted).
+% (a) design point; (b) two low-kR cells of the regime study (30 deg, kR 3; 120 deg, kR 1.5).
+% Data: data/f24v2_*.dat and data/f24v2_numbers.tex (tests/r0_fig_passrule_v2.py). Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\input{data/f24v2_numbers.tex}
+
+\def\ph{46}   % axis height (mm)
+
+\pgfplotsset{
+  axbase/.style={
+    scale only axis, anchor=south west, clip=true,
+    height=\ph mm,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    label style={lab},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+    xlabel={predicted level $\Delta L_{\rm pred}$ (dB)},
+    ylabel style={yshift=-1mm},
+  },
+  sincmk/.style={surrcurve, only marks, mark=square, mark size=0.9pt, mark options={solid}},
+  sincmkb/.style={surrcurve, only marks, mark=diamond, mark size=1.2pt, mark options={solid}},
+  exactmk/.style={refcurve, only marks, mark=triangle, mark size=1.1pt},
+  randmk/.style={refcurve, draw=black!55, only marks, mark=*, mark size=0.9pt, mark options={fill=black!55}},
+  envline/.style={refcurve, draw=black},
+}
+
+% reading arrow of the y direction in the left gutter of an axis whose left edge is at x = #1 mm (bottom 10 mm)
+\newcommand{\errgutter}[1]{%
+  \node[note, rotate=90, anchor=west] at ({(#1-16.2)*1mm},10mm) {quieter};
+  \node[note, rotate=90, anchor=east] at ({(#1-16.2)*1mm},{(10+\ph)*1mm}) {louder};
+  \draw[axisline] ({(#1-13.6)*1mm},10.5mm) -- ({(#1-13.6)*1mm},{(10+\ph)*1mm});
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% ================================================================ panel (a): design point
+\begin{axis}[axbase, at={(18mm,10mm)}, width=44mm,
+    xmin=-30, xmax=3, ymin=-2.4, ymax=1.9,
+    xtick={-25,-20,-15,-10,-5,0}, xticklabels={$-$25,$-$20,$-$15,$-$10,$-$5,0},
+    ytick={-2,-1,0,1}, yticklabels={$-$2,$-$1,0,1},
+    ylabel={error $e=\Delta L_x-\Delta L_{\rm pred}$ (dB)}]
+  \draw[reference] (axis cs:-30,0) -- (axis cs:3,0);
+  \addplot[exactmk] table[x=dLpred, y=e]{data/f24v2_paper_exact.dat};
+  \addplot[randmk] table[x=dLpred, y=e]{data/f24v2_paper_random.dat};
+  \addplot[sincmk] table[x=dLpred, y=e]{data/f24v2_paper_sinc.dat};
+  % class envelope e = a - b dL_pred (kR >= 7, pooled) and the line Delta L_x = -20 dB (e = -20 - dL_pred)
+  \addplot[envline, domain=-30:3, samples=2] {\envHiA-\envHiB*x};
+  \addplot[reference, domain=-30:3, samples=2] {-20-x};
+  \node[point] (da) at (axis cs:\needHiTtwenty,{\envHiA-\envHiB*\needHiTtwenty}) {};
+  \node[note, anchor=south west, align=left] (la) at (axis cs:-18.6,1.0) {certified at\\$\Delta L_{\rm pred}\le\needHiTtwenty$ dB};
+  \draw[leader] (da) -- (la.south west);
+  \node[note, anchor=south east, align=right] at (axis cs:-22.3,1.2) {$\Delta L_x=$\\$-20$ dB};
+\end{axis}
+\errgutter{18}
+\node[paneltag, anchor=north west] at (0mm,79mm) {(a)};
+\node[paneltitle, anchor=north west] at (5mm,79mm) {Design point, $30^\circ$, $kR=18.3$};
+% legend of (a)
+\def\lxa{4mm}
+\draw[surrcurve] plot[only marks, mark=square, mark size=1.2pt, mark options={solid}] coordinates {(\lxa,71.5mm)};
+\node[note, anchor=west] at (\lxa+2mm,71.5mm) {sinc-driven iterates of S0, SX, SG};
+\draw[refcurve] plot[only marks, mark=triangle, mark size=1.5pt] coordinates {(\lxa,67.5mm)};
+\node[note, anchor=west] at (\lxa+2mm,67.5mm) {exact-driven iterates};
+\draw[refcurve, draw=black!55, fill=black!55] plot[only marks, mark=*, mark size=1.1pt] coordinates {(\lxa,63.5mm)};
+\node[note, anchor=west] at (\lxa+2mm,63.5mm) {random fields};
+
+% ================================================================ panel (b): two low-kR cells
+\begin{axis}[axbase, at={(82mm,10mm)}, width=53mm,
+    xmin=-62, xmax=6, ymin=-66, ymax=52,
+    xtick={-60,-40,-20,0}, xticklabels={$-$60,$-$40,$-$20,0},
+    ytick={-60,-40,-20,0,20,40}, yticklabels={$-$60,$-$40,$-$20,0,20,40},
+    ylabel={error $e=\Delta L_x-\Delta L_{\rm pred}$ (dB)}]
+  \draw[reference] (axis cs:-62,0) -- (axis cs:6,0);
+  \addplot[exactmk] table[x=dLpred, y=e]{data/f24v2_c30k3_exact.dat};
+  \addplot[exactmk] table[x=dLpred, y=e]{data/f24v2_c120k1p5_exact.dat};
+  \addplot[randmk] table[x=dLpred, y=e]{data/f24v2_c30k3_random.dat};
+  \addplot[randmk] table[x=dLpred, y=e]{data/f24v2_c120k1p5_random.dat};
+  \addplot[sincmk] table[x=dLpred, y=e]{data/f24v2_c30k3_sinc.dat};
+  \addplot[sincmkb] table[x=dLpred, y=e]{data/f24v2_c120k1p5_sinc.dat};
+  \addplot[envline, domain=-62:6, samples=2] {\envLoA-\envLoB*x};
+  \addplot[reference, domain=-62:6, samples=2] {-20-x};
+  \addplot[reference, dash pattern=on 4pt off 1.5pt on 0.8pt off 1.5pt, domain=-62:6, samples=2] {-40-x};
+  \node[point] (db) at (axis cs:\needLoTtwenty,{\envLoA-\envLoB*\needLoTtwenty}) {};
+  \node[note, anchor=south west, align=left] (lb) at (axis cs:-38,33) {certified at\\$\Delta L_{\rm pred}\le\needLoTtwenty$ dB};
+  \draw[leader] (db) -- (lb.south west);
+  \node[note, anchor=north west, align=left] at (axis cs:-61.5,51) {$\Delta L_x=$\\$-20$ dB};
+  \node[note, anchor=north west, align=left] at (axis cs:-61,-3) {$\Delta L_x=$\\$-40$ dB};
+\end{axis}
+\errgutter{82}
+\node[paneltag, anchor=north west] at (66mm,79mm) {(b)};
+\node[paneltitle, anchor=north west] at (71mm,79mm) {Two low-$kR$ cases (scaled)};
+% legend of (b)
+\def\lxb{68mm}
+\draw[surrcurve] plot[only marks, mark=square, mark size=1.2pt, mark options={solid}] coordinates {(\lxb,71.5mm)};
+\node[note, anchor=west] at (\lxb+2mm,71.5mm) {sinc-driven, $30^\circ$, $kR=3$};
+\draw[surrcurve] plot[only marks, mark=diamond, mark size=1.5pt, mark options={solid}] coordinates {(\lxb,67.5mm)};
+\node[note, anchor=west] at (\lxb+2mm,67.5mm) {sinc-driven, $120^\circ$, $kR=1.5$};
+\draw[refcurve] plot[only marks, mark=triangle, mark size=1.5pt] coordinates {(\lxb,63.5mm)};
+\node[note, anchor=west] at (\lxb+2mm,63.5mm) {exact-driven iterates (both cases)};
+\draw[refcurve, draw=black!55, fill=black!55] plot[only marks, mark=*, mark size=1.1pt] coordinates {(\lxb,59.5mm)};
+\node[note, anchor=west] at (\lxb+2mm,59.5mm) {random fields (both cases)};
+\end{tikzpicture}
+\end{document}

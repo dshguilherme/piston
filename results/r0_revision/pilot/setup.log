@@ -1,0 +1,20 @@
+﻿
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+articleB_r0_eval, dense 1730 x 3024 factor: 2.109 s per call (threads 2)
+R0_PILOT_SETUP_timing_DONE
+theta0=30 t=0.025: f1=78.603 Hz, f60=117.254 Hz, modes below 100 Hz: 42 (pole-participating >1e-3: 4)
+theta0=30 t=0.050: f1=79.317 Hz, f60=164.792 Hz, modes below 100 Hz: 21 (pole-participating >1e-3: 3)
+theta0=30 t=0.100: f1=81.905 Hz, f60=281.989 Hz, modes below 100 Hz: 9 (pole-participating >1e-3: 1)
+theta0=90 t=0.025: f1=44.762 Hz, f60=81.725 Hz, modes below 100 Hz: 60 (pole-participating >1e-3: 7)
+theta0=90 t=0.050: f1=44.861 Hz, f60=85.051 Hz, modes below 100 Hz: 60 (pole-participating >1e-3: 7)
+theta0=90 t=0.100: f1=45.003 Hz, f60=91.197 Hz, modes below 100 Hz: 60 (pole-participating >1e-3: 6)
+theta0=120 t=0.025: f1=23.297 Hz, f60=80.100 Hz, modes below 100 Hz: 60 (pole-participating >1e-3: 7)
+theta0=120 t=0.050: f1=23.385 Hz, f60=81.332 Hz, modes below 100 Hz: 60 (pole-participating >1e-3: 7)
+theta0=120 t=0.100: f1=23.512 Hz, f60=84.561 Hz, modes below 100 Hz: 60 (pole-participating >1e-3: 6)
+R0_PILOT_SETUP_modes_DONE
+theta0=30: 61440 points, |x| in [10.0000000000, 10.0000000000], area 84.17872145 (exact 84.17872145), max polar 29.985109 deg
+theta0=90: 61440 points, |x| in [10.0000000000, 10.0000000000], area 628.31853072 (exact 628.31853072), max polar 89.955326 deg
+theta0=120: 61440 points, |x| in [10.0000000000, 10.0000000000], area 942.47779608 (exact 942.47779608), max polar 119.940435 deg
+R0_PILOT_SETUP_samples_DONE

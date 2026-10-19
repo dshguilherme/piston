@@ -1,0 +1,8 @@
+﻿
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+frozen-state recompute rel diff 2.638e-10
+nq=8: 61440 points, |x| in [10.000000000000, 10.000000000000], total area 84.1787214477 (sphere cap 2piR^2(1-cos30)=84.1787214477)
+nq=12: 138240 points, |x| in [10.000000000000, 10.000000000000], total area 84.1787214477 (sphere cap 2piR^2(1-cos30)=84.1787214477)
+R0_OPT_EXPORT_DONE

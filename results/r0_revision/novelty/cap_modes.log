@@ -1,0 +1,12 @@
+theta0=15: basis 63s
+   done 67s; kR=18: uniform:0.549 cos0:0.504 cos1:0.536 cos2:0.754 cos3:2.068 cos4:1.663 cos5:3.622 cos6:2.644 cos7:5.181
+theta0=30: basis 62s
+   done 66s; kR=18: uniform:0.483 cos0:0.501 cos1:0.497 cos2:0.415 cos3:0.419 cos4:1.092 cos5:0.856 cos6:2.010 cos7:1.308
+theta0=60: basis 52s
+   done 56s; kR=18: uniform:0.507 cos0:0.501 cos1:0.500 cos2:0.496 cos3:0.512 cos4:0.583 cos5:0.506 cos6:0.348 cos7:0.605
+theta0=90: basis 51s
+   done 55s; kR=18: uniform:0.515 cos0:0.499 cos1:0.497 cos2:0.540 cos3:0.570 cos4:0.511 cos5:0.473 cos6:0.515 cos7:0.441
+theta0=120: basis 51s
+   done 54s; kR=18: uniform:0.738 cos0:0.684 cos1:0.889 cos2:0.617 cos3:0.477 cos4:0.564 cos5:0.573 cos6:0.612 cos7:0.477
+theta0=150: basis 88s
+   done 92s; kR=18: uniform:1.019 cos0:1.018 cos1:0.940 cos2:1.129 cos3:0.311 cos4:0.235 cos5:0.384 cos6:1.012 cos7:0.346

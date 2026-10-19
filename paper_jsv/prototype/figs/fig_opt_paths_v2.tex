@@ -1,0 +1,166 @@
+﻿% Optimization paths v2: level re uniform of the two runs from the uniform design (a), and true against
+% predicted level for every iterate of the six runs (b). Delta L > 0 dB would be more power than uniform;
+% higher = more power. Data: data/f13_*.dat only (columns iter, dB_sinc, dB_exact). Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{shapes.geometric}
+
+% ---- read the last row of each run (end design); nothing typed by hand
+\newcommand{\readrun}[2]{%
+  \pgfplotstableread{data/f13_#1.dat}\tmptab
+  \pgfplotstablegetrowsof{\tmptab}%
+  \pgfmathtruncatemacro{\lastrow}{\pgfplotsretval-1}%
+  \pgfplotstablegetelem{\lastrow}{iter}\of\tmptab
+  \expandafter\xdef\csname endit#2\endcsname{\pgfplotsretval}%
+  \pgfplotstablegetelem{\lastrow}{dB_sinc}\of\tmptab
+  \expandafter\xdef\csname endsi#2\endcsname{\pgfplotsretval}%
+  \pgfplotstablegetelem{\lastrow}{dB_exact}\of\tmptab
+  \expandafter\xdef\csname endex#2\endcsname{\pgfplotsretval}%
+}
+\readrun{S0}{Sz}\readrun{SX}{SX}\readrun{X0}{Xz}
+\pgfmathsetmacro{\gapA}{(\endexSz)-(\endexXz)}
+
+% geometry (mm): both axes 31 x 31; panel (a) axis at x = 17.5, panel (b) axis at x = 90
+\def\ph{31}
+\def\axA{17.5}
+\def\axB{87}
+\pgfmathsetmacro{\sc}{31/33}% mm per dB in panel (b), range -32..1
+
+\pgfplotsset{
+  pathax/.style={
+    width=31mm, height=\ph mm, scale only axis, anchor=south west, clip=false,
+    xmin=1, xmax=700, xtick={1,10,100,600}, xticklabels={1,10,100,600},
+    xminorticks=false,
+    ymin=-30, ymax=1, ytick={0,-10,-20,-30}, yticklabels={0,$-$10,$-$20,$-$30},
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+  },
+  scatax/.style={
+    width=31mm, height=31mm, scale only axis, anchor=south west, clip=false,
+    xmin=-32, xmax=1, ymin=-32, ymax=1,
+    xtick={-30,-20,-10,0}, ytick={-30,-20,-10,0},
+    xticklabels={$-$30,$-$20,$-$10,0},
+    yticklabels={$-$30,$-$20,$-$10,0},
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    major tick length=1.2mm,
+  },
+  runmark/.style={only marks, mark size=0.8pt},
+}
+\tikzset{
+  star5/.style={star, star points=5, star point ratio=2.2, inner sep=0pt, minimum size=2.6mm},
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% ================================================================ panel (a)
+\begin{axis}[pathax, xmode=log, at={(\axA mm,0mm)}]
+  % S0 first, X0 on top: the two paths coincide for about 100 iterations
+  \addplot[surrcurve, solid] table[x=iter,y=dB_exact]{data/f13_S0.dat};
+  \addplot[surrcurve] table[x=iter,y=dB_sinc]{data/f13_S0.dat};
+  \addplot[refcurve] table[x=iter,y=dB_exact]{data/f13_X0.dat};
+  \addplot[refcurve, dash pattern=on 3pt off 1.5pt] table[x=iter,y=dB_sinc]{data/f13_X0.dat};
+  % end markers on the true (exact) curves
+  \addplot[surrcurve, solid, only marks, mark=square*, mark size=1.7pt] coordinates {(\enditSz,\endexSz)};
+  \addplot[refcurve, only marks, mark=*, mark size=1.7pt] coordinates {(\enditXz,\endexXz)};
+  % target line (level re uniform = -20 dB), drawn after the curves
+  \draw (axis cs:1,-20) -- (axis cs:700,-20);
+  \node[note, anchor=north west, inner sep=0.5pt] at (axis cs:1,-20) {$-20$ dB target};
+  % direct labels with the final true level, right of the axis
+  \node[note, anchor=west, align=left, text=figsurr, xshift=1.2mm] at (axis cs:700,\endexSz)
+    {S0, sinc-driven\\ends at $\pgfmathprintnumber[fixed,zerofill,precision=2]{\endexSz}$\,dB};
+  \node[note, anchor=west, align=left, text=figref, xshift=1.2mm] at (axis cs:700,\endexXz)
+    {X0, exact-driven\\ends at $\pgfmathprintnumber[fixed,zerofill,precision=2]{\endexXz}$\,dB};
+\end{axis}
+
+% left gutter: reading arrow and axis label
+\node[note, rotate=90, anchor=west] at (1.8mm,0mm) {less power};
+\node[note, rotate=90, anchor=east] at (1.8mm,\ph mm) {more power};
+\draw[axisline] (4.4mm,0.5mm) -- (4.4mm,\ph mm);
+\node[lab, rotate=90, anchor=north] at (6.2mm,0.5*\ph mm) {$\Delta L$ (dB) re uniform};
+\node[lab, anchor=north] at (\axA mm+15.5mm,-5mm) {iteration};
+
+% key above the axis: line style = evaluation, colour = run
+\draw[refcurve, draw=black!70] (\axA mm+0.5mm,41mm) -- ++(6mm,0);
+\node[note, anchor=west] at (\axA mm+7mm,41mm) {solid: exact evaluation (true level)};
+\draw[surrcurve, draw=black!70] (\axA mm+0.5mm,37.5mm) -- ++(6mm,0);
+\node[note, anchor=west] at (\axA mm+7mm,37.5mm) {dashed: sinc evaluation (predicted level)};
+
+\node[paneltag, anchor=north west] at (0mm,53mm) {(a)};
+\node[paneltitle, anchor=north west] at (5mm,53mm) {Two runs from the uniform design};
+
+% ================================================================ panel (b)
+\begin{axis}[scatax, at={(\axB mm,0mm)},
+    xlabel={}, ylabel={}]
+  \draw[reference] (axis cs:-32,-32) -- (axis cs:1,1);
+  % target lines on both axes
+  \draw (axis cs:-32,-20) -- (axis cs:1,-20);
+  \draw (axis cs:-20,-32) -- (axis cs:-20,1);
+  % all iterates: exact-driven first so sinc-driven open circles stay visible
+  \foreach \r in {X0,XR,XS}
+    \addplot[witness, draw=figref, fill=figref, runmark, mark=*] table[x=dB_sinc,y=dB_exact]{data/f13_\r.dat};
+  \foreach \r in {S0,SR,SX}
+    \addplot[witness, draw=figsurr, runmark, mark=o] table[x=dB_sinc,y=dB_exact]{data/f13_\r.dat};
+\end{axis}
+
+% axis labels and reading arrows (outer gutters)
+\node[lab, anchor=north] at (\axB mm+15.5mm,-5mm) {predicted level $\Delta L_{\rm pred}$ (sinc, dB)};
+\node[lab, rotate=90, anchor=south] at (\axB mm-8.4mm,15.5mm) {true level $\Delta L_x$ (exact, dB)};
+\draw[axisline] (\axB mm+18mm,-11.5mm) -- (\axB mm+29mm,-11.5mm);
+\node[note, anchor=east] at (\axB mm+17.5mm,-11.5mm) {more power};
+\draw[axisline] (\axB mm-13mm,19mm) -- (\axB mm-13mm,30mm);
+\node[note, rotate=90, anchor=south] at (\axB mm-13.6mm,24.5mm) {more power};
+
+% end designs: picture coordinates
+\pgfmathsetmacro{\xSz}{\axB+(\endsiSz+32)*\sc}\pgfmathsetmacro{\ySz}{(\endexSz+32)*\sc}
+\pgfmathsetmacro{\xXz}{\axB+(\endsiXz+32)*\sc}\pgfmathsetmacro{\yXz}{(\endexXz+32)*\sc}
+\pgfmathsetmacro{\xSX}{\axB+(\endsiSX+32)*\sc}\pgfmathsetmacro{\ySX}{(\endexSX+32)*\sc}
+\node[star5, fill=black, draw=none] (S0s) at (\xSz mm,\ySz mm) {};
+\node[star5, draw=black] (SXs) at (\xSX mm,\ySX mm) {};
+\node[star5, fill=black, draw=none] (X0s) at (\xXz mm,\yXz mm) {};
+\pgfmathsetmacro{\xlS}{\axB+(-21+32)*\sc}\pgfmathsetmacro{\ylS}{(-9+32)*\sc}
+\node[lab, anchor=south east] (S0l) at (\xlS mm,\ylS mm) {S0};
+\draw[leader] ($(S0s)+(-1.1mm,1.1mm)$) -- (S0l.south east);
+\node[lab, anchor=south east] (SXl) at ($(SXs)+(0.6mm,1.3mm)$) {SX};
+\node[lab, anchor=west] (X0l) at ($(X0s)+(1.6mm,-0.4mm)$) {X0};
+
+% target label, once, in the empty upper-left quadrant just above the horizontal target line
+\pgfmathsetmacro{\yTl}{(-20+32)*\sc}
+\pgfmathsetmacro{\xTl}{\axB+(-20.6+32)*\sc}
+\node[note, anchor=south east, align=right, inner sep=0.5pt] at (\xTl mm,\yTl mm+0.4mm) {$-20$ dB\\target};
+
+% S0-X0 gap, computed from the files, right gutter
+\pgfmathsetmacro{\xW}{\axB+34.2}\draw[witness] ($(S0s)+(1.8mm,0)$) -- (\xW mm,\ySz mm);
+\draw[witness] ($(X0s)+(2mm,0)$) -- (\xW mm,\yXz mm);
+\draw[dimension] (\axB mm+33.2mm,\ySz mm) -- (\axB mm+33.2mm,\yXz mm);
+\pgfmathsetmacro{\yMid}{(\ySz+\yXz)/2}
+\node[note, anchor=west, align=left] at (\axB mm+34.4mm,\yMid mm) {S0: \pgfmathprintnumber[fixed,zerofill,precision=2,assume math mode]{\gapA}\,dB\\more power\\than X0};
+% equal-prediction label
+\draw[reference] (\axB mm+31mm,31mm) -- (\axB mm+33.2mm,33.2mm);
+\node[note, anchor=south west, align=left] at (\axB mm+32.8mm,33.2mm) {equal\\prediction};
+
+% legend above the axis
+\fill[figref] (\axB mm+1.6mm,41mm) circle (0.9pt);
+\node[note, anchor=west] at (\axB mm+3.2mm,41mm) {exact-driven iterates};
+\draw[witness, draw=figsurr] (\axB mm+1.6mm,37.6mm) circle (0.9pt);
+\node[note, anchor=west] at (\axB mm+3.2mm,37.6mm) {sinc-driven iterates};
+\node[star5, fill=black, draw=none, minimum size=2.2mm] at (\axB mm+1.6mm,44.4mm) {};
+\node[note, anchor=west] at (\axB mm+3.2mm,44.4mm) {end design of a run};
+
+\node[paneltag, anchor=north west] at (70mm,53mm) {(b)};
+\node[paneltitle, anchor=north west] at (75mm,53mm) {True against predicted level};
+
+\end{tikzpicture}
+\end{document}
+
+
+
+
+

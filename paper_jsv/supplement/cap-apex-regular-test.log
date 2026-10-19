@@ -1,0 +1,18 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+frozen_response
+ phi= 0.00e+00 mean-norm= 2.1529e-09 angular-spread= 1.3813e-13 rel-spread= 6.4160e-05
+ phi= 1.00e-07 mean-norm= 2.1529e-09 angular-spread= 1.3806e-13 rel-spread= 6.4131e-05
+ phi= 1.00e-05 mean-norm= 2.1529e-09 angular-spread= 1.3177e-13 rel-spread= 6.1206e-05
+ phi= 1.00e-03 mean-norm= 2.1519e-09 angular-spread= 5.2158e-13 rel-spread= 2.4238e-04
+ phi= 1.00e-02 mean-norm= 2.1198e-09 angular-spread= 5.9294e-12 rel-spread= 2.7972e-03
+random_coefficients
+ phi= 0.00e+00 mean-norm= 3.9356e-01 angular-spread= 1.4199e+00 rel-spread= 9.6367e-01
+ phi= 1.00e-07 mean-norm= 3.9356e-01 angular-spread= 1.4199e+00 rel-spread= 9.6367e-01
+ phi= 1.00e-05 mean-norm= 3.9309e-01 angular-spread= 1.4191e+00 rel-spread= 9.6371e-01
+ phi= 1.00e-03 mean-norm= 3.4754e-01 angular-spread= 1.3451e+00 rel-spread= 9.6820e-01
+ phi= 1.00e-02 mean-norm= 9.1781e-02 angular-spread= 1.0462e+00 rel-spread= 9.9617e-01
+boundary max displacement 0.000000e+00; boundary gradient RMS 2.633068e-09; near-edge gradient RMS 2.133073e-09
+R0_CAP_APEX_REGULAR_TEST_DONE

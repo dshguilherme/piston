@@ -1,0 +1,39 @@
+3121 designs; sinc(q4 consistent)/sinc(spectral) over all designs: [0.9999999, 1.0000000]; exact L8000-only/Richardson: [0.999325, 1.001364]
+uniform t=0.05: P_sinc 3.779178e-07 W, P_exact 5.946400e-07 W (ratio 0.6355)
+
+run  description                      niter  P_sinc(W)     P_exact(W)    ratio   dB_sinc  dB_exact  pred-true(dB) vol
+S0   sinc, start uniform                600  7.17272e-09  1.16156e-08  0.6175  -17.217  -17.092  -0.125   0.5000
+X0   exact, start uniform               600  1.25655e-09  1.30314e-09  0.9642  -24.782  -26.593  +1.810   0.4720
+XS   exact, start sinc optimum          600  7.25178e-09  9.77594e-09  0.7418  -17.170  -17.841  +0.671   0.5000
+SX   sinc, start exact optimum          600  1.01953e-09  1.53990e-09  0.6621  -25.690  -25.868  +0.178   0.4896
+SR   sinc, start paper quadvel-rad      109  7.18377e-09  1.17895e-08  0.6093  -17.210  -17.028  -0.183   0.5000
+XR   exact, start paper quadvel-rad     600  7.53132e-09  1.07462e-08  0.7008  -17.005  -17.430  +0.425   0.5000
+paper uniform                                3.77918e-07  5.94640e-07  0.6355   +0.000   +0.000  +0.000   0.5000
+paper dyncomp                                1.37686e-08  2.61739e-08  0.5260  -14.385  -13.564  -0.821   0.5000
+paper inputpower                             1.49608e-08  2.77398e-08  0.5393  -14.024  -13.312  -0.713   0.5000
+paper quadvel-rad                            7.18504e-09  1.17476e-08  0.6116  -17.210  -17.043  -0.167   0.5000
+paper quadvel-I                              9.64532e-09  1.71828e-08  0.5613  -15.931  -15.392  -0.539   0.5000
+paper quadvel-ones                           2.87996e-08  5.83477e-08  0.4936  -11.180  -10.082  -1.098   0.4506
+
+sinc-optimal design: SX  exact-optimal design: X0
+lowest P_exact over ALL 3121 evaluated designs: idx 1200 (run X0, iter 600) 1.303138e-09;  lowest P_sinc over all: idx 2402 1.019532e-09
+REGRET  P_exact(sinc-opt)/P_exact(exact-opt) = 1.18169  (+0.725 dB)
+reverse: P_sinc(exact-opt)/P_sinc(sinc-opt) = 1.23248 (+0.908 dB)
+predicted reduction of sinc-opt (sinc model): -25.690 dB; true (exact) reduction of the same design: -25.868 dB; best achievable (exact-opt): -26.593 dB
+paper quadvel-rad design: exact -17.043 dB (regret vs exact-opt +9.550 dB)
+design difference ||t_s - t_x||/||t_x|| = 0.1684; corr(t_s, t_x) = 0.9590; fraction of elements at bounds: sinc 0.850, exact 0.819
+
+Kendall tau (sinc vs exact power) over sampled designs
+  all path designs (all runs)                                n= 3115  tau=0.4788  spearman=0.6508
+  run S0 path                                                n=  600  tau=0.9172  spearman=0.9762
+  run X0 path                                                n=  600  tau=0.9917  spearman=0.9997
+  run XS path                                                n=  600  tau=0.7088  spearman=0.8642
+  run SX path                                                n=  600  tau=-0.5383  spearman=-0.7443
+  run SR path                                                n=  109  tau=0.2589  spearman=0.2807
+  run XR path                                                n=  600  tau=-0.4436  spearman=-0.6591
+  path designs within 3 dB of the exact optimum (exact)      n= 1020  tau=0.0245  spearman=0.1183
+  path designs within 1 dB of the exact optimum (exact)      n=  845  tau=-0.4215  spearman=-0.5508
+  path designs within 3 dB of the sinc optimum (sinc)        n=  996  tau=-0.0231  spearman=0.0530
+  the six paper designs                                      n=    6  tau=1.0000  spearman=1.0000
+  run optima + six paper designs                             n=   12  tau=0.7576  spearman=0.8811
+R0_OPT_CAP_EVAL_DONE

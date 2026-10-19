@@ -1,0 +1,92 @@
+﻿% Verification of the exact two-sided cap solution: (a) against boundary elements on six frozen
+% cap fields at 100 Hz, (b) convergence of the uniform cap power to the flat-disc power.
+% Data: data/f6_bem.dat, data/f6_flat_ka{0.1,1,3,10}.dat. Drawn for the 137 mm width.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\pgfplotsset{
+  vfy/.style = {
+    scale only axis, axis lines=box, axis on top,
+    tick align=inside, clip=false,
+    every tick label/.append style={note},
+    major tick length=1.5mm,
+    mark size=1.7pt,
+  },
+  dline/.style = {normal, -, mark options={solid}, restrict x to domain=0.005:1},
+  xline/.style = {reference, mark=none, restrict x to domain=-1:0.0105},
+  xpt/.style = {only marks, mark=diamond*, black, mark size=2.2pt, restrict x to domain=-1:0.005},
+}
+% one ka series: file, marker, label y, label text, node name
+\newcommand{\kaseries}[5]{%
+  \addplot[xline] table[x=aR2,y=cap_over_disc] {data/f6_flat_ka#1.dat};
+  \addplot[xpt] table[x=aR2,y=cap_over_disc] {data/f6_flat_ka#1.dat};
+  \addplot[dline, mark=#2] table[x=aR2,y=cap_over_disc] {data/f6_flat_ka#1.dat}
+     node[coordinate, pos=1] (end#5) {};
+  \draw[leader] (end#5) -- (axis cs:0.1765,#3);
+  \node[lab, anchor=west] at (axis cs:0.1765,#3) {#4};
+}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[vfy, name=A, at={(0mm,0mm)}, anchor=south west, width=44mm, height=30mm,
+  xmin=-0.6, xmax=5.6, ymin=0.985, ymax=1.006,
+  xtick={0,1,2,3,4,5}, xticklabels={U,B,C,D,E,G},
+  ytick={0.985,0.990,0.995,1.000,1.005},
+  yticklabel={\pgfmathprintnumber[fixed,precision=3,zerofill]{\tick}},
+  xlabel={frozen cap field (100 Hz)}, ylabel={$P_{2s}/P_{\rm BEM}$},
+  legend style={at={(0,1.03)}, anchor=south west, draw=none, nodes={note},
+                legend cell align=left, inner sep=0pt, row sep=0.4mm, column sep=1mm},
+  legend image post style={mark size=1.7pt}]
+  \draw[reference] (axis cs:-0.6,1) -- (axis cs:5.6,1);
+  \addplot[only marks, mark=o, black]
+    table[x expr=\thisrow{idx}-0.22, y=coarse] {data/f6_bem.dat};
+  \addlegendentry{coarse mesh, 5.2 el./wavelength}
+  \addplot[only marks, mark=square*, black]
+    table[x expr=\thisrow{idx}, y=fine] {data/f6_bem.dat};
+  \addlegendentry{fine mesh, 7.9 el./wavelength}
+  \addplot[only marks, mark=triangle, black!55]
+    table[x expr=\thisrow{idx}+0.22, y=finest_vs_extrap] {data/f6_bem.dat};
+  \addlegendentry{finest trace vs extrapolated BEM}
+  \node[note, anchor=west, align=left] at (axis cs:5.6,1.000) {exact\\$=$ BEM};
+\end{axis}
+\node[paneltag, anchor=south west] at ([yshift=12.5mm]A.north west) {(a)};
+\node[paneltitle, anchor=south west] at ([xshift=5.5mm,yshift=12.5mm]A.north west) {Exact vs boundary elements};
+
+\begin{axis}[vfy, name=B, at={(64mm,0mm)}, anchor=south west, width=41mm, height=30mm,
+  xmin=-0.008, xmax=0.17, ymin=0.99, ymax=1.19,
+  xtick={0,0.04,0.08,0.12,0.16},
+  xticklabel={\pgfmathprintnumber[fixed,precision=2,zerofill]{\tick}},
+  ytick={1.00,1.05,1.10,1.15},
+  yticklabel={\pgfmathprintnumber[fixed,precision=2,zerofill]{\tick}},
+  xlabel={$(a/R)^2$}, ylabel={$P_{\rm cap}/P_{\rm disc}$}]
+  \draw[reference] (axis cs:-0.008,1) -- (axis cs:0.17,1);
+  \node[lab, anchor=west] at (axis cs:0.1765,1.000) {disc};
+  \kaseries{0.1}{o}{1.127}{$ka=0.1$}{a}
+  \kaseries{1}{square*}{1.174}{$ka=1$}{b}
+  \kaseries{3}{triangle}{1.024}{$ka=3$}{c}
+  \kaseries{10}{x}{1.058}{$ka=10$}{d}
+\end{axis}
+\node[paneltag, anchor=south west] at ([yshift=12.5mm]B.north west) {(b)};
+\node[paneltitle, anchor=south west] at ([xshift=5.5mm,yshift=12.5mm]B.north west) {Cap tends to the flat disc};
+% inset: three caps of equal rim radius a, drawn to scale (sagitta h/a from the exact geometry)
+\begin{scope}[shift={(B.north west)}]
+  \foreach \ar/\y in {0.1/1.05, 0.2/0.70, 0.4/0.35} {
+    \pgfmathsetmacro{\th}{asin(\ar)}
+    \pgfmathsetmacro{\Rr}{0.7/\ar}
+    \draw[reference] (0.2,\y) -- (1.6,\y);
+    \draw[normal, -] (0.2,\y) arc[start angle={90+\th}, end angle={90-\th}, radius=\Rr];
+    \node[note, anchor=west] at (1.7,\y) {$a/R=\ar$};
+  }
+  \node[note, anchor=west] at (3.3,1.05) {same rim radius $a$,};
+  \node[note, anchor=west] at (3.3,0.70) {to scale};
+  \node[note, anchor=west] at (3.3,0.35) {$\blacklozenge$ extrapolated};
+\end{scope}
+\end{tikzpicture}
+\end{document}
+
+
+
+
+
+

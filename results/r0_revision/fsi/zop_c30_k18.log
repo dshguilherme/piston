@@ -1,0 +1,13 @@
+cell c30_k18: theta0 = 30 deg, kR = 18.318325, rho c = 415.030, c' = 343.000 m/s, rho' = 1.21000 kg/m^3
+  per-block 1/2 Herm(rho c Aw^-1) vs PSD form: max rel (to ||H||) 4.46e+04 at m=-20 L=8000; max rel (to ||Z||) 1.23e-08; block symmetry ||Z-Z^T||/||Z|| max 4.90e-08
+    m=+0 L=8000: rel to ||H|| 3.20e-16, rel to ||Z|| 1.23e-16
+    m=+1 L=8000: rel to ||H|| 7.03e-16, rel to ||Z|| 2.13e-16
+    m=+2 L=8000: rel to ||H|| 1.52e-14, rel to ||Z|| 5.45e-15
+    m=+5 L=8000: rel to ||H|| 1.58e-10, rel to ||Z|| 5.86e-11
+    m=+10 L=8000: rel to ||H|| 1.14e-06, rel to ||Z|| 1.41e-09
+    m=+20 L=8000: rel to ||H|| 4.46e+04, rel to ||Z|| 6.07e-09
+  reciprocity ||Zx - Zx^T||_F / ||Zx||_F = 3.76e-10
+  ||1/2 Herm(Zx) - Hx(PSD form)||_F / ||Hx||_F = 2.78e-10; ||Hx||/||Zx|| = 3.38e-01
+  ||Hx - Fx^H Fx||_F / ||Fx^H Fx||_F = 1.21e-06 (difference = eigen-clipping of the Richardson blocks)
+  runtime 32 s
+R0_FSI_ZOP_DONE

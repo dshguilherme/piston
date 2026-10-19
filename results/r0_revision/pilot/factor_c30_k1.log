@@ -1,0 +1,46 @@
+cell c30_k1: theta0 = 30 deg, kR = 1.000000
+  m=-20: H eig max 9.447e-66, 17 negative, most negative -5.17e-69 (-5.5e-04 of max) -> clipped
+  m=-19: H eig max 6.460e-62, 17 negative, most negative -3.21e-65 (-5.0e-04 of max) -> clipped
+  m=-18: H eig max 3.999e-58, 16 negative, most negative -1.75e-61 (-4.4e-04 of max) -> clipped
+  m=-17: H eig max 2.229e-54, 19 negative, most negative -8.75e-58 (-3.9e-04 of max) -> clipped
+  m=-16: H eig max 1.113e-50, 19 negative, most negative -3.86e-54 (-3.5e-04 of max) -> clipped
+  m=-15: H eig max 4.937e-47, 17 negative, most negative -1.49e-50 (-3.0e-04 of max) -> clipped
+  m=-14: H eig max 1.934e-43, 20 negative, most negative -5.10e-47 (-2.6e-04 of max) -> clipped
+  m=-13: H eig max 6.634e-40, 18 negative, most negative -1.52e-43 (-2.3e-04 of max) -> clipped
+  m=-12: H eig max 1.972e-36, 18 negative, most negative -3.85e-40 (-2.0e-04 of max) -> clipped
+  m=-11: H eig max 5.028e-33, 20 negative, most negative -8.31e-37 (-1.7e-04 of max) -> clipped
+  m=-10: H eig max 1.084e-29, 22 negative, most negative -1.48e-33 (-1.4e-04 of max) -> clipped
+  m=-9: H eig max 1.948e-26, 21 negative, most negative -2.19e-30 (-1.1e-04 of max) -> clipped
+  m=-8: H eig max 2.861e-23, 21 negative, most negative -2.58e-27 (-9.0e-05 of max) -> clipped
+  m=-7: H eig max 3.353e-20, 22 negative, most negative -2.38e-24 (-7.1e-05 of max) -> clipped
+  m=-6: H eig max 3.044e-17, 23 negative, most negative -1.65e-21 (-5.4e-05 of max) -> clipped
+  m=-5: H eig max 2.056e-14, 22 negative, most negative -8.16e-19 (-4.0e-05 of max) -> clipped
+  m=-4: H eig max 9.763e-12, 22 negative, most negative -2.69e-16 (-2.8e-05 of max) -> clipped
+  m=-3: H eig max 2.993e-09, 23 negative, most negative -5.33e-14 (-1.8e-05 of max) -> clipped
+  m=-2: H eig max 5.104e-07, 24 negative, most negative -5.28e-12 (-1.0e-05 of max) -> clipped
+  m=-1: H eig max 3.568e-05, 22 negative, most negative -1.77e-10 (-5.0e-06 of max) -> clipped
+  m=+0: H eig max 1.753e-03, 23 negative, most negative -2.78e-09 (-1.6e-06 of max) -> clipped
+  m=+1: H eig max 3.568e-05, 22 negative, most negative -1.77e-10 (-5.0e-06 of max) -> clipped
+  m=+2: H eig max 5.104e-07, 24 negative, most negative -5.28e-12 (-1.0e-05 of max) -> clipped
+  m=+3: H eig max 2.993e-09, 23 negative, most negative -5.33e-14 (-1.8e-05 of max) -> clipped
+  m=+4: H eig max 9.763e-12, 22 negative, most negative -2.69e-16 (-2.8e-05 of max) -> clipped
+  m=+5: H eig max 2.056e-14, 22 negative, most negative -8.16e-19 (-4.0e-05 of max) -> clipped
+  m=+6: H eig max 3.044e-17, 23 negative, most negative -1.65e-21 (-5.4e-05 of max) -> clipped
+  m=+7: H eig max 3.353e-20, 22 negative, most negative -2.38e-24 (-7.1e-05 of max) -> clipped
+  m=+8: H eig max 2.861e-23, 21 negative, most negative -2.58e-27 (-9.0e-05 of max) -> clipped
+  m=+9: H eig max 1.948e-26, 21 negative, most negative -2.19e-30 (-1.1e-04 of max) -> clipped
+  m=+10: H eig max 1.084e-29, 22 negative, most negative -1.48e-33 (-1.4e-04 of max) -> clipped
+  m=+11: H eig max 5.028e-33, 20 negative, most negative -8.31e-37 (-1.7e-04 of max) -> clipped
+  m=+12: H eig max 1.972e-36, 18 negative, most negative -3.85e-40 (-2.0e-04 of max) -> clipped
+  m=+13: H eig max 6.634e-40, 18 negative, most negative -1.52e-43 (-2.3e-04 of max) -> clipped
+  m=+14: H eig max 1.934e-43, 20 negative, most negative -5.10e-47 (-2.6e-04 of max) -> clipped
+  m=+15: H eig max 4.937e-47, 17 negative, most negative -1.49e-50 (-3.0e-04 of max) -> clipped
+  m=+16: H eig max 1.113e-50, 19 negative, most negative -3.86e-54 (-3.5e-04 of max) -> clipped
+  m=+17: H eig max 2.229e-54, 19 negative, most negative -8.75e-58 (-3.9e-04 of max) -> clipped
+  m=+18: H eig max 3.999e-58, 16 negative, most negative -1.75e-61 (-4.4e-04 of max) -> clipped
+  m=+19: H eig max 6.460e-62, 17 negative, most negative -3.21e-65 (-5.0e-04 of max) -> clipped
+  m=+20: H eig max 9.447e-66, 17 negative, most negative -5.17e-69 (-5.5e-04 of max) -> clipped
+  max cond(Aw) over m: 7.576e+02; kept ranks [35, 36, 36, 37, 38, 38, 39, 40, 41, 42, 42, 43, 44, 45, 46, 47, 48, 48, 48, 48, 48, 48, 48, 48, 48, 47, 46, 45, 44, 43, 42, 42, 41, 40, 39, 38, 38, 37, 36, 36, 35]
+  uniform design: P_exact 1.114943e-10  P_exact(L8000) 1.114632e-10  direct L8000 solve 1.114632e-10 (factor/direct 1.00000003)  N32/N48 0.999917  P_sinc_spec 5.839550e-10  sinc/exact 5.2375  P_ERP 8.114274e-07  sigma_exact 1.3741e-04
+Fx (1730, 3024), Fs (1302, 3024); runtime 73 s
+R0_PILOT_FACTOR_DONE

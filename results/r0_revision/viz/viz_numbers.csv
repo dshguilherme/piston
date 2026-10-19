@@ -1,0 +1,524 @@
+figure,quantity,design,geometry,kR,resolved,value,unit,source_file,origin_csv
+fig1_m2,max_abs_vn,quadvel-rad,cap,,,3.249411201655598e-06,m/s,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,rms_vn_area_weighted,quadvel-rad,cap,,,1.2651634371236552e-06,m/s,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,min_abs_vn,quadvel-rad,cap,,,1.8137379074225284e-18,m/s,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,surface_area,quadvel-rad,cap,,,83.9611519268424,m^2,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,n_triangles,quadvel-rad,cap,,,7632,1,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,h_max,quadvel-rad,cap,,,0.6540312923078148,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,lambda,quadvel-rad,cap,,,3.43,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,elements_per_wavelength,quadvel-rad,cap,,,5.244397386395539,1,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,frequency,quadvel-rad,cap,,,100.0,Hz,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_xmin,quadvel-rad,cap,,,2.6783679619721137,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_xmax,quadvel-rad,cap,,,4.345034628638402,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_ymin,quadvel-rad,cap,,,-0.0537974629622161,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_ymax,quadvel-rad,cap,,,1.6128692037040726,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,color_scale_log(1=yes),quadvel-rad,cap,,,1,1,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,max_over_min_abs_vn,quadvel-rad,cap,,,1791554991687.4595,1,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,max_abs_vn,uniform,cap,,,3.2797691084947553e-05,m/s,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,rms_vn_area_weighted,uniform,cap,,,6.8058426323748805e-06,m/s,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,min_abs_vn,uniform,cap,,,1.516236607925495e-17,m/s,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,surface_area,uniform,cap,,,83.9611519268424,m^2,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,n_triangles,uniform,cap,,,7632,1,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,h_max,uniform,cap,,,0.6540312923078148,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,lambda,uniform,cap,,,3.43,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,elements_per_wavelength,uniform,cap,,,5.244397386395539,1,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,frequency,uniform,cap,,,100.0,Hz,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_xmin,uniform,cap,,,-4.384359837899985,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_xmax,uniform,cap,,,-2.7176931712336962,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_ymin,uniform,cap,,,-2.1268490877592603,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_ymax,uniform,cap,,,-0.4601824210929719,m,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,color_scale_log(1=yes),uniform,cap,,,1,1,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,max_over_min_abs_vn,uniform,cap,,,2163098484333.5986,1,spherecap_m2.mat,numbers_fig1.csv
+fig1_m2,max_abs_vn,uniform,panel,,,2.886824487212313e-06,m/s,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,rms_vn_area_weighted,uniform,panel,,,9.25222371149857e-07,m/s,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,min_abs_vn,uniform,panel,,,0.0,m/s,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,surface_area,uniform,panel,,,1745.3070996736237,m^2,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,n_triangles,uniform,panel,,,7680,1,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,h_max,uniform,panel,,,1.1293584457360781,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,lambda,uniform,panel,,,52.482835970481084,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,elements_per_wavelength,uniform,panel,,,46.47137157262283,1,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,frequency,uniform,panel,,,6.53547,Hz,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_xmin,uniform,panel,,,-11.780972450960995,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_xmax,uniform,panel,,,-5.963208277648018,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_ymin,uniform,panel,,,6.5972222222239605,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_ymax,uniform,panel,,,14.930555555553822,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,color_scale_log(1=yes),uniform,panel,,,1,1,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,max_over_min_abs_vn,uniform,panel,,,7.365249768847399e+23,1,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,max_abs_vn,legacy_long_horizon,panel,,,1.699934991425823e-06,m/s,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,rms_vn_area_weighted,legacy_long_horizon,panel,,,5.148043915606673e-07,m/s,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,min_abs_vn,legacy_long_horizon,panel,,,0.0,m/s,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,surface_area,legacy_long_horizon,panel,,,1745.3070996736237,m^2,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,n_triangles,legacy_long_horizon,panel,,,7680,1,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,h_max,legacy_long_horizon,panel,,,1.1293584457360781,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,lambda,legacy_long_horizon,panel,,,52.482835970481084,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,elements_per_wavelength,legacy_long_horizon,panel,,,46.47137157262283,1,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,frequency,legacy_long_horizon,panel,,,6.53547,Hz,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_xmin,legacy_long_horizon,panel,,,-10.035643198966667,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_xmax,legacy_long_horizon,panel,,,-4.217879025653689,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_ymin,legacy_long_horizon,panel,,,29.51388888889062,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,zoom_ymax,legacy_long_horizon,panel,,,37.84722222222048,m,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,color_scale_log(1=yes),legacy_long_horizon,panel,,,1,1,cylpanel_m2.mat,numbers_fig1.csv
+fig1_m2,max_over_min_abs_vn,legacy_long_horizon,panel,,,1.23278886835591e+23,1,cylpanel_m2.mat,numbers_fig1.csv
+fig1b_m3,max_abs_vn,quadvel-rad,cap,,,3.2593476646440787e-06,m/s,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,rms_vn_area_weighted,quadvel-rad,cap,,,1.2673938734657123e-06,m/s,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,min_abs_vn,quadvel-rad,cap,,,1.8315053176964456e-18,m/s,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,surface_area,quadvel-rad,cap,,,84.0819741904144,m^2,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,n_triangles,quadvel-rad,cap,,,17208,1,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,h_max,quadvel-rad,cap,,,0.43672556221598896,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,lambda,quadvel-rad,cap,,,3.43,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,elements_per_wavelength,quadvel-rad,cap,,,7.85390253457077,1,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,frequency,quadvel-rad,cap,,,100.0,Hz,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_xmin,quadvel-rad,cap,,,2.6783679619721137,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_xmax,quadvel-rad,cap,,,4.345034628638402,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_ymin,quadvel-rad,cap,,,-0.0537974629622161,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_ymax,quadvel-rad,cap,,,1.6128692037040726,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,color_scale_log(1=yes),quadvel-rad,cap,,,1,1,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,max_over_min_abs_vn,quadvel-rad,cap,,,1779600437493.3975,1,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,max_abs_vn,uniform,cap,,,3.279769108494756e-05,m/s,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,rms_vn_area_weighted,uniform,cap,,,6.811218390726108e-06,m/s,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,min_abs_vn,uniform,cap,,,1.516236607925495e-17,m/s,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,surface_area,uniform,cap,,,84.0819741904144,m^2,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,n_triangles,uniform,cap,,,17208,1,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,h_max,uniform,cap,,,0.43672556221598896,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,lambda,uniform,cap,,,3.43,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,elements_per_wavelength,uniform,cap,,,7.85390253457077,1,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,frequency,uniform,cap,,,100.0,Hz,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_xmin,uniform,cap,,,-4.384359837899985,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_xmax,uniform,cap,,,-2.7176931712336962,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_ymin,uniform,cap,,,-2.1268490877592603,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_ymax,uniform,cap,,,-0.4601824210929719,m,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,color_scale_log(1=yes),uniform,cap,,,1,1,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,max_over_min_abs_vn,uniform,cap,,,2163098484333.599,1,spherecap_m3.mat,numbers_fig1.csv
+fig1b_m3,max_abs_vn,uniform,panel,,,2.888726857068006e-06,m/s,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,rms_vn_area_weighted,uniform,panel,,,9.291379825247388e-07,m/s,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,min_abs_vn,uniform,panel,,,0.0,m/s,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,surface_area,uniform,panel,,,1745.3194064969866,m^2,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,n_triangles,uniform,panel,,,17280,1,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,h_max,uniform,panel,,,0.7529064229484029,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,lambda,uniform,panel,,,52.482835970481084,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,elements_per_wavelength,uniform,panel,,,69.70698399006454,1,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,frequency,uniform,panel,,,6.53547,Hz,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_xmin,uniform,panel,,,-11.780972450960995,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_xmax,uniform,panel,,,-5.963208277648018,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_ymin,uniform,panel,,,6.5972222222239605,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_ymax,uniform,panel,,,14.930555555553822,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,color_scale_log(1=yes),uniform,panel,,,1,1,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,max_over_min_abs_vn,uniform,panel,,,7.370103347304271e+23,1,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,max_abs_vn,legacy_long_horizon,panel,,,1.7283931658112584e-06,m/s,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,rms_vn_area_weighted,legacy_long_horizon,panel,,,5.175421757806413e-07,m/s,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,min_abs_vn,legacy_long_horizon,panel,,,0.0,m/s,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,surface_area,legacy_long_horizon,panel,,,1745.3194064969866,m^2,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,n_triangles,legacy_long_horizon,panel,,,17280,1,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,h_max,legacy_long_horizon,panel,,,0.7529064229484029,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,lambda,legacy_long_horizon,panel,,,52.482835970481084,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,elements_per_wavelength,legacy_long_horizon,panel,,,69.70698399006454,1,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,frequency,legacy_long_horizon,panel,,,6.53547,Hz,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_xmin,legacy_long_horizon,panel,,,-10.035643198966667,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_xmax,legacy_long_horizon,panel,,,-4.217879025653689,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_ymin,legacy_long_horizon,panel,,,29.51388888889062,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,zoom_ymax,legacy_long_horizon,panel,,,37.84722222222048,m,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,color_scale_log(1=yes),legacy_long_horizon,panel,,,1,1,cylpanel_m3.mat,numbers_fig1.csv
+fig1b_m3,max_over_min_abs_vn,legacy_long_horizon,panel,,,1.2534266696677533e+23,1,cylpanel_m3.mat,numbers_fig1.csv
+fig2/fig3,P_bem,uniform,,,,5.8869937399e-07,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem_json,uniform,,,,5.8869937399e-07,W,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_bem_regression_rel_err,uniform,,,,-1.4432899320e-15,1,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_plus,uniform,,,,4.0348096253e-07,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus,uniform,,,,1.8521841146e-07,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus/P_bem,uniform,,,,6.8537691792e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus/P_bem,uniform,,,,3.1462308208e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus+P_minus_over_P_bem_minus1,uniform,,,,0.0000000000e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh,uniform,,,,3.7242211232e-07,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh_csv,uniform,,,,3.7242086689e-07,W,results/r0_revision/bem_shell_levels.csv,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh/P_bem,uniform,,,,6.3261849558e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,2*P_sinc_mesh/P_bem,uniform,,,,1.2652369912e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_plus,uniform,,,,9.2302276169e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_minus,uniform,,,,2.0107186396e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem,dyncomp,,,,2.6100189105e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem_json,dyncomp,,,,2.6100189105e-08,W,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_bem_regression_rel_err,dyncomp,,,,1.3322676296e-15,1,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_plus,dyncomp,,,,1.2657489778e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus,dyncomp,,,,1.3442699326e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus/P_bem,dyncomp,,,,4.8495778049e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus/P_bem,dyncomp,,,,5.1504221951e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus+P_minus_over_P_bem_minus1,dyncomp,,,,-1.9984014443e-15,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh,dyncomp,,,,1.3689725545e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh_csv,dyncomp,,,,1.3689720834e-08,W,results/r0_revision/bem_shell_levels.csv,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh/P_bem,dyncomp,,,,5.2450675704e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,2*P_sinc_mesh/P_bem,dyncomp,,,,1.0490135141e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_plus,dyncomp,,,,1.0815513806e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_minus,dyncomp,,,,1.0183762363e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem,inputpower,,,,2.7650197713e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem_json,inputpower,,,,2.7650197713e-08,W,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_bem_regression_rel_err,inputpower,,,,1.5543122345e-15,1,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_plus,inputpower,,,,1.3756506358e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus,inputpower,,,,1.3893691355e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus/P_bem,inputpower,,,,4.9751927639e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus/P_bem,inputpower,,,,5.0248072361e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus+P_minus_over_P_bem_minus1,inputpower,,,,-1.7763568394e-15,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh,inputpower,,,,1.4854620408e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh_csv,inputpower,,,,1.4854616673e-08,W,results/r0_revision/bem_shell_levels.csv,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh/P_bem,inputpower,,,,5.3723378625e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,2*P_sinc_mesh/P_bem,inputpower,,,,1.0744675725e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_plus,inputpower,,,,1.0798250676e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_minus,inputpower,,,,1.0691629768e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem,quadvel-rad,,,,1.1606295088e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem_json,quadvel-rad,,,,1.1606295088e-08,W,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_bem_regression_rel_err,quadvel-rad,,,,-3.3306690739e-15,1,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_plus,quadvel-rad,,,,7.2364774184e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus,quadvel-rad,,,,4.3698176692e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus/P_bem,quadvel-rad,,,,6.2349590147e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus/P_bem,quadvel-rad,,,,3.7650409853e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus+P_minus_over_P_bem_minus1,quadvel-rad,,,,2.2204460493e-15,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh,quadvel-rad,,,,7.0922810912e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh_csv,quadvel-rad,,,,7.0922684510e-09,W,results/r0_revision/bem_shell_levels.csv,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh/P_bem,quadvel-rad,,,,6.1107192586e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,2*P_sinc_mesh/P_bem,quadvel-rad,,,,1.2221438517e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_plus,quadvel-rad,,,,9.8007368519e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_minus,quadvel-rad,,,,1.6230153357e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem,quadvel-I,,,,1.7091882927e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem_json,quadvel-I,,,,1.7091882927e-08,W,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_bem_regression_rel_err,quadvel-I,,,,-1.5543122345e-15,1,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_plus,quadvel-I,,,,8.5806685734e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus,quadvel-I,,,,8.5112143534e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus/P_bem,quadvel-I,,,,5.0203178960e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus/P_bem,quadvel-I,,,,4.9796821040e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus+P_minus_over_P_bem_minus1,quadvel-I,,,,-2.2204460493e-16,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh,quadvel-I,,,,9.5553841013e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh_csv,quadvel-I,,,,9.5553549746e-09,W,results/r0_revision/bem_shell_levels.csv,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh/P_bem,quadvel-I,,,,5.5905976786e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,2*P_sinc_mesh/P_bem,quadvel-I,,,,1.1181195357e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_plus,quadvel-I,,,,1.1135943568e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_minus,quadvel-I,,,,1.1226816415e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem,quadvel-ones,,,,5.8410284711e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_bem_json,quadvel-ones,,,,5.8410284711e-08,W,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_bem_regression_rel_err,quadvel-ones,,,,1.7763568394e-15,1,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_plus,quadvel-ones,,,,2.4961390585e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus,quadvel-ones,,,,3.3448894125e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus/P_bem,quadvel-ones,,,,4.2734581263e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_minus/P_bem,quadvel-ones,,,,5.7265418737e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_plus+P_minus_over_P_bem_minus1,quadvel-ones,,,,-2.3314683517e-15,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh,quadvel-ones,,,,2.8553844929e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh_csv,quadvel-ones,,,,2.8553734972e-08,W,results/r0_revision/bem_shell_levels.csv,numbers_cap_100hz.csv
+fig2/fig3,P_sinc_mesh/P_bem,quadvel-ones,,,,4.8884961048e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,2*P_sinc_mesh/P_bem,quadvel-ones,,,,9.7769922095e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_plus,quadvel-ones,,,,1.1439204411e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_sinc/P_minus,quadvel-ones,,,,8.5365587340e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_bem,quadvel-rad,,,,1.1606659873e-08,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_bem_rel_err_vs_P_bem,quadvel-rad,,,,3.1429997251e-05,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_bem_rel_err_vs_P_far_json,quadvel-rad,,,,0.0000000000e+00,1,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_sinc,quadvel-rad,,,,7.0922810912e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_sinc_rel_err_vs_sinc_mesh,quadvel-rad,,,,3.0864200085e-14,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_sinc_rel_err_vs_csv,quadvel-rad,,,,1.7822625815e-06,1,results/r0_revision/bem_shell_levels.csv,numbers_cap_100hz.csv
+fig2/fig3,P_north_theta<90_bem,quadvel-rad,,,,5.8722593215e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_south_theta>90_bem,quadvel-rad,,,,5.7344005518e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,north_fraction_bem,quadvel-rad,,,,5.0593877873e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_north_theta<90_sinc,quadvel-rad,,,,3.6978330789e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_south_theta>90_sinc,quadvel-rad,,,,3.3944480124e-09,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,north_fraction_sinc,quadvel-rad,,,,5.2138839836e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_check_rel_err_delta0.5h,quadvel-rad,,,,9.8075322886e-02,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_check_rel_err_oppositesign_delta0.5h,quadvel-rad,,,,1.9493836103e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,mean_check_rel_err_delta0.5h,quadvel-rad,,,,6.6615925530e-03,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_LS_coef_delta0.5h,quadvel-rad,,,,9.4761942279e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_check_rel_err_delta0.25h,quadvel-rad,,,,4.3017173867e-02,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_check_rel_err_oppositesign_delta0.25h,quadvel-rad,,,,1.9981673169e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,mean_check_rel_err_delta0.25h,quadvel-rad,,,,1.9370553407e-02,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_LS_coef_delta0.25h,quadvel-rad,,,,9.9770553731e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_bem,uniform,,,,5.8870894870e-07,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_bem_rel_err_vs_P_bem,uniform,,,,1.6264182676e-05,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_bem_rel_err_vs_P_far_json,uniform,,,,0.0000000000e+00,1,results/r0_revision/bem_shell_runs/spherecap_m2_q0.json,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_sinc,uniform,,,,3.7242211232e-07,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_sinc_rel_err_vs_sinc_mesh,uniform,,,,1.2656542481e-14,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_far_integral_sinc_rel_err_vs_csv,uniform,,,,3.3441539651e-06,1,results/r0_revision/bem_shell_levels.csv,numbers_cap_100hz.csv
+fig2/fig3,P_north_theta<90_bem,uniform,,,,2.9537366120e-07,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_south_theta>90_bem,uniform,,,,2.9333528750e-07,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,north_fraction_bem,uniform,,,,5.0173122364e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_north_theta<90_sinc,uniform,,,,2.4815490334e-07,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,P_south_theta>90_sinc,uniform,,,,1.2426720898e-07,W,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,north_fraction_sinc,uniform,,,,6.6632698524e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_check_rel_err_delta0.5h,uniform,,,,4.9763158916e-02,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_check_rel_err_oppositesign_delta0.5h,uniform,,,,1.9697087790e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,mean_check_rel_err_delta0.5h,uniform,,,,2.8256182024e-03,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_LS_coef_delta0.5h,uniform,,,,9.6931907557e-01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_check_rel_err_delta0.25h,uniform,,,,2.1403680293e-02,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_check_rel_err_oppositesign_delta0.25h,uniform,,,,2.0092902156e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,mean_check_rel_err_delta0.25h,uniform,,,,9.6294921334e-03,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_LS_coef_delta0.25h,uniform,,,,1.0091972633e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,jump_sign_s,all,,,,1.0000000000e+00,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,kR,all,,,,1.8318324511e+01,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,h_max,all,,,,6.5403129231e-01,m,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,lambda_over_h_max,all,,,,5.2443973864e+00,elements/wavelength,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,nv,all,,,,3.8410000000e+03,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig2/fig3,nt,all,,,,7.6320000000e+03,1,results/r0_revision/viz/cap_m2_100hz_bem.npz,numbers_cap_100hz.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,0.1,1,1.0478882494598096e-16,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,0.1,1,1.0951496771690296e-15,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,0.1,1,0.09568447777555018,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,0.1,1,1.948341038378699e-13,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,0.1,1,1870.5747736570922,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,0.1,1,1861.5896854456405,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,0.1,1,1.000961719348887,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,0.3,1,8.569693968169939e-15,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,0.3,1,1.15456532668018e-14,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,0.3,1,0.7422441823028854,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,0.3,1,1.7409282455597156e-12,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,0.3,1,204.3737423725828,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,0.3,1,203.4038538138348,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,0.3,1,1.0005902812119412,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,1.0,1,1.1801052482753543e-12,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,1.0,1,1.1902366951995822e-12,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,1.0,1,0.9914878721475403,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,1.0,1,1.7859472211452774e-11,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,1.0,1,15.218925717144343,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,1.0,1,15.156671179825434,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,1.0,1,0.999641329268049,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_plus_over_P_surface,quadvel-rad,spherecap,1.0,1,5.74911703890592,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_minus_over_P_surface,quadvel-rad,spherecap,1.0,1,-4.749117038905953,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,2.0,1,2.6999251220262407e-11,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,2.0,1,2.702124249606446e-11,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,2.0,1,0.9991861486086269,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,2.0,1,5.6932426277320445e-11,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,2.0,1,2.1181821868371826,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,2.0,1,2.113728079478355,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,2.0,1,0.9966234653230731,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,4.0,1,8.71792034979201e-10,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,4.0,1,8.718282434499602e-10,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,4.0,1,0.9999584683439298,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,4.0,1,2.1708202076294786e-10,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,4.0,1,0.2506600422363018,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,4.0,1,0.24992679510119548,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,4.0,1,1.0015249144804883,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_plus_over_P_surface,quadvel-rad,spherecap,4.0,1,0.4072608251767939,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_minus_over_P_surface,quadvel-rad,spherecap,4.0,1,0.592739174823206,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,6.0,1,1.5412274195010247e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,6.0,1,1.5412087559673123e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,6.0,1,1.0000121096727748,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,6.0,1,1.1680877281550537e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,6.0,1,0.7652131464033533,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,6.0,1,0.7601592357232917,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,6.0,1,1.0028113671430243,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,8.0,1,3.31274571348359e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,8.0,1,3.3125900711740953e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,8.0,1,1.000046985079998,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,8.0,1,3.424685509709166e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,8.0,1,1.0423226467651225,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,8.0,1,1.0380441910323748,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,8.0,1,0.9837416685939318,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,10.0,1,1.1332331912915974e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,10.0,1,1.1331714042663475e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,10.0,1,1.0000545257540185,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,10.0,1,5.387315507422547e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,10.0,1,0.4780926164141317,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,10.0,1,0.47833626552976105,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,10.0,1,0.9797600103909636,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_plus_over_P_surface,quadvel-rad,spherecap,10.0,1,0.37631864181130154,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_minus_over_P_surface,quadvel-rad,spherecap,10.0,1,0.623681358188699,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,12.0,1,1.1966176073096453e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,12.0,1,1.1965936900068797e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,12.0,1,1.0000199878229055,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,12.0,1,5.540004820315031e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,12.0,1,0.46458004038325085,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,12.0,1,0.4667404329445221,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,12.0,1,0.9994147010451605,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,14.0,1,9.302717857939568e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,14.0,1,9.302942313139546e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,14.0,1,0.9999758726656124,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,14.0,1,4.851845501759224e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,14.0,1,0.5233192359543046,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,14.0,1,0.525953787494052,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,14.0,1,0.9970927447424078,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,16.0,1,8.922648795497875e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,16.0,1,8.923045846561626e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,16.0,1,0.9999555027430568,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,16.0,1,4.734409693596035e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,16.0,1,0.5337255779897938,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,16.0,1,0.5340306544801352,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,16.0,1,0.9953632389126311,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_plus_over_P_surface,quadvel-rad,spherecap,16.0,1,0.5363866936841283,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_minus_over_P_surface,quadvel-rad,spherecap,16.0,1,0.4636133063158718,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,18.3183,0,1.1606600115857143e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,18.3183,0,1.1606235345260675e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,18.3183,0,1.000031428847134,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,18.3183,0,7.092229987950726e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,18.3183,0,0.6190434307481215,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,18.3183,0,0.6109165711274837,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,18.3183,0,0.98858851109296,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,quadvel-rad,spherecap,21.0,0,2.7477942223003345e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,quadvel-rad,spherecap,21.0,0,2.747388088098487e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,quadvel-rad,spherecap,21.0,0,1.0001478255669838,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,quadvel-rad,spherecap,21.0,0,1.6259929564313276e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,quadvel-rad,spherecap,21.0,0,0.5999945070238163,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,quadvel-rad,spherecap,21.0,0,0.590601081548694,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,quadvel-rad,spherecap,21.0,0,0.971294333382878,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,0.1,,1.96015332505121e-13,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,0.1,,1.95073795669407e-13,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,0.3,,1.75142042726264e-12,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,0.3,,1.74310877913094e-12,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,1.0,,1.79599341119148e-11,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,1.0,,1.78864672056958e-11,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,2.0,,5.71893329927019e-11,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,2.0,,5.70690754291589e-11,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,4.0,,2.18523428309158e-10,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,4.0,,2.17884189297101e-10,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,6.0,,1.1793674829995e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,6.0,,1.17157825728368e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,8.0,,3.45294988013803e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,8.0,,3.43877644424904e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,10.0,,5.41790421431936e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,10.0,,5.42066532696796e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,12.0,,5.55924656327224e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,12.0,,5.58509820104742e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,14.0,,4.8682912017154e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,14.0,,4.89279969137187e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,16.0,,4.76224588557704e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,16.0,,4.76496797595612e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,18.3183,,7.18498955504175e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,18.3183,,7.0906643452273e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,quadvel-rad,spherecap,21.0,,1.64866143981198e-08,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,quadvel-rad,spherecap,21.0,,1.62285023956383e-08,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,0.1,1,1.0011580763193407e-14,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,0.1,1,6.212653045830947e-14,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,0.1,1,0.16114823553379926,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,0.1,1,5.588327743287067e-12,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,0.1,1,556.2337515528246,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,0.1,1,558.0411867576661,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,0.1,1,0.9971608160765228,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,0.3,1,8.177156214114001e-13,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,0.3,1,9.74117847825557e-13,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,0.3,1,0.8394421919654992,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,0.3,1,5.049181961124881e-11,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,0.3,1,61.53435446996232,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,0.3,1,61.73186774287232,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,0.3,1,0.9970825189452729,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,1.0,1,1.1102516046413959e-10,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,1.0,1,1.1154972649664643e-10,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,1.0,1,0.9952974691289573,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,1.0,1,5.85671687915605e-10,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,1.0,1,5.259663439790908,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,1.0,1,5.27429078979071,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,1.0,1,0.9961862672994695,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_plus_over_P_surface,uniform,spherecap,1.0,1,0.838746466601818,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_minus_over_P_surface,uniform,spherecap,1.0,1,0.16125353339818202,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,2.0,1,2.4309101315338e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,2.0,1,2.431993088966942e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,2.0,1,0.9995547037374181,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,2.0,1,2.653978765345208e-09,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,2.0,1,1.0901397800112436,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,2.0,1,1.091902172080899,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,2.0,1,0.9932929024189283,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,4.0,1,6.559954882403676e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,4.0,1,6.560153296889608e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,4.0,1,0.9999697545961271,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,4.0,1,1.4472000590545424e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,4.0,1,0.22098835383104426,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,4.0,1,0.22085759420074697,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,4.0,1,0.9993487703079953,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_plus_over_P_surface,uniform,spherecap,4.0,1,0.37855133941879987,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_minus_over_P_surface,uniform,spherecap,4.0,1,0.6214486605812004,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,6.0,1,7.707310507232895e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,6.0,1,7.707473069151205e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,6.0,1,0.9999789085324267,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,6.0,1,3.720919086794764e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,6.0,1,0.4842227945861409,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,6.0,1,0.484060856842072,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,6.0,1,1.0069457467182805,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,8.0,1,7.888430885283867e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,8.0,1,7.888542500181804e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,8.0,1,0.999985851011396,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,8.0,1,5.571673188458871e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,8.0,1,0.7079962146479265,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,8.0,1,0.7094711279142067,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,8.0,1,0.9984541267866862,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,10.0,1,1.3371410926022242e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,10.0,1,1.3371055953116273e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,10.0,1,1.0000265478588388,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,10.0,1,6.581986893347115e-08,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,10.0,1,0.494091803558446,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,10.0,1,0.4943984716364526,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,10.0,1,0.9918025888486344,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_plus_over_P_surface,uniform,spherecap,10.0,1,0.4813047646607915,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_minus_over_P_surface,uniform,spherecap,10.0,1,0.5186952353392085,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,12.0,1,1.8146374182649155e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,12.0,1,1.8145915133943096e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,12.0,1,1.0000252976332509,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,12.0,1,1.013832380766356e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,12.0,1,0.5632922454152134,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,12.0,1,0.5601517389108182,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,12.0,1,1.001735847237858,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,14.0,1,2.311387886939209e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,14.0,1,2.3113961589095547e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,14.0,1,0.9999964212234611,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,14.0,1,1.6116255518096785e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,14.0,1,0.7026634463783081,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,14.0,1,0.7002072348917939,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,14.0,1,0.9912053980615966,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,16.0,1,3.800811953535111e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,16.0,1,3.8009679906460765e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,16.0,1,0.9999589480597181,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,16.0,1,2.022123942328004e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,16.0,1,0.5357231593090759,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,16.0,1,0.5343460010180634,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,16.0,1,0.9850070427146647,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_plus_over_P_surface,uniform,spherecap,16.0,1,0.4944082869819048,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_minus_over_P_surface,uniform,spherecap,16.0,1,0.505591713018095,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,18.3183,0,5.887052168611645e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,18.3183,0,5.886956431165623e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,18.3183,0,1.0000162626387916,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,18.3183,0,3.724183655281993e-07,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,18.3183,0,0.6419408761307379,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,18.3183,0,0.629405400310534,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,18.3183,0,0.9907338251635136,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_bem_far_m2,uniform,spherecap,21.0,0,1.7806696955541972e-06,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_bem_surface_m2,uniform,spherecap,21.0,0,1.7804094046244642e-06,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,far_over_surface,uniform,spherecap,21.0,0,1.000146197233657,-,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,P_sinc_mesh_m2,uniform,spherecap,21.0,0,1.069578060170943e-06,W,results/r0_revision/viz/cap_m2_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_consistent_over_bem_far,uniform,spherecap,21.0,0,0.6090445576372934,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,ratio_centroid_over_bem_far,uniform,spherecap,21.0,0,0.5976501225619634,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,bem_far_over_spectral,uniform,spherecap,21.0,0,0.9695810667066096,-,results/r0_revision/viz/cap_m2_freq_sweep.csv; results/r0_revision/novelty/cap_frozen_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,0.1,,5.56877912688516e-12,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,0.1,,5.58687441041267e-12,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,0.3,,5.03176029035546e-11,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,0.3,,5.04791125922492e-11,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,1.0,,5.83954977390154e-10,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,1.0,,5.85578981271047e-10,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,2.0,,2.65003183601736e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,2.0,,2.65431605275522e-09,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,4.0,,1.44967363066831e-08,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,4.0,,1.44881585339312e-08,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,6.0,,3.73205543255544e-08,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,6.0,,3.73080732807906e-08,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,8.0,,5.58497920629277e-08,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,8.0,,5.59661395765561e-08,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,10.0,,6.60670454055944e-08,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,10.0,,6.61080512544836e-08,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,12.0,,1.02217118594891e-07,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,12.0,,1.01647230533373e-07,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,14.0,,1.62412777855378e-07,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,14.0,,1.61845052107609e-07,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,16.0,,2.03618298768753e-07,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,16.0,,2.03094866799314e-07,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,18.3183,,3.77913942694592e-07,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,18.3183,,3.70534242683401e-07,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_consistent_sinc,uniform,spherecap,21.0,,1.08450718702694e-06,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,P_centroid_sinc,uniform,spherecap,21.0,,1.06421746179034e-06,W,results/r0_revision/viz/cap_sinc_freq_sweep.csv,numbers_fig4.csv
+fig4,sphere_sinc_over_exterior,breathing-sphere,,0.1,,2.0132756380346,-,results/r0_revision/spherical-exterior-benchmark.csv,numbers_fig4.csv
+fig4,sphere_sinc_over_exterior,breathing-sphere,,0.5,,2.29848847065931,-,results/r0_revision/spherical-exterior-benchmark.csv,numbers_fig4.csv
+fig4,sphere_sinc_over_exterior,breathing-sphere,,1.0,,2.83229367309429,-,results/r0_revision/spherical-exterior-benchmark.csv,numbers_fig4.csv
+fig4,sphere_sinc_over_exterior,breathing-sphere,,2.0,,2.06705452607952,-,results/r0_revision/spherical-exterior-benchmark.csv,numbers_fig4.csv
+fig4,sphere_sinc_over_exterior,breathing-sphere,,3.0,,0.0442552370551491,-,results/r0_revision/spherical-exterior-benchmark.csv,numbers_fig4.csv
+fig4,sphere_sinc_over_exterior,breathing-sphere,,4.0,,1.21709378592165,-,results/r0_revision/spherical-exterior-benchmark.csv,numbers_fig4.csv
+fig4,sphere_sinc_over_exterior,breathing-sphere,,5.0,,1.91263439023951,-,results/r0_revision/spherical-exterior-benchmark.csv,numbers_fig4.csv
+fig4,sphere_sinc_over_exterior,breathing-sphere,,6.0,,0.160483431302717,-,results/r0_revision/spherical-exterior-benchmark.csv,numbers_fig4.csv
+fig4,sphere_sinc_over_exterior,breathing-sphere,,8.0,,1.98824790970344,-,results/r0_revision/spherical-exterior-benchmark.csv,numbers_fig4.csv
+fig4,kR_resolution_limit_6_per_lambda_m2,,spherecap,16.011428864534242,,16.011428864534242,-,bem_shell_runs/spherecap_m2_q0.json (h_max),numbers_fig4.csv
+fig2,"corr(P_plus/P_bem, P_sinc/P_bem) over 6 cap designs",all6,spherecap,18.3183,0,0.9798384580463128,-,numbers_cap_100hz.csv (derived),derived
+fig2,min P_sinc/P_plus over 6 cap designs,all6,spherecap,18.3183,0,0.923022761694233,-,numbers_cap_100hz.csv (derived),derived
+fig2,max P_sinc/P_plus over 6 cap designs,all6,spherecap,18.3183,0,1.1439204410860826,-,numbers_cap_100hz.csv (derived),derived
+fig2,min P_minus/P_bem over 6 cap designs,all6,spherecap,18.3183,0,0.31462308208,-,numbers_cap_100hz.csv (derived),derived
+fig2,max P_minus/P_bem over 6 cap designs,all6,spherecap,18.3183,0,0.57265418737,-,numbers_cap_100hz.csv (derived),derived
+fig2,min 2*P_sinc/P_bem over 6 cap designs,all6,spherecap,18.3183,0,0.97769922096,-,numbers_cap_100hz.csv (derived),derived
+fig2,max 2*P_sinc/P_bem over 6 cap designs,all6,spherecap,18.3183,0,1.26523699116,-,numbers_cap_100hz.csv (derived),derived
+fig1_field_maps.png,corner_pixels_all_white,,,,,1,bool,fig1_field_maps.png,derived
+fig1b_field_maps_m3.png,corner_pixels_all_white,,,,,1,bool,fig1b_field_maps_m3.png,derived
+fig2_cap_face_pressure.png,corner_pixels_all_white,,,,,1,bool,fig2_cap_face_pressure.png,derived
+fig3_cap_directivity.png,corner_pixels_all_white,,,,,1,bool,fig3_cap_directivity.png,derived
+fig3b_cap_directivity_uniform.png,corner_pixels_all_white,,,,,1,bool,fig3b_cap_directivity_uniform.png,derived
+fig4_cap_power_vs_frequency.png,corner_pixels_all_white,,,,,1,bool,fig4_cap_power_vs_frequency.png,derived

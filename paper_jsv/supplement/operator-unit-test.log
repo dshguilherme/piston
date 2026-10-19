@@ -1,0 +1,16 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+Angular vs dense sinc relative error: 5.705677e-16
+Hermitian residual: 0.000000e+00
+Power directional derivative error: 4.955937e-12
+    ka     analytic_power_W    quadrature_power_W    relative_error
+    ___    ________________    __________________    ______________
+
+    0.1         1.5946               1.5946            3.7319e-14  
+      1         135.21               135.21             6.306e-16  
+      3         348.91               348.91            2.4438e-15  
+      6         331.34               331.34             6.176e-15  
+
+R0_OPERATOR_UNIT_TESTS_PASS

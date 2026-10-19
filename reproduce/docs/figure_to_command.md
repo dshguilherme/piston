@@ -1,0 +1,45 @@
+# Paper item -> command -> inputs -> outputs -> expected time
+
+Manuscript: `paper_jsv/prototype/manuscript_proto_voice.tex` (17-Oct-2026 22:56, the audited draft). Commands run from `harmonic_shell_course/reproduce/` in the analysis environment. Inputs are relative to `harmonic_shell_course/` (`RES` = `results/r0_revision`); outputs go to `$REPRO_OUT` (default `reproduce/out`). Re-plot times were measured on 18-Oct-2026 by the smoke tests on the authors' laptop (shared with MATLAB jobs); recompute times are wall times from the original logs (upper bounds).
+
+## Re-plot from stored results (no MATLAB, no BEM)
+
+| Paper item | Command | Inputs (stored) | Outputs | Expected time | Check |
+|---|---|---|---|---|---|
+| Fig. 1 `fig:problem` (schematic) | `python figures/make_figures.py --only fig_cap_problem` | none | `figs/pdf/fig_cap_problem.pdf` | 5-10 s | compiles |
+| Fig. 2 `fig:factortwo` (schematic) | `... --only fig_factor_two` | none | `figs/pdf/fig_factor_two.pdf` | 5-10 s | compiles |
+| Fig. 3 `fig:axes` (schematic, 4 typed numbers) | `... --only fig_model_axes` | none (typed: 0.15 to >10^3, 2 %, 6 %, 9.5 dB) | `figs/pdf/fig_model_axes.pdf` | 5-10 s | compiles; typed numbers checked in the audit only |
+| Fig. 4 `fig:ratiokR` | `python figures/make_fig_ratio_kR.py` (or `make_figures.py --only fig_ratio_kR_proto`) | `RES/novelty/cap_frozen_sweep.csv`, `cap_modes_ratio.csv`, `disc_two_sided.csv`, `RES/viz/numbers_fig4.csv` | `figs/fig_ratio_kR_proto.{pdf,png}` | 8 s | PNG byte-identical; PDF identical except `/CreationDate` |
+| Fig. 5 `fig:regime` | `... --only fig_regime_map` (runs `make_fig_data_d2.py`) | `RES/novelty/cap_modes_ratio.csv`, `cap_frozen_sweep.csv` | `figs/data/f8_*.dat` (6), `figs/pdf/fig_regime_map.pdf` | 1 s + 10 s | `.dat` byte-identical |
+| Fig. 6 `fig:paths` | `... --only fig_opt_paths` (`make_fig_data_d2.py`) | `RES/exact_opt/cap_path_powers.csv`, `cap_reopt_summary.csv` | `figs/data/f13_{S0,SR,SX,X0,XR,XS}.dat`, `fig_opt_paths.pdf` | 1 s + 10 s | `.dat` byte-identical (SR/XR = paper SG/XG) |
+| Table 2 `tab:opt` | `python tables/make_tab_opt.py` | `RES/exact_opt/cap_reopt_summary.csv`, `cap_path_powers.csv` (row G) | `tables/tab_opt.{csv,tex}` | 1 s | 42 typed cells equal to the printed digits, including row G |
+| Fig. 7 `fig:pilot` | `... --only fig_pilot_regime` (`make_fig_pilot_f17.py`) | `RES/pilot/pilot_runs.csv`, `pilot_cells_summary.csv` | `figs/data/f17_*.dat` (4), `fig_pilot_regime.pdf` | 1 s + 10 s | `.dat` byte-identical (CRLF on Windows, as stored) |
+| Table 3 `tab:pilot` | `python tables/make_tab_pilot.py` | `RES/pilot/pilot_runs.csv` | `tables/tab_pilot.{csv,tex}` | 1 s | 42 typed cells equal |
+| Fig. 8 `fig:fsi` | `... --only fig_fsi` (`make_fig_fsi_f18.py`) | `RES/fsi/fsi_summary.csv`, `reopt_eval_c30_k3.csv` | `figs/data/f18_fsi.dat`, `fig_fsi.pdf` | 1 s + 10 s | `.dat` byte-identical; the four re-optimised points typed in `fig_fsi.tex:93,108` are recomputed by `make_tab_fsi.py` |
+| Table F.1 `tab:fsi` + footnote | `python tables/make_tab_fsi.py` | `RES/fsi/fsi_summary.csv`, `reopt_eval_c30_k3.csv` | `tables/tab_fsi.{csv,tex}` | 1 s | 77 typed cells + 4 footnote values equal |
+| Fig. 9 `fig:decision` (schematic, typed evidence) | `... --only fig_decision` | none (typed) | `fig_decision.pdf` | 5-10 s | compiles; "2-30 dB" flagged (`docs/PACKAGE-NOTES.md`) |
+| Fig. A.1 `fig:construction` (schematic) | `... --only fig_sinc_construction` | caption numbers (typed) from `RES/frozen_field_quadrature.csv` | `fig_sinc_construction.pdf` | 5-10 s | compiles |
+| Fig. B.1 `fig:validation` | `... --only fig_verification` (`make_fig_data_d2.py`) | `RES/novelty/cap_frozen_validation_M20.csv`, `cap_flat_extrap.csv` | `figs/data/f6_*.dat` (5), `fig_verification.pdf` | 1 s + 10 s | `.dat` byte-identical |
+| Fig. D.1 `fig:faces` | `... --only fig_face_power` (`make_fig_data_d2.py`) | `RES/viz/numbers_cap_100hz.csv` | `figs/data/f9_shares.dat`, `fig_face_power.pdf` | 1 s + 10 s | `.dat` byte-identical |
+| Fig. G.1 `fig:cards` + card table (schematic, typed) | `... --only fig_bench_cards` | none (typed) | `fig_bench_cards.pdf` | 5-10 s | compiles |
+| Table 1 `tab:setup` | `python tables/make_tab_setup.py` | code lines in `tests/r0_pilot_runs.m`, `r0_pilot_track.m`, `r0_opt_export_samples.m`, `r0_opt_exact_factor.py`; `RES/exact_opt/cap_exact_factor_q8.log` | `tables/tab_setup.csv` | 1 s | 29 settings found in code + 3 counts by arithmetic |
+| All of the above | `python figures/make_figures.py` and the four `tables/make_tab_*.py` | as above | as above | about 3 min | `python run_smoke_tests.py --only replot_figure_data replot_ratio_figure tables tikz_compile` |
+| In-progress F19-F22 (not in the audited draft) | `python figures/make_figures.py --extras --only fig_cap_geometry fig_designs_paper fig_designs_pilot fig_mechanism` | `RES/pilot/samples_th*.mat`, `RES/exact_opt/cap_path_states.mat`, `RES/pilot/eval_*_designs.mat`, `RES/novelty/cap_basis_N48_M20_L8000.npz` (release assets) | `figs/data/f19-f22*`, PDFs | about 2.5 min (mechanism 2 min) | data equal to the stored copies on 18-Oct-2026 |
+
+`...` = `python figures/make_figures.py`.
+
+## Recompute (upstream stages; original scripts, unchanged)
+
+These call the original scripts in `tests/` and `src/`, which still contain absolute paths (MATLAB `addpath` of the GeoPDEs folder; MATLAB and Python write into `results/r0_revision/`). Run them in a scratch copy of the repository if the stored results must stay untouched. Pipeline labels (PL-A ... PL-H) refer to `paper_jsv/reproduce_plan/REPRODUCIBILITY-AUDIT.md` section 3.
+
+| Paper item | Stage and commands (in order) | Main inputs | Outputs feeding the re-plot | Wall time (logs) |
+|---|---|---|---|---|
+| Frozen fields (Section 5, Figs. 4, A.1, Fig. 3 notes) | MATLAB `r0_frozen_field_audit` (PL-A7) | frozen designs `results/articleB_r0_thesisdamp_spherecap_40x24_f100_partial.mat`, `results/t3_longhorizon.mat` | `RES/spherecap_frozen_states.mat`, `frozen_field_quadrature.csv` | minutes |
+| Fig. 4 curves, Fig. 5, Fig. B.1 (exact cap) | Python `tests/r0_nov_cap_frozen.py validate` then `sweep`; `r0_nov_cap_modes.py`; `r0_nov_disc_hankel.py`; `r0_nov_cap_flat_limit.py`; `r0_nov_flat_extrap.py` (PL-C) | frozen states; BEM powers typed in `r0_nov_cap_frozen.py:126-135` | `RES/novelty/*.csv` | validate about 8 min; modes about 7 min; disc about 2 min; flat limit about 8.5 min (a/R = 0.05 does not finish on 16 GB) |
+| Fig. 4 markers, Fig. B.1 BEM, Fig. D.1 | MATLAB `r0_bem_export_fields`; Python (bempp env) `src/r0_bem_shells.py run <geom> <m>` and `agg`; `src/r0_bem_validate.py`; `tests/r0_viz_cap_bem_100hz.py`; `tests/r0_viz_cap_freq_sweep.py`; MATLAB `r0_viz_sinc_freq_sweep`; `tests/r0_viz_fig4_power_vs_frequency.py` (PL-B) | frozen states | `RES/bem_shell_runs/*`, `RES/viz/numbers_cap_100hz.csv`, `numbers_fig4.csv` | about 6 h (sweep 2.4 h, shells 1.4 h, validation 1.2 h, 100 Hz 0.5 h) |
+| Table 2, Fig. 6 | MATLAB `r0_opt_export_samples`; `python -u tests/r0_opt_exact_factor.py 8` (and `12`); MATLAB `r0_opt_cap_reopt`; `python tests/r0_opt_cap_eval.py`; `python tests/r0_opt_cap_checks.py` (PL-D) | frozen design G, structural model | `RES/exact_opt/cap_reopt_summary.csv`, `cap_path_powers.csv` | samples seconds; F_x 54 s (q12 106 s); six runs 3971 s; eval minutes |
+| Table 3, Fig. 7 | MATLAB `r0_pilot_setup`; `python tests/r0_pilot_factor.py <cell>` (7 cells) and `gate`; MATLAB `r0_pilot_runs(cell,'ops')`; `drivers/pilot_queue.ps1 -List <items of drivers/pilot_queue.txt>` (38 runs, 2 threads); `r0_pilot_runs(cell,'eval')`; `python tests/r0_pilot_stats.py`; `python tests/r0_pilot_cells_summary.py` (PL-E) | structural model; Experiment 5 runs reused for the anchor cell | `RES/pilot/pilot_runs.csv`, `pilot_cells_summary.csv` | factors 879 s; runs about 4.8 h; eval and stats minutes |
+| Fig. 8, Table F.1 | MATLAB `r0_fsi_export_ctx`; `python tests/r0_fsi_zop.py <cell>` (7); `python tests/r0_fsi_check.py <cell>` (7); `python tests/r0_fsi_summary.py`; `python tests/r0_fsi_export_z.py c30_k3 <s or phys> <file>`; MATLAB `r0_fsi_reopt('c30_k3', <zfile>, 'XU', 150, <tag>)` x 2 (4 threads); `python tests/r0_fsi_reopt_eval.py c30_k3 dev_XU phys_XU` (PL-F) | pilot runs | `RES/fsi/fsi_summary.csv`, `reopt_eval_c30_k3.csv` | zop 7 x 25-38 s; checks about 31 min; two re-optimisations 2054 s + 1989 s |
+| Appendix checks (operator unit, seam, gradient, sphere modal, apex) | MATLAB `r0_operator_unit_tests`, `r0_seam_trace_tests`, `r0_consistent_gradient_test`, `r0_sphere_modal_spectrum`, `r0_spherical_exterior_benchmark`, `r0_cap_apex_regular_test`, `r0_nystrom_rank_sweep` (PL-G) | structural model; `t3_longhorizon.mat` | logs in `paper_jsv/supplement/`, CSVs in `RES/` | seconds to minutes each |
+
+The argument order of `r0_fsi_reopt` is from its signature, `tests/r0_fsi_reopt.m:1` (`r0_fsi_reopt(cell, zfile, startcode, nmax, tag)`; the audit text has the arguments in another order). The actual call lines, and the paths of the two `iwZ` files, were not recorded; only the log header, the tags and `nmax = 150` (log and exp7 note) are.

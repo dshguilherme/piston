@@ -1,0 +1,12 @@
+# conda env create -f reproduce/env/environment-bempp.yml   ->  conda activate piston-bempp
+# Pins from pip-freeze-bempp.txt (the author's environment C:\Users\dshgu\.envs\bempp, Anaconda Python 3.11.17).
+# bempp-cl 0.4.2 is imported as bempp_cl.api. Numba JIT costs about 55 s on a cold cache.
+# Untested as a fresh environment: the versions are what ran, the environment itself was not rebuilt.
+name: piston-bempp
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.17
+  - pip
+  - pip:
+      - -r requirements-bempp.txt

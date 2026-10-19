@@ -1,0 +1,170 @@
+% Optimization paths: power change along each of six GCMMA runs (a), and exact against
+% sinc change for every iterate (b). Data: data/f13_*.dat only. Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{shapes.geometric}
+
+% ---- read the last row of each run (end design); nothing typed by hand
+% #1 = file tag, #2 = macro key (letters only)
+\newcommand{\readrun}[2]{%
+  \pgfplotstableread{data/f13_#1.dat}\tmptab
+  \pgfplotstablegetrowsof{\tmptab}%
+  \pgfmathtruncatemacro{\lastrow}{\pgfplotsretval-1}%
+  \pgfplotstablegetelem{\lastrow}{iter}\of\tmptab
+  \expandafter\xdef\csname endit#2\endcsname{\pgfplotsretval}%
+  \pgfplotstablegetelem{\lastrow}{dB_sinc}\of\tmptab
+  \expandafter\xdef\csname endsi#2\endcsname{\pgfplotsretval}%
+  \pgfplotstablegetelem{\lastrow}{dB_exact}\of\tmptab
+  \expandafter\xdef\csname endex#2\endcsname{\pgfplotsretval}%
+}
+\readrun{S0}{Sz}\readrun{SR}{SR}\readrun{SX}{SX}\readrun{X0}{Xz}\readrun{XR}{XR}\readrun{XS}{XS}
+\pgfmathsetmacro{\gapA}{(\endexSz)-(\endexXz)}
+\pgfmathsetmacro{\gapB}{(\endexSX)-(\endexXz)}
+
+\pgfplotsset{
+  miniaxis/.style={
+    width=16mm, height=19mm, scale only axis, anchor=south west,
+    xmin=1, xmax=700, xtick={1,10,100}, xticklabels={},
+    xminorticks=false,
+    ymin=-30, ymax=2, ytick={0,-10,-20,-30}, yticklabels={},
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+  },
+  scatax/.style={
+    width=40mm, height=42mm, scale only axis, anchor=south west,
+    xmin=-28, xmax=1, ymin=-28, ymax=1,
+    xtick={-25,-20,-15,-10,-5,0}, ytick={-25,-20,-15,-10,-5,0},
+    xticklabels={$-$25,$-$20,$-$15,$-$10,$-$5,0},
+    yticklabels={$-$25,$-$20,$-$15,$-$10,$-$5,0},
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    label style={lab},
+    major tick length=1.2mm,
+  },
+  runmark/.style={only marks, mark size=0.8pt},
+  endsq/.style={refcurve, only marks, mark=square, mark size=1.6pt},
+  enddot/.style={refcurve, fill=figref, only marks, mark=*, mark size=1.6pt},
+}
+\tikzset{
+  star5/.style={star, star points=5, star point ratio=2.2, inner sep=0pt, minimum size=2.6mm},
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% ================================================================ panel (a)
+% #1 file, #2 key, #3 x, #4 y, #5 xtick labels, #6 ytick labels
+\def\RunMini#1#2#3#4#5#6{%
+  \begin{axis}[miniaxis, xmode=log, at={(#3,#4)}, xticklabels={#5}, yticklabels={#6}]
+    \addplot[refcurve] table[x=iter,y=dB_exact]{data/f13_#1.dat};
+    \addplot[surrcurve] table[x=iter,y=dB_sinc]{data/f13_#1.dat};
+    \csname note#2\endcsname
+  \end{axis}
+}
+
+% end-of-run marker (on the exact curve) and note, in rel axis cs
+\def\noteSz{\addplot[endsq] coordinates {(\enditSz,\endexSz)};
+  \node[note, inner sep=0pt, anchor=north east, align=right, xshift=-0.3mm] at (rel axis cs:1,0.36) {600 it.,\\iteration limit};}
+\def\noteSR{\addplot[enddot] coordinates {(\enditSR,\endexSR)};
+  \node[note, inner sep=0pt, anchor=north east, align=right, xshift=-0.3mm] at (rel axis cs:1,0.36) {109 it.,\\stop rule met};}
+\def\noteSX{\addplot[endsq] coordinates {(\enditSX,\endexSX)};
+  \node[note, inner sep=0pt, anchor=north east, align=right, xshift=-0.3mm] at (rel axis cs:1,0.95) {600 it.,\\iteration limit};}
+\def\noteXz{\addplot[endsq] coordinates {(\enditXz,\endexXz)};
+  \node[note, inner sep=0pt, anchor=north east, align=right, xshift=-0.3mm] at (rel axis cs:1,0.97) {600 it.,\\iteration\\limit};
+  \node[note, inner sep=0pt, anchor=south west, align=left, xshift=-0.3mm] at (rel axis cs:0,0) {still\\descending};}
+\def\noteXR{\addplot[endsq] coordinates {(\enditXR,\endexXR)};
+  \node[note, inner sep=0pt, anchor=north east, align=right, xshift=-0.3mm] at (rel axis cs:1,0.36) {600 it.,\\iteration limit};}
+\def\noteXS{\addplot[endsq] coordinates {(\enditXS,\endexXS)};
+  \node[note, inner sep=0pt, anchor=north east, align=right, xshift=-0.3mm] at (rel axis cs:1,0.36) {600 it.,\\iteration limit};}
+
+\RunMini{S0}{Sz}{10.5mm}{23mm}{}{0,$-$10,$-$20,$-$30}
+\RunMini{SR}{SR}{30.1mm}{23mm}{}{}
+\RunMini{SX}{SX}{49.7mm}{23mm}{}{}
+\RunMini{X0}{Xz}{10.5mm}{0mm}{1,10,100}{0,$-$10,$-$20,$-$30}
+\RunMini{XR}{XR}{30.1mm}{0mm}{1,10,100}{}
+\RunMini{XS}{XS}{49.7mm}{0mm}{1,10,100}{}
+
+% run tags in the top gutter of each mini
+% (the files keep the run keys SR and XR; the paper names these runs SG and XG, after design G)
+\foreach \t/\x/\y in {S0/10.5/42, SG/30.1/42, SX/49.7/42, X0/10.5/19, XG/30.1/19, XS/49.7/19}
+  \node[lab, anchor=south west] at (\x mm,\y mm) {\t};
+% column headers
+\node[note, anchor=south, align=center] at (18.5mm,46.5mm) {from uniform};
+\node[note, anchor=south, align=center] at (38.1mm,46.5mm) {from design G};
+\node[note, anchor=south, align=center] at (57.7mm,46.5mm) {from other\\run's end};
+% shared axis labels
+\node[inner sep=0pt, anchor=south, rotate=90] at (2.5mm,21mm) {$\Delta L$ (dB) vs uniform};
+\node[anchor=north] at (38.1mm,-5.5mm) {iteration};
+% one line: key for the two curve styles, and what the run tags mean
+\draw[refcurve] (0.5mm,-11.2mm) -- (5.5mm,-11.2mm);
+\node[note, anchor=west] at (6mm,-11.2mm) {exact evaluation};
+\draw[surrcurve] (27mm,-11.2mm) -- (32mm,-11.2mm);
+\node[note, anchor=west] at (32.5mm,-11.2mm) {sinc evaluation};
+\node[note, anchor=west] at (55mm,-11.2mm) {S: sinc-driven runs (top row); X: exact-driven runs (bottom row)};
+\node[paneltag, anchor=north west] at (0mm,56.5mm) {(a)};
+\node[paneltitle, anchor=north west] at (5mm,56.5mm) {Power change along each run};
+
+% ================================================================ panel (b)
+% axis box: 76.2..116.2 mm by 0..42 mm
+\begin{axis}[scatax, at={(76.2mm,0mm)}, clip=false,
+    xlabel={$\Delta L$ sinc (dB)}, ylabel={$\Delta L$ exact (dB)}]
+  % equal-prediction line
+  \draw[reference] (axis cs:-28,-28) -- (axis cs:1,1);
+  % all iterates: exact-driven first so sinc-driven open circles stay visible
+  \foreach \r in {X0,XR,XS}
+    \addplot[witness, draw=figref, fill=figref, runmark, mark=*] table[x=dB_sinc,y=dB_exact]{data/f13_\r.dat};
+  \foreach \r in {S0,SR,SX}
+    \addplot[witness, draw=figsurr, runmark, mark=o] table[x=dB_sinc,y=dB_exact]{data/f13_\r.dat};
+\end{axis}
+
+% end designs, labels and leaders: drawn after the axis so the stars sit on top of the cloud
+% (picture coordinates: x = 76.2 + (dB+28)*40/29 mm, y = (dB+28)*42/29 mm)
+\pgfmathsetmacro{\xSz}{76.2+(\endsiSz+28)*40/29}\pgfmathsetmacro{\ySz}{(\endexSz+28)*42/29}
+\pgfmathsetmacro{\xXz}{76.2+(\endsiXz+28)*40/29}\pgfmathsetmacro{\yXz}{(\endexXz+28)*42/29}
+\pgfmathsetmacro{\xSX}{76.2+(\endsiSX+28)*40/29}\pgfmathsetmacro{\ySX}{(\endexSX+28)*42/29}
+\pgfmathsetmacro{\xlS}{76.2+(-20+28)*40/29}\pgfmathsetmacro{\ylS}{(-13+28)*42/29}
+\pgfmathsetmacro{\xlX}{76.2+(-22+28)*40/29}\pgfmathsetmacro{\ylX}{(-21+28)*42/29}
+\pgfmathsetmacro{\xlY}{76.2+(-26.2+28)*40/29}
+\node[star5, fill=black, draw=none] (S0s) at (\xSz mm,\ySz mm) {};
+\node[star5, fill=black, draw=none] (X0s) at (\xXz mm,\yXz mm) {};
+\node[star5, draw=black] (SXs) at (\xSX mm,\ySX mm) {};
+\node[lab, anchor=south east] (S0l) at (\xlS mm,\ylS mm) {S0};
+\draw[leader] ($(S0s)+(-1.1mm,1.1mm)$) -- (S0l.south east);
+\node[lab, anchor=south] (SXl) at (\xlY mm,\ylX mm) {SX};
+\draw[leader] ($(SXs)+(0,1.7mm)$) -- (SXl.south);
+\node[lab, anchor=south] (X0l) at (\xlX mm,\ylX mm) {X0};
+\draw[leader] ($(X0s)+(0.2mm,1.6mm)$) -- (X0l.south);
+
+% exact-power gaps (computed from the files), both in the gutter right of the axis
+\pgfmathsetmacro{\yMid}{(\ySz+\yXz)/2+2}
+\draw[witness] ($(S0s)+(1.8mm,0)$) -- (118.0mm,\ySz mm);
+\draw[witness] ($(X0s)+(2mm,0)$) -- (120.6mm,\yXz mm);
+\draw[witness] ($(SXs)+(2mm,0)$) -- (120.6mm,\ySX mm);
+\draw[dimension] (117.4mm,\ySz mm) -- (117.4mm,\yXz mm);
+\node[note, anchor=west, align=left] at (118.9mm,\yMid mm) {\pgfmathprintnumber[fixed,zerofill,precision=2,assume math mode]{\gapA}\,dB\\same start};
+\draw[dimension, -{Latex[length=1.6mm,width=1.1mm]}] (119.4mm,\yXz mm-3mm) -- (119.4mm,\yXz mm);
+\draw[dimension, -{Latex[length=1.6mm,width=1.1mm]}] (119.4mm,\ySX mm+3mm) -- (119.4mm,\ySX mm);
+\node[note, anchor=west, align=left] at (120.9mm,\ySX mm-0.5mm) {\pgfmathprintnumber[fixed,zerofill,precision=2,assume math mode]{\gapB}\,dB\\lower bound};
+% equal-prediction label (upper end of the y = x line)
+\draw[reference] (116.2mm,42mm) -- (118.4mm,44.2mm);
+\node[note, anchor=south west, align=left] at (118mm,44.2mm) {equal\\prediction};
+
+% legend above the axis
+\fill[figref] (77.6mm,50mm) circle (0.9pt);
+\node[note, anchor=west] at (79.2mm,50mm) {exact-driven iterates};
+\draw[witness, draw=figsurr] (77.6mm,46.8mm) circle (0.9pt);
+\node[note, anchor=west] at (79.2mm,46.8mm) {sinc-driven iterates};
+\node[star5, fill=black, draw=none, minimum size=2.2mm] at (77.6mm,43.6mm) {};
+\node[note, anchor=west] at (79.2mm,43.6mm) {end design of a run};
+
+\node[paneltag, anchor=north west] at (71mm,56.5mm) {(b)};
+\node[paneltitle, anchor=north west] at (76mm,56.5mm) {Exact against sinc change};
+
+\end{tikzpicture}
+\end{document}

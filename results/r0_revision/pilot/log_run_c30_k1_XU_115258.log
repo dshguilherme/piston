@@ -1,0 +1,20 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== pilot run c30_k1 XU (theta0 30, kR 1.0000), normalisation 5.33337e+03 ==
+  [quadvel    |consistent] it   1: J=5.94640e-07  f0=+100.0000  Jbest=5.94640e-07  vol=0.5000  chg=1.54e-02  inner=0
+  [quadvel    |consistent] it  25: J=2.09465e-11  f0=-17.9874  Jbest=2.09465e-11  vol=0.4865  chg=8.00e-04  inner=3
+  [quadvel    |consistent] it  50: J=1.56302e-11  f0=-21.3561  Jbest=1.56302e-11  vol=0.4896  chg=2.65e-03  inner=2
+  [quadvel    |consistent] it  75: J=7.69422e-12  f0=-29.5114  Jbest=7.69422e-12  vol=0.4997  chg=4.64e-04  inner=2
+  [quadvel    |consistent] it 100: J=5.94432e-12  f0=-32.4805  Jbest=5.94432e-12  vol=0.4996  chg=7.59e-04  inner=2
+  [quadvel    |consistent] it 125: J=5.17203e-12  f0=-34.0819  Jbest=5.17203e-12  vol=0.4998  chg=2.81e-04  inner=2
+  [quadvel    |consistent] it 150: J=4.69500e-12  f0=-35.1954  Jbest=4.69500e-12  vol=0.5000  chg=7.31e-05  inner=2
+  [quadvel    |consistent] it 175: J=4.13184e-12  f0=-36.6657  Jbest=4.13184e-12  vol=0.5000  chg=3.77e-04  inner=3
+  [quadvel    |consistent] it 200: J=3.46195e-12  f0=-38.7012  Jbest=3.46195e-12  vol=0.5000  chg=1.31e-03  inner=3
+  [quadvel    |consistent] it 225: J=2.98294e-12  f0=-40.4148  Jbest=2.98294e-12  vol=0.5000  chg=3.56e-04  inner=3
+  [quadvel    |consistent] it 250: J=2.30523e-12  f0=-43.3804  Jbest=2.30523e-12  vol=0.5000  chg=1.30e-03  inner=3
+  [quadvel    |consistent] it 275: J=1.69309e-12  f0=-46.9317  Jbest=1.69309e-12  vol=0.5000  chg=1.14e-03  inner=3
+  [quadvel    |consistent] it 300: J=1.52978e-12  f0=-48.0988  Jbest=1.52978e-12  vol=0.5000  chg=8.95e-04  inner=3
+RESULT c30_k1 XU: it=300 stop=nmax evals=755 Jbest=1.529780e-12 vol=0.500000 time=526s
+R0_PILOT_RUNS_c30_k1_XU_DONE

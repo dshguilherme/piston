@@ -1,0 +1,12 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== new c30_k3_SS_N8_s1_mean (theta0 30, kR 3.0000): start C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\results\r0_revision\pilot\run_c30_k3_SU.mat, N 8, sigma 0.01, mode mean, cstart 1.253878e+05, target 600 ==
+  [S c30_k3 N8 s0.01] it     1: Jrob=4.74241e-12 (std 1.24e-12) f0=+100.0000  nominal exact  -34.257 dB  sinc  -55.864 dB  robust  -50.983 dB  vol=0.5000 chg=4.42e-05 inner=6 16.0s
+  [S c30_k3 N8 s0.01] it    25: Jrob=4.28834e-12 (std 1.12e-12) f0= +98.8419  nominal exact  -34.156 dB  sinc  -54.887 dB  robust  -51.420 dB  vol=0.5000 chg=3.86e-05 inner=5 9.4s
+  [S c30_k3 N8 s0.01] it    50: Jrob=4.21405e-12 (std 1.11e-12) f0= +98.6408  nominal exact  -34.149 dB  sinc  -54.892 dB  robust  -51.496 dB  vol=0.5000 chg=2.07e-04 inner=5 8.0s
+  [S c30_k3 N8 s0.01] it    75: Jrob=4.10561e-12 (std 1.07e-12) f0= +98.3408  nominal exact  -34.150 dB  sinc  -54.922 dB  robust  -51.609 dB  vol=0.5000 chg=1.84e-04 inner=5 31.9s
+  [S c30_k3 N8 s0.01] it   100: Jrob=3.99271e-12 (std 1.05e-12) f0= +98.0200  nominal exact  -34.168 dB  sinc  -54.985 dB  robust  -51.730 dB  vol=0.5000 chg=1.22e-04 inner=5 11.5s
+STOP file seen at it 100
+R0_ROBUST_c30_k3_SS_N8_s1_mean_DONE it=100 status=running walltime=1288s warn=0

@@ -1,0 +1,128 @@
+﻿% Optimized thickness designs of the paper case (a) and their profiles along two
+% meridians (b). Data: data/f20_*.dat and data/f20_numbers.tex only. Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\usepgfplotslibrary{patchplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\input{data/f20_numbers.tex}
+
+\pgfplotsset{
+  mapax/.style={
+    hide axis, width=27.2mm, height=27.2mm, scale only axis, anchor=center,
+    xmin=-5.4, xmax=5.4, ymin=-5.4, ymax=5.4, clip=false,
+    colormap={thk}{gray(0cm)=(0.93); gray(1cm)=(0.12)},
+    point meta min=25, point meta max=100,
+  },
+  profax/.style={
+    width=55mm, height=19mm, scale only axis, anchor=south west,
+    xmin=0, xmax=5.236, xtick={0,1,2,3,4,5}, xminorticks=false,
+    ymin=20, ymax=105, ytick={25,50,75,100}, yminorticks=false,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    label style={lab},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+  },
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+% ================================================================ panel (a)
+\def\ym{67}   % map centres (mm)
+\def\yc{50} % caption top (mm)
+
+% one map: #1 data tag, #2 centre x (mm)
+\def\Map#1#2{%
+  \begin{axis}[mapax, at={(#2 mm,\ym mm)}, name=ax#1]
+    \addplot[patch, patch type=polygon, vertex count=8, shader=faceted,
+      faceted color=mapped color, witness, point meta=\thisrow{h}]
+      table[x=x,y=y]{data/f20_map_#1.dat};
+    \addplot[witness, domain=0:360, samples=121] ({5.236*cos(x)},{5.236*sin(x)});
+    \csname over#1\endcsname
+  \end{axis}
+}
+
+% key map overlay: mesh, meridians A and B, labels, azimuth arc, scale bar
+\def\overU{%
+  \foreach \k in {1,...,40}{%
+    \pgfmathsetmacro{\rr}{\k*0.1309}%
+    \edef\tmp{\noexpand\addplot[witness, draw=black!50, domain=0:360, samples=49]
+      ({\rr*cos(x)},{\rr*sin(x)});}\tmp}
+  \foreach \ang in {0,15,...,345}{%
+    \pgfmathsetmacro{\mx}{5.236*cos(\ang)}\pgfmathsetmacro{\my}{5.236*sin(\ang)}%
+    \edef\tmp{\noexpand\draw[witness, draw=black!50] (axis cs:0,0) -- (axis cs:\mx,\my);}\tmp}
+  \draw[witness, draw=black!85] (axis cs:0,0) -- (axis cs:{5.236*cos(7.5)},{5.236*sin(7.5)});
+  \draw[witness, draw=black!85] (axis cs:0,0) -- (axis cs:{5.236*cos(22.5)},{5.236*sin(22.5)});
+  \node[lab, anchor=west] at (axis cs:{5.5*cos(5)},{5.5*sin(5)-0.35}) {A};
+  \node[lab, anchor=south west] at (axis cs:{5.5*cos(24)},{5.5*sin(24)-0.1}) {B};
+  % azimuth arc from the +x direction
+  \addplot[leader, -{Latex[length=1.6mm,width=1.1mm]}, domain=0:62, samples=17]
+    ({3.3*cos(x)},{3.3*sin(x)});
+  \node[lab, anchor=south west] at (axis cs:{3.5*cos(45)},{3.5*sin(45)}) {$\varphi$};
+  \node[point] at (axis cs:0,0) {};
+  % scale bar, 0 to 2 m, in the free lower-right corner
+  \draw[leader] (axis cs:3.2,-5.0) -- (axis cs:5.2,-5.0);
+  \draw[leader] (axis cs:3.2,-4.8) -- (axis cs:3.2,-5.2);
+  \draw[leader] (axis cs:5.2,-4.8) -- (axis cs:5.2,-5.2);
+  \node[note, anchor=north] at (axis cs:3.2,-5.2) {0};
+  \node[note, anchor=north] at (axis cs:5.2,-5.2) {2 m};
+}
+\def\overG{}\def\overSz{}\def\overXz{}
+
+\Map{U}{17}\Map{G}{47.5}\Map{S0}{78}\Map{X0}{108.5}
+
+% captions: three lines on one baseline row; optional style underlines line 1
+\def\Cap#1#2#3#4{%
+  \node[note, anchor=north, inner sep=0pt] at (#1 mm,\yc mm) {#2};
+  \node[note, anchor=north, inner sep=0pt] at (#1 mm,\yc mm-3.6mm) {#3};
+  \node[note, anchor=north, inner sep=0pt] at (#1 mm,\yc mm-6.6mm) {#4};
+}
+\Cap{17}{uniform start, 50 mm}{centre: apex; circle: rim}{0 dB (reference)}
+\Cap{47.5}{design G}{(earlier sinc run)}{exact: $\fdbxG$\,dB}
+\Cap{78}{S0, sinc-driven}{from uniform}{exact: $\fdbxS$\,dB}
+\Cap{108.5}{X0, exact-driven}{from uniform}{exact: $\fdbxX$\,dB}
+% swatches tying S0 and X0 to panel (b)
+\draw[surrcurve] (72.2mm,\yc mm-3.0mm) -- (83.8mm,\yc mm-3.0mm);
+\draw[refcurve] (102.2mm,\yc mm-3.0mm) -- (114.8mm,\yc mm-3.0mm);
+
+% colorbar (vertical, right end)
+\shade[bottom color=black!7, top color=black!88] (124mm,\ym mm-14mm) rectangle (126.5mm,\ym mm+14mm);
+\draw[witness] (124mm,\ym mm-14mm) rectangle (126.5mm,\ym mm+14mm);
+\foreach \v in {25,50,75,100} {
+  \draw[witness] (126.5mm,{(\ym-14+(\v-25)/75*28)*1mm}) -- ++(0.9mm,0);
+  \node[note, anchor=west] at (127.4mm,{(\ym-14+(\v-25)/75*28)*1mm}) {\v};
+}
+\node[note, anchor=north, rotate=90, inner sep=0pt] at (133.6mm,\ym mm) {element thickness $h_e$ (mm)};
+
+\node[paneltag, anchor=north west] at (0mm,86.5mm) {(a)};
+\node[paneltitle, anchor=north west] at (6.5mm,86.5mm) {Thickness designs, seen from the apex};
+
+% ================================================================ panel (b)
+% #1 column letter, #2 x of axis origin (mm), #3 extra axis options
+\def\Prof#1#2#3{%
+  \begin{axis}[profax, at={(#2 mm,9mm)}, xlabel={arc length $s$ from the apex (m)}, #3]
+    \addplot[refcurve, const plot] table[x=s,y=X0#1]{data/f20_prof.dat};
+    \addplot[surrcurve, const plot] table[x=s,y=S0#1]{data/f20_prof.dat};
+    \draw[reference] (axis cs:0,50) -- (axis cs:5.236,50);
+    \node[note, anchor=south west, inner sep=0pt] at (axis cs:2.6,51) {uniform};
+  \end{axis}
+}
+\Prof{A}{11}{ylabel={$h_e$ (mm)}}
+\Prof{B}{78}{}
+\node[note, anchor=south] at (38.5mm,28.8mm) {meridian A, $\varphi=7.5^\circ$};
+\node[note, anchor=south] at (105.5mm,28.8mm) {meridian B, $\varphi=22.5^\circ$};
+
+\draw[refcurve] (72mm,35.6mm) -- (77mm,35.6mm);
+\node[note, anchor=west] at (77.5mm,35.6mm) {X0 (exact-driven)};
+\draw[surrcurve] (105mm,35.6mm) -- (110mm,35.6mm);
+\node[note, anchor=west] at (110.5mm,35.6mm) {S0 (sinc-driven)};
+
+\node[paneltag, anchor=north west] at (0mm,38.2mm) {(b)};
+\node[paneltitle, anchor=north west] at (6.5mm,38.2mm) {Thickness along meridians A and B};
+
+\end{tikzpicture}
+\end{document}

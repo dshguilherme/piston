@@ -1,0 +1,30 @@
+# DRAFT citation metadata. No DOI has been minted: the doi, date-released, license and
+# repository-code fields are left out until the release exists (CFF allows them to be absent).
+cff-version: 1.2.0
+message: "If you use this package, please cite the article below and the version of the package you used."
+title: "Reproducibility package for: When is a piston good enough? Limits of radiation simplifications for shell optimization and numerical benchmarks"
+type: software
+authors:
+  - family-names: "da Silva"
+    given-names: "Guilherme Henrique"
+    affiliation: "Laboratorio de Vibracoes e Acustica (LVA), Department of Mechanical Engineering, Universidade Federal de Santa Catarina, Florianopolis, Brazil"
+  - family-names: "Lenzi"
+    given-names: "Arcanjo"
+    affiliation: "Laboratorio de Vibracoes e Acustica (LVA), Department of Mechanical Engineering, Universidade Federal de Santa Catarina, Florianopolis, Brazil"
+version: "0.1.0-draft"
+keywords:
+  - acoustic radiation
+  - shell optimization
+  - radiation matrix
+  - spherical cap
+  - boundary element method
+preferred-citation:
+  type: article
+  title: "When is a piston good enough? Limits of radiation simplifications for shell optimization and numerical benchmarks"
+  authors:
+    - family-names: "da Silva"
+      given-names: "Guilherme Henrique"
+    - family-names: "Lenzi"
+      given-names: "Arcanjo"
+  journal: "Journal of Sound and Vibration"
+  status: submitted

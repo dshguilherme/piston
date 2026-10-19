@@ -1,0 +1,182 @@
+== r0_robust_unit c30_k18 2026-10-18T01:14:44 (theta0 30, kR 18.3183), threads 2 ==
+(1) sigma=0 uniform  X: J 5.946400e-07, |dJ|/J 1.068e-15, grad rel 0.000e+00
+(1) sigma=0 uniform  S: J 5.946400e-07, |dJ|/J 0.000e+00, grad rel 0.000e+00
+(1) sigma=0 exactopt X: J 1.303138e-09, |dJ|/J 1.270e-15, grad rel 0.000e+00
+(1) sigma=0 exactopt S: J 1.977138e-09, |dJ|/J 0.000e+00, grad rel 0.000e+00
+(2) uniform  X sigma=1e-02 N=16: J_rob/J_nom-1 +1.304e-05, grad rel 5.923e-03, cos 0.99998246, gmres its 6-11
+(2) uniform  X sigma=1e-03 N=16: J_rob/J_nom-1 -1.259e-06, grad rel 6.669e-04, cos 0.99999978, gmres its 3-8
+(2) uniform  X sigma=1e-04 N=16: J_rob/J_nom-1 -1.499e-07, grad rel 6.765e-05, cos 1.00000000, gmres its 2-2
+(2) uniform  X sigma=1e-06 N=16: J_rob/J_nom-1 -1.767e-09, grad rel 6.801e-07, cos 1.00000000, gmres its 1-5
+(2) exactopt X sigma=1e-02 N=16: J_rob/J_nom-1 +9.690e-03, grad rel 1.660e-01, cos 0.98622596, gmres its 6-11
+(2) exactopt X sigma=1e-03 N=16: J_rob/J_nom-1 -1.569e-05, grad rel 1.670e-02, cos 0.99986152, gmres its 3-8
+(2) exactopt X sigma=1e-04 N=16: J_rob/J_nom-1 -1.145e-05, grad rel 1.671e-03, cos 0.99999862, gmres its 2-2
+(2) exactopt X sigma=1e-06 N=16: J_rob/J_nom-1 -1.252e-07, grad rel 1.672e-05, cos 1.00000000, gmres its 1-5
+(3) FD uniform  X mean    sigma=1% N=8 h=1e-05: J 5.941133e-07 fd -2.589004247e-08 adj -2.589066207e-08 rel 2.39e-05
+(3) FD uniform  X mean    sigma=1% N=8 h=1e-06: J 5.941133e-07 fd -2.587831905e-08 adj -2.589066207e-08 rel 4.77e-04
+(3) FD uniform  X meanstd sigma=1% N=8 h=1e-05: J 5.956275e-07 fd -2.678420930e-08 adj -2.678441230e-08 rel 7.58e-06
+(3) FD uniform  X meanstd sigma=1% N=8 h=1e-06: J 5.956275e-07 fd -2.675411035e-08 adj -2.678441230e-08 rel 1.13e-03
+(3) FD uniform  S mean    sigma=1% N=8 h=1e-05: J 5.940632e-07 fd -4.187628235e-08 adj -4.187690305e-08 rel 1.48e-05
+(3) FD uniform  S mean    sigma=1% N=8 h=1e-06: J 5.940632e-07 fd -4.186452914e-08 adj -4.187690305e-08 rel 2.95e-04
+(3) FD uniform  S meanstd sigma=1% N=8 h=1e-05: J 5.956932e-07 fd -4.246843429e-08 adj -4.246862568e-08 rel 4.51e-06
+(3) FD uniform  S meanstd sigma=1% N=8 h=1e-06: J 5.956932e-07 fd -4.243761941e-08 adj -4.246862568e-08 rel 7.30e-04
+(3) FD exactopt X mean    sigma=1% N=8 h=1e-05: J 1.322319e-09 fd -2.711809589e-11 adj -2.711992876e-11 rel 6.76e-05
+(3) FD exactopt X mean    sigma=1% N=8 h=1e-06: J 1.322319e-09 fd -2.708160374e-11 adj -2.711992876e-11 rel 1.41e-03
+(3) FD exactopt X meanstd sigma=1% N=8 h=1e-05: J 1.332469e-09 fd +5.960068636e-10 adj +5.960034539e-10 rel 5.72e-06
+(3) FD exactopt X meanstd sigma=1% N=8 h=1e-06: J 1.332469e-09 fd +5.959996834e-10 adj +5.960034539e-10 rel 6.33e-06
+(3) FD exactopt S mean    sigma=1% N=8 h=1e-05: J 1.989249e-09 fd -1.838749214e-10 adj -1.838776472e-10 rel 1.48e-05
+(3) FD exactopt S mean    sigma=1% N=8 h=1e-06: J 1.989249e-09 fd -1.838212779e-10 adj -1.838776472e-10 rel 3.07e-04
+(3) FD exactopt S meanstd sigma=1% N=8 h=1e-05: J 2.010815e-09 fd +2.624521870e-10 adj +2.624486891e-10 rel 1.33e-05
+(3) FD exactopt S meanstd sigma=1% N=8 h=1e-06: J 2.010815e-09 fd +2.624444169e-10 adj +2.624486891e-10 rel 1.63e-05
+(4) gmres vs direct uniform  X sigma=1e-02 N=8: J rel 0.00e+00, per-sample P max rel 0.00e+00, grad rel 0.00e+00, gmres its 6-8, fallbacks 16
+(4) gmres vs direct uniform  X sigma=3e-02 N=8: J rel 0.00e+00, per-sample P max rel 0.00e+00, grad rel 0.00e+00, gmres its 10-11, fallbacks 16
+(4) gmres vs direct exactopt X sigma=1e-02 N=8: J rel 0.00e+00, per-sample P max rel 0.00e+00, grad rel 8.59e-11, gmres its 6-11, fallbacks 14
+(4) gmres vs direct exactopt X sigma=3e-02 N=8: J rel 0.00e+00, per-sample P max rel 0.00e+00, grad rel 5.44e-11, gmres its 10-15, fallbacks 14
+(5) FSI dev uniform  sigma=0: r0_fsi_eval J 5.805946e-07 (P_fsi/P_vac 0.9764), gmres J rel 5.47e-16, grad rel 0.00e+00
+(previous run stopped by me after section (4): GMRES tol 1e-12 was not reachable, every solve fell back to direct; tol changed to 1e-10, FD now also with the direct solver)
+== r0_robust_unit c30_k18 2026-10-18T01:21:16 (theta0 30, kR 18.3183), threads 2 ==
+(1) sigma=0 uniform  X: J 5.946400e-07, |dJ|/J 1.068e-15, grad rel 0.000e+00
+(1) sigma=0 uniform  S: J 5.946400e-07, |dJ|/J 0.000e+00, grad rel 0.000e+00
+(1) sigma=0 exactopt X: J 1.303138e-09, |dJ|/J 1.270e-15, grad rel 0.000e+00
+(1) sigma=0 exactopt S: J 1.977138e-09, |dJ|/J 0.000e+00, grad rel 0.000e+00
+(2) uniform  X sigma=1e-02 N=16: J_rob/J_nom-1 +1.304e-05, grad rel 5.923e-03, cos 0.99998246, gmres its 6-10
+(2) uniform  X sigma=1e-03 N=16: J_rob/J_nom-1 -1.259e-06, grad rel 6.669e-04, cos 0.99999978, gmres its 3-7
+(2) uniform  X sigma=1e-04 N=16: J_rob/J_nom-1 -1.499e-07, grad rel 6.765e-05, cos 1.00000000, gmres its 2-6
+(2) uniform  X sigma=1e-06 N=16: J_rob/J_nom-1 -1.772e-09, grad rel 6.803e-07, cos 1.00000000, gmres its 1-5
+(2) exactopt X sigma=1e-02 N=16: J_rob/J_nom-1 +9.690e-03, grad rel 1.660e-01, cos 0.98622596, gmres its 6-6
+(2) exactopt X sigma=1e-03 N=16: J_rob/J_nom-1 -1.569e-05, grad rel 1.670e-02, cos 0.99986152, gmres its 3-3
+(2) exactopt X sigma=1e-04 N=16: J_rob/J_nom-1 -1.145e-05, grad rel 1.671e-03, cos 0.99999862, gmres its 2-3
+(2) exactopt X sigma=1e-06 N=16: J_rob/J_nom-1 -1.252e-07, grad rel 1.672e-05, cos 1.00000000, gmres its 1-1
+(3) FD uniform  X nominal (sigma=0) h=1e-05: J 5.946400e-07 fd -2.523090116e-08 adj -2.522651080e-08 rel 1.74e-04
+(3) FD uniform  X nominal (sigma=0) h=1e-06: J 5.946400e-07 fd -2.520694019e-08 adj -2.522651080e-08 rel 7.76e-04
+(3) FD uniform  X mean    direct sigma=1% N=8 h=1e-05: J 5.941133e-07 fd -2.589004247e-08 adj -2.589066207e-08 rel 2.39e-05
+(3) FD uniform  X mean    direct sigma=1% N=8 h=1e-06: J 5.941133e-07 fd -2.587831905e-08 adj -2.589066207e-08 rel 4.77e-04
+(3) FD uniform  X mean    gmres  sigma=1% N=8 h=1e-05: J 5.941133e-07 fd -2.589057851e-08 adj -2.589066202e-08 rel 3.23e-06
+(3) FD uniform  X meanstd direct sigma=1% N=8 h=1e-05: J 5.956275e-07 fd -2.678420930e-08 adj -2.678441230e-08 rel 7.58e-06
+(3) FD uniform  X meanstd direct sigma=1% N=8 h=1e-06: J 5.956275e-07 fd -2.675411035e-08 adj -2.678441230e-08 rel 1.13e-03
+(3) FD uniform  X meanstd gmres  sigma=1% N=8 h=1e-05: J 5.956275e-07 fd -2.678374370e-08 adj -2.678441219e-08 rel 2.50e-05
+(3) FD uniform  S mean    direct sigma=1% N=8 h=1e-05: J 5.940632e-07 fd -4.187628235e-08 adj -4.187690305e-08 rel 1.48e-05
+(3) FD uniform  S mean    direct sigma=1% N=8 h=1e-06: J 5.940632e-07 fd -4.186452914e-08 adj -4.187690305e-08 rel 2.95e-04
+(3) FD uniform  S mean    gmres  sigma=1% N=8 h=1e-05: J 5.940632e-07 fd -4.187680909e-08 adj -4.187690307e-08 rel 2.24e-06
+(3) FD uniform  S meanstd direct sigma=1% N=8 h=1e-05: J 5.956932e-07 fd -4.246843429e-08 adj -4.246862568e-08 rel 4.51e-06
+(3) FD uniform  S meanstd direct sigma=1% N=8 h=1e-06: J 5.956932e-07 fd -4.243761941e-08 adj -4.246862568e-08 rel 7.30e-04
+(3) FD uniform  S meanstd gmres  sigma=1% N=8 h=1e-05: J 5.956932e-07 fd -4.246790718e-08 adj -4.246862570e-08 rel 1.69e-05
+(3) FD exactopt X nominal (sigma=0) h=1e-05: J 1.303138e-09 fd -5.263991691e-11 adj -5.264169275e-11 rel 3.37e-05
+(3) FD exactopt X nominal (sigma=0) h=1e-06: J 1.303138e-09 fd -5.261137075e-11 adj -5.264169275e-11 rel 5.76e-04
+(3) FD exactopt X mean    direct sigma=1% N=8 h=1e-05: J 1.322319e-09 fd -2.711809589e-11 adj -2.711992873e-11 rel 6.76e-05
+(3) FD exactopt X mean    direct sigma=1% N=8 h=1e-06: J 1.322319e-09 fd -2.708160374e-11 adj -2.711992873e-11 rel 1.41e-03
+(3) FD exactopt X mean    gmres  sigma=1% N=8 h=1e-05: J 1.322319e-09 fd -2.712056845e-11 adj -2.711992895e-11 rel 2.36e-05
+(3) FD exactopt X meanstd direct sigma=1% N=8 h=1e-05: J 1.332469e-09 fd +5.960068636e-10 adj +5.960034539e-10 rel 5.72e-06
+(3) FD exactopt X meanstd direct sigma=1% N=8 h=1e-06: J 1.332469e-09 fd +5.959996834e-10 adj +5.960034539e-10 rel 6.33e-06
+(3) FD exactopt X meanstd gmres  sigma=1% N=8 h=1e-05: J 1.332469e-09 fd +5.960034999e-10 adj +5.960034549e-10 rel 7.55e-08
+(3) FD exactopt S mean    direct sigma=1% N=8 h=1e-05: J 1.989249e-09 fd -1.838749214e-10 adj -1.838776472e-10 rel 1.48e-05
+(3) FD exactopt S mean    direct sigma=1% N=8 h=1e-06: J 1.989249e-09 fd -1.838212779e-10 adj -1.838776472e-10 rel 3.07e-04
+(3) FD exactopt S mean    gmres  sigma=1% N=8 h=1e-05: J 1.989249e-09 fd -1.838786290e-10 adj -1.838776473e-10 rel 5.34e-06
+(3) FD exactopt S meanstd direct sigma=1% N=8 h=1e-05: J 2.010815e-09 fd +2.624521870e-10 adj +2.624486892e-10 rel 1.33e-05
+(3) FD exactopt S meanstd direct sigma=1% N=8 h=1e-06: J 2.010815e-09 fd +2.624444169e-10 adj +2.624486892e-10 rel 1.63e-05
+(3) FD exactopt S meanstd gmres  sigma=1% N=8 h=1e-05: J 2.010815e-09 fd +2.624461338e-10 adj +2.624486906e-10 rel 9.74e-06
+(4) gmres vs direct uniform  X sigma=1e-02 N=8: J rel 1.27e-12, per-sample P max rel 9.46e-11, grad rel 2.71e-10, gmres its 6-10, fallbacks 0
+(4) gmres vs direct uniform  X sigma=3e-02 N=8: J rel 6.36e-12, per-sample P max rel 1.05e-10, grad rel 3.98e-10, gmres its 10-13, fallbacks 0
+(4) gmres vs direct exactopt X sigma=1e-02 N=8: J rel 1.03e-11, per-sample P max rel 1.50e-10, grad rel 4.58e-10, gmres its 6-7, fallbacks 0
+(4) gmres vs direct exactopt X sigma=3e-02 N=8: J rel 8.59e-11, per-sample P max rel 3.51e-10, grad rel 1.34e-09, gmres its 8-10, fallbacks 0
+(5) FSI dev uniform  sigma=0: r0_fsi_eval J 5.805946e-07 (P_fsi/P_vac 0.9764), gmres J rel 1.56e-10, grad rel 5.19e-09
+(5) FSI dev uniform  sigma=1% N=4: gmres vs dense direct J rel 1.85e-10 grad rel 1.33e-09, gmres its 8-11, fallbacks 0
+(5) FSI dev uniform  sigma=1% N=4 FD h=1e-6: fd -2.136054749e-08 adj -2.137018647e-08 rel 4.51e-04
+(5) FSI dev exactopt sigma=0: r0_fsi_eval J 1.297194e-09 (P_fsi/P_vac 0.9954), gmres J rel 4.25e-10, grad rel 1.75e-09
+(5) FSI dev exactopt sigma=1% N=4: gmres vs dense direct J rel 1.17e-10 grad rel 5.61e-09, gmres its 6-7, fallbacks 0
+(5) FSI dev exactopt sigma=1% N=4 FD h=1e-6: fd +4.767148797e-10 adj +4.766771807e-10 rel 7.91e-05
+(6) cost uniform  gmres  N= 1: J only 1.070 s, gradient after cached J 0.480 s, J+grad cold 1.420 s, gmres its mean 7.0, MATLAB memory 1966 MB
+(6) cost uniform  gmres  N= 8: J only 4.431 s, gradient after cached J 3.724 s, J+grad cold 8.316 s, gmres its mean 7.2, MATLAB memory 1966 MB
+(6) cost uniform  gmres  N=16: J only 7.766 s, gradient after cached J 8.152 s, J+grad cold 15.111 s, gmres its mean 7.6, MATLAB memory 1967 MB
+(6) cost uniform  gmres  N=32: J only 8.417 s, gradient after cached J 6.189 s, J+grad cold 12.657 s, gmres its mean 7.7, MATLAB memory 1968 MB
+(6) cost uniform  direct N= 1: J only 0.267 s, gradient after cached J 0.340 s, J+grad cold 0.555 s, gmres its mean 0.0, MATLAB memory 1946 MB
+(6) cost uniform  direct N= 8: J only 2.076 s, gradient after cached J 2.177 s, J+grad cold 3.678 s, gmres its mean 0.0, MATLAB memory 1946 MB
+(6) cost exactopt gmres  N= 1: J only 0.256 s, gradient after cached J 0.178 s, J+grad cold 0.474 s, gmres its mean 6.0, MATLAB memory 1967 MB
+(6) cost exactopt gmres  N= 8: J only 1.239 s, gradient after cached J 1.290 s, J+grad cold 2.512 s, gmres its mean 6.0, MATLAB memory 1967 MB
+(6) cost exactopt gmres  N=16: J only 2.144 s, gradient after cached J 3.249 s, J+grad cold 4.971 s, gmres its mean 6.0, MATLAB memory 1967 MB
+(6) cost exactopt gmres  N=32: J only 4.307 s, gradient after cached J 5.942 s, J+grad cold 11.497 s, gmres its mean 6.0, MATLAB memory 1968 MB
+(6) cost exactopt direct N= 1: J only 0.236 s, gradient after cached J 0.364 s, J+grad cold 0.487 s, gmres its mean 0.0, MATLAB memory 1946 MB
+(6) cost exactopt direct N= 8: J only 1.356 s, gradient after cached J 1.675 s, J+grad cold 3.122 s, gmres its mean 0.0, MATLAB memory 1946 MB
+R0_ROBUST_UNIT_c30_k18_DONE
+(run 3 below: r0_robust_eval rewritten for speed: own left-preconditioned GMRES, free-dof assembly, batched factor products, cached sample matrices; FD steps 1e-3..1e-5)
+== r0_robust_unit c30_k18 2026-10-18T01:40:01 (theta0 30, kR 18.3183), threads 2 ==
+(1) sigma=0 uniform  X: J 5.946400e-07, |dJ|/J 7.122e-16, grad rel 9.492e-10
+(1) sigma=0 uniform  S: J 5.946400e-07, |dJ|/J 1.603e-15, grad rel 6.829e-10
+(1) sigma=0 exactopt X: J 1.303138e-09, |dJ|/J 1.031e-14, grad rel 7.690e-10
+(1) sigma=0 exactopt S: J 1.977138e-09, |dJ|/J 5.502e-14, grad rel 4.768e-10
+(2) uniform  X sigma=1e-02 N=16: J_rob/J_nom-1 +1.304e-05, grad rel 5.923e-03, cos 0.99998246, gmres its 6-6
+(2) uniform  X sigma=1e-03 N=16: J_rob/J_nom-1 -1.259e-06, grad rel 6.669e-04, cos 0.99999978, gmres its 3-3
+(2) uniform  X sigma=1e-04 N=16: J_rob/J_nom-1 -1.500e-07, grad rel 6.765e-05, cos 1.00000000, gmres its 2-2
+(2) uniform  X sigma=1e-06 N=16: J_rob/J_nom-1 -1.762e-09, grad rel 6.802e-07, cos 1.00000000, gmres its 1-1
+(2) exactopt X sigma=1e-02 N=16: J_rob/J_nom-1 +9.690e-03, grad rel 1.660e-01, cos 0.98622596, gmres its 6-6
+(2) exactopt X sigma=1e-03 N=16: J_rob/J_nom-1 -1.569e-05, grad rel 1.670e-02, cos 0.99986152, gmres its 3-3
+(2) exactopt X sigma=1e-04 N=16: J_rob/J_nom-1 -1.145e-05, grad rel 1.671e-03, cos 0.99999862, gmres its 2-2
+(2) exactopt X sigma=1e-06 N=16: J_rob/J_nom-1 -1.252e-07, grad rel 1.672e-05, cos 1.00000000, gmres its 1-1
+(3) FD uniform  X nominal (sigma=0) h=1e-03: J 5.946400e-07 fd -2.522619507e-08 adj -2.522651082e-08 rel 1.25e-05
+(3) FD uniform  X nominal (sigma=0) h=1e-04: J 5.946400e-07 fd -2.522685669e-08 adj -2.522651082e-08 rel 1.37e-05
+(3) FD uniform  X nominal (sigma=0) h=1e-05: J 5.946400e-07 fd -2.523090120e-08 adj -2.522651082e-08 rel 1.74e-04
+(3) FD uniform  X mean    direct sigma=1% N=8 h=1e-03: J 5.941133e-07 fd -2.589034839e-08 adj -2.589066214e-08 rel 1.21e-05
+(3) FD uniform  X mean    direct sigma=1% N=8 h=1e-04: J 5.941133e-07 fd -2.589070636e-08 adj -2.589066214e-08 rel 1.71e-06
+(3) FD uniform  X mean    direct sigma=1% N=8 h=1e-05: J 5.941133e-07 fd -2.589004243e-08 adj -2.589066214e-08 rel 2.39e-05
+(3) FD uniform  X mean    gmres  sigma=1% N=8 h=1e-04: J 5.941133e-07 fd -2.589058883e-08 adj -2.589066212e-08 rel 2.83e-06
+(3) FD uniform  X mean    gmres  sigma=1% N=8 h=1e-05: J 5.941133e-07 fd -2.588960535e-08 adj -2.589066212e-08 rel 4.08e-05
+(3) FD uniform  X meanstd direct sigma=1% N=8 h=1e-03: J 5.956275e-07 fd -2.678409366e-08 adj -2.678441238e-08 rel 1.19e-05
+(3) FD uniform  X meanstd direct sigma=1% N=8 h=1e-04: J 5.956275e-07 fd -2.678454439e-08 adj -2.678441238e-08 rel 4.93e-06
+(3) FD uniform  X meanstd direct sigma=1% N=8 h=1e-05: J 5.956275e-07 fd -2.678420926e-08 adj -2.678441238e-08 rel 7.58e-06
+(3) FD uniform  X meanstd gmres  sigma=1% N=8 h=1e-04: J 5.956275e-07 fd -2.678420075e-08 adj -2.678441231e-08 rel 7.90e-06
+(3) FD uniform  X meanstd gmres  sigma=1% N=8 h=1e-05: J 5.956275e-07 fd -2.678352203e-08 adj -2.678441231e-08 rel 3.32e-05
+(3) FD uniform  S mean    direct sigma=1% N=8 h=1e-03: J 5.940632e-07 fd -4.187653651e-08 adj -4.187690316e-08 rel 8.76e-06
+(3) FD uniform  S mean    direct sigma=1% N=8 h=1e-04: J 5.940632e-07 fd -4.187694689e-08 adj -4.187690316e-08 rel 1.04e-06
+(3) FD uniform  S mean    direct sigma=1% N=8 h=1e-05: J 5.940632e-07 fd -4.187628238e-08 adj -4.187690316e-08 rel 1.48e-05
+(3) FD uniform  S mean    gmres  sigma=1% N=8 h=1e-04: J 5.940632e-07 fd -4.187682944e-08 adj -4.187690318e-08 rel 1.76e-06
+(3) FD uniform  S mean    gmres  sigma=1% N=8 h=1e-05: J 5.940632e-07 fd -4.187584468e-08 adj -4.187690318e-08 rel 2.53e-05
+(3) FD uniform  S meanstd direct sigma=1% N=8 h=1e-03: J 5.956932e-07 fd -4.246825011e-08 adj -4.246862586e-08 rel 8.85e-06
+(3) FD uniform  S meanstd direct sigma=1% N=8 h=1e-04: J 5.956932e-07 fd -4.246876309e-08 adj -4.246862586e-08 rel 3.23e-06
+(3) FD uniform  S meanstd direct sigma=1% N=8 h=1e-05: J 5.956932e-07 fd -4.246843439e-08 adj -4.246862586e-08 rel 4.51e-06
+(3) FD uniform  S meanstd gmres  sigma=1% N=8 h=1e-04: J 5.956932e-07 fd -4.246840766e-08 adj -4.246862583e-08 rel 5.14e-06
+(3) FD uniform  S meanstd gmres  sigma=1% N=8 h=1e-05: J 5.956932e-07 fd -4.246764723e-08 adj -4.246862583e-08 rel 2.30e-05
+(3) FD exactopt X nominal (sigma=0) h=1e-03: J 1.303138e-09 fd -5.260996403e-11 adj -5.264169314e-11 rel 6.03e-04
+(3) FD exactopt X nominal (sigma=0) h=1e-04: J 1.303138e-09 fd -5.264240819e-11 adj -5.264169314e-11 rel 1.36e-05
+(3) FD exactopt X nominal (sigma=0) h=1e-05: J 1.303138e-09 fd -5.263991833e-11 adj -5.264169314e-11 rel 3.37e-05
+(3) FD exactopt X mean    direct sigma=1% N=8 h=1e-03: J 1.322319e-09 fd -2.708696692e-11 adj -2.711992980e-11 rel 1.22e-03
+(3) FD exactopt X mean    direct sigma=1% N=8 h=1e-04: J 1.322319e-09 fd -2.711977770e-11 adj -2.711992980e-11 rel 5.61e-06
+(3) FD exactopt X mean    direct sigma=1% N=8 h=1e-05: J 1.322319e-09 fd -2.711809582e-11 adj -2.711992980e-11 rel 6.76e-05
+(3) FD exactopt X mean    gmres  sigma=1% N=8 h=1e-04: J 1.322319e-09 fd -2.712002467e-11 adj -2.711992986e-11 rel 3.50e-06
+(3) FD exactopt X mean    gmres  sigma=1% N=8 h=1e-05: J 1.322319e-09 fd -2.712110534e-11 adj -2.711992986e-11 rel 4.33e-05
+(3) FD exactopt X meanstd direct sigma=1% N=8 h=1e-03: J 1.332469e-09 fd +5.947420778e-10 adj +5.960034527e-10 rel 2.12e-03
+(3) FD exactopt X meanstd direct sigma=1% N=8 h=1e-04: J 1.332469e-09 fd +5.959903780e-10 adj +5.960034527e-10 rel 2.19e-05
+(3) FD exactopt X meanstd direct sigma=1% N=8 h=1e-05: J 1.332469e-09 fd +5.960068629e-10 adj +5.960034527e-10 rel 5.72e-06
+(3) FD exactopt X meanstd gmres  sigma=1% N=8 h=1e-04: J 1.332469e-09 fd +5.959900413e-10 adj +5.960034518e-10 rel 2.25e-05
+(3) FD exactopt X meanstd gmres  sigma=1% N=8 h=1e-05: J 1.332469e-09 fd +5.960020740e-10 adj +5.960034518e-10 rel 2.31e-06
+(3) FD exactopt S mean    direct sigma=1% N=8 h=1e-03: J 1.989249e-09 fd -1.838450397e-10 adj -1.838776485e-10 rel 1.77e-04
+(3) FD exactopt S mean    direct sigma=1% N=8 h=1e-04: J 1.989249e-09 fd -1.838775911e-10 adj -1.838776485e-10 rel 3.12e-07
+(3) FD exactopt S mean    direct sigma=1% N=8 h=1e-05: J 1.989249e-09 fd -1.838749214e-10 adj -1.838776485e-10 rel 1.48e-05
+(3) FD exactopt S mean    gmres  sigma=1% N=8 h=1e-04: J 1.989249e-09 fd -1.838779541e-10 adj -1.838776486e-10 rel 1.66e-06
+(3) FD exactopt S mean    gmres  sigma=1% N=8 h=1e-05: J 1.989249e-09 fd -1.838794880e-10 adj -1.838776486e-10 rel 1.00e-05
+(3) FD exactopt S meanstd direct sigma=1% N=8 h=1e-03: J 2.010815e-09 fd +2.623537162e-10 adj +2.624486879e-10 rel 3.62e-04
+(3) FD exactopt S meanstd direct sigma=1% N=8 h=1e-04: J 2.010815e-09 fd +2.624469144e-10 adj +2.624486879e-10 rel 6.76e-06
+(3) FD exactopt S meanstd direct sigma=1% N=8 h=1e-05: J 2.010815e-09 fd +2.624521874e-10 adj +2.624486879e-10 rel 1.33e-05
+(3) FD exactopt S meanstd gmres  sigma=1% N=8 h=1e-04: J 2.010815e-09 fd +2.624466463e-10 adj +2.624486880e-10 rel 7.78e-06
+(3) FD exactopt S meanstd gmres  sigma=1% N=8 h=1e-05: J 2.010815e-09 fd +2.624440990e-10 adj +2.624486880e-10 rel 1.75e-05
+(4) gmres vs direct uniform  X sigma=1e-02 N=8: J rel 1.64e-11, per-sample P max rel 1.27e-10, grad rel 2.26e-10, gmres its 6-6, fallbacks 0
+(4) gmres vs direct uniform  X sigma=3e-02 N=8: J rel 1.39e-11, per-sample P max rel 7.52e-11, grad rel 3.02e-10, gmres its 9-9, fallbacks 0
+(4) gmres vs direct exactopt X sigma=1e-02 N=8: J rel 3.12e-11, per-sample P max rel 1.22e-10, grad rel 4.70e-10, gmres its 6-6, fallbacks 0
+(4) gmres vs direct exactopt X sigma=3e-02 N=8: J rel 5.74e-11, per-sample P max rel 3.43e-10, grad rel 1.63e-09, gmres its 8-9, fallbacks 0
+(5) FSI dev uniform  sigma=0: r0_fsi_eval J 5.805946e-07 (P_fsi/P_vac 0.9764), gmres J rel 9.69e-11, grad rel 5.50e-09
+(5) FSI dev uniform  sigma=1% N=4: gmres vs dense direct J rel 1.74e-10 grad rel 1.26e-09, gmres its 7-7, fallbacks 0
+(5) FSI dev uniform  sigma=1% N=4 FD h=1e-6: fd -2.137834603e-08 adj -2.137018648e-08 rel 3.82e-04
+(5) FSI dev exactopt sigma=0: r0_fsi_eval J 1.297194e-09 (P_fsi/P_vac 0.9954), gmres J rel 5.17e-10, grad rel 2.42e-08
+(5) FSI dev exactopt sigma=1% N=4: gmres vs dense direct J rel 1.44e-10 grad rel 5.61e-09, gmres its 6-7, fallbacks 0
+(5) FSI dev exactopt sigma=1% N=4 FD h=1e-6: fd +4.766961146e-10 adj +4.766771797e-10 rel 3.97e-05
+(6) cost uniform  gmres  N= 1: J only 0.314 s, gradient after cached J 0.090 s, J+grad cold 0.369 s, gmres its mean 6.0, MATLAB memory 1986 MB
+(6) cost uniform  gmres  N= 8: J only 0.833 s, gradient after cached J 0.475 s, J+grad cold 1.484 s, gmres its mean 6.0, MATLAB memory 2097 MB
+(6) cost uniform  gmres  N=16: J only 1.593 s, gradient after cached J 1.301 s, J+grad cold 2.410 s, gmres its mean 6.0, MATLAB memory 2223 MB
+(6) cost uniform  gmres  N=32: J only 2.903 s, gradient after cached J 1.920 s, J+grad cold 25.187 s, gmres its mean 6.0, MATLAB memory 2488 MB
+(6) cost uniform  direct N= 1: J only 1.807 s, gradient after cached J 0.165 s, J+grad cold 0.366 s, gmres its mean 0.0, MATLAB memory 1975 MB
+(6) cost uniform  direct N= 8: J only 1.967 s, gradient after cached J 1.120 s, J+grad cold 3.932 s, gmres its mean 0.0, MATLAB memory 2086 MB
+(6) cost exactopt gmres  N= 1: J only 1.618 s, gradient after cached J 0.098 s, J+grad cold 0.615 s, gmres its mean 6.0, MATLAB memory 1996 MB
+(6) cost exactopt gmres  N= 8: J only 1.609 s, gradient after cached J 0.478 s, J+grad cold 1.351 s, gmres its mean 6.0, MATLAB memory 2107 MB
+(6) cost exactopt gmres  N=16: J only 2.464 s, gradient after cached J 1.126 s, J+grad cold 2.563 s, gmres its mean 6.0, MATLAB memory 2233 MB
+(6) cost exactopt gmres  N=32: J only 2.676 s, gradient after cached J 1.997 s, J+grad cold 4.763 s, gmres its mean 6.0, MATLAB memory 2488 MB
+(6) cost exactopt direct N= 1: J only 0.230 s, gradient after cached J 0.142 s, J+grad cold 0.343 s, gmres its mean 0.0, MATLAB memory 1975 MB
+(6) cost exactopt direct N= 8: J only 1.413 s, gradient after cached J 1.291 s, J+grad cold 2.436 s, gmres its mean 0.0, MATLAB memory 2086 MB
+R0_ROBUST_UNIT_c30_k18_DONE

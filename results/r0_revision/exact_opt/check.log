@@ -1,0 +1,17 @@
+﻿
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+uniform       J_sinc(consistent q4/32x64)=3.779178e-07  J_exact=5.946400e-07  ratio 0.6355
+dyncomp       J_sinc(consistent q4/32x64)=1.376857e-08  J_exact=2.617387e-08  ratio 0.5260
+inputpower    J_sinc(consistent q4/32x64)=1.496079e-08  J_exact=2.773982e-08  ratio 0.5393
+quadvel-rad   J_sinc(consistent q4/32x64)=7.185042e-09  J_exact=1.174758e-08  ratio 0.6116
+quadvel-I     J_sinc(consistent q4/32x64)=9.645324e-09  J_exact=1.718280e-08  ratio 0.5613
+quadvel-ones  J_sinc(consistent q4/32x64)=2.879960e-08  J_exact=5.834770e-08  ratio 0.4936
+FD check J=5.9464e-07 h=0.0001 fd=-1.058744039e-07 adj=-1.058745023e-07 rel=9.30e-07
+FD check J=5.9464e-07 h=1e-05 fd=-1.058745399e-07 adj=-1.058745023e-07 rel=3.55e-07
+FD check J=5.9464e-07 h=1e-06 fd=-1.058909952e-07 adj=-1.058745023e-07 rel=1.56e-04
+FD check J=3.7792e-07 h=0.0001 fd=-7.088707001e-08 adj=-7.088713345e-08 rel=8.95e-07
+FD check J=3.7792e-07 h=1e-05 fd=-7.088716089e-08 adj=-7.088713345e-08 rel=3.87e-07
+FD check J=3.7792e-07 h=1e-06 fd=-7.089763098e-08 adj=-7.088713345e-08 rel=1.48e-04
+R0_OPT_CAP_REOPT_check_DONE

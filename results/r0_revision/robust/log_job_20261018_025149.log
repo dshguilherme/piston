@@ -1,0 +1,7 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== new c30_k18_XU_N8_s1_mean (theta0 30, kR 18.3183): start uniform, N 8, sigma 0.01, mode mean, cstart 1.001568e+00, target 2 ==
+  [X c30_k18 N8 s0.01] it     1: Jrob=5.93709e-07 (std 1.19e-09) f0=+100.0000  nominal exact   +0.000 dB  sinc   +0.000 dB  robust   -0.007 dB  vol=0.5000 chg=1.48e-02 inner=0 1.7s
+R0_ROBUST_c30_k18_XU_N8_s1_mean_DONE it=2 status=budget walltime=4s warn=0

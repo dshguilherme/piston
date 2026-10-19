@@ -1,0 +1,7 @@
+cell,run,rung,start,niter,stop,numeval,walltime_s,final_vol,Jbest_own_normalised,tail100_dB,tail50_dB,source
+c90_k7,XU,X,U,600,nmax,3068,705.7,0.496645,6.510600e-11,0.14295,0.06281,pilot
+c90_k7,SU,S,U,600,nmax,2816,637.0,0.500000,5.169991e-11,0.55703,0.25745,pilot
+c90_k7,EU,E,U,600,nmax,443,288.6,0.499999,1.910294e-08,0.00001,0.00000,pilot
+c90_k7,SX,S,X,600,nmax,2928,543.3,0.500000,3.025211e-08,0.68612,0.35398,pilot
+c90_k7,EX,E,X,494,converged,245,170.8,0.500000,2.687445e-08,0.00000,0.00000,pilot
+c90_k7,XS,X,S,600,nmax,3094,487.1,0.500000,1.588542e-07,0.27221,0.11516,pilot

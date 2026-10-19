@@ -1,0 +1,119 @@
+﻿% Three benchmark-card blueprints (B1 open cap family, B2 closed sphere, B3 shallow cap to disc).
+% Drawn for the 137 mm width; include at natural size. Each card is 43 mm wide.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\begin{document}
+\begin{tikzpicture}
+% =================================================================== B1
+\begin{scope}[shift={(0,0)}]
+  \draw[witness] (0,0) rectangle (4.26,6.2);
+  \node[paneltag, anchor=north west] at (0.15,6.07) {B1};
+  \node[paneltitle, anchor=north west, text width=3.4cm, align=left] at (0.65,6.07) {Open spherical cap family};
+  \begin{scope}[shift={(1.95,3.5)}]
+    \def\R{1.1}
+    \def\th{30}
+    % sphere (construction), axis, radius to rim
+    \draw[reference] (0,0) circle[radius=\R];
+    \draw[reference, dash pattern=on 5pt off 1.5pt on 1pt off 1.5pt] (0,-\R-0.35) -- (0,\R+0.4);
+    \draw[witness] (0,0) -- ({90-\th}:\R);
+    % the cap
+    \draw[structure] ({90-\th}:\R) arc[start angle={90-\th}, end angle={90+\th}, radius=\R];
+    \node[point] at (0,0) {};
+    \node[lab, anchor=north east] at (-0.04,-0.02) {$O$};
+    % half-angle and radius
+    \draw[witness, ->] (90:0.5) arc[start angle=90, end angle={90-\th}, radius=0.5];
+    \node[lab] at (72:0.88) {$\theta_0$};
+    \node[lab, anchor=west] at ($(0,0)!0.6!({90-\th}:\R)+(0.05,-0.02)$) {$R$};
+    % tick marks for the other openings (left side of the circle)
+    \foreach \t in {15,30,60,90,120,150} {
+      \draw[witness] ({90+\t}:{\R-0.07}) -- ({90+\t}:{\R+0.09});
+    }
+    \node[note, anchor=south east] at ({90+30}:{\R+0.12}) {$30^\circ$};
+    \node[note, anchor=east] at ({90+90}:{\R+0.12}) {$90^\circ$};
+    \node[note, anchor=north east] at ({90+150}:{\R+0.12}) {$150^\circ$};
+    % outward normal on the outer face
+    \draw[normal] (80:{\R+0.06}) -- (80:{\R+0.50});
+    \node[lab, anchor=west] at (80:{\R+0.45}) {$\bm n$};
+    % free edge
+    \draw[leader] ({90-\th}:{\R+0.08}) -- (1.28,1.22);
+    \node[note, anchor=west] at (1.30,1.22) {free\\edge};
+  \end{scope}
+  \node[note, anchor=south west, text width=4.0cm] at (0.15,0.12)
+    {exact two-sided reference\\(dual series)\\$kR=0.1$--$40$;\\design point $kR=18.32$\\to scale for $R$};
+\end{scope}
+
+% =================================================================== B2
+\begin{scope}[shift={(4.66,0)}]
+  \draw[witness] (0,0) rectangle (4.26,6.2);
+  \node[paneltag, anchor=north west] at (0.15,6.07) {B2};
+  \node[paneltitle, anchor=north west, text width=3.4cm, align=left] at (0.65,6.07) {Closed sphere, harmonic trace};
+  \begin{scope}[shift={(1.95,3.5)}]
+    \def\R{1.1}
+    \draw[reference, dash pattern=on 5pt off 1.5pt on 1pt off 1.5pt] (0,-\R-0.35) -- (0,\R+0.4);
+    \draw[structure] (0,0) circle[radius=\R];
+    \node[point] at (0,0) {};
+    \node[lab, anchor=north west] at (0.02,-0.02) {$O$};
+    \draw[witness] (0,0) -- (205:\R);
+    \node[lab, anchor=south] at (-0.5,-0.2) {$R$};
+    \node[lab, anchor=west] at (0.2,0.35) {$Y_{30}$};
+    % nodal latitudes (theta = 39.2, 90, 140.8 deg from the north pole), both sides
+    \foreach \t in {39.2,90,140.8} {
+      \draw[witness] ({90-\t}:{\R-0.07}) -- ({90-\t}:{\R+0.09});
+      \draw[witness] ({90+\t}:{\R-0.07}) -- ({90+\t}:{\R+0.09});
+    }
+    \node[note, anchor=south east] at ({90+39.2}:{\R+0.12}) {$39.2^\circ$};
+    \node[note, anchor=east] at ({90+90}:{\R+0.12}) {$90^\circ$};
+    \node[note, anchor=north east] at ({90+140.8}:{\R+0.12}) {$140.8^\circ$};
+    % sign of the trace in the four bands
+    \node[lab] at (70.4:{\R+0.35}) {$+$};
+    \node[lab] at (25.4:{\R+0.35}) {$-$};
+    \node[lab] at (-25.4:{\R+0.35}) {$+$};
+    \node[lab] at (-70.4:{\R+0.35}) {$-$};
+    % outward normal
+    \draw[normal] (112:{\R+0.06}) -- (112:{\R+0.50});
+    \node[lab, anchor=south] at (112:{\R+0.50}) {$\bm n$};
+  \end{scope}
+  \node[note, anchor=south west, text width=4.0cm] at (0.15,0.12)
+    {analytic exterior and sinc powers\\interior resonances at $j_\ell(kR)=0$\\not to scale};
+\end{scope}
+
+% =================================================================== B3
+\begin{scope}[shift={(9.32,0)}]
+  \draw[witness] (0,0) rectangle (4.26,6.2);
+  \node[paneltag, anchor=north west] at (0.15,6.07) {B3};
+  \node[paneltitle, anchor=north west, text width=3.4cm, align=left] at (0.65,6.07) {Shallow cap to flat disc};
+  \begin{scope}[shift={(1.35,4.55)}]
+    \def\a{1.1}
+    % axis of symmetry, common apex
+    \draw[reference, dash pattern=on 5pt off 1.5pt on 1pt off 1.5pt] (0,0.35) -- (0,-1.40);
+    % nested caps with the same rim radius a (rim heights exaggerated)
+    \foreach \h in {0.8,0.4,0.2} {
+      \pgfmathsetmacro{\r}{(\a*\a+\h*\h)/(2*\h)}
+      \pgfmathsetmacro{\ph}{asin(\a/\r)}
+      \draw[structure] (0,-\r) ++({90-\ph}:\r) arc[start angle={90-\ph}, end angle={90+\ph}, radius=\r];
+    }
+    % flat disc
+    \draw[structure] (-\a,0) -- (\a,0);
+    % rim end leaders and labels
+    \draw[leader] (\a+0.07,0)    -- (1.40,0);
+    \draw[leader] (\a+0.07,-0.2) -- (1.40,-0.35);
+    \draw[leader] (\a+0.07,-0.4) -- (1.40,-0.70);
+    \draw[leader] (\a+0.07,-0.8) -- (1.40,-1.05);
+    \node[note, anchor=west] at (1.42,0)     {disc};
+    \node[note, anchor=west] at (1.42,-0.35) {$a/R=0.1$};
+    \node[note, anchor=west] at (1.42,-0.70) {$a/R=0.2$};
+    \node[note, anchor=west] at (1.42,-1.05) {$a/R=0.4$};
+    % rim radius a in the bottom gutter
+    \draw[witness] (\a,-0.92) -- (\a,-1.72);
+    \draw[dimension] (0,-1.60) -- (\a,-1.60) node[lab, midway, below] {$a$};
+  \end{scope}
+  \node[note, anchor=south west, text width=4.0cm] at (0.15,0.12)
+    {independent flat-disc reference\\agreement $3\times10^{-5}$--$5.4\times10^{-4}$\\not to scale};
+\end{scope}
+\end{tikzpicture}
+\end{document}
+
+
+
+

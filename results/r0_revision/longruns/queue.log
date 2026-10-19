@@ -1,0 +1,151 @@
+﻿2026-10-17T19:57:42 runner start pid 21700
+2026-10-17T19:57:42 start A c30_k3 XU 1800 launcher pid 5416 log log_A_c30_k3_XU_1800.log
+2026-10-17T19:58:02   A c30_k3 XU 1800 MATLAB child pid(s) 20984
+2026-10-17T20:42:16 end A c30_k3 XU 1800 exit  done-marker True
+2026-10-17T20:42:16 another MATLAB is running (pids 1360,23316); waiting 60 s
+2026-10-17T20:43:16 another MATLAB is running (pids 1360,23316); waiting 60 s
+2026-10-17T20:44:16 start A c30_k3 XS 1800 launcher pid 29444 log log_A_c30_k3_XS_1800.log
+2026-10-17T20:44:37   A c30_k3 XS 1800 MATLAB child pid(s) 32532
+2026-10-17T21:27:16 end A c30_k3 XS 1800 exit  done-marker True
+2026-10-17T21:27:17 another MATLAB is running (pids 7524,26948); waiting 60 s
+2026-10-17T21:27:54 runner pid 21700 stopped by me (was waiting on a foreign MATLAB, r0_fsi_reopt pids 26948/7524); runner now waits only for r0_long_ jobs
+2026-10-17T21:27:56 runner start pid 28904
+2026-10-17T21:27:57 start A c30_k3 SU 1800 launcher pid 30524 log log_A_c30_k3_SU_1800.log
+2026-10-17T21:28:17   A c30_k3 SU 1800 MATLAB child pid(s) 28292
+2026-10-17T22:07:14 end A c30_k3 SU 1800 exit  done-marker True
+2026-10-17T22:07:15 start B c30_k3 P 1200 launcher pid 7836 log log_B_c30_k3_P_1200.log
+2026-10-17T22:07:56   B c30_k3 P 1200 MATLAB child pid(s) 4464
+2026-10-17T22:39:05 end B c30_k3 P 1200 exit  done-marker False
+2026-10-17T22:39:05 B c30_k3 P 1200 FAILED; see log_B_c30_k3_P_1200.err
+2026-10-17T22:39:06 start B c30_k3 S2 1200 launcher pid 14976 log log_B_c30_k3_S2_1200.log
+2026-10-17T22:39:26   B c30_k3 S2 1200 MATLAB child pid(s) 23276
+2026-10-17T23:00:04 runner pid 28904 stopped by me to add automatic retry of failed jobs (B c30_k3 P failed with out-of-memory at it ~1030; checkpoint at 900); job B c30_k3 S2 keeps running
+2026-10-17T23:00:05 runner start pid 33572
+2026-10-17T23:00:05 retrying B c30_k3 P 1200 (failed attempts so far 1) after 120 s
+2026-10-17T23:02:06 an Experiment-8 MATLAB is still running (pids 14976,23276); waiting 60 s
+2026-10-17T23:03:07 retrying B c30_k3 P 1200 (failed attempts so far 1) after 120 s
+2026-10-17T23:05:07 an Experiment-8 MATLAB is still running (pids 14976,23276); waiting 60 s
+2026-10-17T23:06:07 retrying B c30_k3 P 1200 (failed attempts so far 1) after 120 s
+2026-10-17T23:08:08 an Experiment-8 MATLAB is still running (pids 14976,23276); waiting 60 s
+2026-10-17T23:09:11 retrying B c30_k3 P 1200 (failed attempts so far 1) after 120 s
+2026-10-17T23:11:11 start B c30_k3 P 1200 launcher pid 29652 log log_B_c30_k3_P_1200_r1.log
+2026-10-17T23:11:31   B c30_k3 P 1200 MATLAB child pid(s) 28560
+2026-10-17T23:19:46 end B c30_k3 P 1200 exit  done-marker True
+2026-10-17T23:19:47 start B c30_k3 S2 1200 launcher pid 8092 log log_B_c30_k3_S2_1200_r1.log
+2026-10-17T23:20:07   B c30_k3 S2 1200 MATLAB child pid(s) 19612
+2026-10-17T23:21:06 end B c30_k3 S2 1200 exit  done-marker True
+2026-10-17T23:21:06 start B c30_k3 S5 1200 launcher pid 24608 log log_B_c30_k3_S5_1200.log
+2026-10-17T23:21:26   B c30_k3 S5 1200 MATLAB child pid(s) 31284
+2026-10-17T23:48:19 end B c30_k3 S5 1200 exit  done-marker True
+2026-10-17T23:48:19 start B c30_k3 S1 1200 launcher pid 26424 log log_B_c30_k3_S1_1200.log
+2026-10-17T23:48:39   B c30_k3 S1 1200 MATLAB child pid(s) 13156
+2026-10-18T00:08:54 end B c30_k3 S1 1200 exit  done-marker True
+2026-10-18T00:08:55 start B c30_k3 S3 1200 launcher pid 36572 log log_B_c30_k3_S3_1200.log
+2026-10-18T00:09:15   B c30_k3 S3 1200 MATLAB child pid(s) 21140
+2026-10-18T00:44:12 end B c30_k3 S3 1200 exit  done-marker True
+2026-10-18T00:44:12 start B c30_k3 S4 1200 launcher pid 12952 log log_B_c30_k3_S4_1200.log
+2026-10-18T00:44:32   B c30_k3 S4 1200 MATLAB child pid(s) 36580
+2026-10-18T01:02:10 end B c30_k3 S4 1200 exit  done-marker True
+2026-10-18T01:02:11 start R c30_k3 launcher pid 19388 log log_R_c30_k3.log
+2026-10-18T01:02:31   R c30_k3 MATLAB child pid(s) 12984
+2026-10-18T01:02:51 end R c30_k3 exit  done-marker True
+2026-10-18T01:02:52 start A c90_k1p5 XU 1800 launcher pid 26324 log log_A_c90_k1p5_XU_1800.log
+2026-10-18T01:03:12   A c90_k1p5 XU 1800 MATLAB child pid(s) 2928
+2026-10-18T01:12:04 end A c90_k1p5 XU 1800 exit  done-marker True
+2026-10-18T01:12:04 start A c90_k1p5 XS 1800 launcher pid 27540 log log_A_c90_k1p5_XS_1800.log
+2026-10-18T01:12:25   A c90_k1p5 XS 1800 MATLAB child pid(s) 25392
+2026-10-18T02:00:42 end A c90_k1p5 XS 1800 exit  done-marker True
+2026-10-18T02:00:42 start A c90_k1p5 SU 1800 launcher pid 22152 log log_A_c90_k1p5_SU_1800.log
+2026-10-18T02:01:03   A c90_k1p5 SU 1800 MATLAB child pid(s) 20564
+2026-10-18T02:40:21 end A c90_k1p5 SU 1800 exit  done-marker True
+2026-10-18T02:40:22 start R c90_k1p5 launcher pid 22872 log log_R_c90_k1p5.log
+2026-10-18T02:40:42   R c90_k1p5 MATLAB child pid(s) 4184
+2026-10-18T02:41:36 end R c90_k1p5 exit  done-marker True
+2026-10-18T02:41:36 start A c120_k1p5 XU 1800 launcher pid 20244 log log_A_c120_k1p5_XU_1800.log
+2026-10-18T02:41:56   A c120_k1p5 XU 1800 MATLAB child pid(s) 28372
+2026-10-18T03:05:37 end A c120_k1p5 XU 1800 exit  done-marker True
+2026-10-18T03:05:37 start A c120_k1p5 XS 1800 launcher pid 34324 log log_A_c120_k1p5_XS_1800.log
+2026-10-18T03:05:58   A c120_k1p5 XS 1800 MATLAB child pid(s) 33960
+2026-10-18T03:26:22 end A c120_k1p5 XS 1800 exit  done-marker True
+2026-10-18T03:26:22 start A c120_k1p5 SU 1800 launcher pid 23580 log log_A_c120_k1p5_SU_1800.log
+2026-10-18T03:26:43   A c120_k1p5 SU 1800 MATLAB child pid(s) 14772
+2026-10-18T03:43:46 end A c120_k1p5 SU 1800 exit  done-marker True
+2026-10-18T03:43:46 start R c120_k1p5 launcher pid 36544 log log_R_c120_k1p5.log
+2026-10-18T03:44:06 end R c120_k1p5 exit  done-marker True
+2026-10-18T03:44:06 start A c30_k1 XU 1800 launcher pid 5228 log log_A_c30_k1_XU_1800.log
+2026-10-18T03:44:27   A c30_k1 XU 1800 MATLAB child pid(s) 34888
+2026-10-18T04:00:26 end A c30_k1 XU 1800 exit  done-marker True
+2026-10-18T04:00:26 start A c30_k1 XS 1800 launcher pid 26456 log log_A_c30_k1_XS_1800.log
+2026-10-18T04:00:47   A c30_k1 XS 1800 MATLAB child pid(s) 31684
+2026-10-18T04:17:23 end A c30_k1 XS 1800 exit  done-marker True
+2026-10-18T04:17:23 start A c30_k1 SU 1800 launcher pid 28532 log log_A_c30_k1_SU_1800.log
+2026-10-18T04:17:43   A c30_k1 SU 1800 MATLAB child pid(s) 4200
+2026-10-18T04:34:23 end A c30_k1 SU 1800 exit  done-marker True
+2026-10-18T04:34:23 start B c30_k1 P 1200 launcher pid 27692 log log_B_c30_k1_P_1200.log
+2026-10-18T04:34:43   B c30_k1 P 1200 MATLAB child pid(s) 36352
+2026-10-18T04:47:05 end B c30_k1 P 1200 exit  done-marker True
+2026-10-18T04:47:05 start B c30_k1 S2 1200 launcher pid 26596 log log_B_c30_k1_S2_1200.log
+2026-10-18T04:47:25   B c30_k1 S2 1200 MATLAB child pid(s) 3028
+2026-10-18T05:00:49 end B c30_k1 S2 1200 exit  done-marker True
+2026-10-18T05:00:49 start B c30_k1 S5 1200 launcher pid 28900 log log_B_c30_k1_S5_1200.log
+2026-10-18T05:01:09   B c30_k1 S5 1200 MATLAB child pid(s) 4456
+2026-10-18T05:16:24 end B c30_k1 S5 1200 exit  done-marker True
+2026-10-18T05:16:25 start B c30_k1 S1 1200 launcher pid 21684 log log_B_c30_k1_S1_1200.log
+2026-10-18T05:16:45   B c30_k1 S1 1200 MATLAB child pid(s) 26688
+2026-10-18T05:29:03 end B c30_k1 S1 1200 exit  done-marker True
+2026-10-18T05:29:04 start B c30_k1 S3 1200 launcher pid 23704 log log_B_c30_k1_S3_1200.log
+2026-10-18T05:29:24   B c30_k1 S3 1200 MATLAB child pid(s) 3496
+2026-10-18T05:48:03 end B c30_k1 S3 1200 exit  done-marker True
+2026-10-18T05:48:03 start B c30_k1 S4 1200 launcher pid 27936 log log_B_c30_k1_S4_1200.log
+2026-10-18T05:48:23   B c30_k1 S4 1200 MATLAB child pid(s) 22148
+2026-10-18T06:02:11 end B c30_k1 S4 1200 exit  done-marker True
+2026-10-18T06:02:11 start R c30_k1 launcher pid 32120 log log_R_c30_k1.log
+2026-10-18T06:02:31 end R c30_k1 exit  done-marker True
+2026-10-18T06:02:31 start A c30_k18 XU 5000 launcher pid 28584 log log_A_c30_k18_XU_5000.log
+2026-10-18T06:02:52   A c30_k18 XU 5000 MATLAB child pid(s) 32160
+2026-10-18T06:33:16 end A c30_k18 XU 5000 exit  done-marker True
+2026-10-18T06:33:17 start R c30_k18 launcher pid 20620 log log_R_c30_k18.log
+2026-10-18T06:33:37   R c30_k18 MATLAB child pid(s) 26480
+2026-10-18T06:34:28 end R c30_k18 exit  done-marker True
+2026-10-18T06:34:28 start A c30_k3 XS 3000 launcher pid 32508 log log_A_c30_k3_XS_3000.log
+2026-10-18T06:34:48   A c30_k3 XS 3000 MATLAB child pid(s) 33612
+2026-10-18T06:49:58 end A c30_k3 XS 3000 exit  done-marker True
+2026-10-18T06:49:58 start A c30_k3 SU 3000 launcher pid 15688 log log_A_c30_k3_SU_3000.log
+2026-10-18T06:50:18   A c30_k3 SU 3000 MATLAB child pid(s) 16540
+2026-10-18T07:03:31 end A c30_k3 SU 3000 exit  done-marker True
+2026-10-18T07:03:31 start A c90_k1p5 XU 3000 launcher pid 35196 log log_A_c90_k1p5_XU_3000.log
+2026-10-18T07:03:52 end A c90_k1p5 XU 3000 exit  done-marker True
+2026-10-18T07:03:52 start A c90_k1p5 XS 3000 launcher pid 31624 log log_A_c90_k1p5_XS_3000.log
+2026-10-18T07:04:12   A c90_k1p5 XS 3000 MATLAB child pid(s) 29336
+2026-10-18T07:17:22 end A c90_k1p5 XS 3000 exit  done-marker True
+2026-10-18T07:17:22 start A c90_k1p5 SU 3000 launcher pid 1112 log log_A_c90_k1p5_SU_3000.log
+2026-10-18T07:17:42   A c90_k1p5 SU 3000 MATLAB child pid(s) 36708
+2026-10-18T07:30:50 end A c90_k1p5 SU 3000 exit  done-marker True
+2026-10-18T07:30:50 start A c120_k1p5 XU 3000 launcher pid 13956 log log_A_c120_k1p5_XU_3000.log
+2026-10-18T07:31:10   A c120_k1p5 XU 3000 MATLAB child pid(s) 32068
+2026-10-18T07:32:19 end A c120_k1p5 XU 3000 exit  done-marker True
+2026-10-18T07:32:19 start A c120_k1p5 XS 3000 launcher pid 31228 log log_A_c120_k1p5_XS_3000.log
+2026-10-18T07:32:39   A c120_k1p5 XS 3000 MATLAB child pid(s) 28048
+2026-10-18T07:49:09 end A c120_k1p5 XS 3000 exit  done-marker True
+2026-10-18T07:49:09 start A c120_k1p5 SU 3000 launcher pid 34876 log log_A_c120_k1p5_SU_3000.log
+2026-10-18T07:49:29   A c120_k1p5 SU 3000 MATLAB child pid(s) 23716
+2026-10-18T08:43:07 end A c120_k1p5 SU 3000 exit  done-marker True
+2026-10-18T08:43:07 start A c30_k1 XU 3000 launcher pid 4500 log log_A_c30_k1_XU_3000.log
+2026-10-18T08:43:28   A c30_k1 XU 3000 MATLAB child pid(s) 26128
+2026-10-18T08:45:00 end A c30_k1 XU 3000 exit  done-marker True
+2026-10-18T08:45:00 start A c30_k1 XS 3000 launcher pid 28332 log log_A_c30_k1_XS_3000.log
+2026-10-18T08:45:20   A c30_k1 XS 3000 MATLAB child pid(s) 36376
+2026-10-18T10:52:34 end A c30_k1 XS 3000 exit  done-marker True
+2026-10-18T10:52:34 start A c30_k1 SU 3000 launcher pid 7988 log log_A_c30_k1_SU_3000.log
+2026-10-18T10:52:54   A c30_k1 SU 3000 MATLAB child pid(s) 32756
+2026-10-18T11:44:33 end A c30_k1 SU 3000 exit  done-marker True
+2026-10-18T11:44:34 start R c30_k3 final launcher pid 10724 log log_R_c30_k3_final.log
+2026-10-18T11:44:54   R c30_k3 final MATLAB child pid(s) 15176
+2026-10-18T11:45:41 end R c30_k3 final exit  done-marker True
+2026-10-18T11:45:41 start R c90_k1p5 final launcher pid 13516 log log_R_c90_k1p5_final.log
+2026-10-18T11:46:01 end R c90_k1p5 final exit  done-marker True
+2026-10-18T11:46:02 start R c120_k1p5 final launcher pid 23308 log log_R_c120_k1p5_final.log
+2026-10-18T11:46:22 end R c120_k1p5 final exit  done-marker True
+2026-10-18T11:46:22 start R c30_k1 final launcher pid 30740 log log_R_c30_k1_final.log
+2026-10-18T11:46:42 end R c30_k1 final exit  done-marker True
+2026-10-18T11:46:42 queue empty; runner exits

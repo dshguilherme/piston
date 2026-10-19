@@ -1,0 +1,235 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== pilot run c30_k1 SU (theta0 30, kR 1.0000), normalisation 1.01830e+03 ==
+  [quadvel    |consistent] it   1: J=5.94640e-07  f0=+100.0000  Jbest=5.94640e-07  vol=0.5000  chg=1.98e-02  inner=0
+  [quadvel    |consistent] it  25: J=4.14745e-10  f0=+16.3683  Jbest=4.14745e-10  vol=0.4257  chg=1.00e-03  inner=3
+  [quadvel    |consistent] it  50: J=1.76895e-10  f0=+6.5633  Jbest=1.76895e-10  vol=0.4552  chg=2.31e-02  inner=2
+  [quadvel    |consistent] it  75: J=8.47354e-11  f0=-1.9059  Jbest=8.47354e-11  vol=0.4844  chg=1.71e-03  inner=3
+  [quadvel    |consistent] it 100: J=5.30494e-11  f0=-7.2947  Jbest=5.30494e-11  vol=0.4999  chg=2.05e-03  inner=3
+  [quadvel    |consistent] it 125: J=3.63641e-11  f0=-11.6401  Jbest=3.63641e-11  vol=0.5000  chg=4.30e-03  inner=3
+  [quadvel    |consistent] it 150: J=2.46572e-11  f0=-16.1106  Jbest=2.46572e-11  vol=0.4999  chg=1.75e-03  inner=3
+  [quadvel    |consistent] it 175: J=1.62034e-11  f0=-20.9418  Jbest=1.62034e-11  vol=0.5000  chg=7.71e-04  inner=3
+  [quadvel    |consistent] it 200: J=9.23093e-12  f0=-27.4161  Jbest=9.23093e-12  vol=0.5000  chg=8.52e-03  inner=2
+  [quadvel    |consistent] it 225: J=5.90938e-12  f0=-32.5484  Jbest=5.90938e-12  vol=0.5000  chg=5.56e-04  inner=4
+  [quadvel    |consistent] it 250: J=3.81415e-12  f0=-37.5863  Jbest=3.81415e-12  vol=0.5000  chg=6.76e-04  inner=4
+  [quadvel    |consistent] it 275: J=2.39054e-12  f0=-42.9623  Jbest=2.39054e-12  vol=0.5000  chg=1.72e-03  inner=3
+  [quadvel    |consistent] it 300: J=1.33374e-12  f0=-49.6768  Jbest=1.33374e-12  vol=0.5000  chg=5.98e-04  inner=4
+  [quadvel    |consistent] it 325: J=8.72872e-13  f0=-54.5551  Jbest=8.72872e-13  vol=0.5000  chg=2.31e-04  inner=4
+  [quadvel    |consistent] it 350: J=5.78736e-13  f0=-59.2838  Jbest=5.78736e-13  vol=0.4999  chg=7.40e-04  inner=4
+  [quadvel    |consistent] it 375: J=3.90036e-13  f0=-63.8244  Jbest=3.90036e-13  vol=0.5000  chg=2.07e-04  inner=4
+  [quadvel    |consistent] it 400: J=2.42049e-13  f0=-69.3142  Jbest=2.42049e-13  vol=0.5000  chg=1.57e-04  inner=5
+  [quadvel    |consistent] it 425: J=1.41051e-13  f0=-75.5282  Jbest=1.41051e-13  vol=0.5000  chg=2.25e-04  inner=4
+  [quadvel    |consistent] it 450: J=9.37679e-14  f0=-80.2263  Jbest=9.37679e-14  vol=0.5000  chg=7.09e-05  inner=5
+  [quadvel    |consistent] it 475: J=5.97743e-14  f0=-85.4072  Jbest=5.97743e-14  vol=0.5000  chg=7.63e-05  inner=5
+  [quadvel    |consistent] it 500: J=4.15488e-14  f0=-89.5923  Jbest=4.15488e-14  vol=0.5000  chg=2.99e-05  inner=5
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.777270e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.777639e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.458544e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.109610e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.109638e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.544366e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.360342e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.208839e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.209452e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.208456e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.576288e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+  [quadvel    |consistent] it 525: J=3.75882e-14  f0=-90.7450  Jbest=3.75882e-14  vol=0.5000  chg=3.22e-05  inner=5
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.793164e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.792883e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.602440e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.326366e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.326468e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.213862e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.738543e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.738522e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+  [quadvel    |consistent] it 550: J=3.49420e-14  f0=-91.5850  Jbest=3.49420e-14  vol=0.5000  chg=3.05e-05  inner=5
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.323630e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.323733e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.440243e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.917317e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.531785e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.533607e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.279965e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.969028e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+  [quadvel    |consistent] it 575: J=3.31397e-14  f0=-92.1944  Jbest=3.31397e-14  vol=0.5000  chg=4.89e-05  inner=5
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.519565e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.519550e-16.] 
+[> In gcmma_solver>gcmma_subsolv (line 387)
+In gcmma_solver>gcmma_gcmmasub (line 302)
+In gcmma_solver (line 187)
+In r0_pilot_track (line 47)
+In r0_pilot_runs (line 90)
+] 
+  [quadvel    |consistent] it 600: J=3.16234e-14  f0=-92.7333  Jbest=3.16234e-14  vol=0.5000  chg=7.00e-06  inner=5
+RESULT c30_k1 SU: it=600 stop=nmax evals=2287 Jbest=3.162344e-14 vol=0.500000 time=382s
+R0_PILOT_RUNS_c30_k1_SU_DONE

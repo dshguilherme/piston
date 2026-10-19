@@ -1,0 +1,15 @@
+
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+== new c30_k3_XX_N32_s1_mean (theta0 30, kR 3.0000): start C:\Users\dshgu\OneDrive\Documents\FastFormation\harmonic_shell_course\results\r0_revision\pilot\run_c30_k3_XU.mat, N 32, sigma 0.01, mode mean, cstart 3.467129e+06, target 200 ==
+  [X c30_k3 N32 s0.01] it     1: Jrob=1.71508e-13 (std 1.12e-13) f0=+100.0000  nominal exact  -84.526 dB  sinc  -23.902 dB  robust  -65.400 dB  vol=0.4990 chg=1.93e-05 inner=7 16.0s
+  [X c30_k3 N32 s0.01] it    25: Jrob=1.55723e-13 (std 8.15e-14) f0= +98.8890  nominal exact  -75.226 dB  sinc  -23.950 dB  robust  -65.819 dB  vol=0.4990 chg=9.85e-06 inner=6 13.0s
+  [X c30_k3 N32 s0.01] it    50: Jrob=1.51421e-13 (std 7.87e-14) f0= +98.5666  nominal exact  -75.718 dB  sinc  -23.993 dB  robust  -65.941 dB  vol=0.4994 chg=4.08e-05 inner=5 11.2s
+  [X c30_k3 N32 s0.01] it    75: Jrob=1.48641e-13 (std 7.48e-14) f0= +98.3534  nominal exact  -75.463 dB  sinc  -24.023 dB  robust  -66.021 dB  vol=0.4996 chg=5.60e-05 inner=5 11.2s
+  [X c30_k3 N32 s0.01] it   100: Jrob=1.44849e-13 (std 7.10e-14) f0= +98.0561  nominal exact  -75.345 dB  sinc  -24.073 dB  robust  -66.133 dB  vol=0.5000 chg=3.31e-05 inner=5 12.2s
+  [X c30_k3 N32 s0.01] it   125: Jrob=1.42096e-13 (std 6.87e-14) f0= +97.8353  nominal exact  -75.793 dB  sinc  -24.078 dB  robust  -66.217 dB  vol=0.5000 chg=3.00e-05 inner=5 12.2s
+  [X c30_k3 N32 s0.01] it   150: Jrob=1.39047e-13 (std 6.61e-14) f0= +97.5857  nominal exact  -75.804 dB  sinc  -24.121 dB  robust  -66.311 dB  vol=0.5000 chg=5.78e-05 inner=5 12.0s
+  [X c30_k3 N32 s0.01] it   175: Jrob=1.37888e-13 (std 6.60e-14) f0= +97.4894  nominal exact  -75.987 dB  sinc  -24.138 dB  robust  -66.347 dB  vol=0.5000 chg=2.28e-05 inner=5 12.0s
+  [X c30_k3 N32 s0.01] it   200: Jrob=1.36995e-13 (std 6.53e-14) f0= +97.4146  nominal exact  -75.900 dB  sinc  -24.148 dB  robust  -66.375 dB  vol=0.5000 chg=5.48e-05 inner=5 11.7s
+R0_ROBUST_c30_k3_XX_N32_s1_mean_DONE it=200 status=budget walltime=2375s warn=0

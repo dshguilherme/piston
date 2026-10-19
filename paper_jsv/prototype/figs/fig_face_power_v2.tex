@@ -1,0 +1,82 @@
+﻿% Face power: (a) surface work of each face (schematic), (b) measured shares at 100 Hz.
+% Drawn at 137 mm, natural size.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\pgfplotsset{
+  sharesaxis/.style={
+    width=50mm, height=30mm, scale only axis,
+    bar width=5mm,
+    symbolic x coords={U,B,C,D,E,G}, xtick=data,
+    xmin=U, xmax=G, enlarge x limits=0.13,
+    ymin=0, ymax=1, ytick={0,0.5,1},
+    axis line style={leader, draw=black!70},
+    tick style={witness},
+    every tick label/.append style={note},
+    every axis label/.append style={note},
+    ylabel near ticks, xlabel near ticks,
+    ylabel={fraction of $P_{2s}$}, xlabel={design field},
+  },
+}
+\begin{document}
+\begin{tikzpicture}
+% ------------------------------------------------------------------ panel (a)
+\begin{scope}[shift={(0,0)}]
+  \def\Rc{1.8}
+  \coordinate (C) at (2.5,1.2);
+  \draw[structure] ($(C)+(50:\Rc)$) arc[start angle=50, end angle=130, radius=\Rc];
+  % normals on the convex (outer) side
+  \foreach \ang in {68,90,112} {
+    \draw[normal] ($(C)+(\ang:{\Rc+0.08})$) -- ($(C)+(\ang:{\Rc+0.70})$);
+  }
+  \node[lab, anchor=west] at ($(C)+(90:{\Rc+0.62})$) {$\bm n$};
+  % outer face: label and formula, leader to the convex side
+  \node[lab, anchor=south west, align=left] (po) at (0,4.10)
+    {outer face, $p^+$\\[1pt] $P^+=\tfrac12\operatorname{Re}\!\int p^+\overline{v_n}\,dS$};
+  \draw[leader] (1.05,4.08) -- ($(C)+(120:{\Rc+0.07})$);
+  % inner face: label and formula, leader to the concave side
+  \node[lab, anchor=north west, align=left] (pi) at (0.3,2.12)
+    {inner face, $p^-$\\[1pt] $P^-=-\tfrac12\operatorname{Re}\!\int p^-\overline{v_n}\,dS$};
+  \draw[leader] ($(C)+(100:{\Rc-0.07})$) -- (2.2,2.14);
+  % free edge, one side only
+  \draw[leader] ($(C)+(50:{\Rc+0.06})$) -- ++(0.22,0);
+  \node[note, anchor=west] at ($(C)+(50:{\Rc+0.06})+(0.22,0)$) {free edge,\\$\mu=0$};
+  % sum rule
+  \node[lab, anchor=center] at (2.5,1.00) {$P^++P^-=P_{2s}$};
+  \node[note, anchor=north west] at (0,0.66) {a face can absorb power:\\$P^-<0$ is possible};
+  \node[note, anchor=north east, align=right] at (5.1,5.12) {Schematic,\\not to scale};
+  \node[paneltag, anchor=base west] at (0,5.35) {(a)};
+  \node[paneltitle, anchor=base west] at (0.45,5.35) {Surface work of each face};
+\end{scope}
+
+% ------------------------------------------------------------------ panel (b)
+\begin{axis}[sharesaxis, at={(8.0cm,2.1cm)}, anchor=south west]
+  \addplot[ybar stacked, fill=black!70, draw=black!80] table[x=design, y=outer]
+      {data/f9_shares.dat};
+  \addplot[ybar stacked, fill=black!12, draw=black!80] table[x=design, y=inner]
+      {data/f9_shares.dat};
+  \draw[reference] (rel axis cs:0,0.5) -- (rel axis cs:1,0.5);
+  \addplot[only marks, stack plots=false, mark=diamond*, mark size=3pt, mark options={structure, fill=figsurr}]
+      table[x=design, y=sinc] {data/f9_shares.dat};
+  \addplot[only marks, stack plots=false, mark=o, mark size=2.4pt, mark options={structure, fill=none}]
+      table[x=design, y=farfield_outer] {data/f9_shares.dat};
+\end{axis}
+\node[paneltag, anchor=base west] at (6.95,5.35) {(b)};
+\node[paneltitle, anchor=base west] at (7.45,5.35) {Shares at 100 Hz};
+% compact legend, two columns, under the axis
+\begin{scope}[shift={(7.2,0)}]
+  \fill[black!70] (0.00,1.00) rectangle (0.22,1.16);
+  \draw[witness] (0.00,1.00) rectangle (0.22,1.16);
+  \node[note, anchor=west] at (0.30,1.08) {outer face $P^+/P_{2s}$};
+  \fill[black!12] (0.00,0.44) rectangle (0.22,0.60);
+  \draw[witness] (0.00,0.44) rectangle (0.22,0.60);
+  \node[note, anchor=west] at (0.30,0.52) {inner face $P^-/P_{2s}$};
+  \draw[witness, draw=black, fill=figsurr] (3.51,1.18) -- (3.60,1.08) -- (3.51,0.98) -- (3.42,1.08) -- cycle;
+  \node[note, anchor=west] at (3.70,1.08) {sinc $P_{\rm sinc}/P_{2s}$};
+  \draw[structure] (3.51,0.52) circle[radius=0.07];
+  \node[note, anchor=west] at (3.70,0.52) {far field, outer half};
+\end{scope}
+\end{tikzpicture}
+\end{document}

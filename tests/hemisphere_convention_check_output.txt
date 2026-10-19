@@ -1,0 +1,52 @@
+==== PINCHED HEMISPHERE: LOAD-MAGNITUDE / NORMALISATION CONVENTION ====
+R=10, t=0.04, E=6.825e7, nu=0.3, 18deg hole.  Quarter model {y>=0,z>=0}.
+Load points A=(0,R,0) inward (-y) and B=(0,0,R) outward (+z).
+
+---- (1) QUARTER MODEL: two corner loads of magnitude P (load sweep) ----
+symmetry planes = revolution ends z=0 (side1) and y=0 (side2);
+full mirror kinematic set imposed by penalty; x-rigid translation pinned.
+nsub     ndof     P            u_y(load A)      E_strain        
+[16 16]  1083     0.5          -0.04670583      0.023352954     
+[16 16]  1083     1            -0.09341166      0.093411817     
+[16 16]  1083     2            -0.18682332      0.37364727      
+[32 32]  3675     0.5          -0.046835629     0.023418        
+[32 32]  3675     1            -0.093671258     0.093671999     
+[32 32]  3675     2            -0.18734252      0.374688        
+[48 48]  7803     0.5          -0.046907598     0.023453655     
+[48 48]  7803     1            -0.093815196     0.093814619     
+[48 48]  7803     2            -0.18763039      0.37525847      
+  -> u scales LINEARLY with P (0.5:1:2 => 1:2:4).
+  -> quarter(P=1) is the benchmark value; quarter(P=2)=2x it.
+
+---- (2) FULL PERIODIC HEMISPHERE (no symmetry cuts), 4 loads 90deg apart ----
+pattern phi=0 in, 90 out, 180 in, 270 out; each load magnitude P.
+solved with lsqminnorm (self-equilibrated load -> exact min-norm solution).
+nsub       ndof     u(P=0.5)         u(P=1)           u(P=2)           E_strain(P=2)   
+[16 16]    912      -0.0070885403    -0.014177081     -0.028354161     0.11341665      
+[24 24]    1944     -0.019910147     -0.039820294     -0.079640588     0.31856213      
+[32 32]    3360     -0.022482893     -0.044965786     -0.089931573     0.35972583      
+[48 48]    7344     -0.023234298     -0.046468596     -0.092937192     0.37172289      
+[64 64]    12864    -0.023335858     -0.046671717     -0.093343434     0.37337182      
+  -> full(P) scales linearly; expect full(P=1) = HALF of full(P=2).
+
+---- (3) HALF-SHARE CROSS-CHECK ----
+t nsub=48, ndof(quarter)=7803, ndof(full)=7344
+  quarter(P=1)   = -0.093815196  
+  quarter(P=0.5) = -0.046907598  
+  full(P=2)      = -0.092937192  
+  full(P=1)      = -0.046468596  
+  quarter(P=1)-full(P=2) = -8.78e-04   (same physical load)
+  quarter(P=0.5)-full(P=1) = -4.39e-04 (same physical load)
+  => quarter(P) == full(2P): the QUARTER model carries HALF the
+     full-model per-point load.  Hence quarter unit loads  <->  full loads
+     of magnitude 2.  The current setup is CONSISTENT with the canonical
+     "quarter model, two unit loads" benchmark convention.
+
+CONVENTION VERDICT
+ * A point load sitting ON a symmetry plane carries HALF its magnitude in
+   the reduced model (the two reflected halves share it).
+ * Therefore the FULL model equivalent to the canonical quarter-with-unit-
+   loads benchmark has FOUR loads of magnitude 2, NOT four unit loads.
+ * Four UNIT loads in the full model give ~0.047 (half) -- a DIFFERENT,
+   non-canonical problem.
+HEMISPHERE_CONVENTION_CHECK_DONE

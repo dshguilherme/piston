@@ -1,0 +1,85 @@
+﻿
+	Student License -- for use by students to meet course requirements
+	and perform academic research at degree granting institutions only.
+
+c30_k18: theta0 30 kR 18.3183 c' 343.000 m/s; uniform J: ERP 8.11427e-07 sinc 3.77918e-07 exact 5.94640e-07; sinc/exact 0.6355, sigma_exact 7.3283e-01
+  normalisation c = Jref/J(uniform): E 7.32832e-01  S 1.57346e+00  X 1.00000e+00
+  uniform state vs samples file: rel diff 0.00e+00
+  FD check rung E: J=5.94640e-07 fd=-6.842434060e-08 adj=-6.842427077e-08 rel=1.02e-06
+  FD check rung S: J=5.94640e-07 fd=-1.115383950e-07 adj=-1.115383518e-07 rel=3.87e-07
+  FD check rung X: J=5.94640e-07 fd=-1.058745443e-07 adj=-1.058745068e-07 rel=3.54e-07
+  r0_pilot_eval vs articleB_r0_eval rung E: J rel 4.73e-10, J(no grad) rel 4.73e-10, grad rel 2.43e-09
+  r0_pilot_eval vs articleB_r0_eval rung S: J rel 4.73e-10, J(no grad) rel 4.73e-10, grad rel 2.56e-09
+  r0_pilot_eval vs articleB_r0_eval rung X: J rel 4.72e-10, J(no grad) rel 4.72e-10, grad rel 3.81e-09
+R0_PILOT_RUNS_c30_k18_ops_DONE
+c30_k1: theta0 30 kR 1.0000 c' 6283.185 m/s; uniform J: ERP 8.11427e-07 sinc 5.83955e-10 exact 1.11494e-10; sinc/exact 5.2375, sigma_exact 1.3741e-04
+  normalisation c = Jref/J(uniform): E 7.32832e-01  S 1.01830e+03  X 5.33337e+03
+  uniform state vs samples file: rel diff 0.00e+00
+  FD check rung E: J=5.94640e-07 fd=-6.842434060e-08 adj=-6.842427077e-08 rel=1.02e-06
+  FD check rung S: J=5.94640e-07 fd=-1.603610675e-07 adj=-1.603613310e-07 rel=1.64e-06
+  FD check rung X: J=5.94640e-07 fd=-1.282638573e-07 adj=-1.282639089e-07 rel=4.02e-07
+  r0_pilot_eval vs articleB_r0_eval rung E: J rel 4.73e-10, J(no grad) rel 4.73e-10, grad rel 2.43e-09
+  r0_pilot_eval vs articleB_r0_eval rung S: J rel 4.67e-10, J(no grad) rel 4.67e-10, grad rel 3.10e-09
+  r0_pilot_eval vs articleB_r0_eval rung X: J rel 4.71e-10, J(no grad) rel 4.71e-10, grad rel 2.99e-09
+R0_PILOT_RUNS_c30_k1_ops_DONE
+c30_k3: theta0 30 kR 3.0000 c' 2094.395 m/s; uniform J: ERP 8.11427e-07 sinc 7.01093e-09 exact 1.94113e-08; sinc/exact 0.3612, sigma_exact 2.3922e-02
+  normalisation c = Jref/J(uniform): E 7.32832e-01  S 8.48162e+01  X 3.06338e+01
+  uniform state vs samples file: rel diff 0.00e+00
+  FD check rung E: J=5.94640e-07 fd=-6.842434060e-08 adj=-6.842427077e-08 rel=1.02e-06
+  FD check rung S: J=5.94640e-07 fd=-1.459543057e-07 adj=-1.459544419e-07 rel=9.33e-07
+  FD check rung X: J=5.94640e-07 fd=-1.292728132e-07 adj=-1.292728457e-07 rel=2.52e-07
+  r0_pilot_eval vs articleB_r0_eval rung E: J rel 4.73e-10, J(no grad) rel 4.73e-10, grad rel 2.43e-09
+  r0_pilot_eval vs articleB_r0_eval rung S: J rel 4.69e-10, J(no grad) rel 4.69e-10, grad rel 2.91e-09
+  r0_pilot_eval vs articleB_r0_eval rung X: J rel 4.71e-10, J(no grad) rel 4.71e-10, grad rel 2.60e-09
+R0_PILOT_RUNS_c30_k3_ops_DONE
+c90_k1p5: theta0 90 kR 1.5000 c' 4188.790 m/s; uniform J: ERP 3.92001e-07 sinc 1.76099e-10 exact 8.59966e-10; sinc/exact 0.2048, sigma_exact 2.1938e-03
+  normalisation c = Jref/J(uniform): E 1.51694e+00  S 3.37674e+03  X 6.91470e+02
+  uniform state vs samples file: rel diff 0.00e+00
+  FD check rung E: J=5.94640e-07 fd=+2.202538694e-07 adj=+2.202537264e-07 rel=6.49e-07
+  FD check rung S: J=5.94640e-07 fd=+1.309591059e-07 adj=+1.309589581e-07 rel=1.13e-06
+  FD check rung X: J=5.94640e-07 fd=+1.409947058e-07 adj=+1.409945494e-07 rel=1.11e-06
+  r0_pilot_eval vs articleB_r0_eval rung E: J rel 4.21e-11, J(no grad) rel 4.21e-11, grad rel 1.73e-10
+  r0_pilot_eval vs articleB_r0_eval rung S: J rel 4.86e-11, J(no grad) rel 4.86e-11, grad rel 6.12e-11
+  r0_pilot_eval vs articleB_r0_eval rung X: J rel 6.03e-11, J(no grad) rel 6.03e-11, grad rel 5.68e-11
+R0_PILOT_RUNS_c90_k1p5_ops_DONE
+c90_k7: theta0 90 kR 7.0000 c' 897.598 m/s; uniform J: ERP 3.92001e-07 sinc 1.02979e-08 exact 1.69935e-08; sinc/exact 0.6060, sigma_exact 4.3351e-02
+  normalisation c = Jref/J(uniform): E 1.51694e+00  S 5.77435e+01  X 3.49922e+01
+  uniform state vs samples file: rel diff 0.00e+00
+  FD check rung E: J=5.94640e-07 fd=+2.202538694e-07 adj=+2.202537264e-07 rel=6.49e-07
+  FD check rung S: J=5.94640e-07 fd=-2.051640697e-07 adj=-2.051641938e-07 rel=6.05e-07
+  FD check rung X: J=5.94640e-07 fd=-2.093626243e-07 adj=-2.093627481e-07 rel=5.91e-07
+  r0_pilot_eval vs articleB_r0_eval rung E: J rel 4.21e-11, J(no grad) rel 4.21e-11, grad rel 1.73e-10
+  r0_pilot_eval vs articleB_r0_eval rung S: J rel 4.07e-11, J(no grad) rel 4.07e-11, grad rel 1.60e-10
+  r0_pilot_eval vs articleB_r0_eval rung X: J rel 4.06e-11, J(no grad) rel 4.06e-11, grad rel 9.81e-11
+R0_PILOT_RUNS_c90_k7_ops_DONE
+c120_k1p5: theta0 120 kR 1.5000 c' 4188.790 m/s; uniform J: ERP 3.17469e-07 sinc 5.02560e-11 exact 3.00083e-11; sinc/exact 1.6747, sigma_exact 9.4524e-05
+  normalisation c = Jref/J(uniform): E 1.87307e+00  S 1.18322e+04  X 1.98159e+04
+  uniform state vs samples file: rel diff 0.00e+00
+  FD check rung E: J=5.94640e-07 fd=+2.947715428e-07 adj=+2.947713352e-07 rel=7.04e-07
+  FD check rung S: J=5.94640e-07 fd=+7.942672704e-07 adj=+7.942671080e-07 rel=2.04e-07
+  FD check rung X: J=5.94640e-07 fd=+7.742349303e-07 adj=+7.742347829e-07 rel=1.90e-07
+  r0_pilot_eval vs articleB_r0_eval rung E: J rel 1.49e-12, J(no grad) rel 1.49e-12, grad rel 3.53e-11
+  r0_pilot_eval vs articleB_r0_eval rung S: J rel 3.01e-12, J(no grad) rel 3.01e-12, grad rel 1.10e-11
+  r0_pilot_eval vs articleB_r0_eval rung X: J rel 3.67e-12, J(no grad) rel 3.67e-12, grad rel 1.87e-11
+R0_PILOT_RUNS_c120_k1p5_ops_DONE
+c120_k7: theta0 120 kR 7.0000 c' 897.598 m/s; uniform J: ERP 3.17469e-07 sinc 1.07172e-08 exact 1.85694e-08; sinc/exact 0.5771, sigma_exact 5.8492e-02
+  normalisation c = Jref/J(uniform): E 1.87307e+00  S 5.54844e+01  X 3.20226e+01
+  uniform state vs samples file: rel diff 0.00e+00
+  FD check rung E: J=5.94640e-07 fd=+2.947715428e-07 adj=+2.947713352e-07 rel=7.04e-07
+  FD check rung S: J=5.94640e-07 fd=+2.300983671e-07 adj=+2.300981939e-07 rel=7.53e-07
+  FD check rung X: J=5.94640e-07 fd=+2.494921790e-07 adj=+2.494920063e-07 rel=6.92e-07
+  r0_pilot_eval vs articleB_r0_eval rung E: J rel 1.49e-12, J(no grad) rel 1.49e-12, grad rel 3.53e-11
+  r0_pilot_eval vs articleB_r0_eval rung S: J rel 1.64e-13, J(no grad) rel 1.64e-13, grad rel 2.18e-11
+  r0_pilot_eval vs articleB_r0_eval rung X: J rel 7.38e-14, J(no grad) rel 7.38e-14, grad rel 1.03e-11
+R0_PILOT_RUNS_c120_k7_ops_DONE
+  [quadvel    |consistent] it   1: J=5.94640e-07  f0=+100.0000  Jbest=5.94640e-07  vol=0.5000  chg=1.48e-02  inner=0
+  [quadvel    |consistent] it  25: J=1.24523e-08  f0=+55.5143  Jbest=1.24523e-08  vol=0.4991  chg=6.17e-03  inner=0
+  it  1: pilot J/c 5.946399754e-07  exp5 X0 J 5.946399753e-07  rel 1.80e-10
+  it  2: pilot J/c 2.101023904e-07  exp5 X0 J 2.101023906e-07  rel 1.02e-09
+  it  5: pilot J/c 2.798735247e-08  exp5 X0 J 2.798735246e-08  rel 5.70e-10
+  it 10: pilot J/c 1.880058955e-08  exp5 X0 J 1.880058955e-08  rel 7.55e-11
+  it 20: pilot J/c 1.310599203e-08  exp5 X0 J 1.323724079e-08  rel 9.92e-03
+  it 30: pilot J/c 1.177342770e-08  exp5 X0 J 1.172367969e-08  rel 4.24e-03
+  it 40: pilot J/c 1.143210638e-08  exp5 X0 J 1.152206586e-08  rel 7.81e-03
+  replicate: 40 its in 132 s (3.30 s/it, 32 inner evals); normalisation c_X = 1.00000004
+R0_PILOT_RUNS_c30_k18_replicate_DONE

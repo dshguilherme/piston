@@ -1,0 +1,25 @@
+{Out of memory.
+
+Error in r0_long_eval (line 21)
+    [L,U,P,Q] = lu(A);
+                ^^^^^
+Error in r0_long_core>obj_scaled (line 100)
+Jq=r0_long_eval(ctx,tq(:),Fobj);
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in r0_long_core>@(tq)deal(obj_scaled(tq,ctx,Fobj,opt,p0),sum(vw.*tq)/V0-1) (line 58)
+  gopt.eval=@(tq) deal(obj_scaled(tq,ctx,Fobj,opt,p0), sum(vw.*tq)/V0-1);
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in gcmma_solver>eval_true (line 215)
+    [f0new, fnew] = opt.eval(xmma);
+                    ^^^^^^^^^^^^^^
+Error in gcmma_solver (line 189)
+    [f0new, fnew] = eval_true(opt, xmma, x, f0val, df0dx, fval, dfdx);
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in r0_long_core (line 65)
+  [tnew,S.st,info]=gcmma_solver(t,lo,hi,f0s,df0s,gv,dgv,S.st,it,gopt);
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in r0_long_runs (line 89)
+    tc=tic; [S,reason]=r0_long_core(ctx,S,Fobj,ops,G.opt,n,cfg); tchunk=toc(tc);
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+ERROR: MATLAB error Exit Status: 0x00000001

@@ -1,0 +1,133 @@
+﻿% Appendix figure: the ERP (phase-blind velocity norm) runs and the exact-driven runs of the pilot study.
+% (a) level above the best exact design reached from the uniform start (ERP circles, exact-driven triangles,
+% grey bar = the exact optimizer's own spread over its two runs); higher = more power.
+% (b) predicted against true level (re the uniform design) of the 14 ERP runs and the 14 exact runs.
+% Data: data/f17_regret.dat, data/f17_pt_erp.dat, data/f17_pt_exact.dat only. Drawn at 137 mm.
+\documentclass[border=1mm]{standalone}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{jsvfigs}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+
+% geometry (mm)
+\def\axA{20}\def\awA{52}\def\ayA{11}\def\ahA{35}
+\def\axB{94}\def\awB{40}\def\ayB{12}\def\ahB{34}
+
+\pgfplotsset{
+  axbase/.style={
+    scale only axis, anchor=south west, clip=false,
+    axis line style={witness}, tick style={witness},
+    every tick label/.append style={note},
+    label style={lab},
+    major tick length=1.2mm, tick align=outside,
+    axis x line*=bottom, axis y line*=left,
+  },
+  regax/.style={
+    axbase, width=\awA mm, height=\ahA mm,
+    xmin=0.4, xmax=8.6, xtick=\empty, xticklabels={},
+    ymin=0, ymax=65, ytick={0,20,40,60},
+  },
+  scatax/.style={
+    axbase, width=\awB mm, height=\ahB mm,
+    xmin=-90, xmax=3, ymin=-90, ymax=3,
+    xtick={-80,-60,-40,-20,0}, ytick={-80,-60,-40,-20,0},
+    xticklabels={$-$80,$-$60,$-$40,$-$20,0},
+    yticklabels={$-$80,$-$60,$-$40,$-$20,0},
+  },
+  erpfill/.style={refcurve, draw=black!60, only marks, mark=*, mark size=1.5pt, mark options={fill=black!60}},
+  erpopen/.style={refcurve, draw=black!60, only marks, mark=o, mark size=1.5pt},
+  exactmk/.style={refcurve, only marks, mark=triangle, mark size=2.6pt},
+  spreadbar/.style={ybar, bar width=3.2mm, fill=black!18, draw=black!45},
+}
+
+% reading arrow in the left gutter of a panel: #1 gutter x, #2 axis bottom, #3 axis height (mm)
+\newcommand{\gutter}[3]{%
+  \node[note, rotate=90, anchor=west] at (#1 mm+1.8mm,#2 mm) {less power};
+  \node[note, rotate=90, anchor=east] at (#1 mm+1.8mm,#2 mm+#3 mm) {more power};
+  \draw[axisline] (#1 mm+4.4mm,#2 mm+0.5mm) -- (#1 mm+4.4mm,#2 mm+#3 mm);
+}
+
+\pgfplotstableread{data/f17_regret.dat}\regtab
+
+\begin{document}
+\begin{tikzpicture}
+
+% ================================================================ panel (a)
+\begin{axis}[regax, at={(\axA mm,\ayA mm)}]
+  \addplot[spreadbar] table[x expr=\thisrow{idx}-0.25, y expr={max(\thisrow{exact},\thisrow{exactxs})}]{data/f17_regret.dat};
+  \addplot[exactmk] table[x expr=\thisrow{idx}-0.25, y=exact]{data/f17_regret.dat};
+  \addplot[erpfill, restrict expr to domain={\thisrow{erpcap}}{0:0}]
+    table[x expr=\thisrow{idx}+0.25, y=erp]{data/f17_regret.dat};
+  \addplot[erpopen, restrict expr to domain={\thisrow{erpcap}}{1:1}]
+    table[x expr=\thisrow{idx}+0.25, y=erp]{data/f17_regret.dat};
+  % key
+  \addplot[erpfill] coordinates {(4.85,33)};
+  \node[note, anchor=west] at (axis cs:5.2,33) {ERP, rule met};
+  \addplot[erpopen] coordinates {(4.85,28)};
+  \node[note, anchor=west] at (axis cs:5.2,28) {ERP, at limit};
+  \addplot[exactmk] coordinates {(4.85,23)};
+  \node[note, anchor=west] at (axis cs:5.2,23) {exact, from uniform};
+  \draw[fill=black!18, draw=black!45] (axis cs:4.72,16.2) rectangle (axis cs:4.98,19.8);
+  \node[note, anchor=west] at (axis cs:5.2,18) {both exact runs};
+\end{axis}
+\gutter{0}{\ayA}{\ahA}
+\node[lab, rotate=90, anchor=north, align=center] at (6.4mm,\ayA mm+0.5*\ahA mm) {level above the best\\exact design, $s$ (dB)};
+
+% two-line tick labels read from the table; x = axA + (idx-0.4)*awA/8.2 mm
+\foreach \i in {0,...,6}{
+  \pgfplotstablegetelem{\i}{idx}\of\regtab \xdef\ix{\pgfplotsretval}
+  \pgfplotstablegetelem{\i}{theta}\of\regtab \xdef\th{\pgfplotsretval}
+  \pgfplotstablegetelem{\i}{kR}\of\regtab \xdef\kr{\pgfplotsretval}
+  \pgfmathsetmacro{\xx}{\axA+(\ix-0.4)*\awA/8.2}
+  \node[note, anchor=north] at (\xx mm,\ayA mm-3.6mm) {\pgfmathprintnumber[fixed,precision=0,assume math mode]{\th}$^\circ$};
+  \node[note, anchor=north] at (\xx mm,\ayA mm-6.9mm) {\pgfmathprintnumber[fixed,precision=1,assume math mode]{\kr}};
+  \draw[witness] (\xx mm,\ayA mm) -- (\xx mm,\ayA mm-1.2mm);
+}
+\node[note, anchor=east] at (\axA mm-1mm,\ayA mm-4.8mm) {$\theta_0$};
+\node[note, anchor=east] at (\axA mm-1mm,\ayA mm-8.1mm) {$kR$};
+% group brackets
+\pgfmathsetmacro{\xA}{\axA+(0.7-0.4)*\awA/8.2}\pgfmathsetmacro{\xB}{\axA+(4.3-0.4)*\awA/8.2}
+\pgfmathsetmacro{\xC}{\axA+(4.7-0.4)*\awA/8.2}\pgfmathsetmacro{\xD}{\axA+(7.3-0.4)*\awA/8.2}
+\pgfmathsetmacro{\xAB}{(\xA+\xB)/2}\pgfmathsetmacro{\xCt}{\axA+(4.6-0.4)*\awA/8.2}
+\pgfmathsetmacro{\xP}{\axA+(6.45-0.4)*\awA/8.2}
+\draw[witness] (\xA mm,\ayA mm-9.6mm) -- (\xA mm,\ayA mm-10.6mm) -- (\xB mm,\ayA mm-10.6mm) -- (\xB mm,\ayA mm-9.6mm);
+\node[note, anchor=north] at (\xAB mm,\ayA mm-11mm) {$kR\le3$};
+\draw[witness] (\xC mm,\ayA mm-9.6mm) -- (\xC mm,\ayA mm-10.6mm) -- (\xD mm,\ayA mm-10.6mm) -- (\xD mm,\ayA mm-9.6mm);
+\node[note, anchor=north west] at (\xCt mm,\ayA mm-11mm) {$kR\ge7$};
+\node[note, anchor=north west] at (\xP mm,\ayA mm-11mm) {design point};
+
+\node[paneltag, anchor=north west] at (0mm,50.5mm) {(a)};
+\node[paneltitle, anchor=north west] at (5mm,50.5mm) {Level above the best exact design};
+
+% ================================================================ panel (b)
+\begin{axis}[scatax, at={(\axB mm,\ayB mm)}]
+  \draw[reference] (axis cs:-90,-90) -- (axis cs:3,3);
+  \draw (axis cs:-90,-20) -- (axis cs:3,-20);
+  \draw (axis cs:-90,-40) -- (axis cs:3,-40);
+  \addplot[exactmk] table[x=pred, y=true]{data/f17_pt_exact.dat};
+  \addplot[erpfill, restrict expr to domain={\thisrow{cap}}{0:0}] table[x=pred, y=true]{data/f17_pt_erp.dat};
+  \addplot[erpopen, restrict expr to domain={\thisrow{cap}}{1:1}] table[x=pred, y=true]{data/f17_pt_erp.dat};
+  \node[note, anchor=north west] at (axis cs:-90,-20.6) {$-20$ dB};
+  \node[note, anchor=north west] at (axis cs:-90,-40.6) {$-40$ dB};
+  \draw[reference] (axis cs:3,3) -- ([yshift=2.2mm]axis cs:3,3);
+  \node[note, anchor=south east] at ([yshift=2.2mm]axis cs:3,3) {equal prediction};
+  % class labels
+  \node[note, anchor=north west, align=left] at (axis cs:-52,-74) {exact:\\on the diagonal};
+  \node[note, anchor=east, align=right] at (axis cs:-28,-6) {ERP: every run\\predicts about\\$-15$ dB};
+\end{axis}
+\gutter{75}{\ayB}{\ahB}
+\node[lab, rotate=90, anchor=north] at (81.4mm,\ayB mm+0.5*\ahB mm) {true $\Delta L_x$ (dB)};
+\node[lab, anchor=north] at (\axB mm+0.5*\awB mm,\ayB mm-5.4mm) {predicted $\Delta L_{\mathrm{pred}}$ (dB)};
+\node[note, anchor=west] at (\axB mm,0.2mm) {less power};
+\node[note, anchor=east] at (\axB mm+\awB mm,0.2mm) {more power};
+\draw[axisline] (\axB mm+13.5mm,0.2mm) -- (\axB mm+\awB mm-14mm,0.2mm);
+
+\node[paneltag, anchor=north west] at (75mm,50.5mm) {(b)};
+\node[paneltitle, anchor=north west] at (80mm,50.5mm) {Predicted against true level};
+\end{tikzpicture}
+\end{document}
+
+
+
+

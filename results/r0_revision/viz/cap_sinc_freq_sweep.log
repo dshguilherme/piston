@@ -1,0 +1,25 @@
+labels: uniform, dyncomp, inputpower, quadvel-rad, quadvel-I, quadvel-ones
+ctx.w=628.318531 (2*pi*100=628.318531)
+kR=18.3183 f=99.9999 angular convergence (consistent) na=64 vs 96, max rel diff 1.802e-15
+   uniform        P64=3.779139427e-07 P96=3.779139427e-07 rel=1.12e-15
+   dyncomp        P64=1.376856029e-08 P96=1.376856029e-08 rel=1.80e-15
+   inputpower     P64=1.496074813e-08 P96=1.496074813e-08 rel=1.77e-15
+   quadvel-rad    P64=7.184989555e-09 P96=7.184989555e-09 rel=3.45e-16
+   quadvel-I      P64=9.645292162e-09 P96=9.645292162e-09 rel=1.03e-15
+   quadvel-ones   P64=2.879954472e-08 P96=2.879954472e-08 rel=1.61e-15
+GATE uniform        centroid 3.705379e-07 vs 3.705379e-07 (rel 4.29e-16) | consistent 3.779178e-07 vs 3.779178e-07 (rel 7.00e-16)
+GATE dyncomp        centroid 1.376740e-08 vs 1.376740e-08 (rel 3.00e-15) | consistent 1.376857e-08 vs 1.376857e-08 (rel 9.61e-16)
+GATE inputpower     centroid 1.490414e-08 vs 1.490414e-08 (rel 2.66e-15) | consistent 1.496079e-08 vs 1.496079e-08 (rel 2.88e-15)
+GATE quadvel-rad    centroid 7.090715e-09 vs 7.090715e-09 (rel 4.67e-16) | consistent 7.185042e-09 vs 7.185042e-09 (rel 2.30e-16)
+GATE quadvel-I      centroid 9.583568e-09 vs 9.583568e-09 (rel 3.45e-16) | consistent 9.645324e-09 vs 9.645324e-09 (rel 5.15e-16)
+GATE quadvel-ones   centroid 2.871843e-08 vs 2.871843e-08 (rel 1.27e-15) | consistent 2.879960e-08 vs 2.879960e-08 (rel 1.61e-15)
+VALIDATION GATE worst relative error 3.004e-15 -> true
+kR=21.0000 f=114.6393 angular convergence (consistent) na=64 vs 96, max rel diff 3.905e-15
+   uniform        P64=1.084507187e-06 P96=1.084507187e-06 rel=3.91e-15
+   dyncomp        P64=1.478982323e-08 P96=1.478982323e-08 rel=3.13e-15
+   inputpower     P64=1.948038808e-08 P96=1.948038808e-08 rel=1.02e-15
+   quadvel-rad    P64=1.648661440e-08 P96=1.648661440e-08 rel=1.61e-15
+   quadvel-I      P64=1.293992533e-08 P96=1.293992533e-08 rel=1.92e-15
+   quadvel-ones   P64=3.508471141e-08 P96=3.508471141e-08 rel=1.51e-15
+runtime 904.1 s
+DONE
